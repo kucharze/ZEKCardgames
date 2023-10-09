@@ -1,6 +1,6 @@
 import "./App.css";
 import logo from "./Images/PlayingCards4.jpg";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
