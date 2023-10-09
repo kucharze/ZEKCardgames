@@ -1,0 +1,13 @@
+.Navbar {
+  background-color: gray;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+a {
+  font-size: 25px;
+  color: blue;
+}
