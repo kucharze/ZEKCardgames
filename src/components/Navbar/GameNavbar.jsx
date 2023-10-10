@@ -6,7 +6,7 @@ function GameNavbar() {
   return (
     <div className={styles.Navbar}>
       <Link to={'/crazyeights'}>Crazy Eights</Link>
-      <Link>Blackjack</Link>
+      <Link to={'/blackjack'}>Blackjack</Link>
       <Link>Snip Snap Snorum</Link>
       <Link>Matching</Link>
       <Link>Go Fish</Link>

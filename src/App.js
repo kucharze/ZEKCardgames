@@ -7,6 +7,7 @@ import GameNavbar from "./components/Navbar/GameNavbar";
 import Suggestions from "./pages/Suggestions/Suggestions";
 import Leaderboards from "./pages/Leaderboards/Leaderboards";
 import CrazyEights from "./pages/Games/CrazyEights/CrazyEights";
+import Blackjack from "./pages/Games/Blackjack/Blackjack";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/suggestions" element={<Suggestions />} />
         <Route path="/leaderboards" element={<Leaderboards />} />
         <Route path="/crazyeights" element={<CrazyEights />} />
+        <Route path="/blackjack" element={<Blackjack />} />
       </Routes>
     </div>
   );
