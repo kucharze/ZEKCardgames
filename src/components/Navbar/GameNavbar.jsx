@@ -7,7 +7,7 @@ function GameNavbar() {
     <div className={styles.Navbar}>
       <Link to={'/crazyeights'}>Crazy Eights</Link>
       <Link to={'/blackjack'}>Blackjack</Link>
-      <Link>Snip Snap Snorum</Link>
+      <Link to={'/snipsnapsnorum'}>Snip Snap Snorum</Link>
       <Link>Matching</Link>
       <Link>Go Fish</Link>
       <Link>Spider Solitare</Link>
