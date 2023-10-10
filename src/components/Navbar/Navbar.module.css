@@ -12,3 +12,9 @@ a {
   font-size: 25px;
   color: blue;
 }
+
+@media (max-width: 1000px) {
+  a {
+    font-size: 10px;
+  }
+}
