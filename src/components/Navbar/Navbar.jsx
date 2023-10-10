@@ -7,7 +7,7 @@ function Navbar({options}) {
     <div className={styles.Navbar}>
       <Link to={'/'}>Account management</Link>
       <Link to={'/suggestions'}>Suggestions</Link>
-      <Link>Leaderboards</Link>
+      <Link to={'/leaderboards'}>Leaderboards</Link>
     </div>
   )
 }

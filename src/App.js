@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Accounts from "./pages/Accounts/Accounts";
 import GameNavbar from "./components/Navbar/GameNavbar";
 import Suggestions from "./pages/Suggestions/Suggestions";
+import Leaderboards from "./pages/Leaderboards/Leaderboards";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Accounts />} />
         <Route path="/suggestions" element={<Suggestions />} />
+        <Route path="/leaderboards" element={<Leaderboards />} />
       </Routes>
     </div>
   );
