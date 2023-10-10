@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Leaderboards.module.css'
 
 function Leaderboards() {
   return (
