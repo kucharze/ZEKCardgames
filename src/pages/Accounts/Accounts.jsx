@@ -7,9 +7,9 @@ function Accounts() {
       <h3>Active User: No active user</h3>
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form>
-        <input placeholder='name'/>
-        <input placeholder='screenname'/><br/>
-        <input placeholder='password'/>
+        <input placeholder='Name'/>
+        <input placeholder='Screenname'/>
+        <input placeholder='Password'/>
         <input placeholder='Confirm password'/><br/>
         <input type='submit' value='Create an Account'/>
       </form>
