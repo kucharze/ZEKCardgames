@@ -6,6 +6,7 @@ import Accounts from "./pages/Accounts/Accounts";
 import GameNavbar from "./components/Navbar/GameNavbar";
 import Suggestions from "./pages/Suggestions/Suggestions";
 import Leaderboards from "./pages/Leaderboards/Leaderboards";
+import CrazyEights from "./pages/Games/CrazyEights/CrazyEights";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Accounts />} />
         <Route path="/suggestions" element={<Suggestions />} />
         <Route path="/leaderboards" element={<Leaderboards />} />
+        <Route path="/crazyeights" element={<CrazyEights />} />
       </Routes>
     </div>
   );

@@ -5,7 +5,7 @@ import styles from './Navbar.module.css'
 function GameNavbar() {
   return (
     <div className={styles.Navbar}>
-      <Link>Crazy Eights</Link>
+      <Link to={'/crazyeights'}>Crazy Eights</Link>
       <Link>Blackjack</Link>
       <Link>Snip Snap Snorum</Link>
       <Link>Matching</Link>
