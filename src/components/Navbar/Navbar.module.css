@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   height: 60px;
   margin: 10px;
 }
@@ -11,6 +12,19 @@
 a {
   font-size: 25px;
   color: blue;
+  margin: 10px;
+}
+
+@media (max-width: 1500px) {
+  .Navbar {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 150px;
+    margin: 10px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -22,8 +36,5 @@ a {
     flex-wrap: wrap;
     height: 80px;
     margin: 10px;
-  }
-  a {
-    font-size: 10px;
   }
 }
