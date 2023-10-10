@@ -1,9 +1,9 @@
 import React from 'react'
+import styles from './Accounts.module.css'
 
 function Accounts() {
   return (
-    <div>
-      <h1>The accounts page</h1>
+    <div className={styles.Accounts}>
       <h3>Active User: No active user</h3>
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form>
