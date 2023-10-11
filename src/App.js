@@ -11,6 +11,7 @@ import Blackjack from "./pages/Games/Blackjack/Blackjack";
 import SnipSnapSnorum from "./pages/Games/SnipSnapSnorum/SnipSnapSnorum";
 import Matching from "./pages/Games/Matching/Matching";
 import GoFish from "./pages/Games/GoFish/GoFish";
+import SpiderSolitare from "./pages/Games/SpiderSolitare/SpiderSolitare";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/snipsnapsnorum" element={<SnipSnapSnorum />} />
         <Route path="/matching" element={<Matching />} />
         <Route path="/gofish" element={<GoFish />} />
+        <Route path="/spidersolitare" element={<SpiderSolitare />} />
       </Routes>
     </div>
   );
