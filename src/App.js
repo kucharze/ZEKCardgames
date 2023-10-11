@@ -1,5 +1,5 @@
 import "./App.css";
-import logo from "./Images/Card1.jpg";
+import logo from "./Images/Card22.jpg";
 import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Accounts from "./pages/Accounts/Accounts";
@@ -15,7 +15,8 @@ import GoFish from "./pages/Games/GoFish/GoFish";
 function App() {
   return (
     <div className="App">
-      <img src={logo} alt="" />
+      <img src={logo} alt="Cardgames logo" />
+      <h1>Welcome to Cardgames.org</h1>
       <Navbar />
       <GameNavbar />
       <Routes>
