@@ -9,7 +9,7 @@ function GameNavbar() {
       <Link to={'/blackjack'}>Blackjack</Link>
       <Link to={'/snipsnapsnorum'}>Snip Snap Snorum</Link>
       <Link to={'/matching'}>Matching</Link>
-      <Link>Go Fish</Link>
+      <Link to={'/gofish'}>Go Fish</Link>
       <Link>Spider Solitare</Link>
       <Link>War</Link>
     </div>
