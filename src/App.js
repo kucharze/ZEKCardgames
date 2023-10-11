@@ -9,6 +9,7 @@ import Leaderboards from "./pages/Leaderboards/Leaderboards";
 import CrazyEights from "./pages/Games/CrazyEights/CrazyEights";
 import Blackjack from "./pages/Games/Blackjack/Blackjack";
 import SnipSnapSnorum from "./pages/Games/SnipSnapSnorum/SnipSnapSnorum";
+import Matching from "./pages/Games/Matching/Matching";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/crazyeights" element={<CrazyEights />} />
         <Route path="/blackjack" element={<Blackjack />} />
         <Route path="/snipsnapsnorum" element={<SnipSnapSnorum />} />
+        <Route path="/matching" element={<Matching />} />
       </Routes>
     </div>
   );
