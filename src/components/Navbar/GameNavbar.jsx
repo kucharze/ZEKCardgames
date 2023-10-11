@@ -11,7 +11,7 @@ function GameNavbar() {
       <Link to={'/matching'}>Matching</Link>
       <Link to={'/gofish'}>Go Fish</Link>
       <Link to={'/spidersolitare'}>Spider Solitare</Link>
-      <Link>War</Link>
+      <Link to={'/war'}>War</Link>
     </div>
   )
 }
