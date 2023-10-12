@@ -1,0 +1,8 @@
+.CrazyEights {
+  font-size: 20px;
+}
+
+.CrazyEights > h1 {
+  background-color: green;
+  color: gold;
+}
