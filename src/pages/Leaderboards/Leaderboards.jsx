@@ -3,7 +3,7 @@ import styles from './Leaderboards.module.css'
 
 function Leaderboards() {
   return (
-    <div>
+    <div className={styles.Leaderboards}>
       <h1>Leaderboards</h1>
       <h2>Select a game to bring up the leaderboards relating to it.</h2>
       <form>
@@ -19,6 +19,7 @@ function Leaderboards() {
         </select>
         <input type='submit' />
       </form>
+      <p>Where leaderboards will be loaded to</p>
     </div>
   )
 }
