@@ -1,1 +1,1 @@
-# A remake of my Cardgames.org porject using React
+# A remake of my Cardgames.org project using React
