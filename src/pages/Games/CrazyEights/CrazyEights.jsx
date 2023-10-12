@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react'
 import styles from './CrazyEights.module.css'
 
 function CrazyEights() {
+  const [playHand, setPlayHand] = useState([])
+  const [comHand, setComHand] = useState([])
+  
   return (
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
