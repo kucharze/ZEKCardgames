@@ -19,6 +19,10 @@ function App() {
     <div className="App">
       <img src={logo} alt="Cardgames logo" />
       <h1>Welcome to Cardgames.org</h1>
+      <p>
+        The games on this site may not work with versions of Internet Explorer
+      </p>
+      <p>(*Online games)</p>
       <Navbar />
       <GameNavbar />
       <Routes>
