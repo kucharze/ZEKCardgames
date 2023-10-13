@@ -19,6 +19,7 @@ function CrazyEights() {
   return (
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
+      <button>Reset the game</button>
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{

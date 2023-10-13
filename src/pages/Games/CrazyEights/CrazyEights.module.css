@@ -11,3 +11,11 @@
   width: 130px;
   margin: 10px;
 }
+
+button {
+  font-size: 25px;
+  height: 80px;
+  width: 250px;
+  background-color: green;
+  color: yellow;
+}
