@@ -1,9 +1,7 @@
 /**
  * Deck of playing cards.
  */
-if (typeof Card === "undefined") {
-  Card = require('./Card');
-}
+const Card = require("./Card");
 class Deck {
   // Instance variable:
   //   list: Deck of cards (array of Card objects)
@@ -14,11 +12,24 @@ class Deck {
   constructor() {
     this.list = new Array();
     let suit = ["c", "d", "h", "s"];
-    let value = ["2", "3", "4", "5", "6", "7", "8", "9", "10",
-       	         "j", "q", "k", "a"];
-    for (let i=0; i<suit.length; i++) {
-      for (let j=0; j<value.length; j++) {
-        this.list.push(new Card(suit[i],value[j]));
+    let value = [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "j",
+      "q",
+      "k",
+      "a",
+    ];
+    for (let i = 0; i < suit.length; i++) {
+      for (let j = 0; j < value.length; j++) {
+        this.list.push(new Card(suit[i], value[j]));
       }
     }
   }
@@ -26,12 +37,12 @@ class Deck {
    * Shuffle the deck.
    */
   shuffle() {
-    for (let n=this.list.length; n>=2; n--) {
-      let r = Math.floor(Math.random()*n);
+    for (let n = this.list.length; n >= 2; n--) {
+      let r = Math.floor(Math.random() * n);
       // Swap cards at r and n-1
       let card = this.list[r];
-      this.list[r] = this.list[n-1];
-      this.list[n-1] = card;
+      this.list[r] = this.list[n - 1];
+      this.list[n - 1] = card;
     }
   }
   /**
@@ -41,21 +52,21 @@ class Deck {
     return this.list.shift();
   }
 
-  getSize(){
+  getSize() {
     return this.list.length;
   }
-    
+
   /**
-  * Determines if the deck is empty.
-  */
-  isEmpty(){
-    return this.list.length==0;
+   * Determines if the deck is empty.
+   */
+  isEmpty() {
+    return this.list.length == 0;
   }
-    
+
   /**
-  * Adds a card to the deck.
-  */
-  addACard(card){
+   * Adds a card to the deck.
+   */
+  addACard(card) {
     this.list.push(card);
   }
   /**
@@ -68,5 +79,5 @@ class Deck {
   }
 }
 if (typeof module === "object") {
-   module.exports = Deck;
+  module.exports = Deck;
 }

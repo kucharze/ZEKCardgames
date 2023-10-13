@@ -1,5 +1,6 @@
-//const Deck = require("./Deck");
-
+const Deck = require("./Deck");
+const Card = require("./Card");
+const Player = require("./Player");
 /**
  * Interact with the human player to obtain their desired play.
  */

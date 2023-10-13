@@ -2,6 +2,9 @@ import React, {useState, useEffect, useRef} from 'react'
 import styles from './CrazyEights.module.css'
 // import p from '../Images/10c.png'
 import back from '../../../Images/back.png'
+import HumanPlayer from '../../../gamecomponents/HumanPlayer'
+import Card from '../../../gamecomponents/Card'
+import Deck from '../../../gamecomponents/Deck'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState(['2h','10c','10c','10c','10c'])
