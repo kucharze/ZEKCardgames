@@ -6,3 +6,8 @@
   background-color: green;
   color: gold;
 }
+
+.hand {
+  width: 150px;
+  margin: 10px;
+}
