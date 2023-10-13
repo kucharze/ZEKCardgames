@@ -1,5 +1,5 @@
 import "./App.css";
-import logo from "./Images/deckcards.jpg";
+import logo from "./Images/cards11.jpg";
 import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Accounts from "./pages/Accounts/Accounts";
