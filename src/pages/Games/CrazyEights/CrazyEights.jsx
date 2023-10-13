@@ -1,11 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import styles from './CrazyEights.module.css'
-import p from '../../../Images/2c.png'
+import p from '../Images/10c.png'
 import back from '../../../Images/back.png'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState([])
-  const [comHand, setComHand] = useState(['../../../Images/2c.png'])
+  const [comHand, setComHand] = useState(['10c'])
+  const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
     console.log("Picking a card")
@@ -18,7 +19,7 @@ function CrazyEights() {
       <div className='com'>{
         comHand.map((item,i)=>{
           console.log(item)
-          return <img key={i} src={item} alt="" />
+          return <img key={i} src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef} />
         })
       }</div>
       <div>The display section for the suit</div>
