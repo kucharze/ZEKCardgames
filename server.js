@@ -22,6 +22,12 @@ db.on("connected", function () {
   console.log(`Connected to ${db.name} at ${db.host}:${db.port}`);
 });
 
+// Configure both serve-favicon & static middleware
+// to serve from the production 'build' folder
+//Set up to access faviocon name icon
+app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
+app.use(express.static(path.join(__dirname, "build")));
+
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 app.get("/*", function (req, res) {
