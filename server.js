@@ -12,6 +12,13 @@ app.use(cors());
 
 const app = express();
 
+// The following "catch all" route (note the *) is necessary
+// to return the index.html on all non-AJAX requests
+app.get("/*", function (req, res) {
+  // renders the html file
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 app.listen("3001", () => {
   console.log("Listening on port 3001");
 });
