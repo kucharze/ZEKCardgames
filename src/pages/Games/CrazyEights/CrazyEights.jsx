@@ -7,7 +7,7 @@ import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
 
 function CrazyEights() {
-  const [playHand, setPlayHand] = useState(['2h','10c','10c','10c','10c'])
+  const [playHand, setPlayHand] = useState(['2h','10c','10c','10h'])
   const [comHand, setComHand] = useState(['10c','10c','10c','10c'])
   const [pile,setPile] = useState('3h')
   const imageRef = useRef('../../../Images/2c.png');
@@ -16,10 +16,18 @@ function CrazyEights() {
     console.log("Picking a card")
   }
 
+  const newGame = () =>{
+    console.log("Start a new game")
+  }
+
+  useEffect(()=>{
+    newGame()
+  },[])
+
   return (
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
-      <button>Reset the game</button>
+      <button onClick={newGame}>New game</button>
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
