@@ -3,7 +3,8 @@
   background-color: beige;
 }
 
-img {
-  width: 35%;
+.logo {
+  width: 70%;
+  height: 600px;
   border: solid black;
 }

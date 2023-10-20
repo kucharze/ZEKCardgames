@@ -17,7 +17,7 @@ import War from "./pages/Games/War/War";
 function App() {
   return (
     <div className="App">
-      <img src={logo} alt="Cardgames logo" />
+      <img src={logo} alt="Cardgames logo" className="logo" />
       <h1>Welcome to Cardgames.org</h1>
       <p>
         The games on this site may not work with versions of Internet Explorer
