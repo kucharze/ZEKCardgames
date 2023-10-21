@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import styles from './CrazyEights.module.css'
 // import p from '../Images/10c.png'
-import back from '../../../Images/back.png'
+import back from '../../../Images/BACKCARD.JPG'
 import HumanPlayer from '../../../gamecomponents/HumanPlayer'
 import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
@@ -31,7 +31,6 @@ function CrazyEights() {
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
-          console.log(item)
           return <img className={styles.hand} key={i} src={back} alt="" ref={imageRef} />
         })
       }</div>
@@ -42,7 +41,6 @@ function CrazyEights() {
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
-          console.log(item)
           return <img className={styles.hand} key={i} src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef} />
         })
       }</div>
