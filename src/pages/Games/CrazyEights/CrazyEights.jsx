@@ -3,6 +3,7 @@ import styles from './CrazyEights.module.css'
 // import p from '../Images/10c.png'
 import back from '../../../Images/BACKCARD.JPG'
 import HumanPlayer from '../../../gamecomponents/HumanPlayer'
+import ComputerPlayer from '../../../gamecomponents/ComputerPlayer'
 import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
 
@@ -10,6 +11,7 @@ function CrazyEights() {
   const [playHand, setPlayHand] = useState(['2h','10c','10c','10h'])
   const [comHand, setComHand] = useState(['10c','10c','10c','10c'])
   const [pile,setPile] = useState('3h')
+  const [deck, setDeck] = useState(new Deck())
   const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
