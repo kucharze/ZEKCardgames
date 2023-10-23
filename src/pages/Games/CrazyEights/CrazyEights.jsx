@@ -21,6 +21,10 @@ function CrazyEights() {
     console.log("Picking a card")
   }
 
+  const playCard = () =>{
+    console.log("Playing card")
+  }
+
   const newGame = () =>{
     deck.shuffle()
     deck.shuffle()
@@ -42,7 +46,8 @@ function CrazyEights() {
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
-          return <img className={styles.hand} key={i} src={back} alt="" ref={imageRef} />
+          return <img className={styles.hand} key={i} src={back} 
+          alt="" ref={imageRef} />
         })
       }</div>
       <div>The display section for the suit</div>
@@ -52,7 +57,9 @@ function CrazyEights() {
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
-          return <img className={styles.hand} key={i} src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef} />
+          return <img className={styles.hand} key={i} 
+          src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef}
+          onClick={playCard} />
         })
       }</div>
     </div>
