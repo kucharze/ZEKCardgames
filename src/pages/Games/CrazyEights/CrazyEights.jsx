@@ -42,7 +42,7 @@ function CrazyEights() {
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
-          return <img className={styles.hand} key={i} src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef} />
+          return <img className={styles.hand} key={i} src={back} alt="" ref={imageRef} />
         })
       }</div>
       <div>The display section for the suit</div>
