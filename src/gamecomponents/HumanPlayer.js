@@ -17,7 +17,6 @@ class HumanPlayer extends Player {
     //this.presenter=presenter;
     this.deck = deck;
     this.pile = pile;
-    this.view = view;
 
     //True if it is the players turn to ask opponent for a card
     this.fish = true;
@@ -30,14 +29,11 @@ class HumanPlayer extends Player {
   cardPicked() {
     let newCard = this.deck.dealACard();
     this.list.push(newCard);
-    this.view.addHumanCard(newCard, this.list.length);
   }
 
   fishCardPicked() {
     let newCard = this.deck.dealACard();
     this.list.push(newCard);
-    //this.view.addHumanCard(newCard,this.list.length);
-    this.view.displayHumanHand(this.getHandCopy());
   }
 
   cardSelected(cardString) {

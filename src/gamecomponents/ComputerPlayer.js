@@ -15,7 +15,6 @@ class ComputerPlayer extends Player {
     super(deck);
     this.deck = deck;
     this.pile = pile;
-    this.view = view;
 
     //to keep track of card suit values in Crazy Eights
     this.hearts = 0;
@@ -36,8 +35,6 @@ class ComputerPlayer extends Player {
     //alert("Calling Com cardpicked")
     let newCard = this.deck.dealACard();
     this.list.push(newCard);
-    this.view.addComCard(newCard, this.list.length);
-    //this.view.displayComputerHand(this.getHandCopy());
   }
   /**
    * Play for the computer, updating the computer's hand as well as
