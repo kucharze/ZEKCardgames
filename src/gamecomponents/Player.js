@@ -4,7 +4,6 @@
  */
 const Deck = require("./Deck");
 const Card = require("./Card");
-const Player = require("./Player");
 
 class Player {
   constructor(deck) {
