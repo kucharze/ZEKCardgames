@@ -11,7 +11,7 @@ class HumanPlayer extends Player {
    * @param {Pile} pile - The discard pile.
    * @param {View} view - The View object used for all user interaction.
    */
-  constructor(deck, pile, view) {
+  constructor(deck, pile) {
     super(deck);
 
     //this.presenter=presenter;
@@ -53,20 +53,20 @@ class HumanPlayer extends Player {
       this.remove(this.list.indexOf(card));
       this.pile.acceptACard(card);
 
-      this.view.displayPileTopCard(card);
-      this.view.displayHumanHand(this.getHandCopy());
+      //this.view.displayPileTopCard(card);
+      // this.view.displayHumanHand(this.getHandCopy());
 
       if (card.getValue() === "8") {
         //user played an eight
         if (this.isHandEmpty()) {
           return true;
         } else {
-          this.view.displaySuitPicker();
+          // this.view.displaySuitPicker();
           return false;
         }
         // Continue after user picks a suit.
       }
-      this.view.displaySuit(card.getSuit());
+      // this.view.displaySuit(card.getSuit());
       return true;
     }
   }
