@@ -11,7 +11,7 @@ class ComputerPlayer extends Player {
    * @param {Pile} pile - The discard pile.
    * @param {View} view - The View object used for all user interaction.
    */
-  constructor(deck, pile, view) {
+  constructor(deck, pile) {
     super(deck);
     this.deck = deck;
     this.pile = pile;
