@@ -1,57 +1,61 @@
-/** 
+/**
  * Base class for players.  Initializes player's hand and provides
  * several utility methods related to maintaining and searching a hand.
  */
+const Deck = require("./Deck");
+const Card = require("./Card");
+const Player = require("./Player");
+
 class Player {
   constructor(deck) {
-      //this.i=0;
+    //this.i=0;
     /** This player's hand. */
     this.list = new Array();
 
     // Get seven cards from the deck and store them in this hand.
-    for (let i=1; i<=7; i++) {
+    for (let i = 1; i <= 7; i++) {
       this.list.push(deck.dealACard());
-    } 
+    }
   }
   /**
    * Return true when this hand is empty.
    */
-  isHandEmpty() {  
+  isHandEmpty() {
     return this.list.length == 0;
   }
-    
-  /*Returns true if hand has two of the same value*/  
-  checkAmount(){
-      let hand=this.getHandCopy();
-      var total=0;
-        
-      for(var i=0; i<hand.length; i++){
-        total=this.countCard(hand[i]);
-        //console.log(hand[i]);
-        if(total==4){
-          let card=hand[i];
-          //alert("We are going to remove all "+hand[i]);
-          this.removeAll(hand[i]);
-          return card;
-        }
+
+  /*Returns true if hand has two of the same value*/
+  checkAmount() {
+    let hand = this.getHandCopy();
+    var total = 0;
+
+    for (var i = 0; i < hand.length; i++) {
+      total = this.countCard(hand[i]);
+      //console.log(hand[i]);
+      if (total == 4) {
+        let card = hand[i];
+        //alert("We are going to remove all "+hand[i]);
+        this.removeAll(hand[i]);
+        return card;
       }
-        return null;
     }
-    
-    /*Find the duplicates in a hand*/
-    countCard(card){//Count occurences of a single card
-        let hand=this.getHandCopy();
-        var tot=0;
-        for(let i=0; i<hand.length; i++){
-            if(hand[i].getValue()==card.getValue()){
-                tot++;
-            }
-        }
-        //alert("total ="+tot);
-        return tot;
+    return null;
+  }
+
+  /*Find the duplicates in a hand*/
+  countCard(card) {
+    //Count occurences of a single card
+    let hand = this.getHandCopy();
+    var tot = 0;
+    for (let i = 0; i < hand.length; i++) {
+      if (hand[i].getValue() == card.getValue()) {
+        tot++;
+      }
     }
-    
-    
+    //alert("total ="+tot);
+    return tot;
+  }
+
   /**
    * Add the given Card object to this player's hand.
    */
@@ -63,49 +67,46 @@ class Player {
    * this player's hand.
    */
   remove(i) {
-      //console.log("card to remove is "+this.list[i]);
-     this.list.splice(i,1);
+    //console.log("card to remove is "+this.list[i]);
+    this.list.splice(i, 1);
   }
-    
-  removeAll(card){
-    var removed=true;
+
+  removeAll(card) {
+    var removed = true;
     //alert("removing cards");
-    while(true){
-      let hand=this.getHandCopy();
-      for(var i=0; i<hand.length; i++){
-          //alert("In for loop");
-          if(hand[i].getValue() == card.getValue()){
-              this.remove(i);
-              removed=true;
-              break;
-          }
+    while (true) {
+      let hand = this.getHandCopy();
+      for (var i = 0; i < hand.length; i++) {
+        //alert("In for loop");
+        if (hand[i].getValue() == card.getValue()) {
+          this.remove(i);
+          removed = true;
+          break;
+        }
       }
-      if(!removed){
+      if (!removed) {
         //alert("");
         break;
       }
-      removed=false;
+      removed = false;
     }
-      //alert("Outside the loop");
-      return;
-      
+    //alert("Outside the loop");
+    return;
   }
-    
-    findValue(cardvalue){
-        let i = 0;
-        let card = null;
-        while (i<this.list.length && !card) {
-            if (this.list[i].getValue() == cardvalue) {
-                card = this.list[i];
-            }
-            i++;
-        }
-        return card;
+
+  findValue(cardvalue) {
+    let i = 0;
+    let card = null;
+    while (i < this.list.length && !card) {
+      if (this.list[i].getValue() == cardvalue) {
+        card = this.list[i];
+      }
+      i++;
     }
-    
-    findSuit(cardsuit){
-        
-    }
+    return card;
+  }
+
+  findSuit(cardsuit) {}
   /**
    * Given the string specification of a card,
    * return the card if it is in this player's hand
@@ -114,7 +115,7 @@ class Player {
   find(cardString) {
     let i = 0;
     let card = null;
-    while (i<this.list.length && !card) {
+    while (i < this.list.length && !card) {
       if (this.list[i].toString() == cardString) {
         card = this.list[i];
       }
@@ -126,10 +127,10 @@ class Player {
    * Return index of given Card object, or -1 if card not in hand.
    */
   indexOf(card) {
-      //alert("Finding index of card");
-     return this.list.indexOf(card);
+    //alert("Finding index of card");
+    return this.list.indexOf(card);
   }
-    
+
   /**
    * Return copy of this player's hand (array of Card objects).
    * Changes to the returned array will not affect the Player's hand.
@@ -137,7 +138,7 @@ class Player {
   getHandCopy() {
     return this.list.slice(0);
   }
-   /**
+  /**
    * Set this player's hand to the specified array of cards.
    * @param {Card[]} - Array of cards that will become this player's hand.
    */
@@ -146,5 +147,5 @@ class Player {
   }
 }
 if (typeof module === "object") {
-   module.exports = Player;
+  module.exports = Player;
 }
