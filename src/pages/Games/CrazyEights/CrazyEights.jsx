@@ -6,38 +6,44 @@ import HumanPlayer from '../../../gamecomponents/HumanPlayer'
 import ComputerPlayer from '../../../gamecomponents/ComputerPlayer'
 import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
-
+import Pile from '../../../gamecomponents/Pile'
 
 function CrazyEights() {
-  const [playHand, setPlayHand] = useState(['2h','10c','10c','10h'])
-  const [comHand, setComHand] = useState(['10c','10c','10c','10c'])
+  const [playHand, setPlayHand] = useState(['2h','10c','10h'])
+  const [comHand, setComHand] = useState(['10c','10c','10c'])
   const [player, setPlayer] = useState(null)
   const [com, setCom] = useState(null)
-  const [pile,setPile] = useState('3h')
+  const [pile,setPile] = useState(new Pile())
   const [deck, setDeck] = useState(new Deck())
   const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
     console.log("Picking a card")
+    setPlayHand([...player.list])
   }
 
-  const playCard = () =>{
+  const playCard = (card) =>{
     console.log("Playing card")
   }
 
   const newGame = () =>{
-    deck.shuffle()
-    deck.shuffle()
     console.log("Start a new game")
-    setPlayHand([deck.dealACard(),deck.dealACard(),deck.dealACard(),deck.dealACard(),])
-    setComHand([deck.dealACard(),deck.dealACard(),deck.dealACard(),deck.dealACard(),])
+    setPlayHand(player.list)
+    setComHand(com.list)
     console.log(deck)
-    console.log("hello")
+  }
+
+  const setUp = () =>{
+    deck.shuffle()
+    deck.shuffle()
+    setPlayer(new HumanPlayer(deck, pile))
+    setCom(new ComputerPlayer(deck, pile))
   }
 
   useEffect(()=>{
-    newGame()
+    setUp()
   },[])
+
 
   return (
     <div className={styles.CrazyEights}>
@@ -46,20 +52,29 @@ function CrazyEights() {
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
+          if(item){
           return <img className={styles.hand} key={i} src={back} 
-          alt="" ref={imageRef} />
+            alt="" ref={imageRef} />
+          }
+          
         })
       }</div>
-      <div>The display section for the suit</div>
+      <div>The display section for the suit:{}</div>
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
-         <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt="" ref={imageRef} /></div>
+        {pile.getTopCard() &&
+         <img className={styles.hand} src={require(`../../../Images/${pile.getTopCard()}.png`)} alt="" ref={imageRef} />
+        }
+        </div>
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
-          return <img className={styles.hand} key={i} 
-          src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef}
-          onClick={playCard} />
+          if(item){
+            return <img className={styles.hand} key={i} 
+              src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef}
+              onClick={playCard} />
+          }
+          
         })
       }</div>
     </div>
