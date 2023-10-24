@@ -22,14 +22,15 @@ function CrazyEights() {
     setPlayHand([...player.list])
   }
 
-  const playCard = (card) =>{
-    console.log("Playing card")
+  const playCard = (card,i) =>{
+    console.log("Playing card",card,i)
   }
 
   const newGame = () =>{
     console.log("Start a new game")
     setPlayHand(player.list)
     setComHand(com.list)
+    pile.acceptACard(deck.dealACard())
     console.log(deck)
   }
 
@@ -72,7 +73,7 @@ function CrazyEights() {
           if(item){
             return <img className={styles.hand} key={i} 
               src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef}
-              onClick={playCard} />
+              onClick={()=>playCard(item,i)} />
           }
           
         })
