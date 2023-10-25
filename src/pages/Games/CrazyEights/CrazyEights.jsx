@@ -30,6 +30,7 @@ function CrazyEights() {
         player.remove(i);
         setPlayHand(player.list)
         setPile(card)
+        setSuit(card.suit)
     }
     else{
       alert("That card is not valid")
@@ -42,7 +43,7 @@ function CrazyEights() {
     setPlayHand(player.list)
     setComHand(com.list)
     let pileCard = deck.dealACard()
-    
+    setSuit(pileCard.suit)
     setPile(pileCard)
     console.log(deck)
   }
