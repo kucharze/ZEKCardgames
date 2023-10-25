@@ -26,16 +26,24 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     console.log("Playing card",card,i)
     console.log("Ith position in player hand",playHand[i])
-    player.remove(i);
-    setPlayHand(player.list)
-    setPile(card)
+    if(card.suit===suit){
+        player.remove(i);
+        setPlayHand(player.list)
+        setPile(card)
+    }
+    else{
+      alert("That card is not valid")
+    }
+   
   }
 
   const newGame = () =>{
     console.log("Start a new game")
     setPlayHand(player.list)
     setComHand(com.list)
-    setPile(deck.dealACard())
+    let pileCard = deck.dealACard()
+    
+    setPile(pileCard)
     console.log(deck)
   }
 
