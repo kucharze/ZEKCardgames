@@ -25,10 +25,9 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     console.log("Playing card",card,i)
     console.log("Ith position in player hand",playHand[i])
-    let tempHand = [...playHand]
-    let playedCard = tempHand.splice(i,1);
-    setPlayHand(tempHand)
-    setPile(playedCard)
+    player.remove(i);
+    setPlayHand(player.list)
+    setPile(card)
   }
 
   const newGame = () =>{
