@@ -31,7 +31,7 @@ class Player {
     for (var i = 0; i < hand.length; i++) {
       total = this.countCard(hand[i]);
       //console.log(hand[i]);
-      if (total == 4) {
+      if (total === 4) {
         let card = hand[i];
         //alert("We are going to remove all "+hand[i]);
         this.removeAll(hand[i]);
@@ -47,7 +47,7 @@ class Player {
     let hand = this.getHandCopy();
     var tot = 0;
     for (let i = 0; i < hand.length; i++) {
-      if (hand[i].getValue() == card.getValue()) {
+      if (hand[i].getValue() === card.getValue()) {
         tot++;
       }
     }

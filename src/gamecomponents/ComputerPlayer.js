@@ -55,7 +55,7 @@ class ComputerPlayer extends Player {
     for (i = 0; i < hand.length; i++) {
       //Update to make computer play an 8 only if it cant play anything else
       card = hand[i];
-      if (card.getValue() == "8") {
+      if (card.getValue() === "8") {
         eight = i;
         e = true;
         continue;
@@ -74,7 +74,7 @@ class ComputerPlayer extends Player {
 
     // actual hand will change below, so don't continue to use copy
     if (playeight) {
-      if (this.list.length == 0) {
+      if (this.list.length === 0) {
         this.view.displayComputerHand(this.getHandCopy());
         return;
       }
@@ -140,16 +140,16 @@ class ComputerPlayer extends Player {
   countCards() {
     let hand = this.getHandCopy();
     for (let i = 0; i < hand.length; i++) {
-      if (hand[i].suit == "h") {
+      if (hand[i].suit === "h") {
         this.hearts += 1;
       }
-      if (hand[i].suit == "d") {
+      if (hand[i].suit === "d") {
         this.diamonds += 1;
       }
-      if (hand[i].suit == "s") {
+      if (hand[i].suit === "s") {
         this.spades += 1;
       }
-      if (hand[i].suit == "c") {
+      if (hand[i].suit === "c") {
         this.clubs += 1;
       }
     }
@@ -173,7 +173,7 @@ class ComputerPlayer extends Player {
     let hand = this.getHandCopy();
     let removed = false;
     for (var i = 0; i < hand.length; i++) {
-      if (hand[i].getValue() == card.getValue()) {
+      if (hand[i].getValue() === card.getValue()) {
         //this.pile.acceptACard(hand[i]);
         this.fishCard = hand[i];
         this.fishCards.push(hand[i]);

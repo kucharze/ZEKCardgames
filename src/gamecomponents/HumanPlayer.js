@@ -37,10 +37,10 @@ class HumanPlayer extends Player {
   }
 
   cardSelected(cardString) {
-    let moving = true;
+    // let moving = true;
     let card = this.find(cardString);
-    let image = document.getElementById(cardString + "E");
-    let pimage = document.getElementById("pile");
+    // let image = document.getElementById(cardString + "E");
+    // let pimage = document.getElementById("pile");
 
     //picked an ineligible card to play
     if (card == null || !this.pile.isValidToPlay(card)) {
@@ -96,7 +96,7 @@ class HumanPlayer extends Player {
 
   give(cardString, comCard) {
     let card = this.find(cardString);
-    if (card == null || card.getValue() != comCard.getValue()) {
+    if (card == null || card.getValue() !== comCard.getValue()) {
       this.view.displayWrongCardMsg(comCard);
       return false;
     } else {

@@ -50,7 +50,6 @@ function CrazyEights() {
     setUp()
   },[])
 
-
   return (
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
