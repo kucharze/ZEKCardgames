@@ -6,14 +6,13 @@ import HumanPlayer from '../../../gamecomponents/HumanPlayer'
 import ComputerPlayer from '../../../gamecomponents/ComputerPlayer'
 import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
-import Pile from '../../../gamecomponents/Pile'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState(['2h','10c','10h'])
   const [comHand, setComHand] = useState(['10c','10c','10c'])
   const [player, setPlayer] = useState(null)
   const [com, setCom] = useState(null)
-  const [pile,setPile] = useState(new Pile())
+  const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const imageRef = useRef('../../../Images/2c.png');
 
@@ -27,15 +26,16 @@ function CrazyEights() {
     console.log("Playing card",card,i)
     console.log("Ith position in player hand",playHand[i])
     let tempHand = [...playHand]
-    tempHand.splice(i,1);
+    let playedCard = tempHand.splice(i,1);
     setPlayHand(tempHand)
+    setPile(playedCard)
   }
 
   const newGame = () =>{
     console.log("Start a new game")
     setPlayHand(player.list)
     setComHand(com.list)
-    pile.acceptACard(deck.dealACard())
+    setPile(deck.dealACard())
     console.log(deck)
   }
 
@@ -62,14 +62,14 @@ function CrazyEights() {
           return <img className={styles.hand} key={i} src={back} 
             alt="" ref={imageRef} />
           }
-          
+          return <p>No value here</p>
         })
       }</div>
       <div>The display section for the suit:{}</div>
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
-        {pile.getTopCard() &&
-         <img className={styles.hand} src={require(`../../../Images/${pile.getTopCard()}.png`)} alt="" ref={imageRef} />
+        {pile &&
+         <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt="" ref={imageRef} />
         }
         </div>
       <h2>Player</h2>
@@ -80,7 +80,7 @@ function CrazyEights() {
               src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef}
               onClick={()=>playCard(item,i)} />
           }
-          
+          return <p>No value here</p>
         })
       }</div>
     </div>
