@@ -8,12 +8,13 @@ import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
 
 function CrazyEights() {
-  const [playHand, setPlayHand] = useState(['2h','10c','10h'])
-  const [comHand, setComHand] = useState(['10c','10c','10c'])
+  const [playHand, setPlayHand] = useState(['2h','10c'])
+  const [comHand, setComHand] = useState(['10c','10c'])
   const [player, setPlayer] = useState(null)
   const [com, setCom] = useState(null)
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
+  const [suit, setSuit] = useState("No current suit")
   const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
@@ -63,7 +64,7 @@ function CrazyEights() {
           return <p>No value here</p>
         })
       }</div>
-      <div>The display section for the suit:{}</div>
+      <div>The display section for the suit: {suit}</div>
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
         {pile &&
