@@ -15,7 +15,6 @@ function CrazyEights() {
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
-  const [value, setValue] = useState("No value")
   const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
@@ -27,12 +26,11 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     console.log("Playing card",card,i)
     console.log("Ith position in player hand",playHand[i])
-    if(card.suit===suit || card.value==value){
+    if(card.suit===pile.suit || card.value==pile.value){
         player.remove(i);
         setPlayHand(player.list)
         setPile(card)
         setSuit(card.suit)
-        setValue(card.value)
     }
     else{
       alert("That card is not valid")
@@ -46,7 +44,6 @@ function CrazyEights() {
     setComHand(com.list)
     let pileCard = deck.dealACard()
     setSuit(pileCard.suit)
-    setValue(pileCard.value)
     setPile(pileCard)
     console.log(deck)
   }
