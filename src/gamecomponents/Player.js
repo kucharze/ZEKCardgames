@@ -9,7 +9,7 @@ class Player {
   constructor(deck) {
     //this.i=0;
     /** This player's hand. */
-    this.list = new Array();
+    this.list = [];
 
     // Get seven cards from the deck and store them in this hand.
     for (let i = 1; i <= 7; i++) {
@@ -20,7 +20,7 @@ class Player {
    * Return true when this hand is empty.
    */
   isHandEmpty() {
-    return this.list.length == 0;
+    return this.list.length === 0;
   }
 
   //Logic to reset the player's hand
@@ -82,7 +82,7 @@ class Player {
       let hand = this.getHandCopy();
       for (var i = 0; i < hand.length; i++) {
         //alert("In for loop");
-        if (hand[i].getValue() == card.getValue()) {
+        if (hand[i].getValue() === card.getValue()) {
           this.remove(i);
           removed = true;
           break;
@@ -102,7 +102,7 @@ class Player {
     let i = 0;
     let card = null;
     while (i < this.list.length && !card) {
-      if (this.list[i].getValue() == cardvalue) {
+      if (this.list[i].getValue() === cardvalue) {
         card = this.list[i];
       }
       i++;
@@ -120,7 +120,7 @@ class Player {
     let i = 0;
     let card = null;
     while (i < this.list.length && !card) {
-      if (this.list[i].toString() == cardString) {
+      if (this.list[i].toString() === cardString) {
         card = this.list[i];
       }
       i++;
