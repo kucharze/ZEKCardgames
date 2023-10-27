@@ -39,6 +39,10 @@ function CrazyEights() {
     })
   }
 
+  const chooseSuit = (suit) => {
+    setSuit(suit)
+  }
+
   const playCard = (card,i) =>{
     //console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
@@ -96,7 +100,7 @@ function CrazyEights() {
          <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt="" ref={imageRef} />
         }
         </div>
-        <SuitPicker/>
+        <SuitPicker func={chooseSuit}/>
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
