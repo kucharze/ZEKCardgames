@@ -1,4 +1,10 @@
 .SuitPicker {
   border: solid black;
-  width: 500px;
+  background-color: blue;
+  color: white;
+  width: 650px;
+}
+
+button {
+  margin: 20px;
 }
