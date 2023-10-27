@@ -51,7 +51,7 @@ function CrazyEights() {
     //console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
     console.log(player.list)
-    if(card.suit===pile.suit || card.value==pile.value || card.value=="8"){
+    if(card.suit===suit || card.value==pile.value || card.value=="8"){
         player.remove(i);
         setPlayHand(player.list)
         setPile(card)
