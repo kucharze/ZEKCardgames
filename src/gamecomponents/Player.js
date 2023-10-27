@@ -23,6 +23,11 @@ class Player {
     return this.list.length == 0;
   }
 
+  //Logic to reset the player's hand
+  setList(list) {
+    this.list = list;
+  }
+
   /*Returns true if hand has two of the same value*/
   checkAmount() {
     let hand = this.getHandCopy();
