@@ -41,16 +41,22 @@ function CrazyEights() {
 
   const chooseSuit = (suit) => {
     setSuit(suit)
+    setPickSuit(false)
   }
 
   const playCard = (card,i) =>{
     //console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
     if(card.suit===pile.suit || card.value==pile.value || card.value=="8"){
+      if(card.value==="8"){
+        setPickSuit(true)
+      }
+      else{
         player.remove(i);
         setPlayHand(player.list)
         setPile(card)
         setSuit(card.suit)
+      }
     }
     else{
       alert("That card is not valid")
@@ -100,7 +106,10 @@ function CrazyEights() {
          <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt="" ref={imageRef} />
         }
         </div>
-        <SuitPicker func={chooseSuit}/>
+        {
+          pickSuit && <SuitPicker func={chooseSuit}/>
+        }
+        
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
