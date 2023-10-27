@@ -22,6 +22,13 @@ function CrazyEights() {
 
     // player.add(deck.dealACard())
     setPlayHand([...playHand,deck.dealACard()])
+    
+  }
+
+  const resetDeck = () =>{
+    setDeck(()=>{
+      let d = new deck()
+    })
   }
 
   const playCard = (card,i) =>{
