@@ -20,7 +20,8 @@ function CrazyEights() {
   const cardPicked = () =>{
     console.log("Picking a card")
 
-    setPlayHand([...player.list, deck.dealACard() ])
+    // player.add(deck.dealACard())
+    setPlayHand([...playHand,deck.dealACard()])
   }
 
   const playCard = (card,i) =>{
