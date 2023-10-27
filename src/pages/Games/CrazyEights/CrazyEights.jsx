@@ -6,6 +6,7 @@ import HumanPlayer from '../../../gamecomponents/HumanPlayer'
 import ComputerPlayer from '../../../gamecomponents/ComputerPlayer'
 import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
+import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState(['2h','10c'])
@@ -15,6 +16,7 @@ function CrazyEights() {
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
+  const [pickSuit, setPickSuit] = useState(false)
   const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
@@ -94,6 +96,7 @@ function CrazyEights() {
          <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt="" ref={imageRef} />
         }
         </div>
+        <SuitPicker/>
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
