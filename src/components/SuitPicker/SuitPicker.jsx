@@ -4,7 +4,7 @@ import styles from './SuitPicker.module.css'
 function SuitPicker({func}) {
   return (
     <div className={styles.SuitPicker}>
-      <h2>Ths suit picker for Crazy eights</h2>
+      <h2>Choose the new suit</h2>
       <button onClick={()=>func('Diamonds')}>Diamonds</button>
       <button onClick={()=>func('Hearts')}>Hearts</button>
       <button onClick={()=>func('Clubs')}>Clubs</button>
