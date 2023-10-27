@@ -23,11 +23,14 @@ function CrazyEights() {
     console.log("Picking a card")
 
     // player.add(deck.dealACard())
-    setPlayHand([...playHand,deck.dealACard()])
+    let newCard = deck.dealACard()
+    setPlayHand([...playHand,newCard])
     console.log(deck.list.length)
     if(deck.list.length<5){
       resetDeck()
     }
+    player.setList([...playHand,newCard])
+    console.log(player.list)
   }
 
   const resetDeck = () =>{
@@ -47,14 +50,16 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     //console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
+    console.log(player.list)
     if(card.suit===pile.suit || card.value==pile.value || card.value=="8"){
-      if(card.value==="8"){
-        setPickSuit(true)
-      }
-      else{
         player.remove(i);
         setPlayHand(player.list)
         setPile(card)
+      if(card.value==="8"){
+        setPickSuit(true)
+        setPile(card)
+      }
+      else{
         setSuit(card.suit)
       }
     }
