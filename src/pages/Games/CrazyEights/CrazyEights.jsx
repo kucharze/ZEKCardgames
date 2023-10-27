@@ -104,8 +104,8 @@ function CrazyEights() {
      else if(suit === 's' ){
       setSuitDisplay("Spades")
      }
-     else if(suit === 'No Current suite' ){
-      setSuitDisplay("No Current suite")
+     else if(suit === "No current suit" ){
+      setSuitDisplay("No current suit")
      }
      else{
       setSuitDisplay("Error")
