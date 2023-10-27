@@ -25,7 +25,7 @@ function CrazyEights() {
     // player.add(deck.dealACard())
     setPlayHand([...playHand,deck.dealACard()])
     console.log(deck.list.length)
-    if(deck.list.length<4){
+    if(deck.list.length<5){
       resetDeck()
     }
   }
