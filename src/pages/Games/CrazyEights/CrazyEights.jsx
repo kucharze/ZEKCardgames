@@ -4,7 +4,7 @@ import styles from './CrazyEights.module.css'
 import back from '../../../Images/BACKCARD.JPG'
 import HumanPlayer from '../../../gamecomponents/HumanPlayer'
 import ComputerPlayer from '../../../gamecomponents/ComputerPlayer'
-import Card from '../../../gamecomponents/Card'
+// import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 
@@ -48,10 +48,10 @@ function CrazyEights() {
   }
 
   const playCard = (card,i) =>{
-    //console.log("Playing card",card,i)
+    console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
     console.log(player.list)
-    if(card.suit===suit || card.value==pile.value || card.value=="8"){
+    if(card.suit===suit || card.value===pile.value || card.value==="8"){
         player.remove(i);
         setPlayHand(player.list)
         setPile(card)
