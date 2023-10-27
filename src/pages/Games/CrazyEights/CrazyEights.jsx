@@ -16,6 +16,7 @@ function CrazyEights() {
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
+  const [suitDisplay, setSuitDisplay] = useState("No Current suite")
   const [pickSuit, setPickSuit] = useState(false)
   const imageRef = useRef('../../../Images/2c.png');
 
@@ -90,6 +91,27 @@ function CrazyEights() {
     setUp()
   },[])
 
+  useEffect(()=>{
+     if(suit === 'd' ){
+      setSuitDisplay("Diamonds")
+     }
+     else if(suit === 'c' ){
+      setSuitDisplay("Clubs")
+     }
+     else if(suit === 'h' ){
+      setSuitDisplay("Hearts")
+     }
+     else if(suit === 's' ){
+      setSuitDisplay("Spades")
+     }
+     else if(suit === 'No Current suite' ){
+      setSuitDisplay("No Current suite")
+     }
+     else{
+      setSuitDisplay("Error")
+     }
+  },[suit])
+
   return (
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
@@ -104,7 +126,7 @@ function CrazyEights() {
           return <p>No value here</p>
         })
       }</div>
-      <div>The display section for the suit: {suit}</div>
+      <div>The display section for the suit: {suitDisplay}</div>
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
         {pile &&
