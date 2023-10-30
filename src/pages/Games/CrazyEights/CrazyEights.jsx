@@ -9,7 +9,7 @@ import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 
 function CrazyEights() {
-  const [playHand, setPlayHand] = useState(['2h','10c'])
+  const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState(['10c','10c'])
   const [player, setPlayer] = useState(null)
   const [com, setCom] = useState(null)
@@ -30,7 +30,7 @@ function CrazyEights() {
     if(deck.list.length<5){
       resetDeck()
     }
-    player.setList([...playHand,newCard])
+    //player.setList([...playHand,newCard])
     console.log(player.list)
   }
 
@@ -53,8 +53,10 @@ function CrazyEights() {
     //console.log("Ith position in player hand",playHand[i])
     console.log(player.list)
     if(card.suit===suit || card.value===pile.value || card.value==="8"){
-        player.remove(i);
-        setPlayHand(player.list)
+        //player.remove(i);
+        let newHand = playHand;
+        newHand.splice(i,1)
+        setPlayHand(newHand)
         setPile(card)
       if(card.value==="8"){
         setPickSuit(true)
