@@ -87,12 +87,11 @@ function CrazyEights() {
 
     setComHand(tempHand)
 
-    //setPlayHand(player.list)
-    //setComHand(com.list)
     let pileCard = deck.dealACard()
     setSuit(pileCard.suit)
     setPile(pileCard)
     console.log(deck)
+    resetDeck()
   }
 
   const setUp = () =>{
