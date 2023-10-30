@@ -43,9 +43,7 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
-    //console.log(player.list)
     if(card.suit===suit || card.value===pile.value || card.value==="8"){
-        //player.remove(i);
         let newHand = playHand;
         newHand.splice(i,1)
         setPlayHand(newHand)
@@ -62,6 +60,19 @@ function CrazyEights() {
       alert("That card is not valid")
     }
    
+  }
+
+  const comTurn = () =>{
+    let newHand = comHand;
+    let found = false;
+    let foundPos = -1;
+
+    for(let i=0; i<newHand.length; i++){
+      console.log(newHand[i]);
+      if(newHand[i].suit === pile.suit || newHand[i].value === pile.value){
+        found = true;
+      }
+    }
   }
 
   const newGame = () =>{
