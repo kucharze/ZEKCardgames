@@ -1,18 +1,12 @@
 import React, {useState, useEffect, useRef} from 'react'
 import styles from './CrazyEights.module.css'
-// import p from '../Images/10c.png'
 import back from '../../../Images/BACKCARD.JPG'
-import HumanPlayer from '../../../gamecomponents/HumanPlayer'
-import ComputerPlayer from '../../../gamecomponents/ComputerPlayer'
-// import Card from '../../../gamecomponents/Card'
 import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
-  // const [player, setPlayer] = useState(null)
-  // const [com, setCom] = useState(null)
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
@@ -97,8 +91,6 @@ function CrazyEights() {
   const setUp = () =>{
     deck.shuffle()
     deck.shuffle()
-    //setPlayer(new HumanPlayer(deck, pile))
-    //setCom(new ComputerPlayer(deck, pile))
   }
 
   useEffect(()=>{
