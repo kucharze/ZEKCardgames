@@ -17,7 +17,6 @@ function CrazyEights() {
   const cardPicked = () =>{
     console.log("Picking a card")
 
-    // player.add(deck.dealACard())
     let newCard = deck.dealACard()
     setPlayHand([...playHand,newCard])
     console.log(deck.list.length)
@@ -25,7 +24,6 @@ function CrazyEights() {
       resetDeck()
     }
     //player.setList([...playHand,newCard])
-    //console.log(player.list)
   }
 
   const resetDeck = () =>{
