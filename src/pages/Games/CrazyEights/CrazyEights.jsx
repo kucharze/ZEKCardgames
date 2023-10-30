@@ -10,9 +10,9 @@ import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState([])
-  const [comHand, setComHand] = useState(['10c','10c'])
-  const [player, setPlayer] = useState(null)
-  const [com, setCom] = useState(null)
+  const [comHand, setComHand] = useState([])
+  // const [player, setPlayer] = useState(null)
+  // const [com, setCom] = useState(null)
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
@@ -31,7 +31,7 @@ function CrazyEights() {
       resetDeck()
     }
     //player.setList([...playHand,newCard])
-    console.log(player.list)
+    //console.log(player.list)
   }
 
   const resetDeck = () =>{
@@ -51,7 +51,7 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
-    console.log(player.list)
+    //console.log(player.list)
     if(card.suit===suit || card.value===pile.value || card.value==="8"){
         //player.remove(i);
         let newHand = playHand;
@@ -74,8 +74,21 @@ function CrazyEights() {
 
   const newGame = () =>{
     console.log("Start a new game")
-    setPlayHand(player.list)
-    setComHand(com.list)
+    let tempHand = []
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+    setPlayHand(tempHand)
+
+    tempHand = []
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+
+    setComHand(tempHand)
+
+    //setPlayHand(player.list)
+    //setComHand(com.list)
     let pileCard = deck.dealACard()
     setSuit(pileCard.suit)
     setPile(pileCard)
@@ -85,8 +98,8 @@ function CrazyEights() {
   const setUp = () =>{
     deck.shuffle()
     deck.shuffle()
-    setPlayer(new HumanPlayer(deck, pile))
-    setCom(new ComputerPlayer(deck, pile))
+    //setPlayer(new HumanPlayer(deck, pile))
+    //setCom(new ComputerPlayer(deck, pile))
   }
 
   useEffect(()=>{
