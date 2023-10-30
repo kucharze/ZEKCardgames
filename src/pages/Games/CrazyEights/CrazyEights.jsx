@@ -86,13 +86,9 @@ function CrazyEights() {
     resetDeck()
   }
 
-  const setUp = () =>{
-    deck.shuffle()
-    deck.shuffle()
-  }
-
   useEffect(()=>{
-    setUp()
+    deck.shuffle()
+    deck.shuffle()
   },[])
 
   useEffect(()=>{
