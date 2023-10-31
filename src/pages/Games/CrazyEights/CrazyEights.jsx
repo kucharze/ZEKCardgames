@@ -24,6 +24,7 @@ function CrazyEights() {
       resetDeck()
     }
     //player.setList([...playHand,newCard])
+    comTurn();
   }
 
   const resetDeck = () =>{
@@ -71,7 +72,18 @@ function CrazyEights() {
       console.log(newHand[i]);
       if(newHand[i].suit === pile.suit || newHand[i].value === pile.value){
         found = true;
+        foundPos=i;
+
       }
+    }
+
+    if(found){
+      console.log("Found a card to play for Com")
+      console.log(comHand[foundPos])
+    }
+    else{
+      console.log("No card found")
+      setComHand([...comHand, deck.dealACard()])
     }
   }
 
