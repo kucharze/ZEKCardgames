@@ -4,6 +4,8 @@ import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 
+//Hitting new game in the middle of a current game, could
+//revert game status to the previous game
 function CrazyEights() {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
@@ -55,6 +57,7 @@ function CrazyEights() {
       }
       else{
         setSuit(card.suit)
+        comTurn()
       }
     }
     else{
@@ -80,6 +83,9 @@ function CrazyEights() {
     if(found){
       console.log("Found a card to play for Com")
       console.log(comHand[foundPos])
+      let playcard = newHand.splice(foundPos,1);
+      setComHand(newHand)
+      setPile(playCard)
     }
     else{
       console.log("No card found")
