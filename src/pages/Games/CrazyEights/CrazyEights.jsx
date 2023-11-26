@@ -10,6 +10,7 @@ function CrazyEights() {
   const [pile,setPile] = useState(null)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
+  const [value, setValue] = useState('No current value')
   const [suitDisplay, setSuitDisplay] = useState("No Current suite")
   const [pickSuit, setPickSuit] = useState(false)
   const imageRef = useRef('../../../Images/2c.png');
