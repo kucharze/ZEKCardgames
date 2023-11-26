@@ -46,7 +46,7 @@ function CrazyEights() {
     console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
     console.log(pile.value)
-    if(card.suit===suit || card.value===pile.value || card.value==="8"){
+    if(card.suit===suit || card.value===value || card.value==="8"){
         let newHand = playHand;
         newHand.splice(i,1)
         setPlayHand(newHand)
@@ -58,7 +58,7 @@ function CrazyEights() {
       else{
         console.log("Play suite: ", card.suit)
         setSuit(card.suit)
-        comTurn()
+        
       }
     }
     else{
@@ -116,6 +116,7 @@ function CrazyEights() {
 
     let pileCard = deck.dealACard()
     setSuit(pileCard.suit)
+    setValue(pileCard.value)
     setPile(pileCard)
     console.log(deck)
     resetDeck()
@@ -146,6 +147,10 @@ function CrazyEights() {
       setSuitDisplay("Error " + suit)
      }
   },[suit])
+
+  useEffect(()=>{
+    comTurn()
+  },[pile])
 
   return (
     <div className={styles.CrazyEights}>
