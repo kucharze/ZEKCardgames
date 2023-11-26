@@ -44,6 +44,7 @@ function CrazyEights() {
   const playCard = (card,i) =>{
     console.log("Playing card",card,i)
     //console.log("Ith position in player hand",playHand[i])
+    console.log(pile.value)
     if(card.suit===suit || card.value===pile.value || card.value==="8"){
         let newHand = playHand;
         newHand.splice(i,1)
@@ -54,6 +55,7 @@ function CrazyEights() {
         setPile(card)
       }
       else{
+        console.log("Play suite: ", card.suit)
         setSuit(card.suit)
         comTurn()
       }
@@ -69,13 +71,15 @@ function CrazyEights() {
     let newHand = comHand;
     let found = false;
     let foundPos = -1;
+    let foundSuit = null;
 
     for(let i=0; i<newHand.length; i++){
       console.log(newHand[i]);
       if(newHand[i].suit === pile.suit || newHand[i].value === pile.value){
         found = true;
         foundPos=i;
-
+        console.log("Found something to play",newHand[i].suit, newHand[i].value)
+        foundSuit=newHand[i].suit
       }
     }
 
@@ -83,9 +87,10 @@ function CrazyEights() {
       console.log("Found a card to play for Com")
       console.log(comHand[foundPos])
       let playcard = newHand.splice(foundPos,1);
+      console.log("Com suit: ",playcard,playcard.suit)
       setComHand(newHand)
       setPile(playcard)
-      setSuit(playcard.suit)
+      setSuit(foundSuit)
     }
     else{
       console.log("No card found")
@@ -137,7 +142,7 @@ function CrazyEights() {
       setSuitDisplay("No current suit")
      }
      else{
-      setSuitDisplay("Error")
+      setSuitDisplay("Error " + suit)
      }
   },[suit])
 
