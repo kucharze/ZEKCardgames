@@ -43,6 +43,7 @@ function CrazyEights() {
     //Needs to set the pile with the temp pile card
     setSuit(suit)
     setPickSuit(false)
+    setPile(tempPile)
   }
 
   const playCard = (card,i) =>{
@@ -57,10 +58,12 @@ function CrazyEights() {
       if(card.value==="8"){
         setPickSuit(true)
         setTempPile(card)
+        setValue("8")
       }
       else{
         console.log("Play suite: ", card.suit)
         setSuit(card.suit)
+        setValue(card.value)
         setPile(card)
         setComTakeTurn(true)
       }
