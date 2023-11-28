@@ -8,6 +8,8 @@ function CrazyEights() {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [pile,setPile] = useState(null)
+  const [tempPile, setTempPile] = useState(null)
+  const [comTakeTurn, setComTakeTurn] = useState(false)
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
   const [value, setValue] = useState('No current value')
@@ -50,15 +52,15 @@ function CrazyEights() {
         let newHand = playHand;
         newHand.splice(i,1)
         setPlayHand(newHand)
-        setPile(card)
+        
       if(card.value==="8"){
         setPickSuit(true)
-        setPile(card)
+        setTempPile(card)
       }
       else{
         console.log("Play suite: ", card.suit)
         setSuit(card.suit)
-        
+        setPile(card)
       }
     }
     else{
@@ -149,7 +151,10 @@ function CrazyEights() {
   },[suit])
 
   useEffect(()=>{
-    comTurn()
+    if(comTakeTurn){
+      comTurn()
+    }
+    
   },[pile])
 
   return (
