@@ -40,6 +40,7 @@ function CrazyEights() {
   }
 
   const chooseSuit = (suit) => {
+    //Needs to set the pile with the temp pile card
     setSuit(suit)
     setPickSuit(false)
   }
@@ -61,6 +62,7 @@ function CrazyEights() {
         console.log("Play suite: ", card.suit)
         setSuit(card.suit)
         setPile(card)
+        setComTakeTurn(true)
       }
     }
     else{
@@ -94,6 +96,7 @@ function CrazyEights() {
       setComHand(newHand)
       setPile(playcard)
       setSuit(foundSuit)
+      setComTakeTurn(false)
     }
     else{
       console.log("No card found")
