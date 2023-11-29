@@ -3,6 +3,7 @@ import styles from './CrazyEights.module.css'
 import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
+import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function CrazyEights() {
   const [playHand, setPlayHand] = useState([])
@@ -193,7 +194,7 @@ function CrazyEights() {
         {
           pickSuit && <SuitPicker func={chooseSuit}/>
         }
-        
+        <WinnerBoard winner={"Player"}/>
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
