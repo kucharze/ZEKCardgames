@@ -18,13 +18,13 @@ function Blackjack() {
     console.log("New Blackjack game")
 
         let tempHand = []
-    for(let i=0; i<7; i++){
+    for(let i=0; i<2; i++){
       tempHand.push(deck.dealACard())
     }
     setPlayHand(tempHand)
 
     tempHand = []
-    for(let i=0; i<7; i++){
+    for(let i=0; i<2; i++){
       tempHand.push(deck.dealACard())
     }
 
@@ -32,6 +32,11 @@ function Blackjack() {
 
     setDeck(new Deck())
   }
+  
+  useEffect(()=>{
+    deck.shuffle()
+    deck.shuffle()
+  },[])
 
   return (
     <div className={styles.Blackjack}>
@@ -40,7 +45,15 @@ function Blackjack() {
       <h2>Dealer</h2>
       <img src={back} alt="" />
       <h2>Player</h2>
-      <img src={back} alt="" />
+      <div className='player'>{
+          playHand.map((item,i)=>{
+              if(item){
+                return <img className={styles.hand} key={i} 
+                  src={require(`../../../Images/${item}.png`)} alt="" />
+              }
+              return <p>No value here</p>
+            })
+          }</div>
     </div>
   )
 }
