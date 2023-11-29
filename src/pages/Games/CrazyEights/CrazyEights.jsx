@@ -194,7 +194,7 @@ function CrazyEights() {
         {
           pickSuit && <SuitPicker func={chooseSuit}/>
         }
-        <WinnerBoard winner={"Player"}/>
+        <WinnerBoard winner={false}/>
       <h2>Player</h2>
       <div className='player'>{
         playHand.map((item,i)=>{
