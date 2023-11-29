@@ -16,6 +16,8 @@ function CrazyEights() {
   const [value, setValue] = useState('No current value')
   const [suitDisplay, setSuitDisplay] = useState("No Current suite")
   const [pickSuit, setPickSuit] = useState(false)
+  const [gameOver, setGameOver] = useState(true)
+  const [youWin, setYouWin] = useState(true)
 
   const cardPicked = () =>{
     console.log("Picking a card")
@@ -193,18 +195,40 @@ function CrazyEights() {
         {
           pickSuit && <SuitPicker func={chooseSuit}/>
         }
-        <WinnerBoard winner={false}/>
-      <h2>Player</h2>
-      <div className='player'>{
-        playHand.map((item,i)=>{
-          if(item){
-            return <img className={styles.hand} key={i} 
-              src={require(`../../../Images/${item}.png`)} alt=""
-              onClick={()=>playCard(item,i)} />
-          }
-          return <p>No value here</p>
-        })
-      }</div>
+        {
+          (gameOver && (
+          <div>
+            <WinnerBoard winner={youWin}/>
+            <h2>Player</h2>
+            <div className='player'>{
+              playHand.map((item,i)=>{
+                if(item){
+                  return <img className={styles.hand} key={i} 
+                    src={require(`../../../Images/${item}.png`)} alt="" />
+                }
+                return <p>No value here</p>
+              })
+            }</div>
+          </div>
+          )) ||
+          (
+            <div>
+              <h2>Player</h2>
+            <div className='player'>{
+              playHand.map((item,i)=>{
+                if(item){
+                  return <img className={styles.hand} key={i} 
+                    src={require(`../../../Images/${item}.png`)} alt=""
+                    onClick={()=>playCard(item,i)} />
+                }
+                return <p>No value here</p>
+              })
+            }</div>
+            </div>
+          )
+        }
+        
+      
     </div>
   )
 }
