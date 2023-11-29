@@ -44,6 +44,8 @@ function CrazyEights() {
     setSuit(suit)
     setPickSuit(false)
     setPile(tempPile)
+    setComTakeTurn(true)
+    // comTurn()
   }
 
   const playCard = (card,i) =>{
@@ -80,14 +82,17 @@ function CrazyEights() {
     let found = false;
     let foundPos = -1;
     let foundSuit = null;
+    let foundValue = null;
+
+    console.log(newHand);
 
     for(let i=0; i<newHand.length; i++){
-      console.log(newHand[i]);
-      if(newHand[i].suit === pile.suit || newHand[i].value === pile.value){
+      if(newHand[i].suit === suit || newHand[i].value === value){
         found = true;
         foundPos=i;
         console.log("Found something to play",newHand[i].suit, newHand[i].value)
         foundSuit=newHand[i].suit
+        foundValue=newHand[i].value
       }
     }
 
@@ -99,6 +104,7 @@ function CrazyEights() {
       setComHand(newHand)
       setPile(playcard)
       setSuit(foundSuit)
+      setValue(foundValue)
       setComTakeTurn(false)
     }
     else{
@@ -161,7 +167,7 @@ function CrazyEights() {
       comTurn()
     }
     
-  },[pile])
+  },[pile, comTakeTurn])
 
   return (
     <div className={styles.CrazyEights}>
