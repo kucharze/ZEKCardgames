@@ -32,11 +32,23 @@ function Blackjack() {
 
     setDeck(new Deck())
   }
+
+  const findValues = () =>{
+    let handVal=0
+    playHand.forEach(element => {
+      handVal+=element.jackValue
+    });
+    setValue(handVal)
+  }
   
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
   },[])
+
+  useEffect(()=>{
+    findValues()
+  },[playHand, comHand])
 
   return (
     <div className={styles.Blackjack}>
@@ -44,8 +56,12 @@ function Blackjack() {
       <button onClick={newGame}>New Game</button>
       <h2>Dealer</h2>
       <img src={back} alt="" />
+      <h2>Deck</h2>
+      <img src={back} alt="" />
       <h2>Player</h2>
-      <div className='player'>{
+      <div className='player'>
+        <h2>Player hand {value}</h2>
+        {
           playHand.map((item,i)=>{
               if(item){
                 return <img className={styles.hand} key={i} 
