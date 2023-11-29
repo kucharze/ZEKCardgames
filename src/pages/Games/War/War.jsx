@@ -1,4 +1,5 @@
 import React from 'react'
+import back from '../../../Images/BACKCARD.JPG'
 
 function War() {
   return (
