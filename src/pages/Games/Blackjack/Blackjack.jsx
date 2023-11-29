@@ -16,6 +16,21 @@ function Blackjack() {
 
   const newGame = () =>{
     console.log("New Blackjack game")
+
+        let tempHand = []
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+    setPlayHand(tempHand)
+
+    tempHand = []
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+
+    setComHand(tempHand)
+
+    setDeck(new Deck())
   }
 
   return (
