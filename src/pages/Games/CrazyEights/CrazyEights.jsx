@@ -16,8 +16,8 @@ function CrazyEights() {
   const [value, setValue] = useState('No current value')
   const [suitDisplay, setSuitDisplay] = useState("No Current suite")
   const [pickSuit, setPickSuit] = useState(false)
-  const [gameOver, setGameOver] = useState(true)
-  const [youWin, setYouWin] = useState(true)
+  const [gameOver, setGameOver] = useState(false)
+  const [youWin, setYouWin] = useState(false)
 
   const cardPicked = () =>{
     console.log("Picking a card")
@@ -70,6 +70,10 @@ function CrazyEights() {
         setValue(card.value)
         setPile(card)
         setComTakeTurn(true)
+        if(newHand.length==0){
+          setGameOver(true)
+          setYouWin(true)
+        }
       }
     }
     else{
@@ -108,6 +112,10 @@ function CrazyEights() {
       setSuit(foundSuit)
       setValue(foundValue)
       setComTakeTurn(false)
+      if(newHand.length==0){
+        setGameOver(true)
+        setYouWin(false)
+      }
     }
     else{
       console.log("No card found")
@@ -134,6 +142,8 @@ function CrazyEights() {
     setSuit(pileCard.suit)
     setValue(pileCard.value)
     setPile(pileCard)
+    setGameOver(false)
+    setYouWin(false)
     console.log(deck)
     resetDeck()
   }
