@@ -206,7 +206,8 @@ function CrazyEights() {
           pickSuit && <SuitPicker func={chooseSuit}/>
         }
         {
-          (gameOver && (
+          (//If a player has won
+            gameOver && (
           <div>
             <WinnerBoard winner={youWin}/>
             <h2>Player</h2>
@@ -221,7 +222,7 @@ function CrazyEights() {
             }</div>
           </div>
           )) ||
-          (
+          (//Noone has won yet
             <div>
               <h2>Player</h2>
             <div className='player'>{
