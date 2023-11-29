@@ -1,0 +1,15 @@
+.matchzone {
+  width: 900px;
+  border: solid black;
+}
+
+.matchzone > img {
+  height: 200px;
+  width: 200px;
+}
+
+.Matching {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
