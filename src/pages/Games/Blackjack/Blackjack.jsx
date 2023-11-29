@@ -13,11 +13,16 @@ function Blackjack() {
   const [deck, setDeck] = useState(new Deck())
   const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
-  
+
+  const newGame = () =>{
+    console.log("New Blackjack game")
+  }
+
   return (
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
-      <h2>Com</h2>
+      <button onClick={newGame}>New Game</button>
+      <h2>Dealer</h2>
       <img src={back} alt="" />
       <h2>Player</h2>
       <img src={back} alt="" />
