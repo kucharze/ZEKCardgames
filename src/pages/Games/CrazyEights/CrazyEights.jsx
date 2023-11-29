@@ -16,7 +16,6 @@ function CrazyEights() {
   const [value, setValue] = useState('No current value')
   const [suitDisplay, setSuitDisplay] = useState("No Current suite")
   const [pickSuit, setPickSuit] = useState(false)
-  const imageRef = useRef('../../../Images/2c.png');
 
   const cardPicked = () =>{
     console.log("Picking a card")
@@ -179,7 +178,7 @@ function CrazyEights() {
         comHand.map((item,i)=>{
           if(item){
           return <img className={styles.hand} key={i} src={back} 
-            alt="" ref={imageRef} />
+            alt="" />
           }
           return <p>No value here</p>
         })
@@ -188,7 +187,7 @@ function CrazyEights() {
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
         {pile &&
-         <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt="" ref={imageRef} />
+         <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt=""/>
         }
         </div>
         {
@@ -200,7 +199,7 @@ function CrazyEights() {
         playHand.map((item,i)=>{
           if(item){
             return <img className={styles.hand} key={i} 
-              src={require(`../../../Images/${item}.png`)} alt="" ref={imageRef}
+              src={require(`../../../Images/${item}.png`)} alt=""
               onClick={()=>playCard(item,i)} />
           }
           return <p>No value here</p>
