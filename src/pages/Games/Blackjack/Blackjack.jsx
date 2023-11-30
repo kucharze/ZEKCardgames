@@ -4,6 +4,7 @@ import styles from './Blackjack.module.css'
 import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
+import { type } from '@testing-library/user-event/dist/type'
 
 function Blackjack() {
   const [playHand, setPlayHand] = useState([])
@@ -36,8 +37,9 @@ function Blackjack() {
   const findValues = () =>{
     let handVal=0
     playHand.forEach(element => {
-      handVal+=element.jackValue
+      handVal+=Number(element.jackValue)
     });
+    console.log(typeof(handVal))
     setValue(handVal)
   }
   
@@ -56,6 +58,8 @@ function Blackjack() {
       <button onClick={newGame}>New Game</button>
       <h2>Dealer</h2>
       <img src={back} alt="" />
+      <img className={styles.hand} 
+                  src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
       <h2>Deck</h2>
       <img src={back} alt="" />
       <h2>Player</h2>
