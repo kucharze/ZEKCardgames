@@ -184,7 +184,19 @@ function CrazyEights() {
   return (
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
-      <button onClick={newGame}>New game</button>
+      <div>
+        <button onClick={newGame}>New game</button>
+        <button>Show rules</button>
+      </div>
+      <div className={styles.rules}>
+        <ul>
+          <li>Play cards from your hand</li>
+          <li>To play a card, it must match the value or suit of the card on the pile</li>
+          <li>If you can't play a card, click the deck to draw a card</li>
+          <li>First player to empty their hand wins</li>
+        </ul>
+      </div>
+      
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
