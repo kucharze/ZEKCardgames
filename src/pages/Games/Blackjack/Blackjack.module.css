@@ -2,10 +2,20 @@ img {
   height: 200px;
   margin: 10px;
 }
+.Blackjack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .Blackjack > h1 {
   background-color: green;
   color: gold;
   width: 100%;
   font-size: 40px;
+}
+
+.dealer {
+  border: solid black;
+  width: 500px;
 }
