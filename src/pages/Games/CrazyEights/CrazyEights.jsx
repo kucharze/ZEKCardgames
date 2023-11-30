@@ -18,6 +18,7 @@ function CrazyEights() {
   const [pickSuit, setPickSuit] = useState(false)
   const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
+  const [rules, setRules] = useState(false)
 
   const cardPicked = () =>{
     console.log("Picking a card")
@@ -186,16 +187,21 @@ function CrazyEights() {
       <h1>Crazy Eights</h1>
       <div>
         <button onClick={newGame}>New game</button>
-        <button>Show rules</button>
+        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
-      <div className={styles.rules}>
-        <ul>
-          <li>Play cards from your hand</li>
-          <li>To play a card, it must match the value or suit of the card on the pile</li>
-          <li>If you can't play a card, click the deck to draw a card</li>
-          <li>First player to empty their hand wins</li>
-        </ul>
-      </div>
+      {
+        rules &&
+        <div className={styles.rules}>
+          <ul>
+            <li>Play cards from your hand</li>
+            <li>To play a card, it must match the value or suit of the card on the pile</li>
+            <li>If you can't play a card, click the deck to draw a card</li>
+            <li>If you play an 8, you can change the suit to whatever you want</li>
+            <li>First player to empty their hand wins</li>
+          </ul>
+        </div>
+      }
+      
       
       <h2>Computer</h2>
       <div className='com'>{
