@@ -14,6 +14,7 @@ function Blackjack() {
   const [deck, setDeck] = useState(new Deck())
   const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
+  const [rules, setRules] = useState(false)
 
   const newGame = () =>{
     console.log("New Blackjack game")
@@ -55,7 +56,25 @@ function Blackjack() {
   return (
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
-      <button onClick={newGame}>New Game</button>
+      <div>
+        <button onClick={newGame}>New game</button>
+        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+      </div>
+            {
+        rules &&
+        <div className={styles.rules}>
+          <ul>
+            <li>Try to get as close to 21 as possible with your cards</li>
+            <li>Jack, Queen, King are each 10 points</li>
+            <li>An Ace can be either 11 points or 1 point</li>
+            <li>Having 21 with two cards is a blackjack</li>
+            <li>If you go over 21 you lose</li>
+            <li>The dealer will continue to hit until they have at least a value of 17</li>
+            <li>If neither player has gone above 21, the higher valued hand wins</li>
+            <li>The dealer wins all tiebreakers</li>
+          </ul>
+        </div>
+      }
       <h2>Dealer</h2>
       <div className={styles.dealer}>
         <img src={back} alt="" />

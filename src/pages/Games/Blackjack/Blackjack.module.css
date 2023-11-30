@@ -19,3 +19,12 @@ img {
   border: solid green;
   width: 500px;
 }
+
+.rules {
+  background-color: gray;
+  border: solid green;
+  width: 800px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
