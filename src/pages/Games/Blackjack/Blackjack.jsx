@@ -76,6 +76,7 @@ function Blackjack() {
         </div>
       }
       <h2>Dealer</h2>
+      <h2>Computer hand value: {comValue}</h2>
       <div className={styles.dealer}>
         <img src={back} alt="" />
         {
@@ -89,7 +90,7 @@ function Blackjack() {
       <img src={back} alt="" />
       <h2>Player</h2>
       <div className='player'>
-        <h2>Player hand {value}</h2>
+        <h2>Player hand value: {value}</h2>
         {
           playHand.map((item,i)=>{
               if(item){
