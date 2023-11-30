@@ -19,7 +19,7 @@ function Blackjack() {
   const newGame = () =>{
     console.log("New Blackjack game")
 
-        let tempHand = []
+    let tempHand = []
     for(let i=0; i<2; i++){
       tempHand.push(deck.dealACard())
     }
@@ -40,8 +40,12 @@ function Blackjack() {
     playHand.forEach(element => {
       handVal+=Number(element.jackValue)
     });
-    console.log(typeof(handVal))
     setValue(handVal)
+  }
+
+  const dealCard = () =>{
+
+    setPlayHand([...playHand, deck.dealACard()])
   }
   
   useEffect(()=>{
@@ -85,9 +89,9 @@ function Blackjack() {
         }
       </div>
       
-      
+      <p></p>
       <h2>Deck</h2>
-      <img src={back} alt="" />
+      <img src={back} alt="" onClick={dealCard} />
       <h2>Player</h2>
       <div className='player'>
         <h2>Player hand value: {value}</h2>
