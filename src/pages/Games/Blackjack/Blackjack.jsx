@@ -57,9 +57,15 @@ function Blackjack() {
       <h1>Blackjack</h1>
       <button onClick={newGame}>New Game</button>
       <h2>Dealer</h2>
-      <img src={back} alt="" />
-      <img className={styles.hand} 
-                  src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
+      <div className={styles.dealer}>
+        <img src={back} alt="" />
+        {
+          comHand.length>0 && <img className={styles.hand} 
+                    src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
+        }
+      </div>
+      
+      
       <h2>Deck</h2>
       <img src={back} alt="" />
       <h2>Player</h2>
