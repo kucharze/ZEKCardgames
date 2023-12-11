@@ -93,6 +93,11 @@ function Blackjack() {
       <h2>Deck</h2>
       <img src={back} alt="" onClick={dealCard} />
       <h2>Player</h2>
+      <div className='interface'>
+        <button>Hit</button>
+        <button>Stand</button>
+      </div>
+      
       <div className='player'>
         <h2>Player hand value: {value}</h2>
         {
