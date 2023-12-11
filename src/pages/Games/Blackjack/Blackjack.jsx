@@ -44,8 +44,8 @@ function Blackjack() {
   }
 
   const dealCard = () =>{
-
     setPlayHand([...playHand, deck.dealACard()])
+    
   }
   
   useEffect(()=>{
@@ -94,7 +94,7 @@ function Blackjack() {
       <img src={back} alt="" onClick={dealCard} />
       <h2>Player</h2>
       <div className='interface'>
-        <button>Hit</button>
+        <button onClick={dealCard}>Hit</button>
         <button>Stand</button>
       </div>
       
