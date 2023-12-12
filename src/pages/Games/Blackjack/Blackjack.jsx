@@ -15,7 +15,7 @@ function Blackjack() {
   const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
   const [rules, setRules] = useState(false)
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(true)
 
   const newGame = () =>{
     console.log("New Blackjack game")
