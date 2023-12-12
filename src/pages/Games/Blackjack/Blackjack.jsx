@@ -15,6 +15,7 @@ function Blackjack() {
   const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
   const [rules, setRules] = useState(false)
+  const [disabled, setDisabled] = useState(false)
 
   const newGame = () =>{
     console.log("New Blackjack game")
@@ -31,6 +32,7 @@ function Blackjack() {
     }
 
     setComHand(tempHand)
+    setDisabled(false)
 
     setDeck(new Deck())
   }
@@ -40,14 +42,21 @@ function Blackjack() {
     playHand.forEach(element => {
       handVal+=Number(element.jackValue)
     });
+    if(handVal>21){
+      setDisabled(true)
+    }
     setValue(handVal)
   }
 
   const dealCard = () =>{
     setPlayHand([...playHand, deck.dealACard()])
-    
+
   }
-  
+
+  const comTurn = () =>{
+    console.log("The computer turn")
+  }
+
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
@@ -94,8 +103,8 @@ function Blackjack() {
       <img src={back} alt="" onClick={dealCard} />
       <h2>Player</h2>
       <div className='interface'>
-        <button onClick={dealCard}>Hit</button>
-        <button>Stand</button>
+        <button onClick={dealCard} disabled={disabled}>Hit</button>
+        <button onClick={comTurn} disabled={disabled}>Stand</button>
       </div>
       
       <div className='player'>
