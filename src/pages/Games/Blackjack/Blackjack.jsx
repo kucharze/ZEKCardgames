@@ -98,9 +98,6 @@ function Blackjack() {
         }
       </div>
       
-      <p></p>
-      <h2>Deck</h2>
-      <img src={back} alt="" onClick={dealCard} />
       <h2>Player</h2>
       <div className='interface'>
         <button onClick={dealCard} disabled={disabled}>Hit</button>
