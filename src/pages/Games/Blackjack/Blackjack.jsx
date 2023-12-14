@@ -73,6 +73,7 @@ function Blackjack() {
 
     let newHand = comHand;
     let handVal = tempComVal;
+    console.log(comHand)
     setComValue(tempComVal)
 
     while(handVal<=17){
@@ -80,7 +81,7 @@ function Blackjack() {
       let card = deck.dealACard()
       console.log(card.jackValue)
       newHand.push(card)
-      handVal+=card.jackValue
+      handVal+=Number(card.jackValue)
     }
 
     setComValue(handVal)
@@ -123,10 +124,13 @@ function Blackjack() {
       <div className={styles.dealer}>
         {
           comTurn && 
-          comHand.forEach(e=>{
-            <img className={styles.hand} 
-                    src={require(`../../../Images/${e}.png`)} alt="" />
-          })
+          comHand.map((item,i)=>{
+              if(item){
+                return <img className={styles.hand} key={i} 
+                  src={require(`../../../Images/${item}.png`)} alt="" />
+              }
+              return <p>No value here</p>
+            })
         }
         {
           !comTurn && 
