@@ -10,6 +10,7 @@ function Blackjack() {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [tempComVal, setTempComVal] = useState(0)
+  const [comTurn, setComTurn] = useState(true)
   const [value, setValue] = useState(0)
   const [comValue, setComValue] = useState(0)
   const [deck, setDeck] = useState(new Deck())
@@ -67,7 +68,7 @@ function Blackjack() {
 
   }
 
-  const comTurn = () =>{
+  const playComTurn = () =>{
     setDisabled(true)
     console.log("The computer turn")
 
@@ -134,7 +135,7 @@ function Blackjack() {
       <h2>Player</h2>
       <div className='interface'>
         <button onClick={dealCard} disabled={disabled}>Hit</button>
-        <button onClick={comTurn} disabled={disabled}>Stand</button>
+        <button onClick={playComTurn} disabled={disabled}>Stand</button>
       </div>
       
       <div className='player'>
