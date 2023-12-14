@@ -72,9 +72,10 @@ function Blackjack() {
     console.log("The computer turn")
 
     let newHand = comHand;
+    let handVal = tempComVal;
     setComValue(tempComVal)
 
-    while(newHand<=17){
+    while(handVal<=17){
       // newHand
     }
   }
@@ -119,6 +120,9 @@ function Blackjack() {
                     src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
         }
       </div>
+      {
+        gameOver && <WinnerBoard/>
+      }
       
       <h2>Player</h2>
       <div className='interface'>
