@@ -17,6 +17,7 @@ function Blackjack() {
   const [youWin, setYouWin] = useState(false)
   const [rules, setRules] = useState(false)
   const [disabled, setDisabled] = useState(true)
+  const [blackjack, setBlackjack] = useState(false)
 
   const newGame = () =>{
     console.log("New Blackjack game")
@@ -45,6 +46,10 @@ function Blackjack() {
       handVal+=Number(element.jackValue)
     });
     if(handVal>21){
+      setDisabled(true)
+    }
+    if(handVal==21){
+      setBlackjack(true)
       setDisabled(true)
     }
     setValue(handVal)
