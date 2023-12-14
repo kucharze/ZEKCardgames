@@ -65,7 +65,6 @@ function Blackjack() {
 
   const dealCard = () =>{
     setPlayHand([...playHand, deck.dealACard()])
-
   }
 
   const playComTurn = () =>{
@@ -122,11 +121,24 @@ function Blackjack() {
       <h2>Dealer</h2>
       <h2>Computer hand value: {comValue}</h2>
       <div className={styles.dealer}>
-        <img src={back} alt="" />
         {
-          comHand.length>0 && <img className={styles.hand} 
-                    src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
+          comTurn && 
+          comHand.forEach(e=>{
+            <img className={styles.hand} 
+                    src={require(`../../../Images/${e}.png`)} alt="" />
+          })
         }
+        {
+          !comTurn && 
+          <div>
+            <img src={back} alt="" />
+            {
+              comHand.length>0 && <img className={styles.hand} 
+                        src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
+            }
+          </div>
+        }
+        
       </div>
       {
         gameOver && <WinnerBoard/>
