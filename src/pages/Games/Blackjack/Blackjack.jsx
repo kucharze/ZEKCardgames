@@ -20,6 +20,7 @@ function Blackjack() {
 
   const newGame = () =>{
     console.log("New Blackjack game")
+    setComValue(0)
 
     let tempHand = []
     for(let i=0; i<2; i++){
