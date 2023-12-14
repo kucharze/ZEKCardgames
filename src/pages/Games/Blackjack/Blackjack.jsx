@@ -53,6 +53,7 @@ function Blackjack() {
       handVal+=Number(element.jackValue)
     })
     setTempComVal(handVal)
+    console.log(tempComVal)
   }
 
   const dealCard = () =>{
@@ -61,19 +62,21 @@ function Blackjack() {
   }
 
   const comTurn = () =>{
+    setDisabled(true)
     console.log("The computer turn")
 
     let newHand = comHand;
+    setComValue(tempComVal)
 
-    while(true){
-
+    while(newHand<=17){
+      // newHand
     }
   }
 
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
-  },[])
+  },[deck])
 
   useEffect(()=>{
     findValues()
