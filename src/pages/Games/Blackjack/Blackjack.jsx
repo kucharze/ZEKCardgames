@@ -9,6 +9,7 @@ import { type } from '@testing-library/user-event/dist/type'
 function Blackjack() {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
+  const [tempComVal, setTempComVal] = useState(0)
   const [value, setValue] = useState(0)
   const [comValue, setComValue] = useState(0)
   const [deck, setDeck] = useState(new Deck())
@@ -46,6 +47,12 @@ function Blackjack() {
       setDisabled(true)
     }
     setValue(handVal)
+
+    handVal = 0
+    comHand.forEach(element =>{
+      handVal+=Number(element.jackValue)
+    })
+    setTempComVal(handVal)
   }
 
   const dealCard = () =>{
@@ -55,6 +62,12 @@ function Blackjack() {
 
   const comTurn = () =>{
     console.log("The computer turn")
+
+    let newHand = comHand;
+
+    while(true){
+
+    }
   }
 
   useEffect(()=>{
