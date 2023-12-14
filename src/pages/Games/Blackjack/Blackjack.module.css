@@ -18,6 +18,7 @@ img {
 .dealer {
   border: solid green;
   width: 500px;
+  margin: 20px;
 }
 
 .rules {
