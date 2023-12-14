@@ -77,7 +77,14 @@ function Blackjack() {
 
     while(handVal<=17){
       // newHand
+      let card = deck.dealACard()
+      console.log(card.jackValue)
+      newHand.push(card)
+      handVal+=card.jackValue
     }
+
+    setComValue(handVal)
+    setComHand(newHand)
   }
 
   useEffect(()=>{
