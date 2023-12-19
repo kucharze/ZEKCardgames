@@ -23,7 +23,7 @@ function Blackjack() {
   const newGame = () =>{
     console.log("New Blackjack game")
     setComValue(0)
-
+   
     let tempHand = []
     for(let i=0; i<2; i++){
       tempHand.push(deck.dealACard())
@@ -39,6 +39,8 @@ function Blackjack() {
     setDisabled(false)
 
     setDeck(new Deck())
+    setGameOver(false)
+    setComTurn(false)
   }
 
   const findValues = () =>{
@@ -48,6 +50,8 @@ function Blackjack() {
     });
     if(handVal>21){
       setDisabled(true)
+      setComValue(tempComVal)
+      setComTurn(true)
     }
     if(handVal==21){
       setBlackjack(true)
