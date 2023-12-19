@@ -14,7 +14,7 @@ function Blackjack() {
   const [value, setValue] = useState(0)
   const [comValue, setComValue] = useState(0)
   const [deck, setDeck] = useState(new Deck())
-  const [gameOver, setGameOver] = useState(false)
+  const [gameOver, setGameOver] = useState(true)
   const [youWin, setYouWin] = useState(false)
   const [rules, setRules] = useState(false)
   const [disabled, setDisabled] = useState(true)
@@ -97,6 +97,27 @@ function Blackjack() {
     findValues()
   },[playHand, comHand])
 
+  useEffect(()=>{
+    setGameOver(true)
+    if(comValue>21 || value>21){
+      if(comValue>21){
+        setYouWin(true)
+      }
+      if(value>21){
+        setYouWin(false)
+      }
+    }
+    else{
+      if(comValue>=value){
+          setYouWin(false)
+      }
+      else{
+        setYouWin(true)
+      }
+    }
+    
+  },[comValue])
+
   return (
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
@@ -145,7 +166,7 @@ function Blackjack() {
         
       </div>
       {
-        gameOver && <WinnerBoard/>
+        gameOver && <WinnerBoard winner={youWin}/>
       }
       
       <h2>Player</h2>
