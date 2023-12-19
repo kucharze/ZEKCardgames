@@ -72,6 +72,7 @@ function Blackjack() {
   }
 
   const playComTurn = () =>{
+    setComTurn(true)
     setDisabled(true)
     console.log("The computer turn")
 
@@ -121,6 +122,8 @@ function Blackjack() {
     }
     
   },[comValue])
+
+  
 
   return (
     <div className={styles.Blackjack}>
