@@ -6,11 +6,11 @@ function SnipSnapSnorum() {
   return (
     <div className={styles.SnipSnapSnorum}>
       <h1>Snip Snap Snorum</h1>
-      <h1>Com</h1>
+      <h2>Com</h2>
       <img src={back} alt="" />
-      <h1>Pile</h1>
+      <h2>Pile</h2>
       <img src={back} alt="" />
-      <h1>Player</h1>
+      <h2>Player</h2>
       <img src={back} alt="" />
     </div>
   )

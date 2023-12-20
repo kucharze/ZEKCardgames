@@ -1,3 +1,9 @@
 .SnipSnapSnorum {
+  font-size: 25px;
+}
+.SnipSnapSnorum > h1 {
   background-color: green;
+  color: gold;
+  width: 100%;
+  font-size: 40px;
 }
