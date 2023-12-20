@@ -20,14 +20,12 @@ function SnipSnapSnorum() {
         rules &&
         <div className={styles.rules}>
           <ul>
-            <li>Try to get as close to 21 as possible with your cards</li>
-            <li>Jack, Queen, King are each 10 points</li>
-            <li>An Ace can be either 11 points or 1 point</li>
-            <li>Having 21 with two cards is a blackjack</li>
-            <li>If you go over 21 you lose</li>
-            <li>The dealer will continue to hit until they have at least a value of 17</li>
-            <li>If neither player has gone above 21, the higher valued hand wins</li>
-            <li>The dealer wins all tiebreakers</li>
+            <li>Play cards from your hand</li>
+            <li>The first card can be anything(snip)</li>
+            <li>The second and third card must match the value of the first card(snap, snorum)</li>
+            <li>If you cannot play a card you pass the turn</li>
+            <li>If both players cannot play a card, we will reset and go back to snip status</li>
+            <li>First player to empty their hand wins</li>
           </ul>
         </div>
       }
