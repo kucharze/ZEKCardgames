@@ -10,7 +10,7 @@ function Blackjack() {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [tempComVal, setTempComVal] = useState(0)
-  const [comTurn, setComTurn] = useState(true)
+  const [comTurn, setComTurn] = useState(false)
   const [value, setValue] = useState(0)
   const [comValue, setComValue] = useState(0)
   const [deck, setDeck] = useState(new Deck())
@@ -39,7 +39,7 @@ function Blackjack() {
     setDisabled(false)
 
     setDeck(new Deck())
-    //setGameOver(false)
+    setGameOver(false)
     setComTurn(false)
   }
 
@@ -103,37 +103,39 @@ function Blackjack() {
   },[playHand, comHand])
 
   useEffect(()=>{
-    setGameOver(true)
-    if(comValue>21 || value>21){
-      if(comValue>21){
-        setYouWin(true)
-      }
-      if(value>21){
-        setYouWin(false)
-      }
-    }
-    else{
-      if(comValue>=value){
+    if(comValue>0){
+     setGameOver(true)
+      if(comValue>21 || value>21){
+        if(comValue>21){
+          setYouWin(true)
+        }
+        if(value>21){
           setYouWin(false)
+        }
       }
       else{
-        setYouWin(true)
+        if(comValue>=value){
+            setYouWin(false)
+        }
+        else{
+          setYouWin(true)
+        }
       }
     }
     
   },[comValue])
 
-  useEffect(()=>{
-    if(gameOver==false){
-      newGame()
-    }
-  },[gameOver])
+  // useEffect(()=>{
+  //   if(gameOver==false){
+  //     newGame()
+  //   }
+  // },[gameOver])
 
   return (
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
       <div>
-        <button onClick={()=>{setGameOver(false)}}>New game</button>
+        <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
@@ -178,10 +180,9 @@ function Blackjack() {
       </div>
       <div>
         {
-          gameOver && <WinnerBoard winner={youWin}/>
+          gameOver && <div><WinnerBoard winner={youWin}/></div>
         }
       </div>
-      
       
       <h2>Player</h2>
       <div className='interface'>
