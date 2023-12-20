@@ -14,7 +14,7 @@ function Blackjack() {
   const [value, setValue] = useState(0)
   const [comValue, setComValue] = useState(0)
   const [deck, setDeck] = useState(new Deck())
-  const [gameOver, setGameOver] = useState(true)
+  const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
   const [rules, setRules] = useState(false)
   const [disabled, setDisabled] = useState(true)
@@ -39,7 +39,7 @@ function Blackjack() {
     setDisabled(false)
 
     setDeck(new Deck())
-    setGameOver(false)
+    //setGameOver(false)
     setComTurn(false)
   }
 
@@ -123,13 +123,17 @@ function Blackjack() {
     
   },[comValue])
 
-  
+  useEffect(()=>{
+    if(gameOver==false){
+      newGame()
+    }
+  },[gameOver])
 
   return (
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
       <div>
-        <button onClick={newGame}>New game</button>
+        <button onClick={()=>{setGameOver(false)}}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
@@ -172,9 +176,12 @@ function Blackjack() {
         }
         
       </div>
-      {
-        gameOver && <WinnerBoard winner={youWin}/>
-      }
+      <div>
+        {
+          gameOver && <WinnerBoard winner={youWin}/>
+        }
+      </div>
+      
       
       <h2>Player</h2>
       <div className='interface'>
