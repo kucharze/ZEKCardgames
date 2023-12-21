@@ -67,7 +67,7 @@ function Blackjack() {
       handVal+=Number(element.jackValue)
     })
     setTempComVal(handVal)
-    console.log(tempComVal)
+    //console.log(tempComVal)
   }
 
   const dealCard = () =>{
@@ -81,13 +81,13 @@ function Blackjack() {
 
     let newHand = comHand;
     let handVal = tempComVal;
-    console.log(comHand)
+    //console.log(comHand)
     setComValue(tempComVal)
 
     while(handVal<=17){
       // newHand
       let card = deck.dealACard()
-      console.log(card.jackValue)
+      //console.log(card.jackValue)
       newHand.push(card)
       handVal+=Number(card.jackValue)
     }
