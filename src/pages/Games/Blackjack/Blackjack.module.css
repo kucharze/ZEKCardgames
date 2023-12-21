@@ -14,6 +14,13 @@ img {
   width: 100%;
   font-size: 40px;
 }
+.blackjack {
+  font-size: 30px;
+  background-color: blue;
+  color: white;
+  width: 90%;
+  margin: 20px;
+}
 
 .dealer {
   border: solid green;

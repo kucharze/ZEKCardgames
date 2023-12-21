@@ -180,11 +180,10 @@ function Blackjack() {
           gameOver && <div><WinnerBoard winner={youWin}/></div>
         }
       </div>
-      <div>
+      
         {
-          blackjack && <h2>BLACKJACK</h2>
+          blackjack && <div className={styles.blackjack}><h2>BLACKJACK</h2></div>
         }
-      </div>
       
       <h2>Player</h2>
       <div className='interface'>
