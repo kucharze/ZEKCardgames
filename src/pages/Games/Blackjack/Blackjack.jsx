@@ -57,6 +57,8 @@ function Blackjack() {
       setDisabled(true)
       setGameOver(true)
       setYouWin(true)
+      setComTurn(true)
+      setComValue(tempComVal)
     }
     setValue(handVal)
 
