@@ -2,9 +2,7 @@ import React,{useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import styles from './Blackjack.module.css'
 import Deck from '../../../gamecomponents/Deck'
-import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
-import { type } from '@testing-library/user-event/dist/type'
 
 function Blackjack() {
   const [playHand, setPlayHand] = useState([])
@@ -41,6 +39,7 @@ function Blackjack() {
     setDeck(new Deck())
     setGameOver(false)
     setComTurn(false)
+    setBlackjack(false)
   }
 
   const findValues = () =>{
@@ -53,9 +52,11 @@ function Blackjack() {
       setComValue(tempComVal)
       setComTurn(true)
     }
-    if(handVal==21){
+    if(handVal==21 && playHand.length==2){
       setBlackjack(true)
       setDisabled(true)
+      setGameOver(true)
+      setYouWin(true)
     }
     setValue(handVal)
 
@@ -125,12 +126,6 @@ function Blackjack() {
     
   },[comValue])
 
-  // useEffect(()=>{
-  //   if(gameOver==false){
-  //     newGame()
-  //   }
-  // },[gameOver])
-
   return (
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
@@ -181,6 +176,11 @@ function Blackjack() {
       <div>
         {
           gameOver && <div><WinnerBoard winner={youWin}/></div>
+        }
+      </div>
+      <div>
+        {
+          blackjack && <h2>BLACKJACK</h2>
         }
       </div>
       
