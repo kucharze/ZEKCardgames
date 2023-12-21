@@ -7,10 +7,16 @@ function SnipSnapSnorum() {
   const [rules, setRules] = useState(false)
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
+  const [deck, setDeck] = useState(new Deck())
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
   }
+
+  useEffect(()=>{
+    deck.shuffle()
+    deck.shuffle()
+  },[deck])
 
   return (
     <div className={styles.SnipSnapSnorum}>
