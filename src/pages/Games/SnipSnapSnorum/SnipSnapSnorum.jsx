@@ -5,6 +5,8 @@ import Deck from '../../../gamecomponents/Deck'
 
 function SnipSnapSnorum() {
   const [rules, setRules] = useState(false)
+  const [comHand, setComHand] = useState([])
+  const [playHand, setPlayHand] = useState([])
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
