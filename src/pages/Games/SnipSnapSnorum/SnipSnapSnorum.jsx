@@ -11,6 +11,16 @@ function SnipSnapSnorum() {
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
+
+    let tempPlayHand = []
+
+    let tempComHand = []
+
+    while(!deck.isEmpty()){
+      tempPlayHand.push(deck.dealACard())
+
+      tempComHand.push(deck.dealACard())
+    }
   }
 
   useEffect(()=>{
