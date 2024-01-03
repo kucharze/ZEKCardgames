@@ -20,7 +20,13 @@ function SnipSnapSnorum() {
       tempPlayHand.push(deck.dealACard())
 
       tempComHand.push(deck.dealACard())
+      console.log("Load")
     }
+
+    console.log("Done")
+    setComHand(tempComHand)
+
+    setPlayHand(tempPlayHand)
   }
 
   useEffect(()=>{
@@ -48,12 +54,27 @@ function SnipSnapSnorum() {
           </ul>
         </div>
       }
-      <h2>Com</h2>
-      <img src={back} alt="" />
+      
+      <div className={styles.com}>
+        <h2>Com</h2>
+        {
+          comHand.map((item,i)=>{
+            return <img key={i} className={styles.card} src={require(`../../../Images/${item}.png`)}/>
+          })
+        }
+      </div>
+      
       <h2>Pile</h2>
       <img src={back} alt="" />
-      <h2>Player</h2>
-      <img src={back} alt="" />
+      <div className={styles.player}>
+        <h2>Player</h2>
+          {
+            playHand.map((item,i)=>{
+              return <img key={i} className={styles.card} src={require(`../../../Images/${item}.png`)}/>
+            })
+          }
+      </div>
+      
     </div>
   )
 }
