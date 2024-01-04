@@ -32,6 +32,14 @@ function SnipSnapSnorum() {
     setPlayHand(tempPlayHand)
   }
 
+  const playCard = (card) =>{
+    console.log("Playing a card " + card)
+  }
+
+  const comTurn = () =>{
+    console.log("Computer turn")
+  }
+
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
