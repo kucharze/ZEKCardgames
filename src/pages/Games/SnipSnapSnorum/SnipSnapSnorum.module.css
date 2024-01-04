@@ -20,6 +20,7 @@
 }
 
 .playSpace {
+  margin: 15px;
   width: 90%;
   border: solid black;
 }
