@@ -8,6 +8,7 @@ function SnipSnapSnorum() {
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
   const [deck, setDeck] = useState(new Deck())
+  const [pile, setPile] = useState(null)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
