@@ -60,7 +60,7 @@ function SnipSnapSnorum() {
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
-            return <img key={i} className={styles.card} src={require(`../../../Images/${item}.png`)}/>
+            return <img key={i} className={styles.card} src={back}/>
           })
         }
       </div>
