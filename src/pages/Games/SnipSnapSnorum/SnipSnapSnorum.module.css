@@ -19,15 +19,13 @@
   font-size: 20px;
 }
 .com {
-  background-color: blue;
+  border: solid black;
   width: 80%;
 }
 
 .player {
-  background-color: blue;
   width: 85%;
   border: solid black;
-  color: white;
 }
 
 .card {
