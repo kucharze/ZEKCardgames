@@ -56,7 +56,7 @@ function SnipSnapSnorum() {
         </div>
       }
       
-      <div className={styles.com}>
+      <div className={styles.playSpace}>
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
@@ -67,7 +67,7 @@ function SnipSnapSnorum() {
       
       <h2>Pile</h2>
       <img src={back} alt="" />
-      <div className={styles.player}>
+      <div className={styles.playSpace}>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{

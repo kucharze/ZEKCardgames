@@ -18,16 +18,12 @@
   padding: 10px;
   font-size: 20px;
 }
-.com {
-  border: solid black;
-  width: 80%;
-}
 
-.player {
+.playSpace {
   width: 85%;
   border: solid black;
 }
 
 .card {
-  height: 130px;
+  height: 120px;
 }
