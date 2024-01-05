@@ -112,6 +112,7 @@ function SnipSnapSnorum() {
         pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       <div className={styles.playSpace}>
+        <button onClick={comTurn}>Pass the turn</button>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
