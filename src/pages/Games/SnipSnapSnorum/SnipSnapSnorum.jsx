@@ -35,9 +35,13 @@ function SnipSnapSnorum() {
   const removeCard = (card) => {
     let tempHand = playHand;
 
-
+    let i = 0
+    let spot = 0
     tempHand.forEach(element => {
-      
+      if(element==card){
+        spot = i
+      }
+      i++
     });
   }
 
