@@ -33,7 +33,9 @@ function SnipSnapSnorum() {
   }
 
   const playCard = (card) =>{
-    console.log("Playing a card " + card)
+    console.log("Playing a card " + card.value)
+    setCurCard(card)
+    setPile(card)
   }
 
   const comTurn = () =>{
@@ -76,12 +78,15 @@ function SnipSnapSnorum() {
       </div>
       
       <h2>Pile</h2>
-      <img src={back} alt="" />
+      {
+        pile && <img src={require(`../../../Images/${pile}.png`)}/>
+      }
       <div className={styles.playSpace}>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
-              return <img key={i} className={styles.card} src={require(`../../../Images/${item}.png`)}/>
+              return <img key={i} className={styles.card} src={require(`../../../Images/${item}.png`)}
+              onClick={()=>{playCard(item)}}/>
             })
           }
       </div>
