@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  /* background-color: beige; */
-  background-color: black;
+  background-color: beige;
+  /* background-color: black; */
 }
 
 .logo {
@@ -87,23 +87,14 @@
 }
 
 button {
+  color: var(--bg);
+  font-weight: 600;
+  color: yellow;
   font-size: 20px;
   height: 70px;
   width: 200px;
-  /* background-color: green; */
-  /* color: yellow; */
-}
-
-button {
-  color: var(--bg);
-  font-weight: 600;
   /*     background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
-  background-image: linear-gradient(
-    315deg,
-    #ffc4ec -10%,
-    #efdbfd 50%,
-    #ffedd6 110%
-  );
+  background-image: linear-gradient(315deg, green -10%, green 50%, green 110%);
   padding: 0.8em 1.4em;
   position: relative;
   isolation: isolate;
@@ -198,25 +189,4 @@ button .text {
 button:hover .text,
 button.active .text {
   animation: text 0.66s ease-in 1 both;
-}
-
-body,
-html {
-  display: flex;
-  height: 100vh;
-  padding: 0;
-  /*     background: radial-gradient(circle at 50% 0%, #9588c7 15%, #c79ed5 75%); */
-  background-image: radial-gradient(
-    circle at 50% 0%,
-    rgb(67, 54, 74) 16.4%,
-    rgb(47, 48, 67) 68.2%,
-    rgb(27, 23, 36) 99.1%
-  );
-}
-main#app {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
