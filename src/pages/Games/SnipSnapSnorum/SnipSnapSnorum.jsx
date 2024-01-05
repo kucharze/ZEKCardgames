@@ -33,9 +33,22 @@ function SnipSnapSnorum() {
   }
 
   const playCard = (card) =>{
-    console.log("Playing a card " + card.value)
-    setCurCard(card)
-    setPile(card)
+    if(condition == "Snip"){
+      
+      console.log("Playing a card Snip " + card.value)
+      setCurCard(card)
+      setPile(card)
+
+      setCondition("Snap")
+    }
+    else if(condition == "Snap"){
+      console.log("Playing a card Snap " + card.value)
+    }
+    else{
+      console.log("Playing a card Snorum " + card.value)
+    }
+    
+    
   }
 
   const comTurn = () =>{
