@@ -9,14 +9,14 @@ function SnipSnapSnorum() {
   const [playHand, setPlayHand] = useState([])
   const [deck, setDeck] = useState(new Deck())
   const [pile, setPile] = useState(null)
-  const [condition, setCondition] = useState("Snip")
+  const [condition, setCondition] = useState(null)
   const [curCard, setCurCard] = useState(null)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
+    setCondition("Snip")
 
     let tempPlayHand = []
-
     let tempComHand = []
 
     while(!deck.isEmpty()){
@@ -47,7 +47,6 @@ function SnipSnapSnorum() {
     else{
       console.log("Playing a card Snorum " + card.value)
     }
-    
     
   }
 
@@ -90,7 +89,7 @@ function SnipSnapSnorum() {
         }
       </div>
       
-      <h2>Pile</h2>
+      <h1>{condition}</h1>
       {
         pile && <img src={require(`../../../Images/${pile}.png`)}/>
       }
