@@ -62,7 +62,7 @@ function SnipSnapSnorum() {
         setCurCard(card)
         setPile(card)
 
-        setCondition("Snorum")
+        setCondition("Snip")
       }
     }
     
