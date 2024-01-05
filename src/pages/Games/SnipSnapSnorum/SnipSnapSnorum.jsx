@@ -32,6 +32,15 @@ function SnipSnapSnorum() {
     setPlayHand(tempPlayHand)
   }
 
+  const removeCard = (card) => {
+    let tempHand = playHand;
+
+
+    tempHand.forEach(element => {
+      
+    });
+  }
+
   const playCard = (card) =>{
     if(condition === "Snip"){
       
