@@ -43,14 +43,26 @@ function SnipSnapSnorum() {
     }
     else if(condition === "Snap"){
       console.log("Playing a card Snap " + card.value)
-      if(card.value !== curCard){
+      if(card.value !== curCard.value){
         alert("You need to play a version of the card on the pile")
+      }
+      else{
+        setCurCard(card)
+        setPile(card)
+
+        setCondition("Snorum")
       }
     }
     else{
       console.log("Playing a card Snorum " + card.value)
-      if(card.value !== curCard){
+      if(card.value !== curCard.value){
         alert("You need to play a version of the card on the pile")
+      }
+      else{
+        setCurCard(card)
+        setPile(card)
+
+        setCondition("Snorum")
       }
     }
     
