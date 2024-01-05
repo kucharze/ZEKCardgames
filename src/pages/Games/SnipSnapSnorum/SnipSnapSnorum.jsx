@@ -38,7 +38,7 @@ function SnipSnapSnorum() {
     let i = 0
     let spot = 0
     tempHand.forEach(element => {
-      if(element==card){
+      if(element===card){
         spot = i
       }
       i++
