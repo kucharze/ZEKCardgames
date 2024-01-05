@@ -33,7 +33,7 @@ function SnipSnapSnorum() {
   }
 
   const playCard = (card) =>{
-    if(condition == "Snip"){
+    if(condition === "Snip"){
       
       console.log("Playing a card Snip " + card.value)
       setCurCard(card)
@@ -41,15 +41,15 @@ function SnipSnapSnorum() {
 
       setCondition("Snap")
     }
-    else if(condition == "Snap"){
+    else if(condition === "Snap"){
       console.log("Playing a card Snap " + card.value)
-      if(card.value != curCard){
+      if(card.value !== curCard){
         alert("You need to play a version of the card on the pile")
       }
     }
     else{
       console.log("Playing a card Snorum " + card.value)
-      if(card.value != curCard){
+      if(card.value !== curCard){
         alert("You need to play a version of the card on the pile")
       }
     }
@@ -90,20 +90,20 @@ function SnipSnapSnorum() {
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
-            return <img key={i} className={styles.card} src={back}/>
+            return <img key={i} alt={item} className={styles.card} src={back}/>
           })
         }
       </div>
       
       <h1>{condition}</h1>
       {
-        pile && <img src={require(`../../../Images/${pile}.png`)}/>
+        pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       <div className={styles.playSpace}>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
-              return <img key={i} className={styles.card} src={require(`../../../Images/${item}.png`)}
+              return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
               onClick={()=>{playCard(item)}}/>
             })
           }
