@@ -8,7 +8,7 @@ function SnipSnapSnorum() {
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
   const [deck, setDeck] = useState(new Deck())
-  const [pile, setPile] = useState(null)
+  const [pile, setPile] = useState("back")
   const [condition, setCondition] = useState(null)
   const [curCard, setCurCard] = useState(null)
 
@@ -35,23 +35,26 @@ function SnipSnapSnorum() {
     d.shuffle()
     d.shuffle()
     setDeck(d)
+    setPile("back")
   }
 
   const removeCard = (card) => {
     let tempHand = playHand;
     console.log("Trying to remove a card")
 
-    let i = 0
     let spot = -1
-    tempHand.forEach(element => {
-      if(element===card){
-        spot = i
-      }
-      i++
-    });
 
+    for(let i=0; i<tempHand.length; i++){
+      if(tempHand[i]===card){
+        console.log("FOund our target")
+        spot = i
+        break
+      }
+    }
+
+    console.log(spot)
     if(spot!==-1){
-      tempHand.splice(i,1)
+      tempHand.splice(spot,1)
     }
 
     setPlayHand(tempHand)
