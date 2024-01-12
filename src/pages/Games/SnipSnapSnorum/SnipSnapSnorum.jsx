@@ -30,19 +30,27 @@ function SnipSnapSnorum() {
     setComHand(tempComHand)
 
     setPlayHand(tempPlayHand)
+    
   }
 
   const removeCard = (card) => {
     let tempHand = playHand;
+    console.log("Trying to remove a card")
 
     let i = 0
-    let spot = 0
+    let spot = -1
     tempHand.forEach(element => {
       if(element===card){
         spot = i
       }
       i++
     });
+
+    if(spot!==-1){
+      tempHand.splice(i,1)
+    }
+
+    setPlayHand(tempHand)
   }
 
   const removeComCard = (card) =>{
@@ -55,7 +63,7 @@ function SnipSnapSnorum() {
       console.log("Playing a card Snip " + card.value)
       setCurCard(card)
       setPile(card)
-
+      removeCard(card)
       setCondition("Snap")
     }
     else if(condition === "Snap"){
@@ -66,7 +74,7 @@ function SnipSnapSnorum() {
       else{
         setCurCard(card)
         setPile(card)
-
+        removeCard(card)
         setCondition("Snorum")
       }
     }
@@ -78,7 +86,7 @@ function SnipSnapSnorum() {
       else{
         setCurCard(card)
         setPile(card)
-
+        removeCard(card)
         setCondition("Snip")
       }
     }
