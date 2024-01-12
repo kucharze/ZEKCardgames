@@ -45,6 +45,10 @@ function SnipSnapSnorum() {
     });
   }
 
+  const removeComCard = (card) =>{
+    console.log("ComCard:",card)
+  }
+
   const playCard = (card) =>{
     if(condition === "Snip"){
       
