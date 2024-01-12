@@ -5,7 +5,7 @@ import styles from './Matching.module.css'
 function Matching() {
   return (
     <div className={styles.Matching}>
-      <h2>Matching</h2>
+      <h1>Matching</h1>
       <div className={styles.matchzone}>
         <img src={back} alt="" />
         <img src={back} alt="" />

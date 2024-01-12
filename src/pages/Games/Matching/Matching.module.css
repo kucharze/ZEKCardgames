@@ -1,11 +1,18 @@
 .matchzone {
-  width: 900px;
+  width: 1500px;
   border: solid black;
 }
 
+.Matching > h1 {
+  background-color: green;
+  color: gold;
+  width: 100%;
+  font-size: 40px;
+}
+
 .matchzone > img {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
 }
 
 .Matching {
