@@ -31,6 +31,10 @@ function SnipSnapSnorum() {
 
     setPlayHand(tempPlayHand)
     
+    let d = new Deck()
+    d.shuffle()
+    d.shuffle()
+    setDeck(d)
   }
 
   const removeCard = (card) => {
