@@ -3,6 +3,8 @@ import back from '../../../Images/BACKCARD.JPG'
 import styles from './Matching.module.css'
 
 function Matching() {
+  const [matchList, setMatchList] = useState([])//List of elements that will get matched
+
   return (
     <div className={styles.Matching}>
       <h1>Matching</h1>
