@@ -67,18 +67,22 @@ function SnipSnapSnorum() {
   const comTurn = () =>{
     console.log("Computer turn")
 
-    if(condition === "Snip"){ 
-      console.log("Playing a card Snip " + card.value)
-     
-    }
-    else if(condition === "Snap"){
-      console.log("Playing a card Snap " + card.value)
+    while(true){
+      if(condition === "Snip"){ 
+        // console.log("Playing a card Snip " + card.value)
       
+      }
+      else if(condition === "Snap"){
+        // console.log("Playing a card Snap " + card.value)
+        
+      }
+      else{
+        // console.log("Playing a card Snorum " + card.value)
+        
     }
-    else{
-      console.log("Playing a card Snorum " + card.value)
-      
     }
+
+    
 
   }
 
