@@ -11,6 +11,7 @@ function SnipSnapSnorum() {
   const [pile, setPile] = useState("back")
   const [condition, setCondition] = useState(null)
   const [curCard, setCurCard] = useState(null)
+  const [disabled, setDisabled] = useState(false)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -162,12 +163,17 @@ function SnipSnapSnorum() {
         pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       <div className={styles.playSpace}>
-        <button onClick={comTurn}>Pass the turn</button>
+        <button onClick={comTurn} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
               return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
-              onClick={()=>{playCard(item)}}/>
+              onClick={()=>{
+                if(!disabled){
+                  playCard(item)
+                }
+                
+              }}/>
             })
           }
       </div>
