@@ -128,6 +128,12 @@ function SnipSnapSnorum() {
     deck.shuffle()
   },[deck])
 
+  useEffect(()=>{
+    if(disabled){
+      comTurn()
+    }
+  },[disabled])
+
   return (
     <div className={styles.SnipSnapSnorum}>
       <h1>Snip Snap Snorum</h1>
@@ -163,7 +169,7 @@ function SnipSnapSnorum() {
         pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       <div className={styles.playSpace}>
-        <button onClick={comTurn} disabled={disabled}>Pass the turn</button>
+        <button onClick={()=>{setDisabled(true)}} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
