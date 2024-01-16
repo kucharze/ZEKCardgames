@@ -3,6 +3,12 @@
   background-color: beige;
   /* background-color: black; */
 }
+h1 {
+  background-color: green;
+  color: gold;
+  width: 100%;
+  font-size: 40px;
+}
 
 .logo {
   width: 70%;

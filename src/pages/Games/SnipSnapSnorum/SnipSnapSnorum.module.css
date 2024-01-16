@@ -4,12 +4,7 @@
   flex-direction: column;
   align-items: center;
 }
-.SnipSnapSnorum > h1 {
-  background-color: green;
-  color: gold;
-  width: 100%;
-  font-size: 40px;
-}
+
 .rules {
   background-color: gray;
   border: solid green;
