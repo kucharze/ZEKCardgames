@@ -64,6 +64,24 @@ function SnipSnapSnorum() {
     console.log("ComCard:",card)
   }
 
+  const comTurn = () =>{
+    console.log("Computer turn")
+
+    if(condition === "Snip"){ 
+      console.log("Playing a card Snip " + card.value)
+     
+    }
+    else if(condition === "Snap"){
+      console.log("Playing a card Snap " + card.value)
+      
+    }
+    else{
+      console.log("Playing a card Snorum " + card.value)
+      
+    }
+
+  }
+
   const playCard = (card) =>{
     if(condition === "Snip"){
       
@@ -98,10 +116,6 @@ function SnipSnapSnorum() {
       }
     }
     
-  }
-
-  const comTurn = () =>{
-    console.log("Computer turn")
   }
 
   useEffect(()=>{
