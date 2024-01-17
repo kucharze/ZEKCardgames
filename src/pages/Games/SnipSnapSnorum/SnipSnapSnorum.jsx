@@ -8,7 +8,7 @@ function SnipSnapSnorum() {
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
   const [deck, setDeck] = useState(new Deck())
-  const [pile, setPile] = useState("back")
+  const [pile, setPile] = useState("BACKCARD.JPG")
   const [condition, setCondition] = useState(null)
   const [curCard, setCurCard] = useState(null)
   const [disabled, setDisabled] = useState(false)
@@ -67,24 +67,32 @@ function SnipSnapSnorum() {
 
   const comTurn = () =>{
     console.log("Computer turn")
+    let tempHand = comHand
+
+    let cond = condition
+    let pileCard = pile
 
     while(true){
-      if(condition === "Snip"){ 
+      if(cond === "Snip"){ 
         // console.log("Playing a card Snip " + card.value)
-      
+        pileCard = tempHand[0]
+        tempHand.splice(0,1)
+        cond = "Snap"
       }
-      else if(condition === "Snap"){
+      else if(cond === "Snap"){
         // console.log("Playing a card Snap " + card.value)
+        break
         
       }
       else{
         // console.log("Playing a card Snorum " + card.value)
         
+        break
+      }
     }
-    }
-
-    
-
+    setPile(pileCard)
+    setCondition(cond)
+    setComHand(tempHand)
   }
 
   const playCard = (card) =>{
@@ -130,7 +138,8 @@ function SnipSnapSnorum() {
 
   useEffect(()=>{
     if(disabled){
-      comTurn()
+      console.log("Com turn")
+      //comTurn()
     }
   },[disabled])
 
@@ -166,7 +175,7 @@ function SnipSnapSnorum() {
       
       <h1>{condition}</h1>
       {
-        pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
+        pile && <img alt={pile} src={require(`../../../Images/${pile}`)}/>
       }
       <div className={styles.playSpace}>
         <button onClick={()=>{setDisabled(true)}} disabled={disabled}>Pass the turn</button>
