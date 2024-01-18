@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './CrazyEights.module.css'
 import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
@@ -71,7 +71,7 @@ function CrazyEights() {
         setValue(card.value)
         setPile(card)
         setComTakeTurn(true)
-        if(newHand.length==0){
+        if(newHand.length===0){
           setGameOver(true)
           setYouWin(true)
         }
@@ -113,7 +113,7 @@ function CrazyEights() {
       setSuit(foundSuit)
       setValue(foundValue)
       setComTakeTurn(false)
-      if(newHand.length==0){
+      if(newHand.length===0){
         setGameOver(true)
         setYouWin(false)
       }

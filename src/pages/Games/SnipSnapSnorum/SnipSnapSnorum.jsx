@@ -84,7 +84,7 @@ function SnipSnapSnorum() {
         let tempcard = null
         let tempSpot = -1
         for(let i=0; i<tempHand.length; i++){
-          if(tempHand[i].value==pileCard.value){
+          if(tempHand[i].value===pileCard.value){
             tempcard = tempHand[i]
             tempSpot=i
             break
@@ -105,7 +105,7 @@ function SnipSnapSnorum() {
         let tempcard = null
         let tempSpot = -1
         for(let i=0; i<tempHand.length; i++){
-          if(tempHand[i].value==pileCard.value){
+          if(tempHand[i].value===pileCard.value){
             tempcard = tempHand[i]
             tempSpot=i
             break
