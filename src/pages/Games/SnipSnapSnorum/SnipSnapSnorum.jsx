@@ -177,7 +177,7 @@ function SnipSnapSnorum() {
   return (
     <div className={styles.SnipSnapSnorum}>
       <h1>Snip Snap Snorum</h1>
-            <div>
+      <div>
         <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
