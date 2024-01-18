@@ -5,11 +5,11 @@ function War() {
   return (
     <div>
       <h1>War</h1>
-      <h1>Com</h1>
+      <h2>Com</h2>
       <img src={back} alt="" />
-      <h1>Pile</h1>
+      <h2>Pile</h2>
       <img src={back} alt="" />
-      <h1>Player</h1>
+      <h2>Player</h2>
       <img src={back} alt="" />
     </div>
   )

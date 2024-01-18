@@ -5,9 +5,9 @@ function GoFish() {
   return (
     <div>
       <h1>Go Fish</h1>
-      <h1>Com</h1>
+      <h2>Com</h2>
       <img src={back} alt="" />
-      <h1>Player</h1>
+      <h2>Player</h2>
       <img src={back} alt="" />
     </div>
   )
