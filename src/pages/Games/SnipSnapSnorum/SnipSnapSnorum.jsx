@@ -81,13 +81,44 @@ function SnipSnapSnorum() {
       }
       else if(cond === "Snap"){
         // console.log("Playing a card Snap " + card.value)
-        break
+        let tempcard = null
+        let tempSpot = -1
+        for(let i=0; i<tempHand.length; i++){
+          if(tempHand[i].value==pileCard.value){
+            tempcard = tempHand[i]
+            tempSpot=i
+            break
+          }
+        }
+
+        if(tempcard==null){
+          break
+        }
+        else{
+          pileCard=tempcard
+          tempHand.splice(tempSpot,1)
+        }
         
       }
       else{
         // console.log("Playing a card Snorum " + card.value)
-        
-        break
+        let tempcard = null
+        let tempSpot = -1
+        for(let i=0; i<tempHand.length; i++){
+          if(tempHand[i].value==pileCard.value){
+            tempcard = tempHand[i]
+            tempSpot=i
+            break
+          }
+        }
+
+        if(tempcard==null){
+          break
+        }
+        else{
+          pileCard=tempcard
+          tempHand.splice(tempSpot,1)
+        }
       }
     }
     setPile(pileCard)
