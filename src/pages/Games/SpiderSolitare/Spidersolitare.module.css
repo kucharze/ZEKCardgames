@@ -5,6 +5,24 @@
   align-items: center;
 }
 
+.playmat {
+  width: 1020px;
+  border: solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.playmat img {
+  width: 150px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hand {
   width: 140px;
   margin: 10px;
