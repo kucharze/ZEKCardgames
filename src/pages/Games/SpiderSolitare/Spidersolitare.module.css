@@ -1,0 +1,23 @@
+.SpiderSolitare {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hand {
+  width: 140px;
+  margin: 10px;
+}
+
+.rules {
+  background-color: gray;
+  border: solid green;
+  width: 800px;
+  color: white;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+}
