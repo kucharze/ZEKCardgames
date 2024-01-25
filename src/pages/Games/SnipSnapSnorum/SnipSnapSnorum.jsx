@@ -11,7 +11,7 @@ function SnipSnapSnorum() {
   const [pile, setPile] = useState("BACKCARD.JPG")
   const [condition, setCondition] = useState(null)
   const [curCard, setCurCard] = useState(null)
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(true)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -36,7 +36,8 @@ function SnipSnapSnorum() {
     d.shuffle()
     d.shuffle()
     setDeck(d)
-    setPile("back")
+    setPile("BACKCARD.JPG")
+    setDisabled(false)
   }
 
   const removeCard = (card) => {
