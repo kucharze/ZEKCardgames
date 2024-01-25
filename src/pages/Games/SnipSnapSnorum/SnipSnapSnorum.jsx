@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import styles from './SnipSnapSnorum.module.css'
-import back from '../../../Images/BACKCARD.JPG'
+import back from '../../../Images/cardback.png'
 import Deck from '../../../gamecomponents/Deck'
 
 function SnipSnapSnorum() {
@@ -8,10 +8,11 @@ function SnipSnapSnorum() {
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
   const [deck, setDeck] = useState(new Deck())
-  const [pile, setPile] = useState("BACKCARD.JPG")
+  const [pile, setPile] = useState("cardback")
   const [condition, setCondition] = useState(null)
   const [curCard, setCurCard] = useState(null)
   const [disabled, setDisabled] = useState(true)
+  const [comCanPlay, setComCanPlay] = useState(false)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -36,7 +37,7 @@ function SnipSnapSnorum() {
     d.shuffle()
     d.shuffle()
     setDeck(d)
-    setPile("BACKCARD.JPG")
+    setPile("cardback")
     setDisabled(false)
   }
 
@@ -169,7 +170,7 @@ function SnipSnapSnorum() {
   },[deck])
 
   useEffect(()=>{
-    if(disabled){
+    if(comCanPlay){
       console.log("Com turn")
       //comTurn()
     }
@@ -207,7 +208,7 @@ function SnipSnapSnorum() {
       
       <h1>{condition}</h1>
       {
-        pile && <img alt={pile} src={require(`../../../Images/${pile}`)}/>
+        pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       <div className={styles.playSpace}>
         <button onClick={()=>{setDisabled(true)}} disabled={disabled}>Pass the turn</button>
