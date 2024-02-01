@@ -43,19 +43,19 @@ function SnipSnapSnorum() {
 
   const removeCard = (card) => {
     let tempHand = playHand;
-    console.log("Trying to remove a card")
+    // console.log("Trying to remove a card")
 
     let spot = -1
 
     for(let i=0; i<tempHand.length; i++){
       if(tempHand[i]===card){
-        console.log("FOund our target")
+        // console.log("FOund our target")
         spot = i
         break
       }
     }
 
-    console.log(spot)
+    // console.log(spot)
     if(spot!==-1){
       tempHand.splice(spot,1)
     }
@@ -75,6 +75,7 @@ function SnipSnapSnorum() {
     let pileCard = pile
 
     while(true){
+      console.log("Turn")
       if(cond === "Snip"){ 
         // console.log("Playing a card Snip " + card.value)
         pileCard = tempHand[0]
@@ -211,7 +212,7 @@ function SnipSnapSnorum() {
         pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       <div className={styles.playSpace}>
-        <button onClick={()=>{setDisabled(true)}} disabled={disabled}>Pass the turn</button>
+        <button onClick={()=>{setDisabled(true); setComCanPlay(true)}} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
