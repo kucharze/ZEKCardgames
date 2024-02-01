@@ -18,15 +18,16 @@
   margin: 20px;
   width: 90%;
   border: solid black;
-  background-image: url("../../../Images/gr-download.png");
+  background-color: green;
+  /* background-image: url("../../../Images/gr-download.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   padding: 20px;
 }
 
 .card {
   height: 130px;
-  padding: 15px;
+  padding: 10px;
 }
