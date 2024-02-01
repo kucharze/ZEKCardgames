@@ -15,7 +15,7 @@
 }
 
 .playSpace {
-  margin: 35px;
+  margin: 20px;
   width: 90%;
   border: solid black;
   background-image: url("../../../Images/gr-download.png");
@@ -23,8 +23,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
+  padding: 20px;
 }
 
 .card {
-  height: 120px;
+  height: 130px;
+  padding: 15px;
 }
