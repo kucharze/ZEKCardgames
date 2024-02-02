@@ -124,22 +124,24 @@ function SnipSnapSnorum() {
         }
       }
     }
+    console.log("Done")
     setPile(pileCard)
     setCondition(cond)
     setComHand(tempHand)
+    setDisabled(false)
   }
 
   const playCard = (card) =>{
     if(condition === "Snip"){
       
-      console.log("Playing a card Snip " + card.value)
+      // console.log("Playing a card Snip " + card.value)
       setCurCard(card)
       setPile(card)
       removeCard(card)
       setCondition("Snap")
     }
     else if(condition === "Snap"){
-      console.log("Playing a card Snap " + card.value)
+      // console.log("Playing a card Snap " + card.value)
       if(card.value !== curCard.value){
         alert("You need to play a version of the card on the pile")
       }
@@ -151,7 +153,7 @@ function SnipSnapSnorum() {
       }
     }
     else{
-      console.log("Playing a card Snorum " + card.value)
+      // console.log("Playing a card S  norum " + card.value)
       if(card.value !== curCard.value){
         alert("You need to play a version of the card on the pile")
       }
@@ -173,7 +175,7 @@ function SnipSnapSnorum() {
   useEffect(()=>{
     if(comCanPlay){
       console.log("Com turn")
-      //comTurn()
+      comTurn()
     }
   },[disabled])
 
