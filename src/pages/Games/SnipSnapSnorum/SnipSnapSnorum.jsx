@@ -63,9 +63,9 @@ function SnipSnapSnorum() {
     setPlayHand(tempHand)
   }
 
-  const removeComCard = (card) =>{
-    console.log("ComCard:",card)
-  }
+  // const removeComCard = (card) =>{
+  //   console.log("ComCard:",card)
+  // }
 
   const comTurn = () =>{
     console.log("Computer turn")
@@ -177,7 +177,7 @@ function SnipSnapSnorum() {
       console.log("Com turn")
       comTurn()
     }
-  },[disabled])
+  },[disabled,comCanPlay])
 
   return (
     <div className={styles.SnipSnapSnorum}>
