@@ -10,14 +10,14 @@ function War() {
     }
 
   return (
-    <div>
+    <div className={styles.War}>
       <div>
         <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
         rules &&
-        <div>
+        <div className={styles.rules}>
           <ul>
             <li>Each player starts with 7 cards in hand</li>
           </ul>
