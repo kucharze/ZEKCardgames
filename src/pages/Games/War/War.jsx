@@ -19,7 +19,11 @@ function War() {
         rules &&
         <div className={styles.rules}>
           <ul>
-            <li>Each player starts with 7 cards in hand</li>
+            <li>Each player has their own deck</li>
+            <li>Each turn, players take the top card of their deck and compare values</li>
+            <li>The player with the higher valued card wins a point</li>
+            <li>In the event of a tie, repeat the above with two additional cards</li>
+            <li>However has the most points after running out of cards wins</li>
           </ul>
         </div>
       }
