@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
+import styles from './War.module.css'
 
 function War() {
     const [rules, setRules] = useState(false)
