@@ -218,6 +218,9 @@ function SnipSnapSnorum() {
       {
         pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
+      {
+        win && <h1>You win</h1>
+      }
       <div className={styles.playSpace}>
         <button onClick={()=>{setDisabled(true); setComCanPlay(true)}} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
