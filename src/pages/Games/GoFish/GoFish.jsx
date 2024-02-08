@@ -6,6 +6,7 @@ import styles from './GoFish.module.css'
 
 function GoFish() {
   const [rules, setRules] = useState(false)
+  const [deck, setDeck] = useState(new Deck())
 
   const newGame = () =>{
     console.log("New gofish game")
