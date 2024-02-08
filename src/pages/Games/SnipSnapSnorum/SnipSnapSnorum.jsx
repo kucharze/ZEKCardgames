@@ -13,6 +13,7 @@ function SnipSnapSnorum() {
   const [curCard, setCurCard] = useState(null)
   const [disabled, setDisabled] = useState(true)
   const [comCanPlay, setComCanPlay] = useState(false)
+  const [win, setWin] = useState(false)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -61,6 +62,10 @@ function SnipSnapSnorum() {
     }
 
     setPlayHand(tempHand)
+    if(tempHand.length == 0){
+      setWin(true)
+      setDisabled(true)
+    }
   }
 
   // const removeComCard = (card) =>{
@@ -177,7 +182,7 @@ function SnipSnapSnorum() {
       console.log("Com turn")
       comTurn()
     }
-  },[disabled,comCanPlay])
+  },[comCanPlay])
 
   return (
     <div className={styles.SnipSnapSnorum}>
