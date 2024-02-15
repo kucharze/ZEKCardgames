@@ -107,6 +107,7 @@ function SnipSnapSnorum() {
         else{
           pileCard=tempcard
           tempHand.splice(tempSpot,1)
+          cond = "Snorum"
         }
         
       }
@@ -128,9 +129,11 @@ function SnipSnapSnorum() {
         else{
           pileCard=tempcard
           tempHand.splice(tempSpot,1)
+          cond = "Snip"
         }
       }
     }
+
     console.log("Done")
     setPile(pileCard)
     setCondition(cond)
@@ -140,7 +143,6 @@ function SnipSnapSnorum() {
 
   const playCard = (card) =>{
     if(condition === "Snip"){
-      
       // console.log("Playing a card Snip " + card.value)
       setCurCard(card)
       setPile(card)
@@ -160,7 +162,7 @@ function SnipSnapSnorum() {
       }
     }
     else{
-      // console.log("Playing a card S  norum " + card.value)
+      // console.log("Playing a card Snorum " + card.value)
       if(card.value !== curCard.value){
         alert("You need to play a version of the card on the pile")
       }
@@ -171,7 +173,6 @@ function SnipSnapSnorum() {
         setCondition("Snip")
       }
     }
-    
   }
 
   useEffect(()=>{
@@ -211,7 +212,7 @@ function SnipSnapSnorum() {
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
-            return <img key={i} alt={item} className={styles.card} src={back}/>
+            return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}/>
           })
         }
       </div>
