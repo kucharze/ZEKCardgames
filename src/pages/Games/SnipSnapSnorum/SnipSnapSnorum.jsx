@@ -16,6 +16,7 @@ function SnipSnapSnorum() {
   const [comCanPlay, setComCanPlay] = useState(false)
   const [win, setWin] = useState(false)
   const [gameOver, setGameOver] = useState(false)
+  const [reset, setReset] = useState(false)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -44,6 +45,7 @@ function SnipSnapSnorum() {
     setDisabled(false)
   }
 
+  //How the player romoves a card
   const removeCard = (card) => {
     let tempHand = playHand;
     // console.log("Trying to remove a card")
@@ -52,7 +54,7 @@ function SnipSnapSnorum() {
 
     for(let i=0; i<tempHand.length; i++){
       if(tempHand[i]===card){
-        // console.log("FOund our target")
+        // console.log("Found our target")
         spot = i
         break
       }
@@ -67,12 +69,9 @@ function SnipSnapSnorum() {
     if(tempHand.length === 0){
       setWin(true)
       setDisabled(true)
+      setGameOver(true)
     }
   }
-
-  // const removeComCard = (card) =>{
-  //   console.log("ComCard:",card)
-  // }
 
   const comTurn = () =>{
     console.log("Computer turn")
@@ -173,6 +172,7 @@ function SnipSnapSnorum() {
         setCondition("Snip")
       }
     }
+    
   }
 
   useEffect(()=>{
