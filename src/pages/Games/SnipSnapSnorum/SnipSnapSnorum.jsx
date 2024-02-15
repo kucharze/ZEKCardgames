@@ -14,6 +14,7 @@ function SnipSnapSnorum() {
   const [disabled, setDisabled] = useState(true)
   const [comCanPlay, setComCanPlay] = useState(false)
   const [win, setWin] = useState(false)
+  const [gameOver, setGameOver] = useState(false)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -219,8 +220,13 @@ function SnipSnapSnorum() {
         pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
       }
       {
-        win && <h1>You win</h1>
+        gameOver && <div>
+          {
+            win && <h1>You win</h1>
+          }
+        </div>
       }
+      
       <div className={styles.playSpace}>
         <button onClick={()=>{setDisabled(true); setComCanPlay(true)}} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
