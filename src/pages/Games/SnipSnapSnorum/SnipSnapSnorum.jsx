@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import styles from './SnipSnapSnorum.module.css'
 import back from '../../../Images/cardback.png'
 import Deck from '../../../gamecomponents/Deck'
+import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function SnipSnapSnorum() {
   const [rules, setRules] = useState(false)
@@ -222,7 +223,7 @@ function SnipSnapSnorum() {
       {
         gameOver && <div>
           {
-            win && <h1>You win</h1>
+            win && <WinnerBoard/>
           }
         </div>
       }
