@@ -64,7 +64,7 @@ function SnipSnapSnorum() {
     }
 
     setPlayHand(tempHand)
-    if(tempHand.length == 0){
+    if(tempHand.length === 0){
       setWin(true)
       setDisabled(true)
     }

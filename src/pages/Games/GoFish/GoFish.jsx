@@ -10,6 +10,8 @@ function GoFish() {
 
   const newGame = () =>{
     console.log("New gofish game")
+
+    setDeck(new Deck())
   }
   return (
     <div className={styles.GoFish}>
