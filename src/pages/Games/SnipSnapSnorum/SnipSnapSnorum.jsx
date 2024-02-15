@@ -224,7 +224,7 @@ function SnipSnapSnorum() {
       {
         gameOver && <div>
           {
-            win && <WinnerBoard/>
+            win && <WinnerBoard winner={win}/>
           }
         </div>
       }
