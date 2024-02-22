@@ -13,8 +13,11 @@ import Matching from "./pages/Games/Matching/Matching";
 import GoFish from "./pages/Games/GoFish/GoFish";
 import SpiderSolitare from "./pages/Games/SpiderSolitare/SpiderSolitare";
 import War from "./pages/Games/War/War";
+import { useState } from "react";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <div className="App">
       <img src={logo} alt="Cardgames logo" className="logo" />
@@ -23,6 +26,9 @@ function App() {
         The games on this site may not work with versions of Internet Explorer
       </p>
       <p>(*Online games)</p>
+      <div>
+        <button>Enable dark mode</button>
+      </div>
       <Navbar />
       <GameNavbar />
       <Routes>
