@@ -19,7 +19,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="App">
+    <div className="App" id={darkMode && "darkMode"}>
       <img src={logo} alt="Cardgames logo" className="logo" />
       <h1>Welcome to Cardgames.org</h1>
       <p>
@@ -27,7 +27,13 @@ function App() {
       </p>
       <p>(*Online games)</p>
       <div>
-        <button>Enable dark mode</button>
+        <button
+          onClick={() => {
+            setDarkMode(!darkMode);
+          }}
+        >
+          Enable dark mode
+        </button>
       </div>
       <Navbar />
       <GameNavbar />
