@@ -7,6 +7,8 @@ import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 function GoFish() {
   const [rules, setRules] = useState(false)
   const [deck, setDeck] = useState(new Deck())
+  const [playHand,setPlayHand] = useState([])
+  const [comHand, setComHand] = useState([])
 
   const newGame = () =>{
     console.log("New gofish game")
