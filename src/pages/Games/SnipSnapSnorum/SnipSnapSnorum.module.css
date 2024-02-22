@@ -18,17 +18,10 @@
   font-size: 20px;
 }
 
-div#darkmode {
+#darkmode {
   margin: 20px;
-  width: 90%;
   border: solid black;
   background-color: gray;
-  /* background-image: url("../../../Images/thumbnail.jpg"); */
-  /*background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed; */
-  padding: 25px;
 }
 
 .playSpace {
