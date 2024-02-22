@@ -12,6 +12,9 @@
   /* background-color: black; */
   font-size: 20px;
 }
+a#darkMode {
+  background-color: darkgray;
+}
 
 h1#darkMode {
   /* background-color: gray; */
