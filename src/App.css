@@ -7,6 +7,10 @@
   /* background-color: black; */
   font-size: 20px;
 }
+.darkMode {
+  background-color: black;
+  color: turquoise;
+}
 h1 {
   background-color: green;
   color: gold;
