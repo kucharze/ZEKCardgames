@@ -39,15 +39,30 @@ function App() {
       <GameNavbar />
       <Routes>
         <Route path="/" element={<Accounts />} />
-        <Route path="/suggestions" element={<Suggestions />} />
-        <Route path="/leaderboards" element={<Leaderboards />} />
-        <Route path="/crazyeights" element={<CrazyEights />} />
-        <Route path="/blackjack" element={<Blackjack />} />
-        <Route path="/snipsnapsnorum" element={<SnipSnapSnorum />} />
-        <Route path="/matching" element={<Matching />} />
-        <Route path="/gofish" element={<GoFish />} />
-        <Route path="/spidersolitare" element={<SpiderSolitare />} />
-        <Route path="/war" element={<War />} />
+        <Route
+          path="/suggestions"
+          element={<Suggestions darkMode={darkMode} />}
+        />
+        <Route
+          path="/leaderboards"
+          element={<Leaderboards darkMode={darkMode} />}
+        />
+        <Route
+          path="/crazyeights"
+          element={<CrazyEights darkMode={darkMode} />}
+        />
+        <Route path="/blackjack" element={<Blackjack darkMode={darkMode} />} />
+        <Route
+          path="/snipsnapsnorum"
+          element={<SnipSnapSnorum darkMode={darkMode} />}
+        />
+        <Route path="/matching" element={<Matching darkMode={darkMode} />} />
+        <Route path="/gofish" element={<GoFish darkMode={darkMode} />} />
+        <Route
+          path="/spidersolitare"
+          element={<SpiderSolitare darkMode={darkMode} />}
+        />
+        <Route path="/war" element={<War darkMode={darkMode} />} />
       </Routes>
     </div>
   );
