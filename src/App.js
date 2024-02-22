@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App" id={darkMode && "darkMode"}>
       <img src={logo} alt="Cardgames logo" className="logo" />
-      <h1>Welcome to Cardgames.org</h1>
+      <h1 id={darkMode && "darkMode"}>Welcome to Cardgames.org</h1>
       <p>
         The games on this site may not work with versions of Internet Explorer
       </p>
@@ -32,7 +32,7 @@ function App() {
             setDarkMode(!darkMode);
           }}
         >
-          Enable dark mode
+          Enable/Disable dark mode
         </button>
       </div>
       <Navbar />

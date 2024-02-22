@@ -14,8 +14,8 @@
 }
 
 h1#darkMode {
-  background-color: blue;
-  color: gray;
+  /* background-color: gray; */
+  color: rgb(221, 201, 103);
 }
 
 h1 {
