@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import styles from './War.module.css'
+import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function War() {
     const [rules, setRules] = useState(false)
+    const [comDeck, setComDeck] = useState(new Deck())
+    const [playDeck, setPlayDeck] = useState(new Deck())
 
     const newGame = () =>{
       console.log("New war game")
