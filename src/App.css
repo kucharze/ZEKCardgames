@@ -1,3 +1,8 @@
+#darkMode {
+  background-color: black;
+  color: turquoise;
+}
+
 .App {
   text-align: center;
   background-color: beige;
@@ -7,10 +12,12 @@
   /* background-color: black; */
   font-size: 20px;
 }
-.darkMode {
-  background-color: black;
-  color: turquoise;
+
+h1#darkMode {
+  background-color: blue;
+  color: gray;
 }
+
 h1 {
   background-color: green;
   color: gold;

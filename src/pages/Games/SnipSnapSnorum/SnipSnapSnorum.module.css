@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+#darkMode {
+  color: turquoise;
+}
+
 .rules {
   background-color: gray;
   border: solid green;
@@ -12,6 +16,19 @@
   color: white;
   padding: 10px;
   font-size: 20px;
+}
+
+div#darkmode {
+  margin: 20px;
+  width: 90%;
+  border: solid black;
+  background-color: gray;
+  /* background-image: url("../../../Images/thumbnail.jpg"); */
+  /*background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed; */
+  padding: 25px;
 }
 
 .playSpace {
