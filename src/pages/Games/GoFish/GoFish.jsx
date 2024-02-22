@@ -37,6 +37,7 @@ function GoFish() {
       <h1>Go Fish</h1>
       <h2>Com</h2>
       <img className={styles.card} src={back} alt="" />
+      <WinnerBoard/>
       <h2>Player</h2>
       <img className={styles.card} src={back} alt="" />
     </div>

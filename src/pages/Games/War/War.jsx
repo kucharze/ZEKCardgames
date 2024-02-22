@@ -36,6 +36,7 @@ function War() {
       <img src={back} alt="" />
       <h2>Pile</h2>
       <img src={back} alt="" />
+      <WinnerBoard/>
       <h2>Player</h2>
       <img src={back} alt="" />
     </div>
