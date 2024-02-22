@@ -19,8 +19,8 @@ h1#darkMode {
 }
 
 h1 {
-  background-color: green;
-  color: gold;
+  /* background-color: green; */
+  color: darkred;
   width: 100%;
   font-size: 40px;
 }
