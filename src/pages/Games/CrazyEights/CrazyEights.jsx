@@ -5,7 +5,7 @@ import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
-function CrazyEights() {
+function CrazyEights({darkMode}) {
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [pile,setPile] = useState(null)
