@@ -4,7 +4,7 @@ import Deck from '../../../gamecomponents/Deck'
 import styles from './GoFish.module.css'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
-function GoFish() {
+function GoFish({darkmode}) {
   const [rules, setRules] = useState(false)
   const [deck, setDeck] = useState(new Deck())
   const [playHand,setPlayHand] = useState([])

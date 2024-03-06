@@ -4,7 +4,7 @@ import styles from './War.module.css'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
-function War() {
+function War({darkmode}) {
     const [rules, setRules] = useState(false)
     const [comDeck, setComDeck] = useState(new Deck())
     const [playDeck, setPlayDeck] = useState(new Deck())
