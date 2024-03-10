@@ -11,6 +11,8 @@ function War({darkmode}) {
 
     const newGame = () =>{
       console.log("New war game")
+      setComDeck(new Deck())
+      setPlayDeck(new Deck())
     }
 
   return (
