@@ -4,7 +4,7 @@ import back from '../../../Images/cardback.png'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
-function SnipSnapSnorum() {
+function SnipSnapSnorum({darkMode}) {
   const [rules, setRules] = useState(false)
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
@@ -151,7 +151,7 @@ function SnipSnapSnorum() {
     else if(condition === "Snap"){
       // console.log("Playing a card Snap " + card.value)
       if(card.value !== curCard.value){
-        alert("You need to play a version of the card on the pile")
+        alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",curCard.value)
       }
       else{
         setCurCard(card)
@@ -163,7 +163,7 @@ function SnipSnapSnorum() {
     else{
       // console.log("Playing a card Snorum " + card.value)
       if(card.value !== curCard.value){
-        alert("You need to play a version of the card on the pile")
+        alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",curCard.value)
       }
       else{
         setCurCard(card)
@@ -187,9 +187,13 @@ function SnipSnapSnorum() {
     }
   },[comCanPlay])
 
+  useEffect(()=>{
+    console.log(pile)
+  },[pile])
+
   return (
-    <div className={styles.SnipSnapSnorum}>
-      <h1>Snip Snap Snorum</h1>
+    <div id={darkMode && "darkMode"} className={styles.SnipSnapSnorum}>
+      <h1 id={darkMode && "darkMode"}>Snip Snap Snorum</h1>
       <div>
         <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
@@ -208,7 +212,7 @@ function SnipSnapSnorum() {
         </div>
       }
       
-      <div className={styles.playSpace}>
+      <div className={styles.playSpace} id={darkMode && "darkMode"}>
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
@@ -229,7 +233,7 @@ function SnipSnapSnorum() {
         </div>
       }
       
-      <div className={styles.playSpace}>
+      <div className={styles.playSpace} id={darkMode && "darkMode"}>
         <button onClick={()=>{setDisabled(true); setComCanPlay(true)}} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
           {
