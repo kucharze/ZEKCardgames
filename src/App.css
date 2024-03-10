@@ -229,6 +229,9 @@ button.active .text {
   animation: text 0.66s ease-in 1 both;
 }
 @media (max-width: 1600px) {
+  .App {
+    font-size: 18px;
+  }
   .logo {
     width: 60%;
     height: 350px;
