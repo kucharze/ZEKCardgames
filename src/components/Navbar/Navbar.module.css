@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 80px;
+  height: 90px;
   border: solid 1px green;
 }
 
@@ -14,13 +14,13 @@ a {
   margin: 25px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .Navbar {
-    font-size: 18px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    height: 100px;
+    height: 80px;
   }
 }
 
