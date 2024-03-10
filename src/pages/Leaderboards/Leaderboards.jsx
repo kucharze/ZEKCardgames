@@ -20,6 +20,7 @@ function Leaderboards() {
         <input type='submit' />
       </form>
       <p>Where leaderboards will be loaded to</p>
+      <p>This feature is not yet implemented</p>
     </div>
   )
 }
