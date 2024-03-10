@@ -228,3 +228,15 @@ button:hover .text,
 button.active .text {
   animation: text 0.66s ease-in 1 both;
 }
+@media (max-width: 1600px) {
+  .logo {
+    width: 60%;
+    height: 350px;
+    border: solid black;
+  }
+  h1 {
+    /* background-color: green; */
+    width: 100%;
+    font-size: 30px;
+  }
+}
