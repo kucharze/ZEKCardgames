@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   img {
     height: 120px;
   }
@@ -46,9 +46,9 @@
   .rules {
     background-color: gray;
     border: solid green;
-    width: 800px;
+    width: 550px;
     color: white;
     padding: 10px;
-    font-size: 20px;
+    font-size: 17px;
   }
 }
