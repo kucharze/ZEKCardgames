@@ -12,3 +12,43 @@
   padding: 10px;
   font-size: 20px;
 }
+
+@media (max-width: 1600px) {
+  .War {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    height: 180px;
+  }
+  .rules {
+    background-color: gray;
+    border: solid green;
+    width: 800px;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  img {
+    height: 120px;
+  }
+  .War {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rules {
+    background-color: gray;
+    border: solid green;
+    width: 800px;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+  }
+}
