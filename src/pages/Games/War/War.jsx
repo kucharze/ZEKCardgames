@@ -8,6 +8,7 @@ function War({darkmode}) {
     const [rules, setRules] = useState(false)
     const [comDeck, setComDeck] = useState(new Deck())
     const [playDeck, setPlayDeck] = useState(new Deck())
+    const [gameOver, setGameOver] = useState(false)
 
     const newGame = () =>{
       console.log("New war game")
@@ -44,7 +45,9 @@ function War({darkmode}) {
       <img src={back} alt="" />
       <h2>Pile</h2>
       <img src={back} alt="" />
-      <WinnerBoard/>
+      {
+        gameOver && <WinnerBoard/>
+      }
       <h2>Player</h2>
       <img src={back} alt="" />
     </div>
