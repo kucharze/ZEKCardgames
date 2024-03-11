@@ -15,6 +15,12 @@ function War({darkmode}) {
       setPlayDeck(new Deck())
     }
 
+    const playCard = () =>{
+      console.log("New war round")
+      let playerCard = playDeck.dealACard();
+      let comCard = comDeck.dealACard();
+    }
+
   return (
     <div className={styles.War}>
       <div>
