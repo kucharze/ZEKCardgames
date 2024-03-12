@@ -16,20 +16,20 @@ a {
 
 @media (max-width: 1600px) {
   .Navbar {
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    height: 80px;
+    /* height: 70px; */
   }
 }
 
 @media (max-width: 1100px) {
   .Navbar {
-    font-size: 10px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    height: 80px;
+    height: auto;
   }
 }
