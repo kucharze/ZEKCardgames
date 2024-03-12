@@ -1,0 +1,19 @@
+.Suggestions {
+  font-size: 25px;
+  margin: 15px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1600px) {
+  .Suggestions {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Suggestions {
+    font-size: 17px;
+  }
+}
