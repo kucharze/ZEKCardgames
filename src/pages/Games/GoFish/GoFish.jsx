@@ -14,7 +14,13 @@ function GoFish({darkmode}) {
     console.log("New gofish game")
 
     setDeck(new Deck())
+    setPlayHand([deck.dealACard()])
+    setComHand([deck.dealACard()])
   }
+
+  useEffect(()=>{
+    console.log("Go Fish temp")
+  },[])
   return (
     <div className={styles.GoFish}>
       <div>
