@@ -202,7 +202,6 @@ function CrazyEights({darkMode}) {
         </div>
       }
       
-      
       <h2>Computer</h2>
       <div className='com'>{
         comHand.map((item,i)=>{
@@ -213,7 +212,7 @@ function CrazyEights({darkMode}) {
           return <p>No value here</p>
         })
       }</div>
-      <div>The display section for the suit: {suitDisplay}</div>
+      <div>The current suit: {suitDisplay}</div>
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
         {pile &&
