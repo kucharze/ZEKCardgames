@@ -13,9 +13,21 @@ function GoFish({darkmode}) {
   const newGame = () =>{
     console.log("New gofish game")
 
+    
+    let tempHand = [];
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+    setPlayHand(tempHand)
+
+    tempHand = [];
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+
+    setComHand(tempHand)
+
     setDeck(new Deck())
-    setPlayHand([deck.dealACard()])
-    setComHand([deck.dealACard()])
   }
 
   useEffect(()=>{
