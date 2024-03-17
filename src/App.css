@@ -242,4 +242,11 @@ button.active .text {
     width: 100%;
     font-size: 30px;
   }
+  button {
+    font-weight: 600;
+    font-size: 18px;
+    height: 65px;
+    width: 180px;
+    padding: 0.8em 1.4em;
+  }
 }
