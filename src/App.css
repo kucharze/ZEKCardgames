@@ -11,6 +11,7 @@
   background-size: contain;
   /* background-color: black; */
   font-size: 20px;
+  margin: 0;
 }
 a#darkMode {
   background-color: darkgray;
@@ -126,7 +127,7 @@ button {
   font-size: 20px;
   height: 70px;
   width: 200px;
-  /*     background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
+  /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
   background-image: linear-gradient(
     315deg,
     rgb(4, 170, 4) -10%,
