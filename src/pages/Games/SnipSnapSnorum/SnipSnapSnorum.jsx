@@ -17,6 +17,7 @@ function SnipSnapSnorum({darkMode}) {
   const [win, setWin] = useState(false)
   const [gameOver, setGameOver] = useState(false)
   const [reset, setReset] = useState(false)
+  const [darkmode,setDarkmode] = useState("darkmode")
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -191,9 +192,18 @@ function SnipSnapSnorum({darkMode}) {
     console.log(pile)
   },[pile])
 
+  useEffect(()=>{
+    if(darkMode){
+      setDarkmode("darkMode")
+    }
+    else{
+      setDarkmode("lightmode")
+    }
+  },[darkMode])
+
   return (
-    <div id={darkMode && "darkMode"} className={styles.SnipSnapSnorum}>
-      <h1 id={darkMode && "darkMode"}>Snip Snap Snorum</h1>
+    <div id={darkmode} className={styles.SnipSnapSnorum}>
+      <h1 id={darkmode }>Snip Snap Snorum</h1>
       <div>
         <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>

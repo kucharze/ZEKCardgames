@@ -13,22 +13,31 @@ import Matching from "./pages/Games/Matching/Matching";
 import GoFish from "./pages/Games/GoFish/GoFish";
 import SpiderSolitare from "./pages/Games/SpiderSolitare/SpiderSolitare";
 import War from "./pages/Games/War/War";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [darkmode, setDarkmode] = useState("darkmode");
+
+  useEffect(() => {
+    if (darkMode) {
+      setDarkmode("darkMode");
+    } else {
+      setDarkmode("lightmode");
+    }
+  }, [darkMode]);
 
   return (
-    <div className="App" id={darkMode && "darkMode"}>
+    <div className="App" id={darkmode}>
       <img src={logo} alt="Cardgames logo" className="logo" />
-      <h1 id={darkMode && "darkMode"}>Welcome to Cardgames.org</h1>
+      <h1 id={darkmode}>Welcome to Cardgames.org</h1>
       <p>
         The games on this site may not work with versions of Internet Explorer
       </p>
       <p>(*Online games)</p>
       <div>
         <button
-          id={darkMode && "darkMode"}
+          id={darkmode}
           onClick={() => {
             setDarkMode(!darkMode);
           }}
