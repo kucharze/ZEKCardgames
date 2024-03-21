@@ -23,3 +23,29 @@
   color: white;
   padding: 10px;
 }
+
+@media (max-width: 1600px) {
+  .hand {
+    width: 140px;
+    margin: 10px;
+  }
+  .rules {
+    width: 800px;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hand {
+    width: 100px;
+    margin: 10px;
+  }
+  .rules {
+    width: 500px;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+  }
+}
