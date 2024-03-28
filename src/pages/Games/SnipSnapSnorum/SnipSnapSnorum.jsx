@@ -222,7 +222,7 @@ function SnipSnapSnorum({darkMode}) {
         </div>
       }
       
-      <div className={styles.playSpace} id={darkMode && "darkMode"}>
+      <div className={styles.playSpace} id={darkmode}>
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
@@ -243,7 +243,7 @@ function SnipSnapSnorum({darkMode}) {
         </div>
       }
       
-      <div className={styles.playSpace} id={darkMode && "darkMode"}>
+      <div className={styles.playSpace} id={darkmode}>
         <button onClick={()=>{setDisabled(true); setComCanPlay(true)}} disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
           {
