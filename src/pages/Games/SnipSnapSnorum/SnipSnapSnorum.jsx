@@ -142,6 +142,8 @@ function SnipSnapSnorum({darkMode}) {
   }
 
   const playCard = (card) =>{
+    console.log("New card",card.value)
+    console.log("Pile card:",pile?.value)
     if(condition === "Snip"){
       // console.log("Playing a card Snip " + card.value)
       setCurCard(card)
@@ -151,11 +153,11 @@ function SnipSnapSnorum({darkMode}) {
     }
     else if(condition === "Snap"){
       // console.log("Playing a card Snap " + card.value)
-      if(card.value !== curCard.value){
+      if(card.value !== pile.value){
         alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",curCard.value)
       }
       else{
-        setCurCard(card)
+        // setCurCard(card)
         setPile(card)
         removeCard(card)
         setCondition("Snorum")
@@ -163,11 +165,11 @@ function SnipSnapSnorum({darkMode}) {
     }
     else{
       // console.log("Playing a card Snorum " + card.value)
-      if(card.value !== curCard.value){
+      if(card.value !== pile.value){
         alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",curCard.value)
       }
       else{
-        setCurCard(card)
+        // setCurCard(card)
         setPile(card)
         removeCard(card)
         setCondition("Snip")
@@ -244,7 +246,11 @@ function SnipSnapSnorum({darkMode}) {
       }
       
       <div className={styles.playSpace} id={darkmode}>
-        <button onClick={()=>{setDisabled(true); setComCanPlay(true)}} disabled={disabled}>Pass the turn</button>
+        <button onClick={()=>{
+          // setDisabled(true); 
+          setComCanPlay(true)
+        }} 
+          disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
