@@ -11,7 +11,6 @@ function SnipSnapSnorum({darkMode}) {
   const [deck, setDeck] = useState(new Deck())
   const [pile, setPile] = useState("cardback")
   const [condition, setCondition] = useState(null)
-  const [curCard, setCurCard] = useState(null)
   const [disabled, setDisabled] = useState(true)
   const [comCanPlay, setComCanPlay] = useState(false)
   const [win, setWin] = useState(false)
@@ -142,11 +141,10 @@ function SnipSnapSnorum({darkMode}) {
   }
 
   const playCard = (card) =>{
-    console.log("New card",card.value)
-    console.log("Pile card:",pile?.value)
+    // console.log("New card",card.value)
+    // console.log("Pile card:",pile?.value)
     if(condition === "Snip"){
       // console.log("Playing a card Snip " + card.value)
-      setCurCard(card)
       setPile(card)
       removeCard(card)
       setCondition("Snap")
@@ -154,10 +152,9 @@ function SnipSnapSnorum({darkMode}) {
     else if(condition === "Snap"){
       // console.log("Playing a card Snap " + card.value)
       if(card.value !== pile.value){
-        alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",curCard.value)
+        // alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",pile.value)
       }
       else{
-        // setCurCard(card)
         setPile(card)
         removeCard(card)
         setCondition("Snorum")
@@ -166,10 +163,9 @@ function SnipSnapSnorum({darkMode}) {
     else{
       // console.log("Playing a card Snorum " + card.value)
       if(card.value !== pile.value){
-        alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",curCard.value)
+        // alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",pile.value)
       }
       else{
-        // setCurCard(card)
         setPile(card)
         removeCard(card)
         setCondition("Snip")
