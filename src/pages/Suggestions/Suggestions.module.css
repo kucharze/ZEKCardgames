@@ -2,8 +2,14 @@
   font-size: 25px;
   margin: 15px;
   width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+
+input {
+  margin: 20px;
+  height: 70px;
+  width: 300px;
+  font-size: 24px;
 }
 
 @media (max-width: 1600px) {
@@ -15,5 +21,11 @@
 @media (max-width: 1000px) {
   .Suggestions {
     font-size: 17px;
+  }
+  input {
+    margin: 20px;
+    height: 60px;
+    width: 250px;
+    font-size: 21px;
   }
 }
