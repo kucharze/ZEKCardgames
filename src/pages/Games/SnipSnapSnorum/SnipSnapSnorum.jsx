@@ -17,6 +17,7 @@ function SnipSnapSnorum({darkMode}) {
   const [gameOver, setGameOver] = useState(false)
   const [reset, setReset] = useState(false)
   const [darkmode,setDarkmode] = useState("darkmode")
+  const [passStatus, setPassStatus] = useState(false)
 
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
@@ -181,6 +182,7 @@ function SnipSnapSnorum({darkMode}) {
 
   useEffect(()=>{
     if(comCanPlay){
+      //Check if the turn was passed, if so reset status to snip
       console.log("Com turn")
       comTurn()
     }
