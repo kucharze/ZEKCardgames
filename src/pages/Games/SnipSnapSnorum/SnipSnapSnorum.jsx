@@ -144,6 +144,9 @@ function SnipSnapSnorum({darkMode}) {
   const playCard = (card) =>{
     // console.log("New card",card.value)
     // console.log("Pile card:",pile?.value)
+    if(passStatus){
+      setPassStatus(false)
+    }
     if(condition === "Snip"){
       // console.log("Playing a card Snip " + card.value)
       setPile(card)
@@ -153,7 +156,7 @@ function SnipSnapSnorum({darkMode}) {
     else if(condition === "Snap"){
       // console.log("Playing a card Snap " + card.value)
       if(card.value !== pile.value){
-        // alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",pile.value)
+        alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",pile.value)
       }
       else{
         setPile(card)
@@ -164,7 +167,7 @@ function SnipSnapSnorum({darkMode}) {
     else{
       // console.log("Playing a card Snorum " + card.value)
       if(card.value !== pile.value){
-        // alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",pile.value)
+        alert("You need to play a version of the card on the pile ", "new card",card.value,"Old card",pile.value)
       }
       else{
         setPile(card)
@@ -172,7 +175,6 @@ function SnipSnapSnorum({darkMode}) {
         setCondition("Snip")
       }
     }
-    
   }
 
   useEffect(()=>{
@@ -183,6 +185,9 @@ function SnipSnapSnorum({darkMode}) {
   useEffect(()=>{
     if(comCanPlay){
       //Check if the turn was passed, if so reset status to snip
+      if(passStatus){
+        setCondition("Snip")
+      }
       console.log("Com turn")
       comTurn()
     }
