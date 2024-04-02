@@ -102,6 +102,9 @@ function SnipSnapSnorum({darkMode}) {
         }
 
         if(tempcard==null){
+          if(passStatus){
+            cond="Snip"
+          }
           break
         }
         else{
@@ -124,6 +127,9 @@ function SnipSnapSnorum({darkMode}) {
         }
 
         if(tempcard==null){
+          if(passStatus){
+            cond="Snip"
+          }
           break
         }
         else{
