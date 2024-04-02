@@ -80,10 +80,11 @@ function SnipSnapSnorum({darkMode}) {
 
     let cond = condition
     let pileCard = pile
+    let pass = passStatus
 
     while(true){
       console.log("Turn")
-      if(cond === "Snip"){ 
+      if(cond === "Snip"){
         // console.log("Playing a card Snip " + card.value)
         pileCard = tempHand[0]
         tempHand.splice(0,1)
@@ -102,7 +103,7 @@ function SnipSnapSnorum({darkMode}) {
         }
 
         if(tempcard==null){
-          if(passStatus){
+          if(pass){
             cond="Snip"
           }
           break
@@ -111,6 +112,7 @@ function SnipSnapSnorum({darkMode}) {
           pileCard=tempcard
           tempHand.splice(tempSpot,1)
           cond = "Snorum"
+          pass=false
         }
         
       }
@@ -127,7 +129,7 @@ function SnipSnapSnorum({darkMode}) {
         }
 
         if(tempcard==null){
-          if(passStatus){
+          if(pass){
             cond="Snip"
           }
           break
@@ -136,6 +138,7 @@ function SnipSnapSnorum({darkMode}) {
           pileCard=tempcard
           tempHand.splice(tempSpot,1)
           cond = "Snip"
+          pass=false
         }
       }
     }
@@ -145,6 +148,7 @@ function SnipSnapSnorum({darkMode}) {
     setCondition(cond)
     setComHand(tempHand)
     setDisabled(false)
+    setPassStatus(false)
   }
 
   const playCard = (card) =>{
