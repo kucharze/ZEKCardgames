@@ -148,7 +148,7 @@ function SnipSnapSnorum({darkMode}) {
     setCondition(cond)
     setComHand(tempHand)
     setDisabled(false)
-    setPassStatus(false)
+    setPassStatus(pass)
   }
 
   const playCard = (card) =>{
