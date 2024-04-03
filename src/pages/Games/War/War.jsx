@@ -9,6 +9,8 @@ function War({darkmode}) {
     const [comDeck, setComDeck] = useState(new Deck())
     const [playDeck, setPlayDeck] = useState(new Deck())
     const [gameOver, setGameOver] = useState(false)
+    const [player, setPlayer] = useState(null)
+    const [com, setCom] = useState(null)
 
     const newGame = () =>{
       console.log("New war game")
