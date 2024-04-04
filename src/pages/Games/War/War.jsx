@@ -22,6 +22,8 @@ function War({darkmode}) {
       console.log("New war round")
       let playerCard = playDeck.dealACard();
       let comCard = comDeck.dealACard();
+
+      
     }
 
   return (
@@ -44,14 +46,16 @@ function War({darkmode}) {
       }
       <h1>War</h1>
       <h2>Com</h2>
-      <img src={back} alt="" />
-      <h2>Pile</h2>
-      <img src={back} alt="" />
+      { 
+      com && <img alt={player} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
+      }
       {
         gameOver && <WinnerBoard/>
       }
       <h2>Player</h2>
-      <img src={back} alt="" />
+      { 
+      player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
+      }
     </div>
   )
 }
