@@ -23,7 +23,8 @@ function War({darkmode}) {
       let playerCard = playDeck.dealACard();
       let comCard = comDeck.dealACard();
 
-      
+      setPlayer(playerCard)
+      setCom(comCard)
     }
 
   return (
