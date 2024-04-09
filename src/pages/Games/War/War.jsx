@@ -11,11 +11,13 @@ function War({darkmode}) {
     const [gameOver, setGameOver] = useState(false)
     const [player, setPlayer] = useState(null)
     const [com, setCom] = useState(null)
+    const [gameInProgress, setGameInProgress] = useState(false)
 
     const newGame = () =>{
       console.log("New war game")
       setComDeck(new Deck())
       setPlayDeck(new Deck())
+      setGameInProgress(true)
     }
 
     const playCard = () =>{
@@ -25,6 +27,10 @@ function War({darkmode}) {
 
       setPlayer(playerCard)
       setCom(comCard)
+
+      if(playDeck.isEmpty()  && comDeck.isEmpty()){
+        setGameInProgress(false)
+      }
     }
 
   return (
@@ -54,6 +60,7 @@ function War({darkmode}) {
         gameOver && <WinnerBoard/>
       }
       <h2>Player</h2>
+      <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
       { 
       player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
       }
