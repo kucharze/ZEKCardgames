@@ -98,8 +98,12 @@ function War({darkmode}) {
       }
       <h2>Player</h2>
       <h3>{playScore}</h3>
-      <p>Player war card</p>
       <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
+      <p>Player war card</p>
+      {
+        playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/${playerWar}.png`)}/>
+      }
+      <p>Player play card:</p>
       { 
       player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
       }
