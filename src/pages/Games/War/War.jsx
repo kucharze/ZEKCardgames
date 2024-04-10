@@ -83,16 +83,23 @@ function War({darkmode}) {
       }
       <h1>War</h1>
       <h2>Computer</h2>
+      <div className={styles.commat}>
+        <div className={styles.Comwarmat}>
+          <p>Computer war card</p>
+          {
+            comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
+          }
+        </div>
+        <div className={styles.ComPlayMat}>
+            <p>Computer Play card</p>
+          { 
+          com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
+          }
+        </div>
+      </div>
       <h3>{comScore}</h3>
-      <p>Computer war card</p>
-      {
-        comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
-
-      }
-      <p>Computer Play card</p>
-      { 
-      com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
-      }
+      
+      
       {
         gameOver && <WinnerBoard/>
       }
