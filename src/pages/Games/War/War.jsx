@@ -47,6 +47,13 @@ function War({darkmode}) {
         setComScore(comScore+1)
         console.log("com")
       }
+      else{
+        let playWar = playDeck.dealACard()
+        let commWar = comDeck.dealACard()
+
+        setPlayerWar(playWar)
+        setComWar(commWar)
+      }
 
       setPlayer(playerCard)
       setCom(comCard)
@@ -78,8 +85,13 @@ function War({darkmode}) {
       <h2>Computer</h2>
       <h3>{comScore}</h3>
       <p>Computer war card</p>
+      {
+        comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
+
+      }
+      <p>Computer Play card</p>
       { 
-      com && <img alt={player} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
+      com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
       }
       {
         gameOver && <WinnerBoard/>
