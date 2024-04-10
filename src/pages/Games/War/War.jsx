@@ -15,8 +15,14 @@ function War({darkmode}) {
 
     const newGame = () =>{
       console.log("New war game")
-      setComDeck(new Deck())
-      setPlayDeck(new Deck())
+      let com = new Deck();
+      com.shuffle();
+      com.shuffle()
+      setComDeck(com)
+      let play = new Deck()
+      play.shuffle()
+      play.shuffle()
+      setPlayDeck(play)
       setGameInProgress(true)
     }
 
