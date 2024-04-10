@@ -10,7 +10,9 @@ function War({darkmode}) {
     const [playDeck, setPlayDeck] = useState(new Deck())
     const [gameOver, setGameOver] = useState(false)
     const [player, setPlayer] = useState(null)
+    const [playerWar, setPlayerWar] = useState(null)
     const [com, setCom] = useState(null)
+    const [comWar, setComWar] = useState(null)
     const [gameInProgress, setGameInProgress] = useState(false)
     const [playScore, setPlayScore] = useState(0)
     const [comScore, setComScore] = useState(0)
@@ -28,6 +30,8 @@ function War({darkmode}) {
       setGameInProgress(true)
       setPlayer(null)
       setCom(null)
+      setComWar(null)
+      setPlayerWar(null)
     }
 
     const playCard = () =>{
@@ -71,8 +75,9 @@ function War({darkmode}) {
         </div>
       }
       <h1>War</h1>
-      <h2>Com</h2>
+      <h2>Computer</h2>
       <h3>{comScore}</h3>
+      <p>Computer war card</p>
       { 
       com && <img alt={player} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
       }
@@ -81,6 +86,7 @@ function War({darkmode}) {
       }
       <h2>Player</h2>
       <h3>{playScore}</h3>
+      <p>Player war card</p>
       <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
       { 
       player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
