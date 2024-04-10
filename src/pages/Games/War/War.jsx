@@ -24,6 +24,8 @@ function War({darkmode}) {
       play.shuffle()
       setPlayDeck(play)
       setGameInProgress(true)
+      setPlayer(null)
+      setCom(null)
     }
 
     const playCard = () =>{
