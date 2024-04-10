@@ -35,6 +35,15 @@ function War({darkmode}) {
       let playerCard = playDeck.dealACard();
       let comCard = comDeck.dealACard();
 
+      if(playerCard.warValue > comCard.warValue){
+        console.log("player")
+        setPlayScore(playScore+1)
+      }
+      else if(comCard.warValue > playerCard.warValue){
+        setComScore(comScore+1)
+        console.log("com")
+      }
+
       setPlayer(playerCard)
       setCom(comCard)
 
