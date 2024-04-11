@@ -20,19 +20,22 @@
 }
 .mat {
   display: flex;
+  border: solid black;
+  background-color: green;
+  color: yellow;
 }
 .Comwarmat {
-  margin: 10px;
+  margin: 20px;
 }
 .ComPlayMat {
-  margin: 10px;
+  margin: 20px;
 }
 
 .Playwarmat {
-  margin: 10px;
+  margin: 20px;
 }
 .PlayPlayMat {
-  margin: 10px;
+  margin: 20px;
 }
 
 @media (max-width: 1600px) {
