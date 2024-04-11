@@ -53,10 +53,10 @@ function War({darkmode}) {
 
       if(playerCard.warValue > comCard.warValue){
         console.log("player")
-        setPlayerWins(playScore+1)
+        setPlayerWins(playerWins+1)
       }
       else if(comCard.warValue > playerCard.warValue){
-        setComWins(comScore+1)
+        setComWins(comWins+1)
         console.log("com")
       }
       else{
