@@ -65,6 +65,8 @@ function War({darkmode}) {
 
         setPlayerWar(playWar)
         setComWar(commWar)
+        setComWarScore(commWar.warValue)
+        setPlayWarScore(playWar.warValue)
       }
 
       setPlayer(playerCard)
