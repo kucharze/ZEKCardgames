@@ -30,10 +30,8 @@ function SnipSnapSnorum({darkMode}) {
       tempPlayHand.push(deck.dealACard())
 
       tempComHand.push(deck.dealACard())
-      console.log("Load")
     }
 
-    console.log("Done")
     setComHand(tempComHand)
 
     setPlayHand(tempPlayHand)
@@ -203,9 +201,9 @@ function SnipSnapSnorum({darkMode}) {
     }
   },[comCanPlay])
 
-  useEffect(()=>{
-    console.log(pile)
-  },[pile])
+  // useEffect(()=>{
+  //   console.log(pile)
+  // },[pile])
 
   useEffect(()=>{
     if(darkMode){
@@ -215,6 +213,10 @@ function SnipSnapSnorum({darkMode}) {
       setDarkmode("lightmode")
     }
   },[darkMode])
+
+  useEffect(()=>{
+    console.log(passStatus)
+  },[passStatus])
 
   return (
     <div id={darkmode} className={styles.SnipSnapSnorum}>
