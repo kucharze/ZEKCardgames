@@ -67,6 +67,15 @@ function War({darkmode}) {
         setComWar(commWar)
         setComWarScore(commWar.warValue)
         setPlayWarScore(playWar.warValue)
+
+        if(playWar.warValue > commWar.warValue){
+          console.log("player war win")
+          setPlayerWins(playerWins+1)
+        }
+        else if(commWar.warValue > playWar.warValue){
+          setComWins(comWins+1)
+          console.log("com War win")
+        }
       }
 
       setPlayer(playerCard)
