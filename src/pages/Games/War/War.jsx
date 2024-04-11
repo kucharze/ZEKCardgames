@@ -48,6 +48,8 @@ function War({darkmode}) {
       console.log("New war round")
       let playerCard = playDeck.dealACard();
       let comCard = comDeck.dealACard();
+      setPlayScore(playerCard.warValue)
+      setComScore(comCard.warValue)
 
       if(playerCard.warValue > comCard.warValue){
         console.log("player")
