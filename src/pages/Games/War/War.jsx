@@ -18,6 +18,8 @@ function War({darkmode}) {
     const [playWarScore, setPlayWarScore] = useState(0)
     const [comScore, setComScore] = useState(0)
     const [comWarScore, setComWarScore] = useState(0)
+    const [playerWins, setPlayerWins] = useState(0)
+    const [comWins, setComWins] = useState(0)
 
     const newGame = () =>{
       console.log("New war game")
