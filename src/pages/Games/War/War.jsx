@@ -85,8 +85,7 @@ function War({darkmode}) {
       }
       <h1>War</h1>
       <h2>Computer</h2>
-      
-      <div className={styles.commat}>
+      <div className={styles.mat}>
         <div className={styles.Comwarmat}>
           <p>Computer war card</p> 
           <h3>{comWarScore}</h3>
