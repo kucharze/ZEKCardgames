@@ -105,48 +105,57 @@ function War({darkmode}) {
         </div>
       }
       <h1>War</h1>
-      <h2>Computer</h2>
-      <h3>{comWins}</h3>
       <div className={styles.mat}>
-        <div className={styles.Comwarmat}>
-          <p>Computer war card</p> 
-          <h3>{comWarScore}</h3>
-          {
-            comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
-          }
-        </div>
-        <div className={styles.ComPlayMat}>
-            <p>Computer Play card</p>
-            <h3>{comScore}</h3>
-          { 
-          com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
-          }
-        </div>
+        <div>
+          <h2>Computer</h2>
+          <h3>{comWins}</h3>
+          <div className={styles.mat}>
+            <div className={styles.Comwarmat}>
+              <p>Computer war card</p> 
+              <h3>{comWarScore}</h3>
+              {
+                comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
+              }
+            </div>
+            <div className={styles.ComPlayMat}>
+                <p>Computer Play card</p>
+                <h3>{comScore}</h3>
+              { 
+              com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
+              }
+            </div>
+          </div>
+      </div>
+      <div>
+        {
+          gameOver && <WinnerBoard/>
+        }
+        <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
       </div>
       
-      {
-        gameOver && <WinnerBoard/>
-      }
-      <h2>Player</h2>
-     
-      <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
-      <h3>{playerWins}</h3>
-      <div className={styles.mat}>
-        <div className={styles.Playwarmat}>
-          <p>Player war card</p>
-          <h3>{playWarScore}</h3>
-          {
-            playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/${playerWar}.png`)}/>
-          }
-        </div>
-        <div className={styles.PlayPlayMat}>
-          <p>Player play card:</p>
-          <h3>{playScore}</h3>
-          { 
-            player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
-          }
+      <div>
+        <h2>Player</h2>
+        <h3>{playerWins}</h3>
+        <div className={styles.mat}>
+          <div className={styles.Playwarmat}>
+            <p>Player war card</p>
+            <h3>{playWarScore}</h3>
+            {
+              playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/${playerWar}.png`)}/>
+            }
+          </div>
+          <div className={styles.PlayPlayMat}>
+            <p>Player play card:</p>
+            <h3>{playScore}</h3>
+            { 
+              player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
+            }
+          </div>
         </div>
       </div>
+
+      </div>
+      
      
       
     </div>
