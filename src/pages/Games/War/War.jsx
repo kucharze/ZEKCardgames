@@ -106,16 +106,26 @@ function War({darkmode}) {
         gameOver && <WinnerBoard/>
       }
       <h2>Player</h2>
-      <h3>{playScore}</h3>
+      
       <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
-      <p>Player war card</p>
-      {
-        playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/${playerWar}.png`)}/>
-      }
-      <p>Player play card:</p>
-      { 
-      player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
-      }
+      <div className={styles.mat}>
+        <div className={styles.Playwarmat}>
+          <p>Player war card</p>
+          <h3>{playWarScore}</h3>
+          {
+            playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/${playerWar}.png`)}/>
+          }
+        </div>
+        <div className={styles.PlayPlayMat}>
+          <p>Player play card:</p>
+          <h3>{playScore}</h3>
+          { 
+            player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
+          }
+        </div>
+      </div>
+     
+      
     </div>
   )
 }
