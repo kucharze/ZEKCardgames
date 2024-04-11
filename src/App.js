@@ -31,10 +31,7 @@ function App() {
     <div className="App" id={darkmode}>
       <img src={logo} alt="Cardgames logo" className="logo" />
       <h1 id={darkmode}>Welcome to Cardgames.org</h1>
-      <p>
-        The games on this site may not work with versions of Internet Explorer
-      </p>
-      <p>(*Online games)</p>
+      <p>(*Games with an online mode (Not yet implemented))</p>
       <div>
         <button
           id={darkmode}
