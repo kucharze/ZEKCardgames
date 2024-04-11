@@ -146,7 +146,7 @@ function SnipSnapSnorum({darkMode}) {
     setCondition(cond)
     setComHand(tempHand)
     setDisabled(false)
-    setPassStatus(pass)
+    setPassStatus(true)
   }
 
   const playCard = (card) =>{
@@ -215,7 +215,7 @@ function SnipSnapSnorum({darkMode}) {
   },[darkMode])
 
   useEffect(()=>{
-    console.log(passStatus)
+    console.log("passstatus is",passStatus)
   },[passStatus])
 
   return (
@@ -264,6 +264,7 @@ function SnipSnapSnorum({darkMode}) {
         <button onClick={()=>{
           // setDisabled(true); 
           setComCanPlay(true)
+          //setPassStatus(true)
         }} 
           disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
