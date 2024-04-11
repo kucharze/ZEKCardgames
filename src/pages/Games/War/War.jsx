@@ -36,6 +36,12 @@ function War({darkmode}) {
       setCom(null)
       setComWar(null)
       setPlayerWar(null)
+      setComScore(0)
+      setPlayScore(0)
+      setPlayWarScore(0)
+      setComWarScore(0)
+      setPlayerWins(0)
+      setComWins(0)
     }
 
     const playCard = () =>{
@@ -45,10 +51,10 @@ function War({darkmode}) {
 
       if(playerCard.warValue > comCard.warValue){
         console.log("player")
-        setPlayScore(playScore+1)
+        setPlayerWins(playScore+1)
       }
       else if(comCard.warValue > playerCard.warValue){
-        setComScore(comScore+1)
+        setComWins(comScore+1)
         console.log("com")
       }
       else{
@@ -87,6 +93,7 @@ function War({darkmode}) {
       }
       <h1>War</h1>
       <h2>Computer</h2>
+      <h3>{comWins}</h3>
       <div className={styles.mat}>
         <div className={styles.Comwarmat}>
           <p>Computer war card</p> 
@@ -108,8 +115,9 @@ function War({darkmode}) {
         gameOver && <WinnerBoard/>
       }
       <h2>Player</h2>
-      
+     
       <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
+      <h3>{playerWins}</h3>
       <div className={styles.mat}>
         <div className={styles.Playwarmat}>
           <p>Player war card</p>
