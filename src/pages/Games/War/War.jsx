@@ -15,7 +15,9 @@ function War({darkmode}) {
     const [comWar, setComWar] = useState(null)
     const [gameInProgress, setGameInProgress] = useState(false)
     const [playScore, setPlayScore] = useState(0)
+    const [playWarScore, setPlayWarScore] = useState(0)
     const [comScore, setComScore] = useState(0)
+    const [comWarScore, setComWarScore] = useState(0)
 
     const newGame = () =>{
       console.log("New war game")
@@ -83,22 +85,23 @@ function War({darkmode}) {
       }
       <h1>War</h1>
       <h2>Computer</h2>
+      
       <div className={styles.commat}>
         <div className={styles.Comwarmat}>
-          <p>Computer war card</p>
+          <p>Computer war card</p> 
+          <h3>{comWarScore}</h3>
           {
             comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
           }
         </div>
         <div className={styles.ComPlayMat}>
             <p>Computer Play card</p>
+            <h3>{comScore}</h3>
           { 
           com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
           }
         </div>
       </div>
-      <h3>{comScore}</h3>
-      
       
       {
         gameOver && <WinnerBoard/>
