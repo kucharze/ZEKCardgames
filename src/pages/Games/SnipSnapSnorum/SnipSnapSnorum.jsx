@@ -193,9 +193,7 @@ function SnipSnapSnorum({darkMode}) {
   useEffect(()=>{
     if(comCanPlay){
       //Check if the turn was passed, if so reset status to snip
-      if(passStatus){
-        setCondition("Snip")
-      }
+      
       console.log("Com turn")
       comTurn()
     }
@@ -264,7 +262,10 @@ function SnipSnapSnorum({darkMode}) {
         <button onClick={()=>{
           // setDisabled(true); 
           setComCanPlay(true)
-          //setPassStatus(true)
+          if(passStatus){
+            setCondition("Snip")
+          }
+          setPassStatus(true)
         }} 
           disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
