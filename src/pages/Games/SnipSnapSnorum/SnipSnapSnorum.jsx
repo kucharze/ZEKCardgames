@@ -78,7 +78,7 @@ function SnipSnapSnorum({darkMode}) {
 
     let cond = condition
     let pileCard = pile
-    let pass = passStatus
+    let pass = true
 
     while(true){
       console.log("Turn")
@@ -265,7 +265,6 @@ function SnipSnapSnorum({darkMode}) {
           if(passStatus){
             setCondition("Snip")
           }
-          setPassStatus(true)
         }} 
           disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
