@@ -9,6 +9,7 @@ function GoFish({darkmode}) {
   const [deck, setDeck] = useState(new Deck())
   const [playHand,setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
+  const [gameOver, setGameOver] = useState(false)
 
   const newGame = () =>{
     console.log("New gofish game")
@@ -55,7 +56,9 @@ function GoFish({darkmode}) {
       <h1>Go Fish</h1>
       <h2>Com</h2>
       <img className={styles.card} src={back} alt="" />
-      <WinnerBoard/>
+      {
+        gameOver &&  <WinnerBoard/>
+      }
       <h2>Player</h2>
       <img className={styles.card} src={back} alt="" />
     </div>
