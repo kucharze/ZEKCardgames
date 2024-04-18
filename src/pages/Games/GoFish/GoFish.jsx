@@ -60,7 +60,15 @@ function GoFish({darkmode}) {
         gameOver &&  <WinnerBoard/>
       }
       <h2>Player</h2>
-      <img className={styles.card} src={back} alt="" />
+      {
+          playHand.map((item,i)=>{
+            return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
+              onClick={()=>{
+                console.log("Clicked")
+                
+              }}/>
+          })
+      }
     </div>
   )
 }
