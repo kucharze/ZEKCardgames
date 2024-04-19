@@ -55,20 +55,24 @@ function GoFish({darkmode}) {
       }
       <h1>Go Fish</h1>
       <h2>Com</h2>
-      {
-          comHand.map((item,i)=>{
-            return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
-              onClick={()=>{
-                console.log("Clicked")
-                
-              }}/>
-          })
-      }
+      <div>
+        {
+            comHand.map((item,i)=>{
+              return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
+                onClick={()=>{
+                  console.log("Clicked")
+                  
+                }}/>
+            })
+        }
+      </div>
+      
       {
         gameOver &&  <WinnerBoard/>
       }
       <h2>Player</h2>
-      {
+      <div>
+        {
           playHand.map((item,i)=>{
             return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
               onClick={()=>{
@@ -77,6 +81,8 @@ function GoFish({darkmode}) {
               }}/>
           })
       }
+      </div>
+      
     </div>
   )
 }
