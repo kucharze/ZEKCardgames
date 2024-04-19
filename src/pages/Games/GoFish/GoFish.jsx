@@ -59,7 +59,7 @@ function GoFish({darkmode}) {
       <div>
         {
             comHand.map((item,i)=>{
-              return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
+              return <img key={i} alt={item} className={styles.card} src={`${back}`}
                 onClick={()=>{
                   console.log("Clicked")
                   
