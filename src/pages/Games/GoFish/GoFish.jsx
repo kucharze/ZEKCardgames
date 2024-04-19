@@ -13,7 +13,8 @@ function GoFish({darkmode}) {
 
   const newGame = () =>{
     console.log("New gofish game")
-
+    deck.shuffle()
+    deck.shuffle()
     
     let tempHand = [];
     for(let i=0; i<7; i++){
