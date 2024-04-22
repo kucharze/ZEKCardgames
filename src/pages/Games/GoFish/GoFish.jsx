@@ -32,6 +32,10 @@ function GoFish({darkmode}) {
     setDeck(new Deck())
   }
 
+  const playCard = () =>{
+    
+  }
+
   useEffect(()=>{
     console.log("Go Fish temp")
   },[])
