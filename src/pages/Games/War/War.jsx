@@ -81,11 +81,21 @@ function War({darkmode}) {
       setPlayer(playerCard)
       setCom(comCard)
 
+      
+    }
+
+    useState(()=>{
       if(playDeck.isEmpty()  && comDeck.isEmpty()){
         setGameInProgress(false)
         setGameOver(true)
+        if(playerWins>comWins){
+          setWinner(true)
+        }
+        else{
+          setWinner(false)
+        }
       }
-    }
+    },[comWins,playerWins])
 
   return (
     <div className={styles.War}>
