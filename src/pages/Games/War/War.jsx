@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import back from '../../../Images/BACKCARD.JPG'
 import styles from './War.module.css'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
