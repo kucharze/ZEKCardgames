@@ -44,16 +44,15 @@ function GoFish({darkmode}) {
   const goFish = () =>{
     //Tells computer to go fish
     console.log("Go fish")
-    let newcomList = comHand
+    let newCard = deck.dealACard()
 
-    newcomList.push(deck.dealACard())
-
-    setComHand(newcomList)
+    setComHand([...comHand,newCard])
   }
 
   useEffect(()=>{
-    console.log("Go Fish temp")
-  },[])
+    console.log(comHand)
+  },[comHand])
+
   return (
     <div className={styles.GoFish}>
       <div>
