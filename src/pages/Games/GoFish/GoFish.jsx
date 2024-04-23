@@ -43,6 +43,12 @@ function GoFish({darkmode}) {
 
   const goFish = () =>{
     //Tells computer to go fish
+    console.log("Go fish")
+    let newcomList = comHand
+
+    newcomList.push(deck.dealACard())
+
+    setComHand(newcomList)
   }
 
   useEffect(()=>{
@@ -85,7 +91,7 @@ function GoFish({darkmode}) {
         gameOver &&  <WinnerBoard/>
       }
       <h2>Player</h2>
-      <button onClick={()=>{goFish()}} disabled>Go Fish</button>
+      <button onClick={()=>{goFish()}}>Go Fish</button>
       <div>
         {
           playHand.map((item,i)=>{
