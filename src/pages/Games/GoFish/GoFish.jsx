@@ -10,6 +10,7 @@ function GoFish({darkmode}) {
   const [playHand,setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [gameOver, setGameOver] = useState(false)
+  const [askCard, setAskCard] = useState(null)
 
   const newGame = () =>{
     console.log("New gofish game")
@@ -32,12 +33,12 @@ function GoFish({darkmode}) {
     setDeck(new Deck())
   }
 
-  const askCard = (card) =>{
+  const askForCard = (card) =>{
     console.log("Do you have any ",card.suit,card.value,"?")
   }
 
   const comTurn = () =>{
-    
+
   }
 
   useEffect(()=>{
@@ -85,7 +86,7 @@ function GoFish({darkmode}) {
           playHand.map((item,i)=>{
             return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
               onClick={()=>{
-                askCard(item)
+                askForCard(item)
               }}/>
           })
       }
