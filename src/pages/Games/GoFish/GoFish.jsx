@@ -32,7 +32,11 @@ function GoFish({darkmode}) {
     setDeck(new Deck())
   }
 
-  const playCard = () =>{
+  const askCard = (card) =>{
+    console.log("Do you have any ",card.suit,card.value,"?")
+  }
+
+  const comTurn = () =>{
     
   }
 
@@ -81,8 +85,7 @@ function GoFish({darkmode}) {
           playHand.map((item,i)=>{
             return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
               onClick={()=>{
-                console.log("Clicked")
-                
+                askCard(item)
               }}/>
           })
       }
