@@ -11,6 +11,7 @@ function GoFish({darkmode}) {
   const [comHand, setComHand] = useState([])
   const [gameOver, setGameOver] = useState(false)
   const [askCard, setAskCard] = useState(null)
+  const [disabled, setDisabled] = useState(true)
 
   const newGame = () =>{
     console.log("New gofish game")
@@ -90,7 +91,7 @@ function GoFish({darkmode}) {
         gameOver &&  <WinnerBoard/>
       }
       <h2>Player</h2>
-      <button onClick={()=>{goFish()}}>Go Fish</button>
+      <button disabled={disabled} onClick={()=>{goFish()}}>Go Fish</button>
       <div>
         {
           playHand.map((item,i)=>{
