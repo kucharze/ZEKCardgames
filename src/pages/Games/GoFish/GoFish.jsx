@@ -39,7 +39,7 @@ function GoFish({darkmode}) {
   }
 
   const comTurn = () =>{
-
+    setDisabled(false)
   }
 
   const goFish = () =>{
@@ -48,6 +48,8 @@ function GoFish({darkmode}) {
     let newCard = deck.dealACard()
 
     setComHand([...comHand,newCard])
+
+    setDisabled(true)
   }
 
   useEffect(()=>{
