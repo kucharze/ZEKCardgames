@@ -42,6 +42,7 @@ function War({darkmode}) {
       setComWarScore(0)
       setPlayerWins(0)
       setComWins(0)
+      setGameOver(false)
     }
 
     const playCard = () =>{
@@ -80,8 +81,6 @@ function War({darkmode}) {
 
       setPlayer(playerCard)
       setCom(comCard)
-
-      
     }
 
     useState(()=>{
