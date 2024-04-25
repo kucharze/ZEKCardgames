@@ -52,7 +52,7 @@ function Blackjack() {
       setComValue(tempComVal)
       setComTurn(true)
     }
-    if(handVal==21 && playHand.length==2){
+    if(handVal===21 && playHand.length===2){
       setBlackjack(true)
       setDisabled(true)
       setGameOver(true)

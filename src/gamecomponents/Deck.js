@@ -10,7 +10,7 @@ class Deck {
    * Initialize deck to represent regular 52 playing cards.
    */
   constructor() {
-    this.list = new Array();
+    this.list = [];
     let suit = ["c", "d", "h", "s"];
     let value = [
       "2",
@@ -60,7 +60,7 @@ class Deck {
    * Determines if the deck is empty.
    */
   isEmpty() {
-    return this.list.length == 0;
+    return this.list.length === 0;
   }
 
   /**
@@ -75,7 +75,7 @@ class Deck {
    * initialization to avoid starting the pile with an 8.
    */
   isTopCardAnEight() {
-    return this.list[0].getValue() == "8";
+    return this.list[0].getValue() === "8";
   }
 }
 if (typeof module === "object") {
