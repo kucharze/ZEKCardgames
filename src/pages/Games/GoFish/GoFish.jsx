@@ -12,6 +12,7 @@ function GoFish({darkmode}) {
   const [gameOver, setGameOver] = useState(false)
   const [askCard, setAskCard] = useState(null)
   const [disabled, setDisabled] = useState(true)
+  const [asking, setAsking] = useState(false)
 
   const newGame = () =>{
     console.log("New gofish game")
