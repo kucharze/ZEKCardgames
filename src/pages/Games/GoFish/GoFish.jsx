@@ -100,9 +100,12 @@ function GoFish({darkmode}) {
       {
         gameOver &&  <WinnerBoard/>
       }
-      <div>
-        <h1>Do you have any {askCard}?</h1>
-      </div>
+      {
+        asking && <div>
+          <h1>Do you have any {askCard}?</h1>
+        </div>
+      }
+      
       <h2>Player</h2>
       <button disabled={disabled} onClick={()=>{goFish()}}>Go Fish</button>
       <div>
