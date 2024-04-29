@@ -152,9 +152,9 @@ function SnipSnapSnorum({darkMode}) {
   const playCard = (card) =>{
     // console.log("New card",card.value)
     // console.log("Pile card:",pile?.value)
-    if(passStatus){
-      setPassStatus(false)
-    }
+    
+    setPassStatus(false)
+
     if(condition === "Snip"){
       // console.log("Playing a card Snip " + card.value)
       setPile(card)
