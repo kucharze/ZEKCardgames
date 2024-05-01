@@ -5,6 +5,10 @@ import styles from './Matching.module.css'
 function Matching() {
   const [matchList, setMatchList] = useState([])//List of elements that will get matched
 
+  const newGame = () =>{
+    
+  }
+
   return (
     <div className={styles.Matching}>
       <h1>Matching</h1>
