@@ -7,6 +7,8 @@ function SpiderSolitare() {
   const [row1, setRow1] = useState([])
   const [row2, setRow2] = useState([])
   const [row3, setRow3] = useState([])
+  const [row4, setRow4] = useState([])
+  const [row5, setRow5] = useState([])
 
   return (
     <div className={styles.SpiderSolitare}>
