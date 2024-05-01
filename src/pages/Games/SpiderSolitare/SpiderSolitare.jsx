@@ -4,6 +4,10 @@ import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 
 function SpiderSolitare() {
+  const [row1, setRow1] = useState([])
+  const [row2, setRow2] = useState([])
+  const [row3, setRow3] = useState([])
+
   return (
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
