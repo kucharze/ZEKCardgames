@@ -78,6 +78,6 @@ export default class Deck {
     return this.list[0].getValue() === "8";
   }
 }
-if (typeof module === "object") {
-  module.exports = Deck;
-}
+// if (typeof module === "object") {
+//   module.exports = Deck;
+// }
