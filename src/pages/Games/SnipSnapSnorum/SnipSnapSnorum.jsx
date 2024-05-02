@@ -113,7 +113,7 @@ function SnipSnapSnorum({darkMode}) {
         }
         
       }
-      else{
+      else if (cond === "Snorum" ) {
         // console.log("Playing a card Snorum " + card.value)
         let tempcard = null
         let tempSpot = -1
