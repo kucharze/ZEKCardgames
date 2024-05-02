@@ -15,7 +15,6 @@ function SnipSnapSnorum({darkMode}) {
   const [comCanPlay, setComCanPlay] = useState(false)
   const [win, setWin] = useState(false)
   const [gameOver, setGameOver] = useState(false)
-  const [reset, setReset] = useState(false)
   const [darkmode,setDarkmode] = useState("darkmode")
   const [passStatus, setPassStatus] = useState(false)
 
