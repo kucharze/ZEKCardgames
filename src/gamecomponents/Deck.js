@@ -2,7 +2,7 @@
  * Deck of playing cards.
  */
 const Card = require("./Card");
-class Deck {
+export default class Deck {
   // Instance variable:
   //   list: Deck of cards (array of Card objects)
 
