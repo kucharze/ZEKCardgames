@@ -4,9 +4,11 @@ import styles from './Matching.module.css'
 
 function Matching() {
   const [matchList, setMatchList] = useState([])//List of elements that will get matched
+  const [el1, setEl1] = useState(null)
+  const [el2, setEl2] = useState(null)
 
   const newGame = () =>{
-    
+
   }
 
   return (
