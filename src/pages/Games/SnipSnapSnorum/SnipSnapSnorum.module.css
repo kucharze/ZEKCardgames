@@ -25,7 +25,7 @@
 }
 
 .playSpace {
-  margin: 20px;
+  margin: 15px;
   width: 90%;
   border: solid black;
   background-color: green;
@@ -34,7 +34,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed; */
-  padding: 25px;
+  padding: 10px;
 }
 
 .card {
