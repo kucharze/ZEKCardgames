@@ -74,8 +74,17 @@ function SnipSnapSnorum({darkMode}) {
   const comTurn = () =>{
     console.log("Computer turn")
     let tempHand = comHand
+    let cond
+    
+    if(passStatus){
+      console.log("Fixing turn status for computer")
+      cond = "Snip"
+    }
+    else{
+      cond  = condition
+    }
 
-    let cond = condition
+    
     let pileCard = pile
     let pass = true
 
@@ -88,7 +97,7 @@ function SnipSnapSnorum({darkMode}) {
         cond = "Snap"
       }
       else if(cond === "Snap"){
-        // console.log("Playing a card Snap " + card.value)
+        console.log("Playing a card Snap " + pile.value)
         let tempcard = null
         let tempSpot = -1
         for(let i=0; i<tempHand.length; i++){
@@ -114,7 +123,7 @@ function SnipSnapSnorum({darkMode}) {
         
       }
       else if (cond === "Snorum" ) {
-        // console.log("Playing a card Snorum " + card.value)
+        console.log("Playing a card Snorum " + pile.value)
         let tempcard = null
         let tempSpot = -1
         for(let i=0; i<tempHand.length; i++){
@@ -126,8 +135,10 @@ function SnipSnapSnorum({darkMode}) {
         }
 
         if(tempcard==null){
+          console.log("No card found")
           if(pass){
             cond="Snip"
+            console.log("Resetting ")
           }
           break
         }
@@ -138,13 +149,19 @@ function SnipSnapSnorum({darkMode}) {
           pass=false
         }
       }
+
+      if(tempHand.length===0){
+        //The computer wins
+        setGameOver(true)
+        setWin(false)
+        setDisabled(true)
+      }
     }
 
     console.log("Done")
     setPile(pileCard)
     setCondition(cond)
     setComHand(tempHand)
-    setDisabled(false)
     setPassStatus(true)
   }
 
@@ -261,9 +278,9 @@ function SnipSnapSnorum({darkMode}) {
         <button onClick={()=>{
           // setDisabled(true); 
           setComCanPlay(true)
-          if(passStatus){
-            setCondition("Snip")
-          }
+          // if(passStatus){
+          //   setCondition("Snip")
+          // }
         }} 
           disabled={disabled}>Pass the turn</button>
         <h2>Player</h2>
