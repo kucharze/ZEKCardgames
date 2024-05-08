@@ -40,11 +40,17 @@ function GoFish({darkmode}) {
   const askForCard = (card) =>{
     console.log("Do you have any ",card.suit,card.value,"?")
 
-    comTurn()
+    checkComHand(card)
   }
 
-  const checkComHand = () =>{
-    
+  const checkComHand = (card) =>{
+    let i = 0;
+    let tempHand = comHand
+    while(i<tempHand.length){
+
+      i++
+    }
+    comTurn()
   }
 
   const comTurn = () =>{
