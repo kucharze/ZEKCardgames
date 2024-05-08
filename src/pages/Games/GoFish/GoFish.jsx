@@ -58,6 +58,7 @@ function GoFish({darkmode}) {
     setComHand([...comHand,newCard])
 
     setDisabled(true)
+    setAsking(false)
   }
 
   useEffect(()=>{
@@ -102,7 +103,7 @@ function GoFish({darkmode}) {
       }
       {
         asking && <div>
-          <h1>Do you have any {askCard}?</h1>
+          <h1>Do you have any {askCard.value}?</h1>
         </div>
       }
       
