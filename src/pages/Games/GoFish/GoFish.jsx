@@ -43,6 +43,10 @@ function GoFish({darkmode}) {
     comTurn()
   }
 
+  const checkComHand = () =>{
+    
+  }
+
   const comTurn = () =>{
     setDisabled(false)
     setAsking(true)
