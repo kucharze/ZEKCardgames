@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import styles from './SnipSnapSnorum.module.css'
-import back from '../../../Images/cardback.png'
+// import back from '../../../Images/cardback.png'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
