@@ -10,6 +10,7 @@ function SpiderSolitare() {
   const [row3, setRow3] = useState([])
   const [row4, setRow4] = useState([])
   const [row5, setRow5] = useState([])
+  const [row6, setRow6] = useState([])
   
   const newGame = () =>{
     let templist = []
@@ -44,6 +45,13 @@ function SpiderSolitare() {
     }
 
     setRow5(templist)
+
+    templist = []
+    for(let i=0; i<5; i++){
+      templist.push(deck.dealACard())
+    }
+
+    setRow6(templist)
   }
 
   return (
@@ -90,6 +98,15 @@ function SpiderSolitare() {
         <div className={styles.row}>
           {
             row5.map((item, i)=>{
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
+              />
+            })
+          }
+        </div>
+        <div className={styles.row}>
+          {
+            row6.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card} 
               src={require(`../../../Images/${item}.png`)}
               />
