@@ -16,14 +16,12 @@ function SpiderSolitare() {
     for(let i=0; i<5; i++){
       templist.push(deck.dealACard())
     }
-
     setRow1(templist)
     
     templist = []
     for(let i=0; i<5; i++){
       templist.push(deck.dealACard())
     }
-
     setRow2(templist)
 
     templist = []
@@ -54,40 +52,49 @@ function SpiderSolitare() {
       <button onClick={newGame}>New game</button>
       <div className={styles.playmat}>
         <div className={styles.row}>
-          <img src={back} alt="1" />
-          <img src={back} alt="2" />
-          <img src={back} alt="3" />
-          <img src={back} alt="1" />
+          {
+            row1.map(()=>{
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
+              />
+            })
+          }
         </div>
         <div className={styles.row}>
-          <img src={back} alt="" />
-          <img src={back} alt="2" />
-          <img src={back} alt="2" />
-          <img src={back} alt="2" />
+          {
+            row2.map(()=>{
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
+              />
+            })
+          }
         </div>
         <div className={styles.row}>
-          <img src={back} alt="" />
-          <img src={back} alt="3" />
-          <img src={back} alt="3" />
-          <img src={back} alt="1" />
+          {
+            row3.map(()=>{
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
+              />
+            })
+          }
         </div>
         <div className={styles.row}>
-          <img src={back} alt="" />
-          <img src={back} alt="" />
-          <img src={back} alt="" />
-          <img src={back} alt="" />
+          {
+            row4.map(()=>{
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
+              />
+            })
+          }
         </div>
         <div className={styles.row}>
-          <img src={back} alt="" />
-          <img src={back} alt="3" />
-          <img src={back} alt="3" />
-          <img src={back} alt="3" />
-        </div>
-        <div className={styles.row}>
-          <img src={back} alt="" />
-          <img src={back} alt="5" />
-          <img src={back} alt="5" />
-          <img src={back} alt="5" />
+          {
+            row5.map(()=>{
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
+              />
+            })
+          }
         </div>
       </div>
       
