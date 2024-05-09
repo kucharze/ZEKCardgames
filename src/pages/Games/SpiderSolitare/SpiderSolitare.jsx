@@ -53,7 +53,7 @@ function SpiderSolitare() {
       <div className={styles.playmat}>
         <div className={styles.row}>
           {
-            row1.map(()=>{
+            row1.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card} 
               src={require(`../../../Images/${item}.png`)}
               />
@@ -62,7 +62,7 @@ function SpiderSolitare() {
         </div>
         <div className={styles.row}>
           {
-            row2.map(()=>{
+            row2.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card} 
               src={require(`../../../Images/${item}.png`)}
               />
@@ -71,7 +71,7 @@ function SpiderSolitare() {
         </div>
         <div className={styles.row}>
           {
-            row3.map(()=>{
+            row3.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card} 
               src={require(`../../../Images/${item}.png`)}
               />
@@ -80,7 +80,7 @@ function SpiderSolitare() {
         </div>
         <div className={styles.row}>
           {
-            row4.map(()=>{
+            row4.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card} 
               src={require(`../../../Images/${item}.png`)}
               />
@@ -89,7 +89,7 @@ function SpiderSolitare() {
         </div>
         <div className={styles.row}>
           {
-            row5.map(()=>{
+            row5.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card} 
               src={require(`../../../Images/${item}.png`)}
               />
