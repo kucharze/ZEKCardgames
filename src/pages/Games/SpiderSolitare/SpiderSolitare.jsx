@@ -52,7 +52,16 @@ function SpiderSolitare() {
     }
 
     setRow6(templist)
+
+    setDeck(new Deck())
+    deck.shuffle()
+    deck.shuffle()
   }
+
+  useEffect(()=>{
+    deck.shuffle()
+    deck.shuffle()
+  },[])
 
   return (
     <div className={styles.SpiderSolitare}>
