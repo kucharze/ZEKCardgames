@@ -47,8 +47,13 @@ function GoFish({darkmode}) {
     let i = 0;
     let tempHand = comHand
     while(i<tempHand.length){
-
-      i++
+      if(tempHand[i]==card){
+        tempHand.slice(i,1);
+      }
+      else{
+        i++
+      }
+      
     }
     comTurn()
   }
