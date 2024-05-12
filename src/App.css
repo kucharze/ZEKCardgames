@@ -258,13 +258,13 @@ button.active .text {
   }
   .logo {
     width: 50%;
-    height: 250px;
+    height: 240px;
     border: solid black;
   }
   h1 {
     /* background-color: green; */
     width: 100%;
-    font-size: 30px;
+    font-size: 20px;
   }
   button {
     font-weight: 600;
