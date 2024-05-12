@@ -257,8 +257,8 @@ button.active .text {
     font-size: 18px;
   }
   .logo {
-    width: 60%;
-    height: 350px;
+    width: 50%;
+    height: 250px;
     border: solid black;
   }
   h1 {
@@ -269,8 +269,8 @@ button.active .text {
   button {
     font-weight: 600;
     font-size: 14px;
-    height: 65px;
-    width: 200px;
+    height: 70px;
+    width: 190px;
     padding: 0.8em 1.4em;
   }
 }
