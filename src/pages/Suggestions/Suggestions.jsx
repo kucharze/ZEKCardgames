@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './Suggestions.module.css'
+import axios from 'axios'
 
 function Suggestions() {
+  const [suggestion, setSuggestion] = useState("")
+
+  const sendSuestion = () =>{
+
+  }
+
   return (
     <div className={styles.Suggestions}>
       <h1>Suggestions</h1>
