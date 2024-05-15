@@ -31,8 +31,9 @@ function Suggestions() {
         You may submit them down below.
       </h3>
       <form>
-        <input placeholder='Put your suggestions here'/><br/>
-        <input type='submit'/>
+        <input placeholder='Put your suggestions here' 
+         onChange={(value)=>{setSuggestion(value)}}/><br/>
+        <input type='submit' onClick={sendSuggestion()}/>
       </form>
     </div>
   )
