@@ -5,8 +5,23 @@ import axios from 'axios'
 function Suggestions() {
   const [suggestion, setSuggestion] = useState("")
 
-  const sendSuestion = () =>{
+  const sendSuggestion = async () =>{
+    try {
+      let res = await axios.post('http://localhost:3001/suggestions',
+        suggestion,{
+        headers:{
+            "Content-Type": "application/json"
+          }
+        })
 
+        console.log(res)
+        setAnnouncement("Successful Order Submision")
+          
+    } catch (error) {
+        console.log("There was an error")
+        console.log(error)
+        setAnnouncement('Error')
+    }
   }
 
   return (
