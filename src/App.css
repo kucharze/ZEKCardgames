@@ -125,8 +125,8 @@ button {
   font-weight: 600;
   color: yellow;
   font-size: 25px;
-  height: 80px;
-  width: 260px;
+  height: 100px;
+  width: 300px;
   /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
   background-image: linear-gradient(
     315deg,
