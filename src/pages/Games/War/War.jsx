@@ -115,7 +115,7 @@ function War({darkmode}) {
         </div>
       }
       <h1>War</h1>
-      <div className={styles.mat}>
+      <div className={styles.gamemat}>
         <div>
           <h2>Computer</h2>
           <h3>{comWins}</h3>

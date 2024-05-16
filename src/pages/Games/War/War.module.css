@@ -18,10 +18,17 @@
   color: gold;
   width: 100%;
 }
-.mat {
+.gamemat {
   display: flex;
   border: solid black;
   background-color: green;
+  color: yellow;
+  margin: 20px;
+}
+.mat {
+  display: flex;
+  border: solid black;
+  background-color: blue;
   color: yellow;
   margin: 20px;
 }
