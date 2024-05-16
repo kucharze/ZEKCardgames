@@ -15,12 +15,12 @@ function Suggestions() {
         })
 
         console.log(res)
-        setAnnouncement("Successful Order Submision")
+        // set("Successful Order Submision")
           
     } catch (error) {
         console.log("There was an error")
         console.log(error)
-        setAnnouncement('Error')
+        // setAnnouncement('Error')
     }
   }
 
