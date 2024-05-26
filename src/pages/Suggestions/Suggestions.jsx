@@ -6,6 +6,7 @@ function Suggestions() {
   const [suggestion, setSuggestion] = useState("")
 
   const sendSuggestion = async () =>{
+    console.log("Sending a suggestion",suggestion)
     try {
       let res = await axios.post('http://localhost:3001/suggestions',
         suggestion,{
@@ -30,11 +31,11 @@ function Suggestions() {
       <h3>If you have any suggestions you would like to make or would like to report a bug
         You may submit them down below.
       </h3>
-      <form>
+      {/* <form onSubmit={sendSuggestion}> */}
         <input placeholder='Put your suggestions here' 
-         onChange={(value)=>{setSuggestion(value)}}/><br/>
-        <input type='submit' onClick={sendSuggestion()}/>
-      </form>
+         onChange={(e)=>{setSuggestion(e.target.value)}}/><br/>
+        <input type='submit' onClick={() =>{sendSuggestion()}}/>
+      {/* </form> */}
     </div>
   )
 }
