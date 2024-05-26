@@ -31,6 +31,9 @@ app.use(express.static(path.join(__dirname, "build")));
 //routes
 app.use("/suggestions", require("./routes/suggestions"));
 
+//For games, have site store info along with id for game
+//to send to server, while server holds info for games
+
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 app.get("/*", function (req, res) {
