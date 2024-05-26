@@ -9,7 +9,7 @@ function Suggestions() {
     console.log("Sending a suggestion",suggestion)
     try {
       let res = await axios.post('http://localhost:3001/suggestions',
-        suggestion,{
+        {suggestion},{
         headers:{
             "Content-Type": "application/json"
           }
@@ -21,7 +21,6 @@ function Suggestions() {
     } catch (error) {
         console.log("There was an error")
         console.log(error)
-        // setAnnouncement('Error')
     }
   }
 
