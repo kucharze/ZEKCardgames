@@ -3,6 +3,8 @@ const router = express.Router();
 // const jwt = require("jsonwebtoken");
 // const bcrypt = require("bcrypt");
 
+const Suggestion = require("../Schema_models/suggestions");
+
 router.post("/", async (req, res) => {
   console.log("Server suggestion test");
   console.log(req.body);
