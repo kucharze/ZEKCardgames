@@ -8,6 +8,13 @@ const Suggestion = require("../Schema_models/suggestions/suggestions");
 router.post("/", async (req, res) => {
   console.log("Server suggestion test");
   console.log(req.body);
+  try {
+    const suggestion = Suggestion.create(req.body);
+    res.status(200).json("Successfully made a new suggestion");
+  } catch (error) {
+    console.log(error);
+    res.status(400).json(error);
+  }
 });
 
 module.exports = router;
