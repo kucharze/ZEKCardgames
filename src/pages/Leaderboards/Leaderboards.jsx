@@ -6,7 +6,11 @@ function Leaderboards() {
   const [option,setOption] = useState("")
 
   const getLeaderboardData = async () =>{
-
+    try {
+      let res = await axios.get("http://localhost:3001/leaderboard")
+    } catch (error) {
+      console.log("There was an error",error)
+    }
   }
   return (
     <div className={styles.Leaderboards}>
