@@ -15,6 +15,7 @@ function Suggestions() {
           }
         })
 
+        console.log("Back from the server")
         console.log(res)
         // set("Successful Order Submision")
           

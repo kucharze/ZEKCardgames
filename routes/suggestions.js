@@ -9,12 +9,16 @@ router.post("/", async (req, res) => {
   console.log("Server suggestion test");
   console.log(req.body);
   try {
+    console.log("Inside try block");
     const suggestion = Suggestion.create(req.body);
-    res.status(200).json("Successfully made a new suggestion");
+    console.log("Made suggestion object");
+    res.json("Successfully made a new suggestion", suggestion);
   } catch (error) {
+    console.log("We failed");
     console.log(error);
-    res.status(400).json(error);
+    res.status(400).json("Error:", error);
   }
+  console.log("Finsished in Suggestions");
 });
 
 module.exports = router;
