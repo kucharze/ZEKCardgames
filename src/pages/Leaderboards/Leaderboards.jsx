@@ -5,9 +5,13 @@ import axios from 'axios'
 function Leaderboards() {
   const [option,setOption] = useState("")
 
-  const getLeaderboardData = async () =>{
+  const getLeaderboardData = async (e) =>{
+    e.preventDefault()
+    console.log("Leaderboard server test")
     try {
-      let res = await axios.get("http://localhost:3001/leaderboard")
+      let res = await axios.get("http://localhost:3001/leaderboards")
+
+      console.log(res)
     } catch (error) {
       console.log("There was an error",error)
     }
@@ -27,7 +31,7 @@ function Leaderboards() {
             <option>Spider Solitare</option>
             <option>War</option>
         </select>
-        <input type='submit' />
+        <input type='submit' onClick={getLeaderboardData}/>
       </form>
       <p>Where leaderboards will be loaded to</p>
       <p>This feature is not yet implemented</p>
