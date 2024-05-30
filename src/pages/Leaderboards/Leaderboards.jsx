@@ -1,7 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from './Leaderboards.module.css'
+import axios from 'axios'
 
 function Leaderboards() {
+  const [option,setOption] = useState("")
+
+  const getLeaderboardData = async () =>{
+
+  }
   return (
     <div className={styles.Leaderboards}>
       <h1>Leaderboards</h1>
