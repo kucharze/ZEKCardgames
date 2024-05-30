@@ -12,11 +12,11 @@ router.post("/", async (req, res) => {
     console.log("Inside try block");
     const suggestion = Suggestion.create(req.body);
     console.log("Made suggestion object");
-    res.json("Successfully made a new suggestion", suggestion);
+    res.status(200).json("Successfully made a new suggestion");
   } catch (error) {
     console.log("We failed");
     console.log(error);
-    res.status(400).json("Error:", error);
+    res.status(400).json(error);
   }
   console.log("Finsished in Suggestions");
 });
