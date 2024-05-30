@@ -36,6 +36,7 @@ app.use("/*", (req, res, next) => {
 
 //routes
 app.use("/suggestions", require("./routes/suggestions"));
+app.use("/leaderboards", require("./routes/leaderboards"));
 
 //For games, have site store info along with id for game
 //to send to server, while server holds info for games
