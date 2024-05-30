@@ -30,8 +30,7 @@ app.use(express.static(path.join(__dirname, "build")));
 
 //Used for testing
 app.use("/*", (req, res, next) => {
-  console.log("New data");
-  console.log("new data has come in: ", req.body);
+  console.log("New data has come in: ", req.body);
   next();
 });
 
