@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   console.log("Server Leaderboard test");
-  res.status(200).json("Success");
+  res.status(200).json("Success accessing server for leaderboards");
 });
 
 module.exports = router;

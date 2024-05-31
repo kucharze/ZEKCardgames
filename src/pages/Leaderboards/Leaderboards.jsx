@@ -11,7 +11,7 @@ function Leaderboards() {
     try {
       let res = await axios.get("http://localhost:3001/leaderboards")
 
-      console.log("res is",res)
+      console.log(res)
     } catch (error) {
       console.log("There was an error",error)
     }
