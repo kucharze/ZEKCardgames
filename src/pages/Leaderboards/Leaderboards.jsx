@@ -14,7 +14,7 @@ function Leaderboards() {
     e.preventDefault()
     console.log("Leaderboard server test")
     try {
-      let res = await axios.get("http://localhost:3001/leaderboards/gofish")
+      let res = await axios.get("http://localhost:3001/leaderboards/"+option)
 
       console.log(res)
     } catch (error) {
