@@ -33,13 +33,13 @@ function Leaderboards() {
       <form>
         <select value={option} onChange={(e) =>{setOption(e.target.value)}}>
             <option>Select a leaderboard option</option>
-            <option>Crazy Eights</option>
-            <option>Blackjack</option>
+            <option>Crazy Eights Moves</option>
+            <option>Blackjack Wins</option>
             <option>Snip Snap Snorum</option>
-            <option>Matching</option>
-            <option>Go Fish</option>
+            <option>Matching Moves</option>
+            <option>Go Fish High Score</option>
             <option>Spider Solitare</option>
-            <option>War</option>
+            <option>War Score</option>
         </select>
         <input type='submit' onClick={getLeaderboardData}/>
       </form>
