@@ -125,8 +125,8 @@ button {
   font-weight: 600;
   color: yellow;
   font-size: 25px;
-  height: 100px;
-  width: 300px;
+  height: 80px;
+  width: 550px;
   /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
   background-image: linear-gradient(
     315deg,
@@ -246,8 +246,8 @@ button.active .text {
   button {
     font-weight: 600;
     font-size: 17px;
-    height: 65px;
-    width: 210px;
+    height: 80px;
+    width: 550px;
     padding: 0.8em 1.4em;
   }
 }
@@ -269,8 +269,8 @@ button.active .text {
   button {
     font-weight: 600;
     font-size: 14px;
-    height: 70px;
-    width: 190px;
+    height: 100px;
+    width: 550px;
     padding: 0.8em 1.4em;
   }
 }
