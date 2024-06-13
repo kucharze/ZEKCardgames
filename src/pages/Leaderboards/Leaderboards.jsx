@@ -38,7 +38,7 @@ function Leaderboards() {
             <option>Snip Snap Snorum</option>
             <option>Matching Moves</option>
             <option>Go Fish High Score</option>
-            <option>Spider Solitare</option>
+            <option>Spider Solitare Score</option>
             <option>War Score</option>
         </select>
         <input type='submit' onClick={getLeaderboardData}/>
