@@ -34,6 +34,7 @@ function App() {
       <p>(*Games with an online mode (Not yet implemented))</p>
       <div>
         <button
+          className="darkMode"
           id={darkmode}
           onClick={() => {
             setDarkMode(!darkMode);

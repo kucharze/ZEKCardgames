@@ -120,13 +120,37 @@ button#darkMode {
   );
 }
 
-button {
+.darkMode {
   color: var(--bg);
   font-weight: 600;
   color: yellow;
   font-size: 25px;
   height: 80px;
   width: 550px;
+  /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
+  background-image: linear-gradient(
+    315deg,
+    rgb(4, 170, 4) -10%,
+    rgb(6, 168, 6) 50%,
+    rgb(6, 177, 6) 110%
+  );
+  padding: 0.8em 1.4em;
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 2px 3px 1px hsl(var(--glow-hue) 50% 20% / 50%),
+    inset 0 -10px 20px -10px hsla(var(--shadow-hue), 10%, 90%, 95%);
+  border-radius: 0.66em;
+  scale: 1;
+  transition: all var(--spring-duration) var(--spring-easing);
+}
+
+button {
+  color: var(--bg);
+  font-weight: 600;
+  color: yellow;
+  font-size: 25px;
+  height: 80px;
+  width: 250px;
   /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
   background-image: linear-gradient(
     315deg,
