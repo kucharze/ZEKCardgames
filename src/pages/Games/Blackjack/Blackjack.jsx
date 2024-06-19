@@ -190,9 +190,8 @@ function Blackjack() {
         <button onClick={dealCard} disabled={disabled}>Hit</button>
         <button onClick={playComTurn} disabled={disabled}>Stand</button>
       </div>
-      
-      <div className='player'>
-        <h2>Player hand value: {value}</h2>
+      <h2>Player hand value: {value}</h2>
+      <div className={styles.player}>
         {
           playHand.map((item,i)=>{
               if(item){

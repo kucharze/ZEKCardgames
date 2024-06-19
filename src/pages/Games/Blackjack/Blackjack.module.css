@@ -28,6 +28,12 @@ img {
   margin: 20px;
 }
 
+.player {
+  border: solid green;
+  width: 800px;
+  margin: 20px;
+}
+
 .rules {
   background-color: gray;
   border: solid green;
