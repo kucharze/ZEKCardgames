@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-// const Suggestion = require("../Schema_models/suggestions/suggestions");
+const Blackjack = require("../Schema_models/leaderboards/Blackjackwins.js");
+const EightMoves = require("../Schema_models/leaderboards/EightMoves.js");
+const WarScore = require("../Schema_models/leaderboards/WarScore.js");
 
 router.get("/:game", async (req, res) => {
   console.log("Server Leaderboard test");
