@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const Blackjack = require("../Schema_models/leaderboards/Blackjackwins.js");
-const EightMoves = require("../Schema_models/leaderboards/EightMoves.js");
-const WarScore = require("../Schema_models/leaderboards/WarScore.js");
-const GoFishScore = require("../Schema_models/leaderboards/GoFishScore.js");
-const MatchMoves = require("../Schema_models/leaderboards/MatchMoves.js");
+const Blackjack = require("../Schema_models/Leaderboards/Blackjackwins.js");
+const EightMoves = require("../Schema_models/Leaderboards/EightMoves.js");
+const WarScore = require("../Schema_models/Leaderboards/WarScore.js");
+const GoFishScore = require("../Schema_models/Leaderboards/GoFishScore.js");
+const MatchMoves = require("../Schema_models/Leaderboards/MatchMoves.js");
 
 router.get("/:game", async (req, res) => {
   console.log("Server Leaderboard test");
