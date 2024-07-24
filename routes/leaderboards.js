@@ -4,6 +4,8 @@ const router = express.Router();
 const Blackjack = require("../Schema_models/leaderboards/Blackjackwins.js");
 const EightMoves = require("../Schema_models/leaderboards/EightMoves.js");
 const WarScore = require("../Schema_models/leaderboards/WarScore.js");
+const GoFishScore = require("../Schema_models/leaderboards/GoFishScore.js");
+const MatchMoves = require("../Schema_models/leaderboards/MatchMoves.js");
 
 router.get("/:game", async (req, res) => {
   console.log("Server Leaderboard test");
@@ -31,6 +33,22 @@ router.get("/:game", async (req, res) => {
   } else if (game === "War Score") {
     try {
       const leaderboard = await WarScore.find();
+      res.status(200).json(leaderboard);
+    } catch (error) {
+      console.log(error);
+      res.status(400).json(error);
+    }
+  } else if (game === "Go Fish High Score") {
+    try {
+      const leaderboard = await GoFishScore.find();
+      res.status(200).json(leaderboard);
+    } catch (error) {
+      console.log(error);
+      res.status(400).json(error);
+    }
+  } else if (game === "Matching Moves") {
+    try {
+      const leaderboard = await MatchMoves.find();
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
