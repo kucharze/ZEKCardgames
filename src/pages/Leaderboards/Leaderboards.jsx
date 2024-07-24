@@ -17,6 +17,9 @@ function Leaderboards() {
       let res = await axios.get("http://localhost:3001/leaderboards/"+option)
 
       console.log(res)
+      if(res.status === 400){
+        alert(res.response.data)
+      }
     } catch (error) {
       console.log("There was an error",error)
     }

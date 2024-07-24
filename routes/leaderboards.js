@@ -36,6 +36,8 @@ router.get("/:game", async (req, res) => {
       console.log(error);
       res.status(400).json(error);
     }
+  } else {
+    res.status(400).json("Invalid game name");
   }
 });
 
