@@ -25,10 +25,6 @@ function Leaderboards() {
     }
   }
 
-  useEffect(()=>{
-    console.log(option)
-  },[option])
-
   return (
     <div className={styles.Leaderboards}>
       <h1>Leaderboards</h1>
@@ -46,8 +42,12 @@ function Leaderboards() {
         </select>
         <input type='submit' onClick={getLeaderboardData}/>
       </form>
-      <p>Where leaderboards will be loaded to</p>
-      <p>This feature is not yet implemented</p>
+      <p>Leadbaord data:
+       
+      </p>
+       <ol>
+          {data.map((data)=>{return <li>{data}</li>})}
+        </ol>
     </div>
   )
 }
