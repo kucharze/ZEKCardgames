@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// const User = require("./users");
 
 const WarScore = mongoose.Schema(
   {
