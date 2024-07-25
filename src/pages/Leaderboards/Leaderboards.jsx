@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import styles from './Leaderboards.module.css'
 import axios from 'axios'
 
@@ -42,9 +42,7 @@ function Leaderboards() {
         </select>
         <input type='submit' onClick={getLeaderboardData}/>
       </form>
-      <p>Leadbaord data:
-       
-      </p>
+      <p>Leadbaord data:</p>
        <ol>
           {data.map((data)=>{return <li>{data}</li>})}
         </ol>
