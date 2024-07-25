@@ -4,6 +4,7 @@ import axios from 'axios'
 
 function Leaderboards() {
   const [option,setOption] = useState("")
+  const [data,setData] = useState([])
 
   const getLeaderboardData = async (e) =>{
     if(option === 'Select a leaderboard option'){
@@ -16,12 +17,11 @@ function Leaderboards() {
     try {
       let res = await axios.get("http://localhost:3001/leaderboards/"+option)
 
-      console.log(res)
-      if(res.status === 400){
-        alert(res.response.data)
-      }
+      console.log(res.data)
+      setData(res.data)
     } catch (error) {
       console.log("There was an error",error)
+      alert("Error: "+error.response.data)
     }
   }
 
