@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// const Suggestion = require("../Schema_models/suggestions/suggestions");
+const users = require("../Schema_models/Users/Users");
 
 router.get("/", async (req, res) => {
   console.log("Server User test");
