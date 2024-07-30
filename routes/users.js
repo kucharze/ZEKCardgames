@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   console.log("Server User test");
-  res.status(200).json("Success accessing server for USers");
+  res.status(200).json("Success accessing server for Users");
 });
 
 module.exports = router;
