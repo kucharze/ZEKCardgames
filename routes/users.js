@@ -7,7 +7,9 @@ const users = require("../Schema_models/Users/Users");
 router.get("/", async (req, res) => {
   console.log("Server User test");
   try {
-    const users = await users.find();
+    let user = req.body;
+    const users = await users.findOne({ username: user.username });
+    if (!users) return res.status(400).json("User not found");
     res.status(200).json(users);
   } catch (error) {
     console.log(error);
