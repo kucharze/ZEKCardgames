@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
     res.status(200).json(users);
   } catch (error) {
     console.log(error);
-    res.status(400).json("Error: " + error);
+    res.status(400).json("Error logging in: " + error);
   }
   res.status(200).json("Success accessing server for Users");
 });
@@ -25,7 +25,7 @@ router.Post("/", async (req, res) => {
     user.save();
   } catch (error) {
     console.log(error);
-    res.status(400).json("Error: " + error);
+    res.status(400).json("Error creating user: " + error);
   }
 
   res.status(200).json("Success accessing server for Users");
