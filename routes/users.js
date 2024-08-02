@@ -6,6 +6,13 @@ const users = require("../Schema_models/Users/Users");
 
 router.get("/", async (req, res) => {
   console.log("Server User test");
+  try {
+    const users = await users.find();
+    res.status(200).json(users);
+  } catch (error) {
+    console.log(error);
+    res.status(400).json("Error: " + error);
+  }
   res.status(200).json("Success accessing server for Users");
 });
 
