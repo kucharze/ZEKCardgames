@@ -10,6 +10,14 @@ router.get("/", async (req, res) => {
     let user = req.body;
     const users = await users.findOne({ username: user.username });
     if (!users) return res.status(400).json("User not found");
+
+    const validPassword = await bcrypt.compare(user.password, users.password);
+
+    if (!validPassword) return res.status(400).json("Wrong password");
+
+    const { password, ...others } = users._doc;
+
+    console.log(others);
     res.status(200).json(users);
   } catch (error) {
     console.log(error);
