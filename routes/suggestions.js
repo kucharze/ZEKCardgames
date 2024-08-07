@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
     console.log("Made suggestion object");
     res.status(200).json("Successfully made a new suggestion");
   } catch (error) {
-    console.log("We failed");
+    console.log("Failed to make suggesstion object");
     console.log(error);
     res.status(400).json(error);
   }
