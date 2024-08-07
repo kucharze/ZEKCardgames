@@ -23,8 +23,23 @@ function Accounts() {
     }
   }
 
-  const login = async () => {}
-  
+  const login = async () => {
+    try {
+      let res = await axios.post('http://localhost:3001/accounts',
+        {
+          username: "test",
+          password: "test",
+        },
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className={styles.Accounts}>
       <h3>Active User: No active user</h3>
