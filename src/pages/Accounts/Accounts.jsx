@@ -22,6 +22,9 @@ function Accounts() {
       console.log(error)
     }
   }
+
+  const login = async () => {}
+  
   return (
     <div className={styles.Accounts}>
       <h3>Active User: No active user</h3>
