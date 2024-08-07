@@ -4,6 +4,13 @@ import axios from 'axios'
 
 function Accounts() {
 
+  const [username,setUsername] = useState("")
+  const [password,setPassword] = useState("")
+  const [name,setName] = useState("")
+
+  const [loginUsername,setLoginUsername] = useState("")
+  const [loginPassword,setLoginPassword] = useState("")
+
   const createAccount = async () => {
     try {
       let res = await axios.post('http://localhost:3001/accounts',
