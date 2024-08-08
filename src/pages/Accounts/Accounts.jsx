@@ -34,8 +34,8 @@ function Accounts() {
     try {
       let res = await axios.post('http://localhost:3001/accounts',
         {
-          username: "test",
-          password: "test",
+          username: loginUsername,
+          password: loginPassword,
         },
         {
           headers: {
@@ -61,8 +61,8 @@ function Accounts() {
 
       <h2>Already have an account? Sign in here</h2>
       <form onSubmit={login}>
-        <input placeholder='Screenname'/>
-        <input placeholder='Password'/><br/>
+        <input onChange={(e) => {setLoginUsername(e.target.value)}} placeholder='Screenname'/>
+        <input onChange={(e) => {setLoginPassword(e.target.value)}} placeholder='Password'/><br/>
         <input type='submit' value='Login'/>
       </form>
     </div>
