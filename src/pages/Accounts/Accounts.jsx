@@ -7,6 +7,7 @@ function Accounts() {
   const [username,setUsername] = useState("")
   const [password,setPassword] = useState("")
   const [name,setName] = useState("")
+  const [confirm,setConfirm] = useState("")
 
   const [loginUsername,setLoginUsername] = useState("")
   const [loginPassword,setLoginPassword] = useState("")
