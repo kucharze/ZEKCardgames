@@ -56,7 +56,7 @@ function Accounts() {
         <input onChange={(e) => {setName(e.target.value)}} placeholder='Name'/>
         <input onChange={(e) => {setUsername(e.target.value)}} placeholder='Username'/>
         <input onChange={(e) => {setPassword(e.target.value)}} placeholder='Password'/>
-        <input placeholder='Confirm password'/><br/>
+        <input onChange={(e) => {setConfirm(e.target.value)}} placeholder='Confirm password'/><br/>
         <input type='submit' value='Create an Account'/>
       </form>
 
