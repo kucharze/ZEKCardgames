@@ -26,6 +26,7 @@ function Accounts() {
             "Content-Type": "application/json"
           }
         })
+        console.log(res)
     } catch (error) {
       console.log(error)
     }
@@ -43,6 +44,7 @@ function Accounts() {
             "Content-Type": "application/json"
           }
         })
+        console.log(res)
     } catch (error) {
       console.log(error)
     }

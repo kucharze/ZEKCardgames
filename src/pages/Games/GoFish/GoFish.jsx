@@ -47,7 +47,7 @@ function GoFish({darkmode}) {
     let i = 0;
     let tempHand = comHand
     while(i<tempHand.length){
-      if(tempHand[i]==card){
+      if(tempHand[i]===card){
         tempHand.splice(i,1);
       }
       else{
