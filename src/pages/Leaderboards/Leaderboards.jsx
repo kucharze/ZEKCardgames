@@ -16,7 +16,6 @@ function Leaderboards() {
     console.log("Leaderboard server test")
     try {
       let res = await axios.get("http://localhost:3001/leaderboards/"+option)
-
       console.log(res.data)
       setData(res.data)
     } catch (error) {
@@ -42,7 +41,7 @@ function Leaderboards() {
         </select>
         <input type='submit' onClick={getLeaderboardData}/>
       </form>
-      <p>Leadbaord data:</p>
+      <p>Leaderboard data:</p>
        <ol>
           {data.map((data)=>{return <li>{data}</li>})}
         </ol>
