@@ -31,6 +31,10 @@ function Accounts() {
           }
         })
         console.log(res)
+        setUsername('')
+        setName('')
+        setPassword('')
+        setConfirm('')
     } catch (error) {
       console.log(error)
     }
@@ -50,6 +54,8 @@ function Accounts() {
           }
         })
         console.log(res)
+        setLoginUsername('')
+        setLoginPassword('')
     } catch (error) {
       console.log(error)
     }
