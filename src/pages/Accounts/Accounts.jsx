@@ -63,9 +63,9 @@ function Accounts() {
         />
         <input onChange={(e) => {setUsername(e.target.value)}} placeholder='Username'/>
         <br />
-        <input onChange={(e) => {setPassword(e.target.value)}} placeholder='Password'
+        <input type='password' onChange={(e) => {setPassword(e.target.value)}} placeholder='Password'
         minLength={8}/>
-        <input onChange={(e) => {setConfirm(e.target.value)}} placeholder='Confirm password'/><br/>
+        <input type='password' onChange={(e) => {setConfirm(e.target.value)}} placeholder='Confirm password'/><br/>
         <input type='submit' value='Create an Account'/>
       </form>
 
@@ -76,6 +76,7 @@ function Accounts() {
         minLength={3}/>
         <input onChange={(e) => {setLoginPassword(e.target.value)}} 
         placeholder='Password'
+        type='password'
         minLength={8}/><br/>
         <input type='submit' value='Login'/>
       </form>
