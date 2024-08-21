@@ -12,7 +12,8 @@ function Accounts() {
   const [loginUsername,setLoginUsername] = useState("")
   const [loginPassword,setLoginPassword] = useState("")
 
-  const createAccount = async () => {
+  const createAccount = async (e) => {
+    e.preventDefault()
     if(password !== confirm){
       alert("Passwords do not match")
     }
@@ -35,7 +36,8 @@ function Accounts() {
     }
   }
 
-  const login = async () => {
+  const login = async (e) => {
+    e.preventDefault()
     try {
       let res = await axios.post('http://localhost:3001/accounts',
         {
