@@ -21,7 +21,7 @@ function Accounts() {
       let res = await axios.post('http://localhost:3001/users/createuser',
         {
           name: name,
-          username: username,
+          userName: username,
           password: password,
 
         },
@@ -41,7 +41,7 @@ function Accounts() {
     try {
       let res = await axios.post('http://localhost:3001/users/login',
         {
-          username: loginUsername,
+          userName: loginUsername,
           password: loginPassword,
         },
         {
