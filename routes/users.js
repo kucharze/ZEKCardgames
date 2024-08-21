@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 const users = require("../Schema_models/Users/Users");
 
-router.post("/", async (req, res) => {
+router.post("/login", async (req, res) => {
   console.log("Server User test");
   try {
     let user = req.body;
@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
   res.status(200).json("Success accessing server for Users");
 });
 
-router.post("/", async (req, res) => {
+router.post("/createuser", async (req, res) => {
   console.log("Saving a user");
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);

@@ -18,7 +18,7 @@ function Accounts() {
       alert("Passwords do not match")
     }
     try {
-      let res = await axios.post('http://localhost:3001/accounts',
+      let res = await axios.post('http://localhost:3001/users/createuser',
         {
           name: name,
           username: username,
@@ -39,7 +39,7 @@ function Accounts() {
   const login = async (e) => {
     e.preventDefault()
     try {
-      let res = await axios.post('http://localhost:3001/accounts',
+      let res = await axios.post('http://localhost:3001/users/login',
         {
           username: loginUsername,
           password: loginPassword,
