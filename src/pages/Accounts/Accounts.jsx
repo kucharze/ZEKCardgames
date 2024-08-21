@@ -58,18 +58,25 @@ function Accounts() {
       <h3>Active User: No active user</h3>
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form onSubmit={createAccount}>
-        <input onChange={(e) => {setName(e.target.value)}} placeholder='Name'/>
+        <input onChange={(e) => {setName(e.target.value)}} placeholder='Name'
+        minLength={3}
+        />
         <input onChange={(e) => {setUsername(e.target.value)}} placeholder='Username'/>
         <br />
-        <input onChange={(e) => {setPassword(e.target.value)}} placeholder='Password'/>
+        <input onChange={(e) => {setPassword(e.target.value)}} placeholder='Password'
+        minLength={8}/>
         <input onChange={(e) => {setConfirm(e.target.value)}} placeholder='Confirm password'/><br/>
         <input type='submit' value='Create an Account'/>
       </form>
 
       <h2>Already have an account? Sign in here</h2>
       <form onSubmit={login}>
-        <input onChange={(e) => {setLoginUsername(e.target.value)}} placeholder='Screenname'/>
-        <input onChange={(e) => {setLoginPassword(e.target.value)}} placeholder='Password'/><br/>
+        <input onChange={(e) => {setLoginUsername(e.target.value)}} 
+        placeholder='Screenname'
+        minLength={3}/>
+        <input onChange={(e) => {setLoginPassword(e.target.value)}} 
+        placeholder='Password'
+        minLength={8}/><br/>
         <input type='submit' value='Login'/>
       </form>
     </div>
