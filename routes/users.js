@@ -2,18 +2,20 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 
-const users = require("../Schema_models/Users/Users");
+const Users = require("../Schema_models/Users/Users");
 
 router.post("/login", async (req, res) => {
   console.log("Server User test");
   try {
     let user = req.body;
-    const users = await users.findOne({ username: user.username });
+    const users = await Users.findOne({ username: user.username });
     if (!users) return res.status(400).json("User not found");
+    console.log("Found the user: " + users);
 
     const validPassword = await bcrypt.compare(user.password, users.password);
 
     if (!validPassword) return res.status(400).json("Wrong password");
+    console.log("Valid password: " + validPassword);
 
     const { password, ...others } = users._doc;
 
