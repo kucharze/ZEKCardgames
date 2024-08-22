@@ -31,6 +31,7 @@ function App() {
     <div className="App" id={darkmode}>
       <img src={logo} alt="Cardgames logo" className="logo" />
       <h1 id={darkmode}>Welcome to Cardgames.org</h1>
+      <h3>Active User: No active user</h3>
       <p>(*Games with an online mode (Not yet implemented))</p>
       <div>
         <button
