@@ -5,6 +5,7 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [user, setUser] = useState({});
+
   return (
     <AppContext.Provider
       value={{
@@ -15,4 +16,8 @@ export const AppContextProvider = ({ children }) => {
       {children}
     </AppContext.Provider>
   );
+};
+
+export const useAuth = () => {
+  return useContext(AppContext);
 };
