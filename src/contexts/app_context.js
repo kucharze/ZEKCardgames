@@ -11,6 +11,8 @@ export const AppContextProvider = ({ children }) => {
       value={{
         isDarkMode,
         setIsDarkMode,
+        user,
+        setUser,
       }}
     >
       {children}
