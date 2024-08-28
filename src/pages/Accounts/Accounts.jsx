@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import styles from './Accounts.module.css'
 import axios from 'axios'
+import { useAuth } from "../../contexts/app_context";
 
 function Accounts() {
+  const { user, setUser } = useAuth();
 
   const [username,setUsername] = useState("")
   const [password,setPassword] = useState("")
