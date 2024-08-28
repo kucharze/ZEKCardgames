@@ -17,12 +17,12 @@ import { useState, useEffect, useContext } from "react";
 import { useAuth } from "./contexts/app_context";
 
 function App() {
-  const AppContext = useAuth();
+  const { isDarkMode, setIsDarkMode, user } = useAuth();
 
   return (
-    <div className="App" id={AppContext.isDarkMode ? "darkMode" : "lightmode"}>
+    <div className="App" id={isDarkMode ? "darkMode" : "lightmode"}>
       <img src={logo} alt="Cardgames logo" className="logo" />
-      <h1 id={AppContext.isDarkMode ? "darkMode" : "lightmode"}>
+      <h1 id={isDarkMode ? "darkMode" : "lightmode"}>
         Welcome to Cardgames.org
       </h1>
       <h3>Active User: No active user</h3>
@@ -30,9 +30,9 @@ function App() {
       <div>
         <button
           className="darkMode"
-          id={AppContext.isDarkMode ? "darkMode" : "lightmode"}
+          id={isDarkMode ? "darkMode" : "lightmode"}
           onClick={() => {
-            AppContext.setIsDarkMode((prev) => {
+            setIsDarkMode((prev) => {
               if (prev) {
                 return false;
               } else {
@@ -51,72 +51,52 @@ function App() {
         <Route
           path="/suggestions"
           element={
-            <Suggestions
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <Suggestions darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/leaderboards"
           element={
-            <Leaderboards
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <Leaderboards darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/crazyeights"
           element={
-            <CrazyEights
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <CrazyEights darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/blackjack"
           element={
-            <Blackjack
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <Blackjack darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/snipsnapsnorum"
           element={
-            <SnipSnapSnorum
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <SnipSnapSnorum darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/matching"
           element={
-            <Matching
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <Matching darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/gofish"
-          element={
-            <GoFish
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
-          }
+          element={<GoFish darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
         />
         <Route
           path="/spidersolitare"
           element={
-            <SpiderSolitare
-              darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"}
-            />
+            <SpiderSolitare darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
         />
         <Route
           path="/war"
-          element={
-            <War darkMode={AppContext.isDarkMode ? "darkMode" : "lightmode"} />
-          }
+          element={<War darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
         />
       </Routes>
     </div>
