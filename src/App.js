@@ -17,14 +17,7 @@ import { useState, useEffect, useContext } from "react";
 import { useAuth } from "./contexts/app_context";
 
 function App() {
-  // const [darkMode, setDarkMode] = useState(false);
-  // const [darkmode, setDarkmode] = useState("darkmode");
-
   const AppContext = useAuth();
-
-  useEffect(() => {
-    console.log("darkmode is " + AppContext.isDarkMode);
-  }, [AppContext.isDarkMode]);
 
   return (
     <div className="App" id={AppContext.isDarkMode ? "darkMode" : "lightmode"}>
