@@ -25,7 +25,7 @@ function App() {
       <h1 id={isDarkMode ? "darkMode" : "lightmode"}>
         Welcome to Cardgames.org
       </h1>
-      <h3>Active User: No active user</h3>
+      <h3>Active User: {user ? user : "No active user"}</h3>
       <p>(*Games with an online mode (Not yet implemented))</p>
       <div>
         <button

@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState("");
 
   return (
     <AppContext.Provider
