@@ -13,7 +13,7 @@ import Matching from "./pages/Games/Matching/Matching";
 import GoFish from "./pages/Games/GoFish/GoFish";
 import SpiderSolitare from "./pages/Games/SpiderSolitare/SpiderSolitare";
 import War from "./pages/Games/War/War";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "./contexts/app_context";
 
 function App() {
