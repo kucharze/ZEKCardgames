@@ -37,6 +37,7 @@ function Accounts() {
         setName('')
         setPassword('')
         setConfirm('')
+        setUser(res.data)
     } catch (error) {
       console.log(error)
     }
@@ -58,6 +59,7 @@ function Accounts() {
         console.log(res)
         setLoginUsername('')
         setLoginPassword('')
+        setUser(res.data)
     } catch (error) {
       console.log(error)
     }
