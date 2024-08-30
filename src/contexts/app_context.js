@@ -6,6 +6,11 @@ export const AppContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [user, setUser] = useState("");
 
+  //Add functions for uploading to leaderboards
+  const uploadToLeaderboards = () => {
+    console.log("uploading to leaderboards");
+  };
+
   return (
     <AppContext.Provider
       value={{
