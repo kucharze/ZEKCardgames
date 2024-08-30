@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-
+import axios from "axios";
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
@@ -18,6 +18,7 @@ export const AppContextProvider = ({ children }) => {
         setIsDarkMode,
         user,
         setUser,
+        uploadToLeaderboards,
       }}
     >
       {children}
