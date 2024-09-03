@@ -9,19 +9,38 @@ export const AppContextProvider = ({ children }) => {
   //Add functions for uploading to leaderboards
   const uploadToLeaderboards = (board) => {
     console.log("uploading to leaderboards");
-    if (board === "Select a leaderboard option") {
-      alert("Please select a valid option");
-      return;
+
+    switch (board) {
+      case "Crazy Eights Moves":
+        eightMoves();
+        break;
+      case "Blackjack Wins":
+        // blackjackWins();
+        break;
+      case "Snip Snap Snorum":
+        // snipSnipSnorum();
+        break;
+      case "Matching Moves":
+        break;
+      case "Go Fish High Score":
+        break;
+      case "Spider Solitare Score":
+        break;
+      case "War Score":
+        break;
+      default:
+        alert("Please select a valid leaderboard option");
+        break;
     }
   };
 
-  const eightMoves = () => {
+  const eightMoves = (moves) => {
     try {
       let res = axios.post(
         "http://localhost:3001/leaderboards/CrazyEightsMoves",
         {
           username: user,
-          score: 8,
+          score: moves,
         },
         {
           headers: {
