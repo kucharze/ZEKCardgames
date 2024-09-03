@@ -13,3 +13,13 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media only screen and (max-width: 1500px) {
+  .matchzone {
+    width: 95%;
+  }
+  .matchzone > img {
+    height: 180px;
+    width: 180px;
+  }
+}
