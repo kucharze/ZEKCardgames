@@ -7,7 +7,7 @@ export const AppContextProvider = ({ children }) => {
   const [user, setUser] = useState("");
 
   //Add functions for uploading to leaderboards
-  const uploadToLeaderboards = () => {
+  const uploadToLeaderboards = (board) => {
     console.log("uploading to leaderboards");
   };
 
