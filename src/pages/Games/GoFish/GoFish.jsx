@@ -12,6 +12,7 @@ function GoFish({darkmode}) {
   const [gameOver, setGameOver] = useState(false)
   const [askCard, setAskCard] = useState(null)
   const [disabled, setDisabled] = useState(true)
+  const [inProgress, setInProgress] = useState(false)
   const [asking, setAsking] = useState(false)//The computer is asking for a card
 
   const newGame = () =>{
@@ -35,6 +36,7 @@ function GoFish({darkmode}) {
     setDeck(new Deck())
 
     setDisabled(false)
+    setInProgress(true)
   }
 
   const askForCard = (card) =>{
@@ -120,6 +122,9 @@ function GoFish({darkmode}) {
         asking && <div>
           <h1>Do you have any {askCard.value}?</h1>
         </div>
+      }
+      {
+        (!asking && inProgress) && <h1>Pick a card to ask for.</h1>
       }
       
       <h2>Player</h2>
