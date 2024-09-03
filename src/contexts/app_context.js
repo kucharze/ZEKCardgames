@@ -13,12 +13,15 @@ export const AppContextProvider = ({ children }) => {
       alert("Please select a valid option");
       return;
     }
+  };
 
+  const eightMoves = () => {
     try {
       let res = axios.post(
         "http://localhost:3001/leaderboards/" + board,
         {
-          name: user,
+          username: user,
+          score: 8,
         },
         {
           headers: {
@@ -26,10 +29,11 @@ export const AppContextProvider = ({ children }) => {
           },
         }
       );
-
       console.log(res);
       setUser(res.data);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
