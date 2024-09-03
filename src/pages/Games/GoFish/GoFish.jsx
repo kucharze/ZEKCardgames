@@ -10,6 +10,8 @@ function GoFish({darkmode}) {
   const [deck, setDeck] = useState(new Deck())
   const [playHand,setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
+  const [playScore, setPlayScore] = useState(0)
+  const [comScore, setComScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
   const [askCard, setAskCard] = useState(null)
   const [disabled, setDisabled] = useState(true)
