@@ -17,3 +17,7 @@
 .card {
   height: 150px;
 }
+button {
+  width: 200px;
+  height: 80px;
+}
