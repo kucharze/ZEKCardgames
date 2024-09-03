@@ -18,7 +18,7 @@ export const AppContextProvider = ({ children }) => {
   const eightMoves = () => {
     try {
       let res = axios.post(
-        "http://localhost:3001/leaderboards/" + board,
+        "http://localhost:3001/leaderboards/CrazyEightsMoves",
         {
           username: user,
           score: 8,
