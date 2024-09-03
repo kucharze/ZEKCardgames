@@ -27,12 +27,10 @@ function SnipSnapSnorum({darkMode}) {
 
     while(!deck.isEmpty()){
       tempPlayHand.push(deck.dealACard())
-
       tempComHand.push(deck.dealACard())
     }
 
     setComHand(tempComHand)
-
     setPlayHand(tempPlayHand)
     
     let d = new Deck()
@@ -84,7 +82,6 @@ function SnipSnapSnorum({darkMode}) {
       cond  = condition
     }
 
-    
     let pileCard = pile
     let pass = true
 
@@ -209,7 +206,6 @@ function SnipSnapSnorum({darkMode}) {
   useEffect(()=>{
     if(comCanPlay){
       //Check if the turn was passed, if so reset status to snip
-      
       console.log("Com turn")
       comTurn()
     }
@@ -218,15 +214,6 @@ function SnipSnapSnorum({darkMode}) {
   // useEffect(()=>{
   //   console.log(pile)
   // },[pile])
-
-  useEffect(()=>{
-    if(darkMode){
-      setDarkmode("darkMode")
-    }
-    else{
-      setDarkmode("lightmode")
-    }
-  },[darkMode])
 
   useEffect(()=>{
     console.log("passstatus is",passStatus)
