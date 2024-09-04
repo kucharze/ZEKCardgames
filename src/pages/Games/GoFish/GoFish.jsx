@@ -99,18 +99,25 @@ function GoFish({darkmode}) {
 
   const takeTurn = (card) =>{
     // setDisabled(true) //Disable the buttons
-
-    if(asking){
+    console.log("Card is",card)
+    if(!asking){
       askForCard(card)
     }
     else{
-      addCardToList(card)
+      if(card.value===askCard.value){
+        addCardToList(card)
+        // setAsking(true)
+      }
+      else{
+        alert("That is not the card that was asked for")
+      }
     }
   }
 
-  // useEffect(()=>{
-  //   console.log(comHand)
-  // },[comHand])
+  //Used for testing
+  useEffect(()=>{
+    console.log("Listtogive:",listToGive)
+  },[listToGive])
 
   return (
     <div className={styles.GoFish}>
@@ -165,7 +172,7 @@ function GoFish({darkmode}) {
           playHand.map((item,i)=>{
             return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
               onClick={()=>{
-                askForCard(item)
+                takeTurn(item,i)
               }}/>
           })
       }
