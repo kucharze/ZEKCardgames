@@ -51,15 +51,19 @@ function GoFish({darkmode}) {
   const checkComHand = (card) =>{
     let i = 0;
     let tempHand = comHand
+    let tempCardList = []
     while(i<tempHand.length){
-      if(tempHand[i]===card){
-        tempHand.splice(i,1);
+      console.log(tempHand[i])
+      if(tempHand[i].value===card.value){
+        tempCardList = [...tempCardList,tempHand.splice(i,1)];
       }
       else{
         i++
       }
       
     }
+    // console.log("Temocardlist:",tempCardList)
+    setPlayHand([...playHand,...tempCardList])
     comTurn()
   }
 
@@ -81,9 +85,9 @@ function GoFish({darkmode}) {
     setAsking(false)
   }
 
-  useEffect(()=>{
-    console.log(comHand)
-  },[comHand])
+  // useEffect(()=>{
+  //   console.log(comHand)
+  // },[comHand])
 
   return (
     <div className={styles.GoFish}>
@@ -109,7 +113,8 @@ function GoFish({darkmode}) {
       <div>
         {
             comHand.map((item,i)=>{
-              return <img key={i} alt={item} className={styles.card} src={`${back}`}
+              return <img key={i} alt={item} className={styles.card} 
+              src={require(`../../../Images/${item}.png`)}
                 onClick={()=>{
                   console.log("Clicked")
                   
