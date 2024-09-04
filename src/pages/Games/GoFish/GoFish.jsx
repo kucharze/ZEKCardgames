@@ -85,6 +85,17 @@ function GoFish({darkmode}) {
     setAsking(false)
   }
 
+  const takeTurn = (card) =>{
+    // setDisabled(true) //Disable the buttons
+
+    if(asking){
+      checkComHand(askCard)
+    }
+    else{
+      goFish()
+    }
+  }
+
   // useEffect(()=>{
   //   console.log(comHand)
   // },[comHand])
