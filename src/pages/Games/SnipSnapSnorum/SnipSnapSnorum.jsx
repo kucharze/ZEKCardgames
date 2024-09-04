@@ -15,7 +15,6 @@ function SnipSnapSnorum({darkMode}) {
   const [comCanPlay, setComCanPlay] = useState(false)
   const [win, setWin] = useState(false)
   const [gameOver, setGameOver] = useState(false)
-  const [darkmode,setDarkmode] = useState("darkmode")
   const [passStatus, setPassStatus] = useState(false)
 
   const newGame = () =>{
@@ -220,8 +219,8 @@ function SnipSnapSnorum({darkMode}) {
   },[passStatus])
 
   return (
-    <div id={darkmode} className={styles.SnipSnapSnorum}>
-      <h1 id={darkmode }>Snip Snap Snorum</h1>
+    <div id={darkMode} className={styles.SnipSnapSnorum}>
+      <h1 id={darkMode }>Snip Snap Snorum</h1>
       <div>
         <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
@@ -240,7 +239,7 @@ function SnipSnapSnorum({darkMode}) {
         </div>
       }
       
-      <div className={styles.playSpace} id={darkmode}>
+      <div className={styles.playSpace} id={darkMode}>
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
@@ -261,7 +260,7 @@ function SnipSnapSnorum({darkMode}) {
         </div>
       }
       
-      <div className={styles.playSpace} id={darkmode}>
+      <div className={styles.playSpace} id={darkMode}>
         <button onClick={()=>{
           // setDisabled(true); 
           setComCanPlay(true)
