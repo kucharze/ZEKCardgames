@@ -17,6 +17,7 @@ function GoFish({darkmode}) {
   const [disabled, setDisabled] = useState(true)
   const [inProgress, setInProgress] = useState(false)
   const [asking, setAsking] = useState(false)//The computer is asking for a card
+  const [listToGive, setListToGive] = useState([])
 
   const newGame = () =>{
     console.log("New gofish game")
@@ -85,14 +86,25 @@ function GoFish({darkmode}) {
     setAsking(false)
   }
 
+  const giveCards = () =>{
+    setAsking(false)
+    setDisabled(true)
+    setInProgress(false)
+    setGameOver(true)
+  }
+
+  const addCardToList = (card) =>{
+    setListToGive([...listToGive,card])
+  }
+
   const takeTurn = (card) =>{
     // setDisabled(true) //Disable the buttons
 
     if(asking){
-      checkComHand(askCard)
+      askForCard(card)
     }
     else{
-      goFish()
+      addCardToList(card)
     }
   }
 
