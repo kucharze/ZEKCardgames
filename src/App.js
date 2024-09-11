@@ -15,6 +15,7 @@ import SpiderSolitare from "./pages/Games/SpiderSolitare/SpiderSolitare";
 import War from "./pages/Games/War/War";
 // import { useState, useEffect } from "react";
 import { useAuth } from "./contexts/app_context";
+import NewsFeed from "./pages/News/NewsFeed";
 
 function App() {
   const { isDarkMode, setIsDarkMode, user } = useAuth();
@@ -97,6 +98,12 @@ function App() {
         <Route
           path="/war"
           element={<War darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
+        />
+        <Route
+          path="/newsfeed"
+          element={
+            <NewsFeed darkMode={isDarkMode ? "darkMode" : "lightmode"} />
+          }
         />
       </Routes>
     </div>
