@@ -90,6 +90,9 @@ function GoFish({darkmode}) {
     setDisabled(true)
     setInProgress(false)
     setGameOver(true)
+
+    setComHand([...comHand,...listToGive])
+    setListToGive([])
   }
 
   const addCardToList = (card) =>{
