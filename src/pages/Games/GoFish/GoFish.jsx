@@ -45,7 +45,6 @@ function GoFish({darkmode}) {
 
   const askForCard = (card) =>{
     console.log("Do you have any ",card.suit,card.value,"?")
-
     checkComHand(card)
   }
 
@@ -97,7 +96,7 @@ function GoFish({darkmode}) {
     setListToGive([...listToGive,card])
   }
 
-  const takeTurn = (card) =>{
+  const takeTurn = (card,pos) =>{
     // setDisabled(true) //Disable the buttons
     console.log("Card is",card)
     if(!asking){
@@ -107,6 +106,7 @@ function GoFish({darkmode}) {
       if(card.value===askCard.value){
         addCardToList(card)
         // setAsking(true)
+        playHand.splice(pos,1)
       }
       else{
         alert("That is not the card that was asked for")
