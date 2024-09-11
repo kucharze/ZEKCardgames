@@ -9,7 +9,13 @@ function NewsFeed(darkmode) {
             <h1>Newfeed component</h1>
         <p>Welcome to our website.  Here you can see news about things that we are working on.</p>
         <ol>
-            <li>Crazy Eights</li>
+            <li>Crazy Eights - Done</li>
+            <li>Snip Snap Snorum - Done</li>
+            <li>Black jack - Done</li>
+            <li>Matching - TODO</li>
+            <li>Go Fish - In Progress</li>
+            <li>Spider Solitare - TODO</li>
+            <li>War - DONE</li>
         </ol>
         </div>
         
