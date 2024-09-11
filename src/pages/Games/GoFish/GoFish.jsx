@@ -67,6 +67,27 @@ function GoFish({darkmode}) {
     comTurn()
   }
 
+  const checkPlayHand = (card) =>{
+    let i = 0;
+    let tempHand = playHand
+    let tempCardList = []
+    while(i<tempHand.length){
+      //Check if the card the computer is asking for is still in the player's hand
+      console.log(tempHand[i])
+      if(tempHand[i].value===card.value){
+        // tempCardList = [...tempCardList,tempHand.splice(i,1)];
+      }
+      else{
+        i++
+      }
+      
+    }
+
+    // console.log("Temocardlist:",tempCardList)
+    // setComHand([...comHand,...tempCardList])
+    // playTurn()
+  }
+
   const comTurn = () =>{
     setDisabled(false)
     setAsking(true)
