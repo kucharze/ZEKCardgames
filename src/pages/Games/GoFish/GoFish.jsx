@@ -88,6 +88,14 @@ function GoFish({darkmode}) {
     // playTurn()
   }
 
+  const checkForComPoints = () =>{
+    
+  }
+
+  const checkForPlayPoints = () =>{
+    
+  }
+
   const comTurn = () =>{
     setDisabled(false)
     setAsking(true)
