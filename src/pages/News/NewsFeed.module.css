@@ -1,0 +1,8 @@
+.NewsFeed h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  background-color: green;
+}
+
+@media (max-width: 1600px) {
+}
