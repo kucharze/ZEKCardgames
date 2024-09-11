@@ -3,6 +3,31 @@
   margin-bottom: 10px;
   background-color: green;
 }
+.NewsFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkgreen;
+  /* background-color: darkgray; */
+  padding: 20px;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: lightgreen; */
+  font-size: 30px;
+  width: 50%;
+}
+.NewsFeed ol {
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 50%;
+  background-color: lightgreen;
+  border: solid black;
+}
 
 @media (max-width: 1600px) {
 }
