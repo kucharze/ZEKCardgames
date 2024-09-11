@@ -8,6 +8,7 @@ function Navbar({options}) {
       <Link to={'/'}>Account management</Link>
       <Link to={'/suggestions'}>Suggestions</Link>
       <Link to={'/leaderboards'}>Leaderboards</Link>
+      <Link to={'/newsfeed'}>News Feed</Link>
     </div>
   )
 }
