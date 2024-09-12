@@ -63,6 +63,7 @@ function GoFish({darkmode}) {
     }
     // console.log("Temocardlist:",tempCardList)
     if(tempCardList.length===0){
+      alert("Go Fish!")
       setPlayHand([...playHand,deck.dealACard()])
     }
     else{
