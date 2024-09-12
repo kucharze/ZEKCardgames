@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from 'react'
-import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './GoFish.module.css'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
