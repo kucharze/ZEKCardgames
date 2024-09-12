@@ -104,11 +104,11 @@ function GoFish({darkmode}) {
 
   }
 
-  const checkForComPoints = () =>{
+  const checkForComPoints = (card) =>{
     let count = 0
   }
 
-  const checkForPlayPoints = () =>{
+  const checkForPlayPoints = (card) =>{
     let count = 0
   }
 
@@ -122,6 +122,9 @@ function GoFish({darkmode}) {
   const goFish = () =>{
     //Tells computer to go fish
     console.log("Go fish")
+
+    //Check if the player can give cards to the opponent
+
     if(deck.list.length>0){
       let newCard = deck.dealACard()
 
@@ -173,6 +176,7 @@ function GoFish({darkmode}) {
       }
       <h1>Go Fish</h1>
       <h2>Com</h2>
+      <h4>Score: {comScore}</h4>
       <div>
         {
             comHand.map((item,i)=>{
@@ -200,6 +204,7 @@ function GoFish({darkmode}) {
       <h3>Cards left in deck: {deck.list.length}</h3>
       
       <h2>Player</h2>
+      <h4>Score: {playScore}</h4>
       <button disabled={disabled} onClick={()=>{goFish()}}>Go Fish</button>
       <div>
         {
