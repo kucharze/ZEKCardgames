@@ -16,6 +16,10 @@ function NewsFeed(darkmode) {
             <li>Go Fish - In Progress</li>
             <li>Spider Solitare - TODO</li>
             <li>War - DONE</li>
+            <li>Online game features - TODO</li>
+            <li>Load Leaderboard - DONE</li>
+            <li>Upload to Leaderboards - TODO</li>
+            <li>Login functions - In Progress</li>
         </ol>
         </div>
         
