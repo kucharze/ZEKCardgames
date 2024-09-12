@@ -11,10 +11,10 @@ function GoFish({darkmode}) {
   const [comHand, setComHand] = useState([])
   const [playScore, setPlayScore] = useState(0)
   const [comScore, setComScore] = useState(0)
-  const [gameOver, setGameOver] = useState(false)
-  const [askCard, setAskCard] = useState(null)
-  const [disabled, setDisabled] = useState(true)
-  const [inProgress, setInProgress] = useState(false)
+  const [gameOver, setGameOver] = useState(false)//The game has completed
+  const [askCard, setAskCard] = useState(null)//The card the computer is asking for
+  const [disabled, setDisabled] = useState(true)//Should the goFish buttons be disabled
+  const [inProgress, setInProgress] = useState(false)//A game is currently in progress
   const [asking, setAsking] = useState(false)//The computer is asking for a card
   const [listToGive, setListToGive] = useState([])
 
