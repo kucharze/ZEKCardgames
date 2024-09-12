@@ -36,7 +36,7 @@ function GoFish({darkmode}) {
 
     setComHand(tempHand)
 
-    setDeck(new Deck())
+    // setDeck(new Deck())
 
     setDisabled(false)
     setInProgress(true)
@@ -52,7 +52,7 @@ function GoFish({darkmode}) {
     let tempHand = comHand
     let tempCardList = []
     while(i<tempHand.length){
-      console.log(tempHand[i])
+      // console.log(tempHand[i])
       if(tempHand[i].value===card.value){
         tempCardList = [...tempCardList,tempHand.splice(i,1)];
       }
@@ -67,32 +67,34 @@ function GoFish({darkmode}) {
   }
 
   const checkPlayHand = (card) =>{
+    console.log("Checking play hand")
     let i = 0;
     let tempHand = playHand
-    let tempCardList = []
+    // let tempCardList = []
+    let stillGiving = false
+
     while(i<tempHand.length){
       //Check if the card the computer is asking for is still in the player's hand
       console.log(tempHand[i])
       if(tempHand[i].value===card.value){
-        // tempCardList = [...tempCardList,tempHand.splice(i,1)];
+        stillGiving = true
+        break
       }
-      else{
-        i++
-      }
-      
+      i++
     }
 
-    // console.log("Temocardlist:",tempCardList)
-    // setComHand([...comHand,...tempCardList])
-    // playTurn()
+    if(!stillGiving){
+      giveCards()
+    }
+
   }
 
   const checkForComPoints = () =>{
-    
+    let count = 0
   }
 
   const checkForPlayPoints = () =>{
-    
+    let count = 0
   }
 
   const comTurn = () =>{
@@ -117,7 +119,6 @@ function GoFish({darkmode}) {
     setAsking(false)
     setDisabled(true)
     setInProgress(false)
-    setGameOver(true)
 
     setComHand([...comHand,...listToGive])
     setListToGive([])
@@ -138,6 +139,7 @@ function GoFish({darkmode}) {
         addCardToList(card)
         // setAsking(true)
         playHand.splice(pos,1)
+        checkPlayHand(card)
       }
       else{
         alert("That is not the card that was asked for")
@@ -195,6 +197,7 @@ function GoFish({darkmode}) {
       {
         (!asking && inProgress) && <h1>Pick a card to ask for.</h1>
       }
+      <h3>Cards left in deck: {deck.list.length}</h3>
       
       <h2>Player</h2>
       <button disabled={disabled} onClick={()=>{goFish()}}>Go Fish</button>
