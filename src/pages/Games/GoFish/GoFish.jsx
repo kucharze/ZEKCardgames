@@ -98,7 +98,8 @@ function GoFish({darkmode}) {
     }
 
     if(!stillGiving){
-      giveCards()
+      setAsking(false)
+      setDisabled(true)
     }
 
   }
@@ -132,19 +133,6 @@ function GoFish({darkmode}) {
 
   }
 
-  const giveCards = () =>{
-    setAsking(false)
-    setDisabled(true)
-    // setInProgress(false)
-
-    setComHand([...comHand,...listToGive])
-    setListToGive([])
-  }
-
-  const addCardToList = (card) =>{
-    setListToGive([...listToGive,card])
-  }
-
   const takeTurn = (card,pos) =>{
     // setDisabled(true) //Disable the buttons
     console.log("Card is",card)
@@ -153,7 +141,7 @@ function GoFish({darkmode}) {
     }
     else{
       if(card.value===askCard.value){
-        addCardToList(card)
+        setComHand([...comHand,...playHand.splice(pos,1)])
         // setAsking(true)
         playHand.splice(pos,1)
         checkPlayHand(card)
@@ -163,11 +151,6 @@ function GoFish({darkmode}) {
       }
     }
   }
-
-  //Used for testing
-  useEffect(()=>{
-    console.log("Listtogive:",listToGive)
-  },[listToGive])
 
   return (
     <div className={styles.GoFish}>
