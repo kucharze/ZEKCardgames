@@ -18,8 +18,14 @@ function GoFish({darkmode}) {
   const [asking, setAsking] = useState(false)//The computer is asking for a card
   const [listToGive, setListToGive] = useState([])
 
+  
+  const setUpDeck = () =>{
+    setDeck(new Deck())
+  }
+
   const newGame = () =>{
     console.log("New gofish game")
+    setUpDeck()
     deck.shuffle()
     deck.shuffle()
     
@@ -36,7 +42,7 @@ function GoFish({darkmode}) {
 
     setComHand(tempHand)
 
-    setDeck(new Deck())
+    // setDeck(new Deck())
 
     setDisabled(false)
     setInProgress(true)
