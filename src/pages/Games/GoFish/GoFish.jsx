@@ -62,7 +62,13 @@ function GoFish({darkmode}) {
       
     }
     // console.log("Temocardlist:",tempCardList)
-    setPlayHand([...playHand,...tempCardList])
+    if(tempCardList.length===0){
+      setPlayHand([...playHand,deck.dealACard()])
+    }
+    else{
+      setPlayHand([...playHand,...tempCardList])
+    }
+    
     comTurn()
   }
 
