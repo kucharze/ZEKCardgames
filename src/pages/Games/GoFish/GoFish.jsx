@@ -36,7 +36,7 @@ function GoFish({darkmode}) {
 
     setComHand(tempHand)
 
-    // setDeck(new Deck())
+    setDeck(new Deck())
 
     setDisabled(false)
     setInProgress(true)
@@ -107,12 +107,15 @@ function GoFish({darkmode}) {
   const goFish = () =>{
     //Tells computer to go fish
     console.log("Go fish")
-    let newCard = deck.dealACard()
+    if(deck.list.length>0){
+      let newCard = deck.dealACard()
 
-    setComHand([...comHand,newCard])
+      setComHand([...comHand,newCard])
 
-    setDisabled(true)
-    setAsking(false)
+      setDisabled(true)
+      setAsking(false)
+    }
+
   }
 
   const giveCards = () =>{
