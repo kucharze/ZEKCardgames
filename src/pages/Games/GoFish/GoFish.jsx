@@ -16,7 +16,6 @@ function GoFish({darkmode}) {
   const [disabled, setDisabled] = useState(true)//Should the goFish buttons be disabled
   const [inProgress, setInProgress] = useState(false)//A game is currently in progress
   const [asking, setAsking] = useState(false)//The computer is asking for a card
-  const [listToGive, setListToGive] = useState([])
 
   
   const setUpDeck = () =>{
@@ -75,6 +74,7 @@ function GoFish({darkmode}) {
     }
     else{
       setPlayHand([...playHand,...tempCardList])
+      checkForPlayPoints(card)
     }
     
     comTurn()
@@ -100,16 +100,19 @@ function GoFish({darkmode}) {
     if(!stillGiving){
       setAsking(false)
       setDisabled(true)
+      checkForComPoints(card)
     }
 
   }
 
   const checkForComPoints = (card) =>{
     let count = 0
+    console.log("Checking for COM points")
   }
 
   const checkForPlayPoints = (card) =>{
     let count = 0
+    console.log("Checking for play points")
   }
 
   const comTurn = () =>{
@@ -154,6 +157,10 @@ function GoFish({darkmode}) {
       }
     }
   }
+
+  useEffect(() => {
+    // newGame()
+  }, [])
 
   return (
     <div className={styles.GoFish}>
