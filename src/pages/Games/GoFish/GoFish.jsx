@@ -42,10 +42,11 @@ function GoFish({darkmode}) {
 
     setComHand(tempHand)
 
-    // setDeck(new Deck())
-
     setDisabled(false)
     setInProgress(true)
+    setAsking(false)
+    setInProgress(true)
+    setAskCard(null)
   }
 
   const askForCard = (card) =>{
