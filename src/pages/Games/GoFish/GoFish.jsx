@@ -134,7 +134,7 @@ function GoFish({darkmode}) {
   const giveCards = () =>{
     setAsking(false)
     setDisabled(true)
-    setInProgress(false)
+    // setInProgress(false)
 
     setComHand([...comHand,...listToGive])
     setListToGive([])
