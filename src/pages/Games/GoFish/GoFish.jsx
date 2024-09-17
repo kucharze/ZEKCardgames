@@ -97,7 +97,7 @@ function GoFish({darkmode}) {
         i++
     }
     return stillGiving
-    
+
   }
 
   const checkPlayHand = (card) =>{
@@ -147,6 +147,11 @@ function GoFish({darkmode}) {
     console.log("Go fish")
 
     //Check if the player can give cards to the opponent
+
+    if(testPlayHand(askCard)){
+      alert("You can still give cards")
+      return
+    }
 
     if(deck.list.length>0){
       let newCard = deck.dealACard()
