@@ -89,7 +89,7 @@ function GoFish({darkmode}) {
 
     while(i<tempHand.length){
         //Check if the card the computer is asking for is still in the player's hand
-        console.log(tempHand[i])
+        // console.log(tempHand[i])
         if(tempHand[i].value===card.value){
           stillGiving = true
           break
@@ -102,22 +102,8 @@ function GoFish({darkmode}) {
 
   const checkPlayHand = (card) =>{
     console.log("Checking play hand")
-    let i = 0;
-    let tempHand = playHand
-    // let tempCardList = []
-    let stillGiving = false
 
-    while(i<tempHand.length){
-      //Check if the card the computer is asking for is still in the player's hand
-      console.log(tempHand[i])
-      if(tempHand[i].value===card.value){
-        stillGiving = true
-        break
-      }
-      i++
-    }
-
-    if(!stillGiving){
+    if(!testPlayGiving(card)){
       setAsking(false)
       setDisabled(true)
       checkForComPoints(card)
