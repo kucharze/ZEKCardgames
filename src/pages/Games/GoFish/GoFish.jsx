@@ -80,7 +80,7 @@ function GoFish({darkmode}) {
     comTurn()
   }
 
-  const testPlayHand = (card) =>{
+  const testPlayGiving = (card) =>{
     //Check Player hand for a given card
     console.log("Testing play hand")
     let i = 0;
@@ -148,7 +148,7 @@ function GoFish({darkmode}) {
 
     //Check if the player can give cards to the opponent
 
-    if(testPlayHand(askCard)){
+    if(testPlayGiving(askCard)){
       alert("You can still give cards")
       return
     }
