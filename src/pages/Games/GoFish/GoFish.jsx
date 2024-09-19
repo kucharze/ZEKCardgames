@@ -122,6 +122,12 @@ function GoFish({darkmode}) {
         count++
       }
     }
+    if(count===4){
+      for(let i=0; i<positions.length; i++){
+        comHand.splice(positions[i],1)
+      }
+      setComScore(comScore+count)
+    }
   }
 
   const checkForPlayPoints = (card) =>{
@@ -135,12 +141,12 @@ function GoFish({darkmode}) {
         count++
       }
     }
-    // if(count>0){
+    if(count===4){
     //   setAsking(false)
     //   setDisabled(true)
     //   setPlayHand([...playHand,...comHand.splice(positions[0],count)])
     //   setComScore(comScore+count)
-    // }
+    }
   }
 
   const comTurn = () =>{
