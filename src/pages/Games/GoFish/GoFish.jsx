@@ -22,6 +22,10 @@ function GoFish({darkmode}) {
     setDeck(new Deck())
   }
 
+  const endGame = () =>{
+    setGameOver(true)
+  }
+
   const newGame = () =>{
     console.log("New gofish game")
     setUpDeck()
@@ -125,6 +129,7 @@ function GoFish({darkmode}) {
     if(count===4){
       for(let i=0; i<positions.length; i++){
         comHand.splice(positions[i],1)
+        //Subtract one from other positions in order to prevent errors
       }
       setComScore(comScore+count)
     }
