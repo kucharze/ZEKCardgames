@@ -113,12 +113,34 @@ function GoFish({darkmode}) {
 
   const checkForComPoints = (card) =>{
     let count = 0
+    let positions = []
     console.log("Checking for COM points")
+
+     for(let i=0; i<comHand.length; i++){
+      if(comHand[i].value===card.value){
+        positions.push(i)
+        count++
+      }
+    }
   }
 
   const checkForPlayPoints = (card) =>{
     let count = 0
+    let positions = []
     console.log("Checking for play points")
+
+    for(let i=0; i<playHand.length; i++){
+      if(playHand[i].value===card.value){
+        positions.push(i)
+        count++
+      }
+    }
+    // if(count>0){
+    //   setAsking(false)
+    //   setDisabled(true)
+    //   setPlayHand([...playHand,...comHand.splice(positions[0],count)])
+    //   setComScore(comScore+count)
+    // }
   }
 
   const comTurn = () =>{
