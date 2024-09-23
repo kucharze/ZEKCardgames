@@ -24,6 +24,7 @@ function GoFish({darkmode}) {
 
   const endGame = () =>{
     setGameOver(true)
+    setInProgress(false)
   }
 
   const newGame = () =>{
@@ -75,6 +76,9 @@ function GoFish({darkmode}) {
     if(tempCardList.length===0){
       alert("Go Fish!")
       setPlayHand([...playHand,deck.dealACard()])
+      if(deck.list.length==0){
+        endGame()
+      }
     }
     else{
       setPlayHand([...playHand,...tempCardList])
@@ -176,6 +180,9 @@ function GoFish({darkmode}) {
       let newCard = deck.dealACard()
 
       setComHand([...comHand,newCard])
+      if(deck.list.length==0){
+        endGame()
+      }
 
       setDisabled(true)
       setAsking(false)
