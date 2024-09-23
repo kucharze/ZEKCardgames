@@ -19,6 +19,12 @@ function SpiderSolitare() {
 
     for(let i=0; i<5; i++){
       card = deck.dealACard()
+      if(i!=4){
+        card.back = true
+      }
+      else{
+        card.back = false
+      }     
       templist.push(card)
     }
     setRow1(templist)
@@ -26,7 +32,12 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      card.back = true
+      if(i!=4){
+        card.back = true
+      }
+      else{
+        card.back = false
+      } 
       templist.push(card)
     }
     setRow2(templist)
@@ -34,7 +45,12 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      card.back = true
+      if(i!=4){
+        card.back = true
+      }
+      else{
+        card.back = false
+      } 
       templist.push(card)
     }
 
@@ -43,7 +59,12 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      card.back = true
+      if(i!=4){
+        card.back = true
+      }
+      else{
+        card.back = false
+      } 
       templist.push(card)
     }
 
@@ -52,7 +73,12 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      card.back = true
+      if(i!=4){
+        card.back = true
+      }
+      else{
+        card.back = false
+      } 
       templist.push(card)
     }
 
@@ -61,7 +87,12 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      card.back = true
+      if(i!=4){
+        card.back = true
+      }
+      else{
+        card.back = false
+      } 
       templist.push(card)
     }
 
@@ -85,54 +116,97 @@ function SpiderSolitare() {
         <div className={styles.row}>
           {
             row1.map((item, i)=>{
-              return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
-              />
+             if(item.back){
+                return <img key={i} alt={item} className={styles.card} 
+                src={back}
+                />
+              }
+              else{
+                return <img key={i} alt={item} className={styles.card} 
+                src={require(`../../../Images/${item}.png`)}
+                />
+              }
             })
           }
         </div>
         <div className={styles.row}>
           {
             row2.map((item, i)=>{
-              return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
-              />
+              if(item.back){
+                return <img key={i} alt={item} className={styles.card} 
+                src={back}
+                />
+              }
+              else{
+                return <img key={i} alt={item} className={styles.card} 
+                src={require(`../../../Images/${item}.png`)}
+                />
+              }
             })
           }
         </div>
         <div className={styles.row}>
           {
             row3.map((item, i)=>{
-              return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
-              />
+              if(item.back){
+                return <img key={i} alt={item} className={styles.card} 
+                src={back}
+                />
+              }
+              else{
+                return <img key={i} alt={item} className={styles.card} 
+                src={require(`../../../Images/${item}.png`)}
+                />
+              }
             })
           }
         </div>
         <div className={styles.row}>
           {
             row4.map((item, i)=>{
-              return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
-              />
+              if(item.back){
+                return <img key={i} alt={item} className={styles.card} 
+                src={back}
+                />
+              }
+              else{
+                return <img key={i} alt={item} className={styles.card} 
+                src={require(`../../../Images/${item}.png`)}
+                />
+              }
             })
           }
         </div>
         <div className={styles.row}>
           {
             row5.map((item, i)=>{
-              return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
-              />
+              if(item.back){
+                return <img key={i} alt={item} className={styles.card} 
+                src={back}
+                />
+              }
+              else{
+                return <img key={i} alt={item} className={styles.card} 
+                src={require(`../../../Images/${item}.png`)}
+                />
+              }
             })
           }
         </div>
         <div className={styles.row}>
           {
             row6.map((item, i)=>{
-              return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
-              />
+              if(item.back){
+                return <img key={i} alt={item} className={styles.card} 
+                src={back}
+                />
+              }
+              else{
+                return <img key={i} alt={item} className={styles.card} 
+                src={require(`../../../Images/${item}.png`)}
+                />
+              }
+              
             })
           }
         </div>
