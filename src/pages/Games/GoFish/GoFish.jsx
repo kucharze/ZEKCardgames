@@ -25,6 +25,17 @@ function GoFish({darkmode}) {
   const endGame = () =>{
     setGameOver(true)
     setInProgress(false)
+
+    //check to see who won
+    if(playScore>comScore){
+      console.log("Player wins")
+    }
+    else if(comScore>playScore){
+      console.log("Computer wins")
+    }
+    else{
+      console.log("Tie")
+    }
   }
 
   const newGame = () =>{
@@ -249,7 +260,7 @@ function GoFish({darkmode}) {
       </div>
       
       {
-        gameOver &&  <WinnerBoard/>
+        gameOver &&  <WinnerBoard winner={comScore<playScore}/>
       }
       {
         asking && <div>
