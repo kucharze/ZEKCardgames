@@ -19,7 +19,7 @@ function SpiderSolitare() {
 
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      if(i!=4){
+      if(i!==4){
         card.back = true
       }
       else{
@@ -32,7 +32,7 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      if(i!=4){
+      if(i!==4){
         card.back = true
       }
       else{
@@ -45,7 +45,7 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      if(i!=4){
+      if(i!==4){
         card.back = true
       }
       else{
@@ -59,7 +59,7 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      if(i!=4){
+      if(i!==4){
         card.back = true
       }
       else{
@@ -73,7 +73,7 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      if(i!=4){
+      if(i!==4){
         card.back = true
       }
       else{
@@ -87,7 +87,7 @@ function SpiderSolitare() {
     templist = []
     for(let i=0; i<5; i++){
       card = deck.dealACard()
-      if(i!=4){
+      if(i!==4){
         card.back = true
       }
       else{
