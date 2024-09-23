@@ -13,42 +13,56 @@ function SpiderSolitare() {
   const [row6, setRow6] = useState([])
   
   const newGame = () =>{
+    let card = null
+
     let templist = []
+
     for(let i=0; i<5; i++){
-      templist.push(deck.dealACard())
+      card = deck.dealACard()
+      templist.push(card)
     }
     setRow1(templist)
     
     templist = []
     for(let i=0; i<5; i++){
-      templist.push(deck.dealACard())
+      card = deck.dealACard()
+      card.back = true
+      templist.push(card)
     }
     setRow2(templist)
 
     templist = []
     for(let i=0; i<5; i++){
-      templist.push(deck.dealACard())
+      card = deck.dealACard()
+      card.back = true
+      templist.push(card)
     }
 
     setRow3(templist)
 
     templist = []
     for(let i=0; i<5; i++){
-      templist.push(deck.dealACard())
+      card = deck.dealACard()
+      card.back = true
+      templist.push(card)
     }
 
     setRow4(templist)
 
     templist = []
     for(let i=0; i<5; i++){
-      templist.push(deck.dealACard())
+      card = deck.dealACard()
+      card.back = true
+      templist.push(card)
     }
 
     setRow5(templist)
 
     templist = []
     for(let i=0; i<5; i++){
-      templist.push(deck.dealACard())
+      card = deck.dealACard()
+      card.back = true
+      templist.push(card)
     }
 
     setRow6(templist)
