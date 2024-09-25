@@ -166,10 +166,11 @@ function GoFish({darkmode}) {
       }
     }
     if(count===4){
-    //   setAsking(false)
-    //   setDisabled(true)
-    //   setPlayHand([...playHand,...comHand.splice(positions[0],count)])
-    //   setComScore(comScore+count)
+      for(let i=0; i<positions.length; i++){
+        comHand.splice(positions[i],1)
+        //Subtract one from other positions in order to prevent errors
+      }
+      setPlayScore(playScore+count)
     }
   }
 
