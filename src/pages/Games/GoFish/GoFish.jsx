@@ -178,7 +178,7 @@ function GoFish({darkmode}) {
     setDisabled(false)
     setAsking(true)
     
-    setAskCard(comHand[0])
+    setAskCard(Math.floor((Math.random() * comHand.length) + 1))
   }
 
   const goFish = () =>{
