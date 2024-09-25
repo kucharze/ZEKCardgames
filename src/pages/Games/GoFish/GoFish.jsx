@@ -265,7 +265,7 @@ function GoFish({darkmode}) {
       </div>
       
       {
-        gameOver &&  <WinnerBoard winner={comScore<playScore}/>
+        gameOver &&  <WinnerBoard winner={winner}/>
       }
       {
         asking && <div>
