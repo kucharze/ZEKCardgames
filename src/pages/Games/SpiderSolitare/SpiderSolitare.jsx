@@ -11,6 +11,7 @@ function SpiderSolitare() {
   const [row4, setRow4] = useState([])
   const [row5, setRow5] = useState([])
   const [row6, setRow6] = useState([])
+  const [movecard, setMoveCard] = useState(null)
   
   const newGame = () =>{
     let card = null
@@ -101,6 +102,19 @@ function SpiderSolitare() {
     setDeck(new Deck())
     deck.shuffle()
     deck.shuffle()
+  }
+
+  const takeTurn = (card) =>{
+    if(movecard){
+      if(card.value===movecard.value){
+        if(card.suit===movecard.suit){
+          setRow1([...row1,movecard])
+        }
+      }
+    }
+    else{
+      setMoveCard(card)
+    }
   }
 
   useEffect(()=>{
