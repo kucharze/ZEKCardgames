@@ -16,7 +16,7 @@ function GoFish({darkmode}) {
   const [disabled, setDisabled] = useState(true)//Should the goFish buttons be disabled
   const [inProgress, setInProgress] = useState(false)//A game is currently in progress
   const [asking, setAsking] = useState(false)//The computer is asking for a card
-
+  const [winner, setWinner] = useState(false)
   
   const setUpDeck = () =>{
     setDeck(new Deck())
@@ -29,12 +29,15 @@ function GoFish({darkmode}) {
     //check to see who won
     if(playScore>comScore){
       console.log("Player wins")
+      setWinner(true)
     }
     else if(comScore>playScore){
       console.log("Computer wins")
+      setWinner(false)
     }
     else{
       console.log("Tie")
+      setWinner(null)
     }
   }
 
@@ -62,6 +65,7 @@ function GoFish({darkmode}) {
     setAsking(false)
     setInProgress(true)
     setAskCard(null)
+    setGameOver(false)
   }
 
   const askForCard = (card) =>{
