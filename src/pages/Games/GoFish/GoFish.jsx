@@ -150,7 +150,7 @@ function GoFish({darkmode}) {
         comHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
       }
-      setComScore(comScore+count)
+      setComScore(comScore+1)
     }
   }
 
@@ -170,7 +170,7 @@ function GoFish({darkmode}) {
         comHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
       }
-      setPlayScore(playScore+count)
+      setPlayScore(playScore+1)
     }
   }
 
