@@ -117,6 +117,10 @@ function SpiderSolitare() {
     }
   }
 
+  const findCard = (card) =>{
+
+  }
+
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
