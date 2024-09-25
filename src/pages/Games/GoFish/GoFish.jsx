@@ -77,6 +77,9 @@ function GoFish({darkmode}) {
     let i = 0;
     let tempHand = comHand
     let tempCardList = []
+
+    // testPlayGiving(card,comHand)
+
     while(i<tempHand.length){
       // console.log(tempHand[i])
       if(tempHand[i].value===card.value){
@@ -103,11 +106,11 @@ function GoFish({darkmode}) {
     comTurn()
   }
 
-  const testPlayGiving = (card) =>{
+  const testPlayGiving = (card,hand) =>{
     //Check Player hand for a given card
     console.log("Testing play hand")
     let i = 0;
-    let tempHand = playHand
+    let tempHand = hand
     let stillGiving = false
 
     while(i<tempHand.length){
@@ -126,7 +129,7 @@ function GoFish({darkmode}) {
   const checkPlayHand = (card) =>{
     console.log("Checking play hand")
 
-    if(!testPlayGiving(card)){
+    if(!testPlayGiving(card,playHand)){
       setAsking(false)
       setDisabled(true)
       checkForComPoints(card)
@@ -139,7 +142,7 @@ function GoFish({darkmode}) {
     let positions = []
     console.log("Checking for COM points")
 
-     for(let i=0; i<comHand.length; i++){
+    for(let i=0; i<comHand.length; i++){
       if(comHand[i].value===card.value){
         positions.push(i)
         count++
