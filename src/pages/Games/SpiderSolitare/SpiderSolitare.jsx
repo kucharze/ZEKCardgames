@@ -135,12 +135,13 @@ function SpiderSolitare() {
           {
             row1.map((item, i)=>{
              if(item.back){
-                return <img key={i} alt={item} className={styles.card} 
+                return <img key={i} alt={item} className={styles.card}
                 src={back}
                 />
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
+                onClick={()=>{takeTurn(item)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -156,7 +157,8 @@ function SpiderSolitare() {
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card} 
+                return <img key={i} alt={item} className={styles.card}
+                onClick={()=>{takeTurn(item)}} 
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -173,6 +175,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
+                onClick={()=>{takeTurn(item)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -189,6 +192,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
+                onClick={()=>{takeTurn(item)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -204,7 +208,8 @@ function SpiderSolitare() {
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card} 
+                return <img key={i} alt={item} className={styles.card}
+                onClick={()=>{takeTurn(item)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -221,6 +226,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
+                onClick={()=>{takeTurn(item)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
