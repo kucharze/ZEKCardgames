@@ -141,7 +141,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item,1)}}
+                onClick={()=>{takeTurn(item, row1)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -158,7 +158,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{takeTurn(item,2)}} 
+                onClick={()=>{takeTurn(item, row2)}} 
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -175,7 +175,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item,3)}}
+                onClick={()=>{takeTurn(item, row3)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -192,7 +192,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item,4)}}
+                onClick={()=>{takeTurn(item, row4)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -209,7 +209,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{takeTurn(item,5)}}
+                onClick={()=>{takeTurn(item, row5)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -226,7 +226,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item,6)}}
+                onClick={()=>{takeTurn(item, row6)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
