@@ -104,7 +104,7 @@ function SpiderSolitare() {
     deck.shuffle()
   }
 
-  const takeTurn = (card) =>{
+  const takeTurn = (card, row) =>{
     if(movecard){
       if(card.value===movecard.value){
         if(card.suit===movecard.suit){
@@ -118,7 +118,7 @@ function SpiderSolitare() {
   }
 
   const findCard = (card) =>{
-
+    
   }
 
   useEffect(()=>{
@@ -141,7 +141,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item)}}
+                onClick={()=>{takeTurn(item,1)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -158,7 +158,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{takeTurn(item)}} 
+                onClick={()=>{takeTurn(item,2)}} 
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -175,7 +175,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item)}}
+                onClick={()=>{takeTurn(item,3)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -192,7 +192,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item)}}
+                onClick={()=>{takeTurn(item,4)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -209,7 +209,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{takeTurn(item)}}
+                onClick={()=>{takeTurn(item,5)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
@@ -226,7 +226,7 @@ function SpiderSolitare() {
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item)}}
+                onClick={()=>{takeTurn(item,6)}}
                 src={require(`../../../Images/${item}.png`)}
                 />
               }
