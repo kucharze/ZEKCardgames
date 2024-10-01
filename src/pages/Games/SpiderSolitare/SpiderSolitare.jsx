@@ -12,6 +12,7 @@ function SpiderSolitare() {
   const [row5, setRow5] = useState([])
   const [row6, setRow6] = useState([])
   const [movecard, setMoveCard] = useState(null)
+  const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
   
   const newGame = () =>{
@@ -148,7 +149,19 @@ function SpiderSolitare() {
   return (
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
+              <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+            {
+        rules &&
+        <div className={styles.rules}>
+          <ul>
+            <li>Each player starts with 7 cards in hand</li>
+            <li>Each player can ask the other if they have a given card in their hand</li>
+          </ul>
+        </div>
+      }
+
       <button onClick={newGame}>New game</button>
+      <div className={styles.score}>Score: {score}</div>
       <div className={styles.playmat}>
         <div className={styles.row}>
           {
