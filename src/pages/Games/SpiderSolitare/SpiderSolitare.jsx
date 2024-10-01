@@ -121,6 +121,27 @@ function SpiderSolitare() {
     
   }
 
+  const depositcard = (card,row) =>{
+    if(row===row1){
+      setRow1([...row1,movecard])
+    }
+    else if(row===row2){
+      setRow2([...row2,movecard])
+    }
+    else if(row===row3){
+      setRow3([...row3,movecard])
+    }
+    else if(row===row4){
+      setRow4([...row4,movecard])
+    }
+    else if(row===row5){
+      setRow5([...row5,movecard])
+    }
+    else if(row===row6){
+      setRow6([...row6,movecard])
+    }
+  }
+
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
