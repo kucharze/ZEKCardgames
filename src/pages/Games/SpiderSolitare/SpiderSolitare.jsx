@@ -12,6 +12,7 @@ function SpiderSolitare() {
   const [row5, setRow5] = useState([])
   const [row6, setRow6] = useState([])
   const [movecard, setMoveCard] = useState(null)
+  const [score, setScore] = useState(0)
   
   const newGame = () =>{
     let card = null
@@ -108,7 +109,8 @@ function SpiderSolitare() {
     if(movecard){
       if(card.value===movecard.value-1){
         if(card.suit===movecard.suit){
-          depositcard(card, row)
+          depositcard(movecard, row)
+          //Remove cards from previous row
         }
       }
     }
