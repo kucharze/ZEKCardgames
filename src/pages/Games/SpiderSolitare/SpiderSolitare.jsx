@@ -106,19 +106,15 @@ function SpiderSolitare() {
 
   const takeTurn = (card, row) =>{
     if(movecard){
-      if(card.value===movecard.value){
+      if(card.value===movecard.value-1){
         if(card.suit===movecard.suit){
-          setRow1([...row1,movecard])
+          depositcard(card, row)
         }
       }
     }
     else{
       setMoveCard(card)
     }
-  }
-
-  const findCard = (card) =>{
-    
   }
 
   const depositcard = (card,row) =>{
