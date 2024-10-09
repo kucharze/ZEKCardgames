@@ -162,11 +162,14 @@ function SpiderSolitare() {
               is one value lower than the card of the pile you are
               moving it to.
             </li>
+            <li>If there are multiple cards in a row that are properly
+              ordered, you can move them all to another row.
+            </li>
             <li>If their are only face down cards on a pile, turn 
               the card on the end face up.
             </li>
             <li>If their are no moves left to make, you may deal a new set
-              of cards to the end of the row.
+              of cards to the end of the row.  You may do this 5 times.
             </li>
           </ul>
         </div>
