@@ -32,9 +32,12 @@
 .rules {
   background-color: gray;
   border: solid green;
-  width: 800px;
+  width: 850px;
   color: white;
   padding: 10px;
+}
+.rules li {
+  margin: 15px;
 }
 
 .row {
