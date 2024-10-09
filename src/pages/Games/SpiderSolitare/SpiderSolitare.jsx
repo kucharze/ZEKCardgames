@@ -171,6 +171,12 @@ function SpiderSolitare() {
             <li>If their are no moves left to make, you may deal a new set
               of cards to the end of the row.  You may do this 5 times.
             </li>
+            <li>When you organize a row from A to K in order, remove those 
+              cards and score a point.
+            </li>
+            <li>Your final score is determined by how many points you have
+              when you can't make any more moves or deal any more cards.
+            </li>
           </ul>
         </div>
       }
