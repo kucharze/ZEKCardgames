@@ -157,10 +157,17 @@ function SpiderSolitare() {
             <li>Their are 6 rows of cards, each with 5 cards.</li>
             <li>4 Cards are face down while the last is face up</li>
             <li>You can move cards from one row to another</li>
-            <li>You can only move cards of the same value</li>
-            <li>You can only move cards of the same suit</li>
-            <li>You can only move cards that are one value lower 
-              than the card you are moving</li>
+            <li>You cannot move cards that are face down</li>
+            <li>You can only move a card to another pile if it 
+              is one value lower than the card of the pile you are
+              moving it to.
+            </li>
+            <li>If their are only face down cards on a pile, turn 
+              the card on the end face up.
+            </li>
+            <li>If their are no moves left to make, you may deal a new set
+              of cards to the end of the row.
+            </li>
           </ul>
         </div>
       }
