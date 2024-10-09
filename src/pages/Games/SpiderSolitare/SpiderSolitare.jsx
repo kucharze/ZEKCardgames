@@ -154,8 +154,13 @@ function SpiderSolitare() {
         rules &&
         <div className={styles.rules}>
           <ul>
-            <li>Each player starts with 7 cards in hand</li>
-            <li>Each player can ask the other if they have a given card in their hand</li>
+            <li>Their are 6 rows of cards, each with 5 cards.</li>
+            <li>4 Cards are face down while the last is face up</li>
+            <li>You can move cards from one row to another</li>
+            <li>You can only move cards of the same value</li>
+            <li>You can only move cards of the same suit</li>
+            <li>You can only move cards that are one value lower 
+              than the card you are moving</li>
           </ul>
         </div>
       }
