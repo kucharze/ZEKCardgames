@@ -37,8 +37,11 @@ img {
 .rules {
   background-color: gray;
   border: solid green;
-  width: 800px;
+  width: 850px;
   color: white;
   padding: 10px;
-  font-size: 20px;
+}
+
+.rules li {
+  margin: 15px;
 }
