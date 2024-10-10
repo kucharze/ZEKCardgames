@@ -2,7 +2,8 @@ import React,{useState, useEffect} from 'react'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './GoFish.module.css'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
-import { useAuth } from "../../../contexts/app_context";
+// import { useAuth } from "../../../contexts/app_context";
+import useCards from "./Game_modules/checkHand"
 
 function GoFish({darkmode}) {
   const [rules, setRules] = useState(false)
@@ -17,6 +18,9 @@ function GoFish({darkmode}) {
   const [inProgress, setInProgress] = useState(false)//A game is currently in progress
   const [asking, setAsking] = useState(false)//The computer is asking for a card
   const [winner, setWinner] = useState(false)
+
+  //hooks
+  const {testPlayGiving} = useCards()
   
   const setUpDeck = () =>{
     setDeck(new Deck())
@@ -104,26 +108,6 @@ function GoFish({darkmode}) {
     }
     
     comTurn()
-  }
-
-  const testPlayGiving = (card,hand) =>{
-    //Check Player hand for a given card
-    console.log("Testing play hand")
-    let i = 0;
-    let tempHand = hand
-    let stillGiving = false
-
-    while(i<tempHand.length){
-        //Check if the card the computer is asking for is still in the player's hand
-        // console.log(tempHand[i])
-        if(tempHand[i].value===card.value){
-          stillGiving = true
-          break
-        }
-        i++
-    }
-    return stillGiving
-
   }
 
   const checkPlayHand = (card) =>{
