@@ -27,12 +27,10 @@ function Matching() {
         rules &&
         <div className={styles.rules}>
           <ul>
-            <li>Each player starts with 7 cards in hand</li>
-            <li>Each player can ask the other if they have a given card in their hand</li>
-            <li>IF they have the asked for cards, they give them all to you</li>
-            <li>If they don't, you instead draw a card</li>
-            <li>Score a point if you have 4 copies of each card</li>
-             <li>Once the deck is out of cards, the player with the most points wins</li>
+            <li>Flip two cards over and see if they match</li>
+            <li>If the two pairs match, they will stay flipped</li>
+            <li>If they don't match, they will be flipped back</li>
+            <li>Keep flipping until you find all pairs</li>
           </ul>
         </div>
       }
