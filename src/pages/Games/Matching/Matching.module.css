@@ -8,6 +8,18 @@
   width: 250px;
 }
 
+.rules {
+  background-color: gray;
+  border: solid green;
+  width: 950px;
+  color: white;
+  padding: 10px;
+}
+
+.rules li {
+  margin: 15px;
+}
+
 .Matching {
   display: flex;
   flex-direction: column;
