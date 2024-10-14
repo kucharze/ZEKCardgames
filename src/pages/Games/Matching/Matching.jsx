@@ -36,26 +36,12 @@ function Matching() {
       }
 
       <div className={styles.matchzone}>
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
-        <img src={back} alt="" />
+        {
+          matchList.map((el, index) => (
+            <img src={back} num={index} alt="back" />
+          ))
+          
+        }
       </div>
 
     </div>
