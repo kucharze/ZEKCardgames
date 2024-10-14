@@ -154,7 +154,7 @@ function GoFish({darkmode}) {
     }
     if(count===4){
       for(let i=0; i<positions.length; i++){
-        comHand.splice(positions[i],1)
+        playHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
       }
       setPlayScore(playScore+1)
@@ -173,7 +173,6 @@ function GoFish({darkmode}) {
     console.log("Go fish")
 
     //Check if the player can give cards to the opponent
-
     if(testPlayGiving(askCard)){
       alert("You can still give cards")
       return
