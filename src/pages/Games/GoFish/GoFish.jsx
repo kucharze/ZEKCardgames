@@ -136,6 +136,9 @@ function GoFish({darkmode}) {
       for(let i=0; i<positions.length; i++){
         comHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
+        for(let j=i+1; j<positions.length; j++){
+          positions[j]--
+        }
       }
       setComScore(comScore+1)
     }
@@ -153,9 +156,13 @@ function GoFish({darkmode}) {
       }
     }
     if(count===4){
+      console.log("Found 4 of a kind")
       for(let i=0; i<positions.length; i++){
         playHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
+        for(let j=i+1; j<positions.length; j++){
+          positions[j]--
+        }
       }
       setPlayScore(playScore+1)
     }
