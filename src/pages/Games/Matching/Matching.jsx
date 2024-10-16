@@ -10,7 +10,9 @@ import butterfly from '../../../Images/cards/butterfly1.PNG'
 import cow from '../../../Images/cards/cow1.PNG'
 import daisy from '../../../Images/cards/daisy1.PNG'
 import dog from '../../../Images/cards/dog1.PNG'
+import dove from '../../../Images/cards/dove1.PNG'
 import fish from '../../../Images/cards/fish1.PNG'
+import flower from '../../../Images/cards/flower1.PNG'
 
 function Matching() {
   //List of elements that will get matched
