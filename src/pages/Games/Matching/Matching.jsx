@@ -3,9 +3,19 @@ import back from '../../../Images/BACKCARD.JPG'
 import styles from './Matching.module.css'
 import apple from '../../../Images/cards/apple1.PNG'
 import bear from '../../../Images/cards/bear1.PNG'
+import blue from '../../../Images/cards/blue.PNG'
+import bluefront from '../../../Images/cards/bluefront.PNG'
+import body from '../../../Images/cards/body.PNG'
+import butterfly from '../../../Images/cards/butterfly1.PNG'
+import cow from '../../../Images/cards/cow1.PNG'
+import daisy from '../../../Images/cards/daisy1.PNG'
+import dog from '../../../Images/cards/dog1.PNG'
+import fish from '../../../Images/cards/fish1.PNG'
 
 function Matching() {
-  const [matchList, setMatchList] = useState([])//List of elements that will get matched
+  //List of elements that will get matched
+  const [matchList, setMatchList] = 
+  useState([apple, bear, blue, bluefront, body, butterfly, cow, daisy, dog, fish])
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
