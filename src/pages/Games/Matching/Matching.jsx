@@ -12,12 +12,13 @@ import daisy from '../../../Images/cards/daisy1.PNG'
 import dog from '../../../Images/cards/dog1.PNG'
 import dove from '../../../Images/cards/dove1.PNG'
 import fish from '../../../Images/cards/fish1.PNG'
-import flower from '../../../Images/cards/flower1.PNG'
+import flower from '../../../Images/cards/flower.PNG'
 
 function Matching() {
   //List of elements that will get matched
   const [matchList, setMatchList] = 
-  useState([apple, bear, blue, bluefront, body, butterfly, cow, daisy, dog, fish])
+  useState([apple, bear, blue, bluefront, body, butterfly, cow, 
+    daisy, dog, dove, fish, flower]) 
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
