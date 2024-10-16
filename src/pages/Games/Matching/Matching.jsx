@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import styles from './Matching.module.css'
+import apple from '../../../Images/cards/apple1.PNG'
+import bear from '../../../Images/cards/bear1.PNG'
 
 function Matching() {
   const [matchList, setMatchList] = useState([])//List of elements that will get matched
