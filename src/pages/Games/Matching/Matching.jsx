@@ -17,8 +17,9 @@ import flower from '../../../Images/cards/flower.PNG'
 function Matching() {
   //List of elements that will get matched
   const [matchList, setMatchList] = 
-  useState([apple, bear, blue, bluefront, body, butterfly, cow, 
-    daisy, dog, dove, fish, flower]) 
+  useState([apple, apple , bear, bear, blue, blue, bluefront, bluefront, 
+    body, body, butterfly, butterfly, cow,  cow, 
+    daisy, daisy, dog, dog, dove, dove, fish, fish, flower, flower])
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
