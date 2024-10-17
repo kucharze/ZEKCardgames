@@ -27,12 +27,22 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1600px) {
   .matchzone {
     width: 95%;
   }
   .matchzone > img {
     height: 180px;
     width: 180px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .matchzone {
+    width: 95%;
+  }
+  .matchzone > img {
+    height: 120px;
+    width: 120px;
   }
 }
