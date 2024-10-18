@@ -45,6 +45,14 @@ function Matching() {
     setEl2(null)
   }
 
+  const setElement = (el) =>{
+    if(el1 === null){
+      setEl1(el)
+    }else{
+      setEl2(el)
+    }
+  }
+
   return (
     <div className={styles.Matching}>
       <h1>Matching</h1>
@@ -67,7 +75,7 @@ function Matching() {
       <div className={styles.matchzone}>
         {
           matchList.map((el, index) => (
-            <img src={back} num={index} alt="back" />
+            <img src={back} num={index} alt="back" onClick={() => setElement(el)} />
           ))
           
         }
