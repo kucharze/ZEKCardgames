@@ -16,6 +16,13 @@ import flower from '../../../Images/cards/flower.PNG'
 import guy from '../../../Images/cards/guy1.JPG'
 import hand from '../../../Images/cards/hand1.PNG'
 import heart from '../../../Images/cards/heart1.PNG'
+import lightblue from '../../../Images/cards/lightblue1.PNG'
+import lightbulb from '../../../Images/cards/lightbulb1.PNG'
+import rabitline from '../../../Images/cards/rabbitline1.PNG'
+import sun from '../../../Images/cards/sun1.PNG'
+import turtle from '../../../Images/cards/turtle1.PNG'
+import umbrella from '../../../Images/cards/umbrella1.PNG'
+import watermellon from '../../../Images/cards/watermellon1.PNG'
 
 function Matching() {
   //List of elements that will get matched
@@ -23,7 +30,9 @@ function Matching() {
   useState([apple, apple , bear, bear, blue, blue, bluefront, bluefront, 
     body, body, butterfly, butterfly, cow,  cow, 
     daisy, daisy, dog, dog, dove, dove, fish, fish, flower, flower,
-    guy, guy, hand, hand, heart, heart])
+    guy, guy, hand, hand, heart, heart, lightblue, lightblue, 
+    lightbulb, lightbulb, rabitline, rabitline, sun, sun, turtle, turtle, 
+    umbrella, umbrella, watermellon, watermellon])
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
