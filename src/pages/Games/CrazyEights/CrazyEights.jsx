@@ -216,7 +216,7 @@ function CrazyEights({darkMode}) {
       <div className='table'>
         <img className={styles.hand} src={back} alt="" onClick={cardPicked} />,
         {pile &&
-         <img className={styles.hand} src={require(`../../../Images/${pile}.png`)} alt=""/>
+         <img className={styles.hand} src={require(`../../../Images/Playcards/${pile}.png`)} alt=""/>
         }
         </div>
         {
@@ -232,7 +232,7 @@ function CrazyEights({darkMode}) {
               playHand.map((item,i)=>{
                 if(item){
                   return <img className={styles.hand} key={i} 
-                    src={require(`../../../Images/${item}.png`)} alt="" />
+                    src={require(`../../../Images/Playcards/${item}.png`)} alt="" />
                 }
                 return <p>No value here</p>
               })
@@ -246,7 +246,7 @@ function CrazyEights({darkMode}) {
               playHand.map((item,i)=>{
                 if(item){
                   return <img className={styles.hand} key={i} 
-                    src={require(`../../../Images/${item}.png`)} alt=""
+                    src={require(`../../../Images/Playcards/${item}.png`)} alt=""
                     onClick={()=>playCard(item,i)} />
                 }
                 return <p>No value here</p>
