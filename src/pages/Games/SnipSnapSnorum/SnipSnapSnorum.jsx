@@ -243,14 +243,14 @@ function SnipSnapSnorum({darkMode}) {
         <h2>Com</h2>
         {
           comHand.map((item,i)=>{
-            return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}/>
+            return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/Playcards/cardback.png`)}/>
           })
         }
       </div>
       
       <h1>{condition}</h1>
       {
-        pile && <img alt={pile} src={require(`../../../Images/${pile}.png`)}/>
+        pile && <img alt={pile} src={require(`../../../Images/Playcards/${pile}.png`)}/>
       }
       {
         gameOver && <div>
@@ -272,7 +272,7 @@ function SnipSnapSnorum({darkMode}) {
         <h2>Player</h2>
           {
             playHand.map((item,i)=>{
-              return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
+              return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/Playcards/${item}.png`)}
               onClick={()=>{
                 if(!disabled){
                   playCard(item)
