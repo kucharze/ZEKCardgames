@@ -47,6 +47,11 @@ function War({darkmode}) {
 
     const playCard = () =>{
       console.log("New war round")
+      if(playDeck.isEmpty() || comDeck.isEmpty()){
+        //Make this check for a win
+        alert("A deck is out of cards")
+        return
+      }
       let playerCard = playDeck.dealACard();
       let comCard = comDeck.dealACard();
       setPlayScore(playerCard.warValue)
