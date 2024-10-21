@@ -124,14 +124,14 @@ function War({darkmode}) {
               <p>Computer war card</p> 
               <h3>{comWarScore}</h3>
               {
-                comWar && <img alt={com} className={styles.card} src={require(`../../../Images/${comWar}.png`)}/>
+                comWar && <img alt={com} className={styles.card} src={require(`../../../Images/Playcards/${comWar}.png`)}/>
               }
             </div>
             <div className={styles.ComPlayMat}>
                 <p>Computer Play card</p>
                 <h3>{comScore}</h3>
               { 
-              com && <img alt={com} className={styles.card} src={require(`../../../Images/${com}.png`)}/>
+              com && <img alt={com} className={styles.card} src={require(`../../../Images/Playcards/${com}.png`)}/>
               }
             </div>
           </div>
@@ -151,14 +151,14 @@ function War({darkmode}) {
             <p>Player war card</p>
             <h3>{playWarScore}</h3>
             {
-              playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/${playerWar}.png`)}/>
+              playerWar && <img alt={player} className={styles.card} src={require(`../../../Images/Playcards/${playerWar}.png`)}/>
             }
           </div>
           <div className={styles.PlayPlayMat}>
             <p>Player play card:</p>
             <h3>{playScore}</h3>
             { 
-              player && <img alt={player} className={styles.card} src={require(`../../../Images/${player}.png`)}/>
+              player && <img alt={player} className={styles.card} src={require(`../../../Images/Playcards/${player}.png`)}/>
             }
           </div>
         </div>
