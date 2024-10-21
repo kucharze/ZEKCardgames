@@ -88,6 +88,18 @@ function War({darkmode}) {
       setCom(comCard)
     }
 
+    const checkForWinner = () =>{
+      if(playerWins>comWins){
+        //winner is player
+      }
+      else if(comWins>playerWins){
+        //winner is computer
+      }
+      else{
+        //draw
+      }
+    }
+
     useState(()=>{
       if(playDeck.isEmpty()  && comDeck.isEmpty()){
         setGameInProgress(false)
