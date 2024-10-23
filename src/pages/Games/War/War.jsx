@@ -5,21 +5,26 @@ import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function War({darkmode}) {
     const [rules, setRules] = useState(false)
-    const [comDeck, setComDeck] = useState(new Deck())
+
     const [playDeck, setPlayDeck] = useState(new Deck())
-    const [gameOver, setGameOver] = useState(false)
+    
     const [player, setPlayer] = useState(null)
     const [playerWar, setPlayerWar] = useState(null)
-    const [com, setCom] = useState(null)
-    const [comWar, setComWar] = useState(null)
-    const [gameInProgress, setGameInProgress] = useState(false)
     const [playScore, setPlayScore] = useState(0)
     const [playWarScore, setPlayWarScore] = useState(0)
+    const [playerWins, setPlayerWins] = useState(0)
+
+    const [com, setCom] = useState(null)
+    const [comWar, setComWar] = useState(null)
+    const [comWins, setComWins] = useState(0)
+
+    const [comDeck, setComDeck] = useState(new Deck())
     const [comScore, setComScore] = useState(0)
     const [comWarScore, setComWarScore] = useState(0)
-    const [playerWins, setPlayerWins] = useState(0)
-    const [comWins, setComWins] = useState(0)
+
+    const [gameInProgress, setGameInProgress] = useState(false)
     const [winner, setWinner] = useState(false)
+    const [gameOver, setGameOver] = useState(false)
 
     const newGame = () =>{
       console.log("New war game")
@@ -27,9 +32,11 @@ function War({darkmode}) {
       com.shuffle();
       com.shuffle()
       setComDeck(com)
+
       let play = new Deck()
       play.shuffle()
       play.shuffle()
+
       setPlayDeck(play)
       setGameInProgress(true)
       setPlayer(null)
@@ -43,7 +50,7 @@ function War({darkmode}) {
       setComScore(0)
       setComWarScore(0)
       setComWins(0)
-      
+
       setGameOver(false)
     }
 
@@ -91,6 +98,7 @@ function War({darkmode}) {
     }
 
     const checkForWinner = () =>{
+      setGameInProgress(false)
       if(playerWins>comWins){
         //winner is player
       }
