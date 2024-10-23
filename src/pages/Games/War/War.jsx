@@ -99,14 +99,18 @@ function War({darkmode}) {
 
     const checkForWinner = () =>{
       setGameInProgress(false)
+      setGameOver(true)
       if(playerWins>comWins){
         //winner is player
+        setWinner(true)
       }
       else if(comWins>playerWins){
         //winner is computer
+        setWinner(false)
       }
       else{
         //draw
+        setWinner(false)
       }
     }
 
