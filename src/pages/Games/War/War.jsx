@@ -33,15 +33,17 @@ function War({darkmode}) {
       setPlayDeck(play)
       setGameInProgress(true)
       setPlayer(null)
-      setCom(null)
-      setComWar(null)
       setPlayerWar(null)
-      setComScore(0)
       setPlayScore(0)
       setPlayWarScore(0)
-      setComWarScore(0)
       setPlayerWins(0)
+
+      setCom(null)
+      setComWar(null)
+      setComScore(0)
+      setComWarScore(0)
       setComWins(0)
+      
       setGameOver(false)
     }
 
