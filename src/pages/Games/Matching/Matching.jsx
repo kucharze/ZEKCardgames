@@ -37,6 +37,16 @@ function Matching() {
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
 
+  const shuffle = () => {
+    for (let n = matchList.length; n >= 2; n--) {
+      let r = Math.floor(Math.random() * n);
+      // Swap cards at r and n-1
+      let card = matchList[r];
+      matchList[r] = matchList[n - 1];
+      matchList[n - 1] = card;
+    }
+  }
+
   const newGame = () =>{
     console.log("A new game of mathing")
     console.log("Load in pictures and randomize their positions")
