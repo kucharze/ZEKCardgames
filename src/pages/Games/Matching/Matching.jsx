@@ -50,6 +50,7 @@ function Matching() {
   const newGame = () =>{
     console.log("A new game of mathing")
     console.log("Load in pictures and randomize their positions")
+    shuffle()
 
     setEl1(null)
     setEl2(null)
