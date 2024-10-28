@@ -1,11 +1,11 @@
 .matchzone {
-  width: 1500px;
+  width: 90%;
   border: solid black;
 }
 
 .matchzone > img {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
 }
 
 .rules {
