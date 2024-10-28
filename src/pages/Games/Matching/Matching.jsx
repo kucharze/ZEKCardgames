@@ -31,9 +31,9 @@ function Matching() {
     {bear}, {bear}, {blue}, {blue}, {bluefront}, {bluefront}, 
     {body}, {body}, {butterfly}, {butterfly}, {cow},  {cow}, 
     {daisy}, {daisy}, {dog}, {dog}, {dove}, {dove}, {fish}, {fish}, {flower}, {flower},
-    guy, guy, hand, hand, heart, heart, lightblue, lightblue, 
-    lightbulb, lightbulb, rabitline, rabitline, sun, sun, turtle, turtle, 
-    umbrella, umbrella, watermellon, watermellon])
+    {guy}, {guy}, {hand}, {hand}, {heart}, {heart}, {lightblue}, {lightblue}, 
+    {lightbulb}, {lightbulb}, {rabitline}, {rabitline}, {sun}, {sun}, {turtle}, {turtle}, 
+    {umbrella}, {umbrella}, {watermellon}, {watermellon}])
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
