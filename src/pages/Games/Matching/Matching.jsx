@@ -27,7 +27,8 @@ import watermellon from '../../../Images/cards/watermellon1.PNG'
 function Matching() {
   //List of elements that will get matched
   const [matchList, setMatchList] = 
-  useState([apple, apple , bear, bear, blue, blue, bluefront, bluefront, 
+  useState([{value: apple, flipped: true}, {value: apple, flipped: true}, 
+    bear, bear, blue, blue, bluefront, bluefront, 
     body, body, butterfly, butterfly, cow,  cow, 
     daisy, daisy, dog, dog, dove, dove, fish, fish, flower, flower,
     guy, guy, hand, hand, heart, heart, lightblue, lightblue, 
@@ -86,7 +87,8 @@ function Matching() {
       <div className={styles.matchzone}>
         {
           matchList.map((el, index) => (
-            <img src={back} num={index} alt="back" onClick={() => setElement(el)} />
+            <img key={index} src={back} num={index} 
+            alt="back" onClick={() => setElement(el)} />
           ))
           
         }
