@@ -28,8 +28,12 @@ function Matching() {
   //List of elements that will get matched
   const [matchList, setMatchList] = 
   useState([{value: apple, flipped: true}, {value: apple, flipped: true}, 
-    {bear}, {bear}, {blue}, {blue}, {bluefront}, {bluefront}, 
-    {body}, {body}, {butterfly}, {butterfly}, {cow},  {cow}, 
+    {value: bear, flipped: true}, {value: bear, flipped: true}, 
+    {value: blue, flipped: true}, {value: blue, flipped: true}, 
+    {value: bluefront, flipped: true}, {value: bluefront, flipped: true}, 
+    {value: body, flipped: true}, {value: body, flipped: true}, 
+    {value: butterfly, flipped: true}, {value: butterfly, flipped: true}, 
+    {cow},  {cow}, 
     {daisy}, {daisy}, {dog}, {dog}, {dove}, {dove}, {fish}, {fish}, {flower}, {flower},
     {guy}, {guy}, {hand}, {hand}, {heart}, {heart}, {lightblue}, {lightblue}, 
     {lightbulb}, {lightbulb}, {rabitline}, {rabitline}, {sun}, {sun}, {turtle}, {turtle}, 
