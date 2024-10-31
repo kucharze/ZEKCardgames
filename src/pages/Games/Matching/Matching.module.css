@@ -4,8 +4,8 @@
 }
 
 .matchzone > img {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
 }
 
 .rules {
@@ -27,22 +27,22 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1650px) {
   .matchzone {
     width: 95%;
   }
   .matchzone > img {
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1350px) {
   .matchzone {
     width: 95%;
   }
   .matchzone > img {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
   }
 }
