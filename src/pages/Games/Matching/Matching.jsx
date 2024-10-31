@@ -3,7 +3,6 @@ import back from '../../../Images/BACKCARD.JPG'
 import styles from './Matching.module.css'
 import apple from '../../../Images/cards/apple1.PNG'
 import bear from '../../../Images/cards/bear1.PNG'
-import blue from '../../../Images/cards/blue.PNG'
 import bluefront from '../../../Images/cards/bluefront.PNG'
 import body from '../../../Images/cards/body1.PNG'
 import butterfly from '../../../Images/cards/butterfly1.PNG'
@@ -16,7 +15,6 @@ import flower from '../../../Images/cards/flower.PNG'
 import guy from '../../../Images/cards/guy1.JPG'
 import hand from '../../../Images/cards/hand1.PNG'
 import heart from '../../../Images/cards/heart1.PNG'
-import lightblue from '../../../Images/cards/lightblue1.PNG'
 import lightbulb from '../../../Images/cards/lightbulb1.PNG'
 import rabitline from '../../../Images/cards/rabbitline1.PNG'
 import sun from '../../../Images/cards/sun1.PNG'
@@ -29,7 +27,6 @@ function Matching() {
   const [matchList, setMatchList] = 
   useState([{value: apple, flipped: true}, {value: apple, flipped: true}, 
     {value: bear, flipped: true}, {value: bear, flipped: true}, 
-    {value: blue, flipped: true}, {value: blue, flipped: true}, 
     {value: bluefront, flipped: true}, {value: bluefront, flipped: true}, 
     {value: body, flipped: true}, {value: body, flipped: true}, 
     {value: butterfly, flipped: true}, {value: butterfly, flipped: true}, 
@@ -40,7 +37,7 @@ function Matching() {
 
     {value: fish}, {value: fish}, {value: flower}, {value: flower},
     {value: guy}, {value: guy}, {value: hand}, {value: hand}, 
-    {value: heart}, {value: heart}, {value: lightblue}, {value: lightblue}, 
+    {value: heart}, {value: heart}, 
     {value: lightbulb}, {value: lightbulb}, {value: rabitline}, {value: rabitline}, 
     {value: sun}, {value: sun}, {value: turtle}, {value: turtle}, 
     {value: umbrella}, {value: umbrella}, {value: watermellon}, {value: watermellon}])
@@ -97,7 +94,7 @@ function Matching() {
       <div className={styles.matchzone}>
         {
           matchList.map((el, index) => (
-            <img key={index} src={back} num={index} 
+            <img key={index} src={el.value} num={index} 
             alt="back" onClick={() => setElement(el)} />
           ))
           
