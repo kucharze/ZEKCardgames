@@ -33,11 +33,17 @@ function Matching() {
     {value: bluefront, flipped: true}, {value: bluefront, flipped: true}, 
     {value: body, flipped: true}, {value: body, flipped: true}, 
     {value: butterfly, flipped: true}, {value: butterfly, flipped: true}, 
-    {cow},  {cow}, 
-    {daisy}, {daisy}, {dog}, {dog}, {dove}, {dove}, {fish}, {fish}, {flower}, {flower},
-    {guy}, {guy}, {hand}, {hand}, {heart}, {heart}, {lightblue}, {lightblue}, 
-    {lightbulb}, {lightbulb}, {rabitline}, {rabitline}, {sun}, {sun}, {turtle}, {turtle}, 
-    {umbrella}, {umbrella}, {watermellon}, {watermellon}])
+    {value: cow, flipped: true},  {value: cow, flipped: true}, 
+    {value: daisy, flipped: true}, {value: daisy, flipped: true}, 
+    {value: dog, flipped: true}, {value: dog, flipped: true}, 
+    {value: dove, flipped: true}, {value: dove, flipped: true},
+
+    {value: fish}, {value: fish}, {value: flower}, {value: flower},
+    {value: guy}, {value: guy}, {value: hand}, {value: hand}, 
+    {value: heart}, {value: heart}, {value: lightblue}, {value: lightblue}, 
+    {value: lightbulb}, {value: lightbulb}, {value: rabitline}, {value: rabitline}, 
+    {value: sun}, {value: sun}, {value: turtle}, {value: turtle}, 
+    {value: umbrella}, {value: umbrella}, {value: watermellon}, {value: watermellon}])
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
