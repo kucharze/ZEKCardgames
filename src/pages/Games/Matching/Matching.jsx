@@ -25,15 +25,16 @@ import watermellon from '../../../Images/cards/watermellon1.PNG'
 function Matching() {
   //List of elements that will get matched
   const [matchList, setMatchList] = 
-  useState([{value: apple, flipped: true}, {value: apple, flipped: true}, 
-    {value: bear, flipped: true}, {value: bear, flipped: true},
-    {value: butterfly, flipped: true}, {value: butterfly, flipped: true}, 
-    {value: cow, flipped: true},  {value: cow, flipped: true}, 
-    {value: daisy, flipped: true}, {value: daisy, flipped: true}, 
-    {value: dog, flipped: true}, {value: dog, flipped: true}, 
-    {value: dove, flipped: true}, {value: dove, flipped: true},
+  useState([{value: apple, flipped: false}, {value: apple, flipped: false}, 
+    {value: bear, flipped: false}, {value: bear, flipped: false},
+    {value: butterfly, flipped: false}, {value: butterfly, flipped: false}, 
+    {value: cow, flipped: false},  {value: cow, flipped: false}, 
+    {value: daisy, flipped: false}, {value: daisy, flipped: false}, 
+    {value: dog, flipped: false}, {value: dog, flipped: false}, 
+    {value: dove, flipped: false}, {value: dove, flipped: false},
+    {value: fish, flipped: false}, {value: fish, flipped: false},
 
-    {value: fish}, {value: fish}, {value: flower}, {value: flower},
+    {value: flower}, {value: flower},
     {value: hand}, {value: hand}, 
     {value: heart}, {value: heart}, 
     {value: lightbulb}, {value: lightbulb}, {value: rabitline}, {value: rabitline}, 
