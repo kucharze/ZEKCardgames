@@ -33,13 +33,16 @@ function Matching() {
     {value: dog, flipped: false}, {value: dog, flipped: false}, 
     {value: dove, flipped: false}, {value: dove, flipped: false},
     {value: fish, flipped: false}, {value: fish, flipped: false},
+    {value: flower, flipped: false}, {value: flower, flipped: false},
+    {value: hand, flipped: false}, {value: hand, flipped: false}, 
+    {value: heart, flipped: false}, {value: heart, flipped: false},
 
-    {value: flower}, {value: flower},
-    {value: hand}, {value: hand}, 
-    {value: heart}, {value: heart}, 
-    {value: lightbulb}, {value: lightbulb}, {value: rabitline}, {value: rabitline}, 
-    {value: sun}, {value: sun}, {value: turtle}, {value: turtle}, 
-    {value: umbrella}, {value: umbrella}, {value: watermellon}, {value: watermellon}])
+    {value: lightbulb, flipped: false}, {value: lightbulb, flipped: false}, 
+    {value: rabitline}, {value: rabitline}, 
+    {value: sun}, {value: sun}, 
+    {value: turtle}, {value: turtle}, 
+    {value: umbrella}, {value: umbrella}, 
+    {value: watermellon}, {value: watermellon}])
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
