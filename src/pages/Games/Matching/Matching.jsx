@@ -67,6 +67,7 @@ function Matching() {
   }
 
   const setElement = (el) =>{
+    console.log("Flip card")
     if(el1 === null){
       setEl1(el)
     }else{
@@ -95,10 +96,17 @@ function Matching() {
 
       <div className={styles.matchzone}>
         {
-          matchList.map((el, index) => (
-            <img key={index} src={el.value} num={index} 
-            alt="back" onClick={() => setElement(el)} />
-          ))
+          matchList.map((el, index) => {
+              if(el.flipped){
+                return <img key={index} src={el.value} num={index} 
+                alt="back" />
+              }
+              else{
+                return <img key={index} src={back} num={index} 
+                alt="back" onClick={() => setElement(el)} />
+              }
+            
+            })
           
         }
       </div>
