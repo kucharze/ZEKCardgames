@@ -44,6 +44,7 @@ function Matching() {
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
+  const [score, setScore] = useState(0)
 
   const shuffle = () => {
     for (let n = matchList.length; n >= 2; n--) {
@@ -72,6 +73,7 @@ function Matching() {
 
     setEl1(null)
     setEl2(null)
+    setScore(0)
   }
 
   const resetCards = () =>{
