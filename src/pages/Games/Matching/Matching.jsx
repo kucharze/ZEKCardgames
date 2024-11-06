@@ -57,10 +57,20 @@ function Matching() {
     }
   }
 
+  const resetPics = () =>{
+    //Reset all flipped items to not flipped
+    for (let n = 0; n<matchList.length;  n++) {
+      if(matchList[n].flipped === true){
+        matchList[n].flipped = false;
+      }
+    }
+  }
+
   const newGame = () =>{
     console.log("A new game of mathing")
     console.log("Load in pictures and randomize their positions")
     shuffle()
+    resetPics()
 
     setEl1(null)
     setEl2(null)
