@@ -95,8 +95,16 @@ function Matching() {
       setEl1(el)
     }else{
       setEl2(el)
+      
     }
+    
   }
+
+  useEffect(()=>{
+    if(el2!=null){
+      resetCards()
+    }
+  },[el2])
 
   return (
     <div className={styles.Matching}>
