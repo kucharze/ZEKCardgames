@@ -45,6 +45,8 @@ function Matching() {
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
+  const [inProgress, setInProgress] = useState(false)
+  const [gameOver, setGameOver] = useState(false)
 
   const shuffle = () => {
     for (let n = matchList.length; n >= 2; n--) {
@@ -74,6 +76,7 @@ function Matching() {
     setEl1(null)
     setEl2(null)
     setScore(0)
+    setInProgress(true)
   }
 
   const resetCards = () =>{
@@ -143,16 +146,18 @@ function Matching() {
 
       <div className={styles.matchzone}>
         {
-          matchList.map((el, index) => {
-              if(el.flipped){
-                return <img key={index} src={el.value} num={index} 
-                alt="back" />
-              }
-              else{
-                return <img key={index} src={back} num={index} 
-                alt="back" onClick={() => setElement(el)} />
-              }
-            })
+          inProgress && (
+            matchList.map((el, index) => {
+                if(el.flipped){
+                  return <img key={index} src={el.value} num={index} 
+                  alt="back" />
+                }
+                else{
+                  return <img key={index} src={back} num={index} 
+                  alt="back" onClick={() => setElement(el)} />
+                }
+              })
+          )
         }
       </div>
 
