@@ -67,7 +67,13 @@ function Matching() {
   }
 
   const resetCards = () =>{
-
+    if(el1.value !== el2.value){
+      el1.flipped = !el1.flipped;
+      el2.flipped = !el2.flipped
+      return;
+    }
+    setEl1(null)
+    setEl2(null)
   }
 
   const setElement = (el) =>{
