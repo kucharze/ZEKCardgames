@@ -195,7 +195,7 @@ function SpiderSolitare() {
               else{
                 return <img key={i} alt={item} className={styles.card} 
                 onClick={()=>{takeTurn(item, row1)}}
-                src={require(`../../../Images/${item}.png`)}
+                src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
             })
@@ -212,7 +212,7 @@ function SpiderSolitare() {
               else{
                 return <img key={i} alt={item} className={styles.card}
                 onClick={()=>{takeTurn(item, row2)}} 
-                src={require(`../../../Images/${item}.png`)}
+                src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
             })
@@ -229,7 +229,7 @@ function SpiderSolitare() {
               else{
                 return <img key={i} alt={item} className={styles.card} 
                 onClick={()=>{takeTurn(item, row3)}}
-                src={require(`../../../Images/${item}.png`)}
+                src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
             })
@@ -246,7 +246,7 @@ function SpiderSolitare() {
               else{
                 return <img key={i} alt={item} className={styles.card} 
                 onClick={()=>{takeTurn(item, row4)}}
-                src={require(`../../../Images/${item}.png`)}
+                src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
             })
@@ -263,7 +263,7 @@ function SpiderSolitare() {
               else{
                 return <img key={i} alt={item} className={styles.card}
                 onClick={()=>{takeTurn(item, row5)}}
-                src={require(`../../../Images/${item}.png`)}
+                src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
             })
@@ -280,7 +280,7 @@ function SpiderSolitare() {
               else{
                 return <img key={i} alt={item} className={styles.card} 
                 onClick={()=>{takeTurn(item, row6)}}
-                src={require(`../../../Images/${item}.png`)}
+                src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
               
