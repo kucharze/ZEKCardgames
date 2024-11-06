@@ -3,7 +3,6 @@ import back from '../../../Images/BACKCARD.JPG'
 import styles from './Matching.module.css'
 import apple from '../../../Images/cards/apple1.PNG'
 import bear from '../../../Images/cards/bear1.PNG'
-import bluefront from '../../../Images/cards/bluefront.PNG'
 import body from '../../../Images/cards/body1.PNG'
 import butterfly from '../../../Images/cards/butterfly1.PNG'
 import cow from '../../../Images/cards/cow1.PNG'
@@ -12,7 +11,6 @@ import dog from '../../../Images/cards/dog1.PNG'
 import dove from '../../../Images/cards/dove1.PNG'
 import fish from '../../../Images/cards/fish1.PNG'
 import flower from '../../../Images/cards/flower.PNG'
-import guy from '../../../Images/cards/guy1.JPG'
 import hand from '../../../Images/cards/hand1.PNG'
 import heart from '../../../Images/cards/heart1.PNG'
 import lightbulb from '../../../Images/cards/lightbulb1.PNG'
@@ -27,6 +25,7 @@ function Matching() {
   const [matchList, setMatchList] = 
   useState([{value: apple, flipped: false}, {value: apple, flipped: false}, 
     {value: bear, flipped: false}, {value: bear, flipped: false},
+    {value: body, flipped: false}, {value: body, flipped: false},
     {value: butterfly, flipped: false}, {value: butterfly, flipped: false}, 
     {value: cow, flipped: false},  {value: cow, flipped: false}, 
     {value: daisy, flipped: false}, {value: daisy, flipped: false}, 
@@ -37,7 +36,6 @@ function Matching() {
     {value: hand, flipped: false}, {value: hand, flipped: false}, 
     {value: heart, flipped: false}, {value: heart, flipped: false},
     {value: lightbulb, flipped: false}, {value: lightbulb, flipped: false},
-
     {value: rabitline, flipped:false}, {value: rabitline, flipped: false}, 
     {value: sun, flipped: false}, {value: sun,flipped: false}, 
     {value: turtle, flipped: false}, {value: turtle, flipped: false}, 
@@ -95,13 +93,13 @@ function Matching() {
       setEl1(el)
     }else{
       setEl2(el)
-      
     }
     
   }
 
   useEffect(()=>{
     if(el2!=null){
+      console.log("Resetting cards")
       resetCards()
     }
   },[el2])
@@ -128,7 +126,7 @@ function Matching() {
       <div className={styles.matchzone}>
         {
           matchList.map((el, index) => {
-              if(el.flipped){
+              if(!el.flipped){
                 return <img key={index} src={el.value} num={index} 
                 alt="back" />
               }
