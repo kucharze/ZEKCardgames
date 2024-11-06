@@ -66,8 +66,15 @@ function Matching() {
     setEl2(null)
   }
 
+  const resetCards = () =>{
+
+  }
+
   const setElement = (el) =>{
     console.log("Flip card")
+
+    el.flipped = !el.flipped
+
     if(el1 === null){
       setEl1(el)
     }else{
