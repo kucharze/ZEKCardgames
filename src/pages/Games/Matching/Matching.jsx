@@ -82,6 +82,9 @@ function Matching() {
       el2.flipped = !el2.flipped
       return;
     }
+    else{
+      setScore(prev=>prev+1)
+    }
   }
 
   const setElement = (el) =>{
