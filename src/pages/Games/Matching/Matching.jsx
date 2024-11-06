@@ -116,6 +116,12 @@ function Matching() {
     }
   },[el2])
 
+  useEffect(()=>{
+    if(score==18){
+      //end game
+    }
+  },[score])
+
   return (
     <div className={styles.Matching}>
       <h1>Matching</h1>
@@ -146,9 +152,7 @@ function Matching() {
                 return <img key={index} src={back} num={index} 
                 alt="back" onClick={() => setElement(el)} />
               }
-            
             })
-          
         }
       </div>
 
