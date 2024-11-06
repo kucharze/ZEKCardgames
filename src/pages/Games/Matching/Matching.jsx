@@ -80,8 +80,6 @@ function Matching() {
       el2.flipped = !el2.flipped
       return;
     }
-    setEl1(null)
-    setEl2(null)
   }
 
   const setElement = (el) =>{
@@ -90,8 +88,10 @@ function Matching() {
     el.flipped = !el.flipped
 
     if(el1 === null){
+      console.log("Setting el1")
       setEl1(el)
     }else{
+      console.log("Setting el2")
       setEl2(el)
     }
     
@@ -100,7 +100,14 @@ function Matching() {
   useEffect(()=>{
     if(el2!=null){
       console.log("Resetting cards")
-      resetCards()
+
+      setTimeout(() => {
+        resetCards()
+
+      setEl1(null)
+      setEl2(null)
+      }, 1000);
+      
     }
   },[el2])
 
@@ -126,7 +133,7 @@ function Matching() {
       <div className={styles.matchzone}>
         {
           matchList.map((el, index) => {
-              if(!el.flipped){
+              if(el.flipped){
                 return <img key={index} src={el.value} num={index} 
                 alt="back" />
               }
