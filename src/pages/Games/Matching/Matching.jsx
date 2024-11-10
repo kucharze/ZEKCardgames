@@ -122,6 +122,7 @@ function Matching() {
   useEffect(()=>{
     if(score==18){
       //end game
+      setGameOver(true)
     }
   },[score])
 
@@ -154,7 +155,7 @@ function Matching() {
                 }
                 else{
                   return <img key={index} src={back} num={index} 
-                  alt="back" onClick={() => setElement(el)} />
+                  alt="back" onClick={() => {if(!gameOver) {setElement(el)}}} />
                 }
               })
           )
