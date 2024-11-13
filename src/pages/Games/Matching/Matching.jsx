@@ -115,7 +115,7 @@ function Matching() {
 
       setEl1(null)
       setEl2(null)
-      }, 1000);
+      }, 700);
       
     }
   },[el2])
