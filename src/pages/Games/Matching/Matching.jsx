@@ -77,6 +77,7 @@ function Matching() {
     setEl2(null)
     setScore(0)
     setInProgress(true)
+    setGameOver(false)
   }
 
   const resetCards = () =>{
@@ -110,7 +111,7 @@ function Matching() {
       console.log("Resetting cards")
 
       setTimeout(() => {
-        resetCards()
+      resetCards()
 
       setEl1(null)
       setEl2(null)
