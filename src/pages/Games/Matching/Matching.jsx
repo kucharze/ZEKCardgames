@@ -47,6 +47,7 @@ function Matching() {
   const [score, setScore] = useState(0)
   const [inProgress, setInProgress] = useState(false)
   const [gameOver, setGameOver] = useState(false)
+  const [frozen, setFrozen] = useState(false)
 
   const shuffle = () => {
     for (let n = matchList.length; n >= 2; n--) {
@@ -107,6 +108,10 @@ function Matching() {
   }
 
   useEffect(()=>{
+    if(el1!=null){
+      setFrozen(true)
+    }
+    
     if(el2!=null){
       console.log("Resetting cards")
 
@@ -115,6 +120,7 @@ function Matching() {
 
       setEl1(null)
       setEl2(null)
+      setFrozen(false)
       }, 700);
       
     }
@@ -156,7 +162,7 @@ function Matching() {
                 }
                 else{
                   return <img key={index} src={back} num={index} 
-                  alt="back" onClick={() => {if(!gameOver) {setElement(el)}}} />
+                  alt="back" onClick={() => {if(!gameOver && !frozen) {setElement(el)}}} />
                 }
               })
           )
