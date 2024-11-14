@@ -164,7 +164,11 @@ function Matching() {
                 }
                 else{
                   return <img key={index} src={back} num={index} 
-                  alt="back" onClick={() => {if(!gameOver && !frozen) {setElement(el)}}} />
+                  alt="back" onClick={() => {if(!gameOver && !frozen) {
+                     setElement(el)
+                     setTotalMoves(prev=>prev+1)
+                    }
+                  }} />
                 }
               })
           )
