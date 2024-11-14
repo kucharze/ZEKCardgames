@@ -288,7 +288,15 @@ function SpiderSolitare() {
           }
         </div>
       </div>
-      
+      <div>
+        <h3>Card to be moved:</h3>
+        {
+          movecard && 
+          <img alt={movecard} className={styles.card} 
+                src={require(`../../../Images/Playcards/${movecard}.png`)}
+                />
+        }
+      </div>
     </div>
   )
 }
