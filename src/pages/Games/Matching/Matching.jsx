@@ -151,6 +151,7 @@ function Matching() {
             <li>If the two pairs match, they will stay flipped</li>
             <li>If they don't match, they will be flipped back</li>
             <li>Keep flipping until you find all pairs</li>
+            <li>Try to use as few moves as possible</li>
           </ul>
         </div>
       }
