@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react'
+import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 import back from '../../../Images/BACKCARD.JPG'
 import styles from './Matching.module.css'
 import apple from '../../../Images/cards/apple1.PNG'
@@ -172,6 +173,12 @@ function Matching() {
                 }
               })
           )
+        }
+      </div>
+      <div>
+        {
+        gameOver && 
+          <WinnerBoard winner={true} moves={totalMoves}/>
         }
       </div>
 
