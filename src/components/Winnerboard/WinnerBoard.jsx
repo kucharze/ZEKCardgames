@@ -14,7 +14,7 @@ function WinnerBoard({winner,moves}) {
       {
         moves
         && 
-        <h3>You had {moves} number of moves</h3>
+        <h3>You had {moves} moves</h3>
       }
     </div>
   )
