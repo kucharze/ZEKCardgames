@@ -48,6 +48,7 @@ function Matching() {
   const [inProgress, setInProgress] = useState(false)
   const [gameOver, setGameOver] = useState(false)
   const [frozen, setFrozen] = useState(false)
+  const [totalMoves, setTotalMoves] = useState(0)
 
   const shuffle = () => {
     for (let n = matchList.length; n >= 2; n--) {
@@ -77,6 +78,7 @@ function Matching() {
     setEl1(null)
     setEl2(null)
     setScore(0)
+    setTotalMoves(0)
     setInProgress(true)
     setGameOver(false)
   }
