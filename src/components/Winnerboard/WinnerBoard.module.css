@@ -5,6 +5,6 @@
   padding: 20px;
 }
 
-h1 {
+.WinnerBoard > h1 {
   color: lightgreen;
 }
