@@ -149,8 +149,11 @@ function SpiderSolitare() {
   return (
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
-              <button onClick={()=>{setRules(!rules)}}>Show rules</button>
-            {
+      <div>
+        <button onClick={newGame}>New game</button>
+        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+      </div>
+          {
         rules &&
         <div className={styles.rules}>
           <ul>
@@ -181,7 +184,7 @@ function SpiderSolitare() {
         </div>
       }
 
-      <button onClick={newGame}>New game</button>
+      
       <div className={styles.score}>Score: {score}</div>
       <div className={styles.playmat}>
         <div className={styles.row}>
