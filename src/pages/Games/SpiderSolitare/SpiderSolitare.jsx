@@ -113,6 +113,12 @@ function SpiderSolitare() {
           depositcard(movecard, row)
           //Remove cards from previous row
         }
+        else{
+          alert("That card can't be moved there")
+        }
+      }
+      else{
+        alert("That card can't be moved there")
       }
     }
     else{
