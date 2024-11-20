@@ -109,16 +109,12 @@ function SpiderSolitare() {
   const takeTurn = (card, row) =>{
     if(movecard){
       if(card.value===movecard.value-1){
-        if(card.suit===movecard.suit){
           depositcard(movecard, row)
           //Remove cards from previous row
-        }
-        else{
-          alert("That card can't be moved there")
-        }
       }
       else{
-        alert("That card can't be moved there")
+        alert("That card can't be moved there value",card.value, movecard.value)
+        setMoveCard(null)
       }
     }
     else{
