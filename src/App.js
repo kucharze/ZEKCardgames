@@ -13,6 +13,7 @@ import Matching from "./pages/Games/Matching/Matching";
 import GoFish from "./pages/Games/GoFish/GoFish";
 import SpiderSolitare from "./pages/Games/SpiderSolitare/SpiderSolitare";
 import War from "./pages/Games/War/War";
+import UnderConstruction from "./components/Construction/UnderConstruction";
 // import { useState, useEffect } from "react";
 import { useAuth } from "./contexts/app_context";
 import NewsFeed from "./pages/News/NewsFeed";
@@ -89,12 +90,13 @@ function App() {
           path="/gofish"
           element={<GoFish darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
         />
-        <Route
+        {/* <Route
           path="/spidersolitare"
           element={
             <SpiderSolitare darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
-        />
+        /> */}
+        <Route path="/spidersolitare" element={<UnderConstruction />} />
         <Route
           path="/war"
           element={<War darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
