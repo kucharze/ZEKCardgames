@@ -90,13 +90,14 @@ function App() {
           path="/gofish"
           element={<GoFish darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
         />
-        {/* <Route
+        {/* <Route path="/gofish element={<UnderConstruction />} /> */}
+        <Route
           path="/spidersolitare"
           element={
             <SpiderSolitare darkMode={isDarkMode ? "darkMode" : "lightmode"} />
           }
-        /> */}
-        <Route path="/spidersolitare" element={<UnderConstruction />} />
+        />
+        {/* <Route path="/spidersolitare" element={<UnderConstruction />} /> */}
         <Route
           path="/war"
           element={<War darkMode={isDarkMode ? "darkMode" : "lightmode"} />}
