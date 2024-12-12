@@ -43,3 +43,19 @@
 .row {
   display: flex;
 }
+
+@media only screen and (max-width: 1550px) {
+  .playmat {
+    width: 95%;
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .playmat img {
+    width: 120px;
+    height: 150px;
+  }
+}
