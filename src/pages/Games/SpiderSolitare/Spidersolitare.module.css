@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding-left: 100px;
 }
 
 .hand {
@@ -44,7 +44,7 @@
   display: flex;
 }
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1750px) {
   .playmat {
     width: 95%;
     border: solid black;
