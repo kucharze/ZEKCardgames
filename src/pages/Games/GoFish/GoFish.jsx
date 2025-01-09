@@ -31,6 +31,16 @@ function GoFish({darkmode}) {
     setDeck(new Deck())
   }
 
+  //See if computer and player hands are empty
+  const checkEndComditions = () =>{
+    if(playHand.length===0 && comHand.length===0){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
   const endGame = () =>{
     setGameOver(true)
     setInProgress(false)
