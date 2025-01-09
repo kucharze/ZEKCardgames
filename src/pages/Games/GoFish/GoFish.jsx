@@ -66,7 +66,6 @@ function GoFish({darkmode}) {
     for(let i=0; i<7; i++){
       tempHand.push(deck.dealACard())
     }
-
     setComHand(tempHand)
 
     setDisabled(false)
@@ -82,6 +81,7 @@ function GoFish({darkmode}) {
     checkComHand(card)
   }
 
+  //Does the computer have a list of cards that the player asked for?
   const checkComHand = (card) =>{
     let i = 0;
     let tempHand = comHand
@@ -123,9 +123,9 @@ function GoFish({darkmode}) {
       setDisabled(true)
       checkForComPoints(card)
     }
-
   }
 
+  //Check conditions for Computer scoring a point
   const checkForComPoints = (card) =>{
     let count = 0
     let positions = []
@@ -149,6 +149,7 @@ function GoFish({darkmode}) {
     }
   }
 
+  //Check conditions for player scoring a point
   const checkForPlayPoints = (card) =>{
     let count = 0
     let positions = []
