@@ -32,7 +32,7 @@ function GoFish({darkmode}) {
   }
 
   //See if computer and player hands are empty
-  const checkEndComditions = () =>{
+  const checkEndConditions = () =>{
     if(playHand.length===0 && comHand.length===0){
       return true
     }
@@ -114,7 +114,9 @@ function GoFish({darkmode}) {
       alert("Go Fish!")
       setPlayHand([...playHand,deck.dealACard()])
       if(deck.list.length===0){
-        endGame()
+        if(checkEndConditions()){
+          endGame()
+        }
       }
     }
     else{
