@@ -269,7 +269,7 @@ button.active .text {
   }
   button {
     font-weight: 600;
-    font-size: 17px;
+    font-size: 20px;
     height: 80px;
     width: 550px;
     padding: 0.8em 1.4em;
@@ -292,9 +292,9 @@ button.active .text {
   }
   button {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     height: 100px;
-    width: 550px;
+    width: 450px;
     padding: 0.8em 1.4em;
   }
 }
