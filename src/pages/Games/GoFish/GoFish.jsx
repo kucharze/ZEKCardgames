@@ -174,6 +174,7 @@ function GoFish({darkmode}) {
     }
   }
 
+  //The computer asks for a card
   const comTurn = () =>{
     setDisabled(false)
     setAsking(true)
@@ -181,8 +182,8 @@ function GoFish({darkmode}) {
     setAskCard(Math.floor((Math.random() * comHand.length) + 1))
   }
 
+  //Tells computer to go fish
   const goFish = () =>{
-    //Tells computer to go fish
     console.log("Go fish")
 
     //Check if the player can give cards to the opponent
@@ -195,7 +196,7 @@ function GoFish({darkmode}) {
       let newCard = deck.dealACard()
 
       setComHand([...comHand,newCard])
-      if(deck.list.length===0){
+      if(deck.list.length===0){//Change end game conditions
         endGame()
       }
 
@@ -205,13 +206,16 @@ function GoFish({darkmode}) {
 
   }
 
+  //Function for player taking there turn
   const takeTurn = (card,pos) =>{
     // setDisabled(true) //Disable the buttons
     console.log("Card is",card)
+
+    //The player is asking for a card
     if(!asking){
       askForCard(card)
     }
-    else{
+    else{//The player is looking for cards to send to the opponent
       if(card.value===askCard.value){
         setComHand([...comHand,...playHand.splice(pos,1)])
         // setAsking(true)
