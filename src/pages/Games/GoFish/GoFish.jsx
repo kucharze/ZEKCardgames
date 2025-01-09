@@ -6,12 +6,17 @@ import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 import useCards from "./Game_modules/checkHand"
 
 function GoFish({darkmode}) {
+  //States
   const [rules, setRules] = useState(false)
   const [deck, setDeck] = useState(new Deck())
+  
+  //Player state items
   const [playHand,setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [playScore, setPlayScore] = useState(0)
   const [comScore, setComScore] = useState(0)
+
+  //Other important state items
   const [gameOver, setGameOver] = useState(false)//The game has completed
   const [askCard, setAskCard] = useState(null)//The card the computer is asking for
   const [disabled, setDisabled] = useState(true)//Should the goFish buttons be disabled
