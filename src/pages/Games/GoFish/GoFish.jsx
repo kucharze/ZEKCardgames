@@ -27,7 +27,7 @@ function GoFish({darkmode}) {
 
   //hooks
   const {testPlayGiving} = useCards()
-  const {checkEndConditions} = endGame()
+  const {checkEndConditions,findWinner} = endGame()
   
   
   const setUpDeck = () =>{
@@ -38,19 +38,7 @@ function GoFish({darkmode}) {
     setGameOver(true)
     setInProgress(false)
 
-    //check to see who won
-    if(playScore>comScore){
-      console.log("Player wins")
-      setWinner(true)
-    }
-    else if(comScore>playScore){
-      console.log("Computer wins")
-      setWinner(false)
-    }
-    else{
-      console.log("Tie")
-      setWinner(null)
-    }
+    setWinner(findWinner(playScore,comScore))
   }
 
   const newGame = () =>{
