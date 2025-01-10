@@ -27,7 +27,7 @@ function GoFish({darkmode}) {
 
   //hooks
   const {testPlayGiving} = useCards()
-  const {endGameCheck} = endGame()
+  const {checkEndConditions} = endGame()
   
   
   const setUpDeck = () =>{
@@ -35,14 +35,14 @@ function GoFish({darkmode}) {
   }
 
   //See if computer and player hands are empty
-  const checkEndConditions = (player,computer) =>{
-    if(playHand.length===0 && comHand.length===0){
-      return true
-    }
-    else{
-      return false
-    }
-  }
+  // const checkEndConditions = (player,computer) =>{
+  //   if(playHand.length===0 && comHand.length===0){
+  //     return true
+  //   }
+  //   else{
+  //     return false
+  //   }
+  // }
 
   const endGame = () =>{
     setGameOver(true)
@@ -117,7 +117,7 @@ function GoFish({darkmode}) {
       alert("Go Fish!")
       setPlayHand([...playHand,deck.dealACard()])
       if(deck.list.length===0){
-        if(checkEndConditions()){
+        if(checkEndConditions(playHand,comHand)){
           endGame()
         }
       }
@@ -212,7 +212,7 @@ function GoFish({darkmode}) {
 
       setComHand([...comHand,newCard])
       if(deck.list.length===0){//Change end game conditions
-        if(checkEndConditions()){
+        if(checkEndConditions(playHand,comHand)){
           endGame()
         }
       }
