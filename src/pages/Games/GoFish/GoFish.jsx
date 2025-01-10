@@ -4,6 +4,7 @@ import styles from './GoFish.module.css'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 // import { useAuth } from "../../../contexts/app_context";
 import useCards from "./Game_modules/checkHand"
+import endGame from './Game_modules/endGame'
 
 function GoFish({darkmode}) {
   //States
@@ -26,13 +27,15 @@ function GoFish({darkmode}) {
 
   //hooks
   const {testPlayGiving} = useCards()
+  const {endGameCheck} = endGame()
+  
   
   const setUpDeck = () =>{
     setDeck(new Deck())
   }
 
   //See if computer and player hands are empty
-  const checkEndConditions = () =>{
+  const checkEndConditions = (player,computer) =>{
     if(playHand.length===0 && comHand.length===0){
       return true
     }

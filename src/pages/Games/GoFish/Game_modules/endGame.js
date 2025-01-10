@@ -6,3 +6,5 @@ const checkEndConditions = (player,computer) =>{
       return false
     }
   }
+
+  export default {checkEndConditions}
