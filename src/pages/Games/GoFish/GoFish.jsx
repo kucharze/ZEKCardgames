@@ -209,7 +209,9 @@ function GoFish({darkmode}) {
 
       setComHand([...comHand,newCard])
       if(deck.list.length===0){//Change end game conditions
-        endGame()
+        if(checkEndConditions()){
+          endGame()
+        }
       }
 
       setDisabled(true)
