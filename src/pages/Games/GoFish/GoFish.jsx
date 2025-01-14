@@ -41,23 +41,22 @@ function GoFish({darkmode}) {
     setWinner(findWinner(playScore,comScore))
   }
 
+  const createHand = () =>{
+    let tempHand = [];
+    for(let i=0; i<7; i++){
+      tempHand.push(deck.dealACard())
+    }
+    return tempHand
+  }
+
   const newGame = () =>{
     console.log("New gofish game")
     setUpDeck()
     deck.shuffle()
     deck.shuffle()
     
-    let tempHand = [];
-    for(let i=0; i<7; i++){
-      tempHand.push(deck.dealACard())
-    }
-    setPlayHand(tempHand)
-
-    tempHand = [];
-    for(let i=0; i<7; i++){
-      tempHand.push(deck.dealACard())
-    }
-    setComHand(tempHand)
+    setPlayHand(createHand())
+    setComHand(createHand())
 
     setDisabled(false)
     setInProgress(true)
