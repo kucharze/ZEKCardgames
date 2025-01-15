@@ -13,8 +13,10 @@ function SpiderSolitare() {
   const [row6, setRow6] = useState([])
   //Card to move
   const [movecard, setMoveCard] = useState(null)
-  //List of cards to move
+  //Used to move list of cards
   const [moveCardList, setMoveCardList] = useState([])
+  //The position of cards to be moved
+  const [movePos, setMovePos] = useState([0,0])
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
   
@@ -55,7 +57,7 @@ function SpiderSolitare() {
   }
 
   const takeTurn = (card, row) =>{
-    if(movecard){
+    if(moveCard){
       if(card.value===movecard.value-1){
           depositcard(movecard, row)
           //Remove cards from previous row
@@ -63,6 +65,7 @@ function SpiderSolitare() {
       else{
         alert("That card can't be moved there value",card.value, movecard.value)
         setMoveCard(null)
+        setMoveCardList([])
       }
     }
     else{
