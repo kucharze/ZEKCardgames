@@ -51,9 +51,13 @@ function SpiderSolitare() {
 
     setRow6(setList())
 
-    setDeck(new Deck())
-    deck.shuffle()
-    deck.shuffle()
+    setDeck(()=>{
+      let deck = new Deck()
+      deck.shuffle()
+      deck.shuffle()
+      return deck
+    })
+    
   }
 
   const takeTurn = (card, row) =>{
