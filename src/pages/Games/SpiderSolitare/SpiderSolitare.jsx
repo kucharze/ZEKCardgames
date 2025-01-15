@@ -40,15 +40,10 @@ function SpiderSolitare() {
   const newGame = () =>{
 
     setRow1(setList())
-    
     setRow2(setList())
-
     setRow3(setList())
-
     setRow4(setList())
-
     setRow5(setList())
-
     setRow6(setList())
 
     setDeck(()=>{
@@ -66,19 +61,19 @@ function SpiderSolitare() {
       setMoveCardList(row1.splice(pos))
     }
     else if(row===row2){
-      setMoveCardList(row2)
+      setMoveCardList(row2.splice(pos))
     }
     else if(row===row3){
-      setMoveCardList(row3)
+      setMoveCardList(row3.splice(pos))
     }
     else if(row===row4){
-      setMoveCardList(row4)
+      setMoveCardList(row4.splice(pos))
     }
     else if(row===row5){
-      setMoveCardList(row5)
+      setMoveCardList(row5.splice(pos))
     }
     else if(row===row6){
-      setMoveCardList(row6)
+      setMoveCardList(row6.splice(pos))
     }
     
     
