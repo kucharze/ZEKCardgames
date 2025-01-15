@@ -60,6 +60,10 @@ function SpiderSolitare() {
     
   }
 
+  const moveCards = () =>{
+    //Set up list starting at pos and move to new row
+  }
+
   const takeTurn = (card, row) =>{
     if(moveCard){
       if(card.value===movecard.value-1){
@@ -74,6 +78,7 @@ function SpiderSolitare() {
     }
     else{
       setMoveCard(card)
+      setMovePos([row,0])
     }
   }
 
