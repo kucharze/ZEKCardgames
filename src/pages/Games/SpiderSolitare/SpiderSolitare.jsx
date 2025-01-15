@@ -11,7 +11,10 @@ function SpiderSolitare() {
   const [row4, setRow4] = useState([])
   const [row5, setRow5] = useState([])
   const [row6, setRow6] = useState([])
+  //Card to move
   const [movecard, setMoveCard] = useState(null)
+  //List of cards to move
+  const [moveCardList, setMoveCardList] = useState([])
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
   
