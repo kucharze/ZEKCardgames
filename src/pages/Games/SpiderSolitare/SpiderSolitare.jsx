@@ -13,8 +13,6 @@ function SpiderSolitare() {
   const [row6, setRow6] = useState([])
   //Card to move
   const [movecard, setMoveCard] = useState(null)
-  //Used to move list of cards
-  const [moveCardList, setMoveCardList] = useState([])
   //The position of cards to be moved
   const [movePos, setMovePos] = useState([0,0])
   const [rules, setRules] = useState(false)
@@ -57,25 +55,25 @@ function SpiderSolitare() {
 
   const moveCards = (row, pos, endrow) =>{
     //Set up list starting at pos and move to new row
+    let movelist = []
     if(row===row1){
-      setMoveCardList(row1.splice(pos))
+      movelist = row1.splice(pos)
     }
     else if(row===row2){
-      setMoveCardList(row2.splice(pos))
+      movelist = row2.splice(pos)
     }
     else if(row===row3){
-      setMoveCardList(row3.splice(pos))
+      movelist = row3.splice(pos)
     }
     else if(row===row4){
-      setMoveCardList(row4.splice(pos))
+      movelist = row4.splice(pos)
     }
     else if(row===row5){
-      setMoveCardList(row5.splice(pos))
+      movelist = row5.splice(pos)
     }
     else if(row===row6){
-      setMoveCardList(row6.splice(pos))
+      movelist = row6.splice(pos)
     }
-    
     
   }
 
