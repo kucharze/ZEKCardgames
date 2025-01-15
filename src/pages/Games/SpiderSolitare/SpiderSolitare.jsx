@@ -60,15 +60,17 @@ function SpiderSolitare() {
     
   }
 
-  const moveCards = () =>{
+  const moveCards = (startrow, endrow) =>{
     //Set up list starting at pos and move to new row
+    setMoveCardList()
   }
 
   const takeTurn = (card, row) =>{
     if(movecard){
       if(card.value===movecard.value-1){
           depositcard(movecard, row)
-          //Remove cards from previous row
+          //Remove cards from previous row and move to new row
+          moveCards()
       }
       else{
         alert("That card can't be moved there value",card.value, movecard.value)
