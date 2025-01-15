@@ -60,9 +60,28 @@ function SpiderSolitare() {
     
   }
 
-  const moveCards = (startrow, endrow) =>{
+  const moveCards = (row, pos, endrow) =>{
     //Set up list starting at pos and move to new row
-    setMoveCardList()
+    if(row===row1){
+      setMoveCardList(row1.splice(pos))
+    }
+    else if(row===row2){
+      setMoveCardList(row2)
+    }
+    else if(row===row3){
+      setMoveCardList(row3)
+    }
+    else if(row===row4){
+      setMoveCardList(row4)
+    }
+    else if(row===row5){
+      setMoveCardList(row5)
+    }
+    else if(row===row6){
+      setMoveCardList(row6)
+    }
+    
+    
   }
 
   const takeTurn = (card, row) =>{
