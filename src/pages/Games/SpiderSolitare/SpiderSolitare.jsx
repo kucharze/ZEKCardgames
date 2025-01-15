@@ -15,11 +15,10 @@ function SpiderSolitare() {
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
   
-  const newGame = () =>{
+  const setList = () =>{
     let card = null
 
     let templist = []
-
     for(let i=0; i<5; i++){
       card = deck.dealACard()
       if(i!==4){
@@ -30,76 +29,22 @@ function SpiderSolitare() {
       }     
       templist.push(card)
     }
-    setRow1(templist)
+    return templist
+  }
+
+  const newGame = () =>{
+
+    setRow1(setList())
     
-    templist = []
-    for(let i=0; i<5; i++){
-      card = deck.dealACard()
-      if(i!==4){
-        card.back = true
-      }
-      else{
-        card.back = false
-      } 
-      templist.push(card)
-    }
-    setRow2(templist)
+    setRow2(setList())
 
-    templist = []
-    for(let i=0; i<5; i++){
-      card = deck.dealACard()
-      if(i!==4){
-        card.back = true
-      }
-      else{
-        card.back = false
-      } 
-      templist.push(card)
-    }
+    setRow3(setList())
 
-    setRow3(templist)
+    setRow4(setList())
 
-    templist = []
-    for(let i=0; i<5; i++){
-      card = deck.dealACard()
-      if(i!==4){
-        card.back = true
-      }
-      else{
-        card.back = false
-      } 
-      templist.push(card)
-    }
+    setRow5(setList())
 
-    setRow4(templist)
-
-    templist = []
-    for(let i=0; i<5; i++){
-      card = deck.dealACard()
-      if(i!==4){
-        card.back = true
-      }
-      else{
-        card.back = false
-      } 
-      templist.push(card)
-    }
-
-    setRow5(templist)
-
-    templist = []
-    for(let i=0; i<5; i++){
-      card = deck.dealACard()
-      if(i!==4){
-        card.back = true
-      }
-      else{
-        card.back = false
-      } 
-      templist.push(card)
-    }
-
-    setRow6(templist)
+    setRow6(setList())
 
     setDeck(new Deck())
     deck.shuffle()
