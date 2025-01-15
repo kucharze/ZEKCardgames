@@ -65,7 +65,7 @@ function SpiderSolitare() {
   }
 
   const takeTurn = (card, row) =>{
-    if(moveCard){
+    if(movecard){
       if(card.value===movecard.value-1){
           depositcard(movecard, row)
           //Remove cards from previous row
