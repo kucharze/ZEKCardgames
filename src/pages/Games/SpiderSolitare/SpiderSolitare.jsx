@@ -75,6 +75,27 @@ function SpiderSolitare() {
       movelist = row6.splice(pos)
     }
     
+    Console.log(movelist)
+
+    if(endrow===row1){
+     
+    }
+    else if(endrow===row2){
+      
+    }
+    else if(endrow===row3){
+      
+    }
+    else if(endrow===row4){
+      
+    }
+    else if(endrow===row5){
+      
+    }
+    else if(endrow===row6){
+      
+    }
+    
   }
 
   const takeTurn = (card, row) =>{
