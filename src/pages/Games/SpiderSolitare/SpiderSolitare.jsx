@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
+import { set } from 'mongoose'
 
 function SpiderSolitare() {
   const [deck, setDeck] = useState(new Deck())
@@ -78,22 +79,22 @@ function SpiderSolitare() {
     Console.log(movelist)
 
     if(endrow===row1){
-     
+     setRow1([...row1,movelist])
     }
     else if(endrow===row2){
-      
+      setRow2([...row2,movelist])
     }
     else if(endrow===row3){
-      
+      setRow3([...row3,movelist])
     }
     else if(endrow===row4){
-      
+      setRow4([...row4,movelist])
     }
     else if(endrow===row5){
-      
+      setRow5([...row5,movelist])
     }
     else if(endrow===row6){
-      
+      setRow6([...row6,movelist])
     }
     
   }
