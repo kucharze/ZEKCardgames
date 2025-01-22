@@ -99,6 +99,13 @@ function SpiderSolitare() {
     
   }
 
+  const checkForPoint = (row) =>{
+    let points = 0
+    for(let i=0; i<row.length; i++){
+      
+    }
+    }
+
   const takeTurn = (card, row) =>{
     if(movecard){
       if(card.value===movecard.value-1){
