@@ -100,9 +100,17 @@ function SpiderSolitare() {
   }
 
   const checkForPoint = (row) =>{
+    let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2']
     let points = 0
     for(let i=0; i<row.length; i++){
-      
+      if(points==0){
+        points++
+      }
+      else{
+        if(row[i].value===row[i-1].value){
+          points++
+        }
+      }
     }
     }
 
