@@ -15,7 +15,7 @@ export const AppContextProvider = ({ children }) => {
         eightMoves();
         break;
       case "Blackjack Wins":
-        // blackjackWins();
+        blackjackWins();
         break;
       case "Snip Snap Snorum":
         // snipSnipSnorum();
@@ -38,6 +38,27 @@ export const AppContextProvider = ({ children }) => {
     try {
       let res = axios.post(
         "http://localhost:3001/leaderboards/CrazyEightsMoves",
+        {
+          username: user,
+          score: moves,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      setUser(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const blackjackWins = (moves) => {
+    try {
+      let res = axios.post(
+        "http://localhost:3001/leaderboards/BlackjackWins",
         {
           username: user,
           score: moves,
