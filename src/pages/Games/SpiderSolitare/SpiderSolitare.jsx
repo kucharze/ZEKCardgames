@@ -104,13 +104,19 @@ function SpiderSolitare() {
     let points = 0
     for(let i=0; i<row.length; i++){
       if(points==0){
-        points++
-      }
-      else{
-        if(row[i].value===row[i-1].value){
+        if(row[i].value===pointlist[points]){
           points++
         }
       }
+      else{
+        if(row[i].value===pointlist[points].value){
+          points++
+        }
+      }
+    }
+
+    if(points===13){
+      setScore(score+1)
     }
     }
 
