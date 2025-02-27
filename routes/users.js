@@ -8,7 +8,7 @@ router.post("/login", async (req, res) => {
   console.log("Server User test");
   try {
     let user = req.body;
-    const users = await Users.findOne({ username: user.username });
+    const users = await Users.findOne({ userName: user.userName });
     if (!users) return res.status(400).json("User not found");
     console.log("Found the user: " + users);
 
@@ -19,13 +19,17 @@ router.post("/login", async (req, res) => {
 
     const { password, ...others } = users._doc;
 
+    console.log("Found the user: " + users);
+    console.log("Attempting to send data back to user");
     console.log(others);
+    console.log("Success accessing server for Users");
+    // res.status(200).json(req.userName);
     res.status(200).json(users);
   } catch (error) {
+    console.log("Error logging in");
     console.log(error);
     res.status(400).json("Error logging in: " + error);
   }
-  res.status(200).json("Success accessing server for Users");
 });
 
 router.post("/createuser", async (req, res) => {
@@ -35,12 +39,13 @@ router.post("/createuser", async (req, res) => {
     req.body.password = hashedPassword;
     const user = new Users(req.body);
     user.save();
+
+    console.log("Success accessing server for Users");
+    res.status(200).json(user);
   } catch (error) {
     console.log(error);
     res.status(400).json("Error creating user: " + error);
   }
-
-  res.status(200).json("Success accessing server for Users");
 });
 
 module.exports = router;
