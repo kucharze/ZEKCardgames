@@ -130,7 +130,7 @@ function Matching() {
   },[el2])
 
   useEffect(()=>{
-    if(score==18){
+    if(score===18){
       //end game
       setGameOver(true)
     }
