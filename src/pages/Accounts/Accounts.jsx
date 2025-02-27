@@ -14,6 +14,8 @@ function Accounts() {
   const [loginUsername,setLoginUsername] = useState("")
   const [loginPassword,setLoginPassword] = useState("")
 
+  const [errorMessage, setErrorMessage] = useState("")
+
   const createAccount = async (e) => {
     e.preventDefault()
     if(password !== confirm){
@@ -62,6 +64,7 @@ function Accounts() {
         setUser(res.data)
     } catch (error) {
       console.log(error)
+      setErrorMessage(error.alert)
     }
   }
 
@@ -80,6 +83,8 @@ function Accounts() {
         <input type='password' onChange={(e) => {setConfirm(e.target.value)}} placeholder='Confirm password'/><br/>
         <input type='submit' value='Create an Account'/>
       </form>
+
+      <h2 className='ErrorMessage'>{errorMessage}</h2>
 
       <h2>Already have an account? Sign in here</h2>
       <form onSubmit={login}>
