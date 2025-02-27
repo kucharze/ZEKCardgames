@@ -43,7 +43,7 @@ function Accounts() {
         setErrorMessage('')
     } catch (error) {
       console.log(error)
-      setErrorMessage(error.message)
+      setErrorMessage(error.response.data)
     }
   }
 
@@ -67,14 +67,14 @@ function Accounts() {
         setErrorMessage('')
     } catch (error) {
       console.log(error)
-      setErrorMessage(error.message)
+      setErrorMessage(error.response.data)
     }
   }
 
   return (
     <div className={styles.Accounts}>
       <h3>Active User: {user}</h3>
-      <div  className={styles.errorMessage}>
+      <div className={styles.errorMessage}>
         <h2>{errorMessage}</h2>
       </div>
        
