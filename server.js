@@ -34,7 +34,7 @@ app.use("/*", (req, res, next) => {
   next();
 });
 
-// Put API routes here
+//API routes
 app.use("/suggestions", require("./routes/suggestions"));
 app.use("/leaderboards", require("./routes/leaderboards"));
 app.use("/users", require("./routes/users"));
