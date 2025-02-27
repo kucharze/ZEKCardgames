@@ -71,7 +71,7 @@ function Accounts() {
 
   return (
     <div className={styles.Accounts}>
-      <h3>Active User: No active user</h3>
+      <h3>Active User: {user}</h3>
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form onSubmit={createAccount}>
         <input onChange={(e) => {setName(e.target.value)}} placeholder='Name'
