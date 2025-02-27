@@ -78,22 +78,22 @@ function SpiderSolitare() {
     Console.log(movelist)
 
     if(endrow===row1){
-     
+     setRow1([...row1,...movelist])
     }
     else if(endrow===row2){
-      
+      setRow1([...row2,...movelist])
     }
     else if(endrow===row3){
-      
+      setRow1([...row3,...movelist])
     }
     else if(endrow===row4){
-      
+      setRow1([...row4,...movelist])
     }
     else if(endrow===row5){
-      
+      setRow1([...row5,...movelist])
     }
     else if(endrow===row6){
-      
+      setRow1([...row6,...movelist])
     }
     
   }
