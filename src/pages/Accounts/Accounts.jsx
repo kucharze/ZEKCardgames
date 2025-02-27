@@ -40,6 +40,7 @@ function Accounts() {
         setPassword('')
         setConfirm('')
         setUser(res.data)
+        setErrorMessage('')
     } catch (error) {
       console.log(error)
       setErrorMessage(error.message)
@@ -63,6 +64,7 @@ function Accounts() {
         setLoginUsername('')
         setLoginPassword('')
         setUser(res.data)
+        setErrorMessage('')
     } catch (error) {
       console.log(error)
       setErrorMessage(error.message)
