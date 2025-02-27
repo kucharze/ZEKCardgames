@@ -33,7 +33,7 @@ router.post("/createuser", async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     req.body.password = hashedPassword;
-    const user = new users(req.body);
+    const user = new Users(req.body);
     user.save();
   } catch (error) {
     console.log(error);
