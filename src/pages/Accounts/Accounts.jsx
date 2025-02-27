@@ -74,6 +74,10 @@ function Accounts() {
   return (
     <div className={styles.Accounts}>
       <h3>Active User: {user}</h3>
+      <div  className={styles.errorMessage}>
+        <h2>{errorMessage}</h2>
+      </div>
+       
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form onSubmit={createAccount}>
         <input onChange={(e) => {setName(e.target.value)}} placeholder='Name'
@@ -87,7 +91,7 @@ function Accounts() {
         <input type='submit' value='Create an Account'/>
       </form>
 
-      <h2 className='ErrorMessage'>{errorMessage}</h2>
+     
 
       <h2>Already have an account? Sign in here</h2>
       <form onSubmit={login}>

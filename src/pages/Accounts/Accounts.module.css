@@ -11,6 +11,14 @@ input {
   border: none;
 }
 
+.errorMessage {
+  color: white;
+  background-color: red;
+  font-size: 40px;
+  /* height: 100px; */
+  padding: 3px;
+}
+
 @media (max-width: 1600px) {
   .Accounts {
     font-size: 18px;
