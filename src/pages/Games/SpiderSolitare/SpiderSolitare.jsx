@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
-import { set } from 'mongoose'
+// import { set } from 'mongoose'
 
 function SpiderSolitare() {
   const [deck, setDeck] = useState(new Deck())
@@ -76,7 +76,7 @@ function SpiderSolitare() {
       movelist = row6.splice(pos)
     }
     
-    Console.log(movelist)
+    console.log(movelist)
 
     if(endrow===row1){
      setRow1([...row1,...movelist])
@@ -131,7 +131,7 @@ function SpiderSolitare() {
       else{
         alert("That card can't be moved there value",card.value, movecard.value)
         setMoveCard(null)
-        setMoveCardList([])
+        // setMoveCardList([])
       }
     }
     else{
