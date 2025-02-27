@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
+import { set } from 'mongoose'
 
 function SpiderSolitare() {
   const [deck, setDeck] = useState(new Deck())
@@ -94,9 +95,31 @@ function SpiderSolitare() {
     }
     else if(endrow===row6){
       setRow1([...row6,...movelist])
+
     }
     
   }
+
+  const checkForPoint = (row) =>{
+    let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2']
+    let points = 0
+    for(let i=0; i<row.length; i++){
+      if(points==0){
+        if(row[i].value===pointlist[points]){
+          points++
+        }
+      }
+      else{
+        if(row[i].value===pointlist[points].value){
+          points++
+        }
+      }
+    }
+
+    if(points===13){
+      setScore(score+1)
+    }
+    }
 
   const takeTurn = (card, row) =>{
     if(movecard){
