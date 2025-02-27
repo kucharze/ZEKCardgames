@@ -42,6 +42,7 @@ function Accounts() {
         setUser(res.data)
     } catch (error) {
       console.log(error)
+      setErrorMessage(error.message)
     }
   }
 
@@ -64,7 +65,7 @@ function Accounts() {
         setUser(res.data)
     } catch (error) {
       console.log(error)
-      setErrorMessage(error)
+      setErrorMessage(error.message)
     }
   }
 
