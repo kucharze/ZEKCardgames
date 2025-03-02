@@ -74,9 +74,13 @@ function Accounts() {
   return (
     <div className={styles.Accounts}>
       <h3>Active User: {user}</h3>
-      <div className={styles.errorMessage}>
-        <h2>{errorMessage}</h2>
-      </div>
+      {
+        errorMessage === "" ? '' :
+        <div className={styles.errorMessage}>
+          <h2>{errorMessage}</h2>
+        </div>
+      }
+      
        
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form onSubmit={createAccount}>
