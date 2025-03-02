@@ -63,6 +63,7 @@ function Accounts() {
         console.log(res)
         setLoginUsername('')
         setLoginPassword('')
+
         setUser(res.data.userName)
         setErrorMessage('')
     } catch (error) {
@@ -84,14 +85,22 @@ function Accounts() {
        
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form onSubmit={createAccount}>
-        <input onChange={(e) => {setName(e.target.value)}} placeholder='Name'
+        <input 
+        value={name}
+        onChange={(e) => {setName(e.target.value)}} placeholder='Name'
         minLength={3}
         />
-        <input onChange={(e) => {setUsername(e.target.value)}} placeholder='Username'/>
+        <input onChange={(e) => {setUsername(e.target.value)}} 
+        value={username}
+        placeholder='Username'/>
         <br />
-        <input type='password' onChange={(e) => {setPassword(e.target.value)}} placeholder='Password'
+        <input type='password' onChange={(e) => {setPassword(e.target.value)}} 
+        value={password}
+        placeholder='Password'
         minLength={8}/>
-        <input type='password' onChange={(e) => {setConfirm(e.target.value)}} placeholder='Confirm password'/><br/>
+        <input type='password' onChange={(e) => {setConfirm(e.target.value)}} 
+        value={confirm}
+        placeholder='Confirm password'/><br/>
         <input type='submit' value='Create an Account'/>
       </form>
 
@@ -99,10 +108,10 @@ function Accounts() {
 
       <h2>Already have an account? Sign in here</h2>
       <form onSubmit={login}>
-        <input onChange={(e) => {setLoginUsername(e.target.value)}} 
+        <input value={loginUsername} onChange={(e) => {setLoginUsername(e.target.value)}} 
         placeholder='Screenname'
         minLength={3}/>
-        <input onChange={(e) => {setLoginPassword(e.target.value)}} 
+        <input value={loginPassword} onChange={(e) => {setLoginPassword(e.target.value)}} 
         placeholder='Password'
         type='password'
         minLength={8}/><br/>
