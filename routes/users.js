@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const Users = require("../Schema_models/Users/Users");
 
 router.post("/login", async (req, res) => {
-  console.log("Server User test");
+  console.log("Attempting to log in");
   try {
     let user = req.body;
     const users = await Users.findOne({ userName: user.userName });
@@ -33,7 +33,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/createuser", async (req, res) => {
-  console.log("Saving a user");
+  console.log("Attempting to create user");
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     req.body.password = hashedPassword;
