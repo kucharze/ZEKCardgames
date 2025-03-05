@@ -14,7 +14,8 @@ function Accounts() {
   const [loginUsername,setLoginUsername] = useState("")
   const [loginPassword,setLoginPassword] = useState("")
 
-  const [errorMessage, setErrorMessage] = useState("")
+  const [signUpError, setSignUpError] = useState("")
+  const [loginError, setLoginError] = useState("")
 
   const createAccount = async (e) => {
     e.preventDefault()
@@ -40,10 +41,10 @@ function Accounts() {
         setPassword('')
         setConfirm('')
         setUser(res.data.userName)
-        setErrorMessage('')
+        setSignUpError('')
     } catch (error) {
       console.log(error)
-      setErrorMessage(error.response.data)
+      setSignUpError(error.response.data)
     }
   }
 
@@ -65,10 +66,10 @@ function Accounts() {
         setLoginPassword('')
 
         setUser(res.data.userName)
-        setErrorMessage('')
+        setLoginError('')
     } catch (error) {
       console.log(error)
-      setErrorMessage(error.response.data)
+      setLoginError(error.response.data)
     }
   }
 
@@ -76,12 +77,11 @@ function Accounts() {
     <div className={styles.Accounts}>
       <h3>Active User: {user}</h3>
       {
-        errorMessage === "" ? '' :
+        signUpError === "" ? '' :
         <div className={styles.errorMessage}>
-          <h2>{errorMessage}</h2>
+          <h2>{signUpError}</h2>
         </div>
       }
-      
        
       <h2>Create a Login to have your name added to Leaderboards</h2>
       <form onSubmit={createAccount}>
@@ -104,7 +104,12 @@ function Accounts() {
         <input type='submit' value='Create an Account'/>
       </form>
 
-     
+      {
+        loginError === "" ? '' :
+        <div className={styles.errorMessage}>
+          <h2>{loginError}</h2>
+        </div>
+      }
 
       <h2>Already have an account? Sign in here</h2>
       <form onSubmit={login}>
