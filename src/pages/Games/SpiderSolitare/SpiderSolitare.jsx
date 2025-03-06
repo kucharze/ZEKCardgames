@@ -80,22 +80,27 @@ function SpiderSolitare() {
 
     if(endrow===row1){
      setRow1([...row1,...movelist])
+     checkForPoint(row1)
     }
     else if(endrow===row2){
       setRow1([...row2,...movelist])
+      checkForPoint(row2)
     }
     else if(endrow===row3){
       setRow1([...row3,...movelist])
+      checkForPoint(row3)
     }
     else if(endrow===row4){
       setRow1([...row4,...movelist])
+      checkForPoint(row4)
     }
     else if(endrow===row5){
       setRow1([...row5,...movelist])
+      checkForPoint(row5)
     }
     else if(endrow===row6){
       setRow1([...row6,...movelist])
-
+      checkForPoint(row6)
     }
     
   }
@@ -131,7 +136,6 @@ function SpiderSolitare() {
       else{
         alert("That card can't be moved there value",card.value, movecard.value)
         setMoveCard(null)
-        // setMoveCardList([])
       }
     }
     else{
