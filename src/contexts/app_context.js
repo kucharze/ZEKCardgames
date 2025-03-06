@@ -17,7 +17,7 @@ export const AppContextProvider = ({ children }) => {
         eightMoves(score);
         break;
       case "Blackjack Wins":
-        blackjackWins();
+        blackjackWins(score);
         break;
       case "Snip Snap Snorum":
         // snipSnipSnorum();
