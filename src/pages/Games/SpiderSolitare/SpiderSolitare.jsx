@@ -121,12 +121,12 @@ function SpiderSolitare() {
     }
 
     if(points===13){
-      setScore(score+1)
+      addPoint(row)
     }
   }
 
   const addPoint = (row) =>{
-    score++;
+    setScore(score+1)
     //remove cards from row where point was scored
     if(row===row1){
       row1.splice((row1.length-1)-12)
