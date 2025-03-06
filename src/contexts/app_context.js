@@ -9,12 +9,12 @@ export const AppContextProvider = ({ children }) => {
   const [user, setUser] = useState("");
 
   //Add functions for uploading to leaderboards
-  const uploadToLeaderboards = (board) => {
+  const uploadToLeaderboards = (board, score) => {
     console.log("uploading to leaderboards");
 
     switch (board) {
       case "Crazy Eights Moves":
-        eightMoves();
+        eightMoves(score);
         break;
       case "Blackjack Wins":
         blackjackWins();
@@ -31,7 +31,7 @@ export const AppContextProvider = ({ children }) => {
       case "War Score":
         break;
       default:
-        alert("Please select a valid leaderboard option");
+        alert("No valid leaderboard option");
         break;
     }
   };
