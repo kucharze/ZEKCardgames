@@ -4,7 +4,7 @@ import styles from './GoFish.module.css'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 // import { useAuth } from "../../../contexts/app_context";
 import useCards from "./Game_modules/checkHand"
-import endGame from './Game_modules/endGame'
+import endGamelogic from './Game_modules/endGame'
 
 function GoFish({darkmode}) {
   //States
@@ -27,7 +27,7 @@ function GoFish({darkmode}) {
 
   //hooks
   const {testPlayGiving} = useCards()
-  const {checkEndConditions,findWinner} = endGame()
+  const {checkEndConditions,findWinner} = endGamelogic
   
   
   const setUpDeck = () =>{
