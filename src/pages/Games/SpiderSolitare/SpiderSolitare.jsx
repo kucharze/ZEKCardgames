@@ -102,7 +102,6 @@ function SpiderSolitare() {
       setRow1([...row6,...movelist])
       checkForPoint(row6)
     }
-    
   }
 
   const checkForPoint = (row) =>{
@@ -124,7 +123,12 @@ function SpiderSolitare() {
     if(points===13){
       setScore(score+1)
     }
-    }
+  }
+
+  const addPoint = (row) =>{
+    //remove cards from row where point was scored
+    score++;
+  }
 
   const takeTurn = (card, row) =>{
     if(movecard){
@@ -207,9 +211,9 @@ function SpiderSolitare() {
           </ul>
         </div>
       }
-
       
       <div className={styles.score}>Score: {score}</div>
+     
       <div className={styles.playmat}>
         <div className={styles.row}>
           {
