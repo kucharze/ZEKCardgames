@@ -252,7 +252,7 @@ function GoFish({darkmode}) {
         {
             comHand.map((item,i)=>{
               return <img key={i} alt={item} className={styles.card} 
-              src={require(`../../../Images/${item}.png`)}
+              src={require(`../../../Images/Playcards/${item}.png`)}
                 onClick={()=>{
                   console.log("Clicked")
                   
@@ -280,7 +280,8 @@ function GoFish({darkmode}) {
       <div>
         {
           playHand.map((item,i)=>{
-            return <img key={i} alt={item} className={styles.card} src={require(`../../../Images/${item}.png`)}
+            return <img key={i} alt={item} className={styles.card} 
+            src={require(`../../../Images/Playcards/${item}.png`)}
               onClick={()=>{
                 takeTurn(item,i)
               }}/>

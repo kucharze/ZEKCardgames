@@ -169,7 +169,7 @@ function Blackjack() {
             <img src={back} alt="" />
             {
               comHand.length>0 && <img className={styles.hand} 
-                        src={require(`../../../Images/${comHand[1]}.png`)} alt="" />
+                        src={require(`../../../Images/Playcards/${comHand[1]}.png`)} alt="" />
             }
           </div>
         }
@@ -196,7 +196,7 @@ function Blackjack() {
           playHand.map((item,i)=>{
               if(item){
                 return <img className={styles.hand} key={i} 
-                  src={require(`../../../Images/${item}.png`)} alt="" />
+                  src={require(`../../../Images/Playcards/${item}.png`)} alt="" />
               }
               return <p>No value here</p>
             })
