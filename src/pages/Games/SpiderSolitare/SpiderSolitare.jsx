@@ -126,8 +126,26 @@ function SpiderSolitare() {
   }
 
   const addPoint = (row) =>{
-    //remove cards from row where point was scored
     score++;
+    //remove cards from row where point was scored
+    if(row===row1){
+      row1.splice((row1.length-1)-12)
+    }
+    else if(row===row2){
+      row2.splice((row2.length-1)-12)
+    }
+    else if(row===row3){
+      row3.splice((row3.length-1)-12)
+    }
+    else if(row===row4){
+      row4.splice((row4.length-1)-12)
+    }
+    else if(row===row5){
+      row5.splice((row5.length-1)-12)
+    }
+    else if(row===row6){
+      row6.splice((row6.length-1)-12)
+    }
   }
 
   const takeTurn = (card, row) =>{
