@@ -93,8 +93,11 @@ function GoFish({darkmode}) {
     if(tempCardList.length===0){
       alert("Go Fish!")
 
-      if(deck.getSize() >0){
+      if(deck.getSize() > 0){
         setPlayHand([...playHand,deck.dealACard()])
+      }
+      else{
+        console.log("No cards left in deck")
       }
 
       if(deck.list.length===0 
@@ -194,6 +197,9 @@ function GoFish({darkmode}) {
       let newCard = deck.dealACard()
 
       setComHand([...comHand,newCard])
+    }
+    else{
+      console.log("No cards left in deck")
     }
 
     if(deck.list.length===0 
