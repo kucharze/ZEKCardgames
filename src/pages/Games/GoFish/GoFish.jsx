@@ -92,7 +92,10 @@ function GoFish({darkmode}) {
     // console.log("Temocardlist:",tempCardList)
     if(tempCardList.length===0){
       alert("Go Fish!")
-      setPlayHand([...playHand,deck.dealACard()])
+
+      if(deck.getSize() >0){
+        setPlayHand([...playHand,deck.dealACard()])
+      }
 
       if(deck.list.length===0 
         && playHand.length === 0 
@@ -191,18 +194,19 @@ function GoFish({darkmode}) {
       let newCard = deck.dealACard()
 
       setComHand([...comHand,newCard])
-
-      if(deck.list.length===0 
-        && playHand.length === 0 
-        && comHand.length === 0){
-        if(checkEndConditions(playHand,comHand)){
-          endGame()
-        }
-      }
-
-      setDisabled(true)
-      setAsking(false)
     }
+
+    if(deck.list.length===0 
+      && playHand.length === 0 
+      && comHand.length === 0){
+      if(checkEndConditions(playHand,comHand)){
+        endGame()
+      }
+    }
+
+    setDisabled(true)
+    setAsking(false)
+    
 
   }
 
