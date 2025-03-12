@@ -93,7 +93,10 @@ function GoFish({darkmode}) {
     if(tempCardList.length===0){
       alert("Go Fish!")
       setPlayHand([...playHand,deck.dealACard()])
-      if(deck.list.length===0){
+
+      if(deck.list.length===0 
+        && playHand.length === 0 
+        && comHand.length === 0){
         if(checkEndConditions(playHand,comHand)){
           endGame()
         }
@@ -188,7 +191,10 @@ function GoFish({darkmode}) {
       let newCard = deck.dealACard()
 
       setComHand([...comHand,newCard])
-      if(deck.list.length===0){//Change end game conditions
+
+      if(deck.list.length===0 
+        && playHand.length === 0 
+        && comHand.length === 0){
         if(checkEndConditions(playHand,comHand)){
           endGame()
         }
