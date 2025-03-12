@@ -194,9 +194,7 @@ function GoFish({darkmode}) {
     }
 
     if(deck.list.length>0){
-      let newCard = deck.dealACard()
-
-      setComHand([...comHand,newCard])
+      setComHand([...comHand,deck.dealACard()])
     }
     else{
       console.log("No cards left in deck")
