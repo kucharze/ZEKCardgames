@@ -4,8 +4,11 @@ import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import SuitPicker from '../../../components/SuitPicker/SuitPicker'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
+import { useAuth } from "../../contexts/app_context";
 
 function CrazyEights({darkMode}) {
+  const { user, uploadToLeaderboards } = useAuth();
+
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [pile,setPile] = useState(null)

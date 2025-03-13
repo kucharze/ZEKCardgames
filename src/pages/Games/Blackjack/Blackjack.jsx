@@ -3,8 +3,11 @@ import back from '../../../Images/BACKCARD.JPG'
 import styles from './Blackjack.module.css'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
+import { useAuth } from "../../contexts/app_context";
 
 function Blackjack() {
+  const { user, uploadToLeaderboards } = useAuth();
+
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
   const [tempComVal, setTempComVal] = useState(0)
