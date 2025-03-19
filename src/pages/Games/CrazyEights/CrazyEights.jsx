@@ -22,13 +22,14 @@ function CrazyEights({darkMode}) {
   const [gameOver, setGameOver] = useState(false)
   const [youWin, setYouWin] = useState(false)
   const [rules, setRules] = useState(false)
+  const [numMoves, setNumMoves] = useState(0)
 
   const endGame = () =>{
     setGameOver(true)
     setYouWin(true)
 
     if(user){
-      uploadToLeaderboards()
+      uploadToLeaderboards(numMoves)
     }
   }
 
