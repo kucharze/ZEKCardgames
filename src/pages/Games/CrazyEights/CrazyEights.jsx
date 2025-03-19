@@ -35,6 +35,7 @@ function CrazyEights({darkMode}) {
 
   const cardPicked = () =>{
     console.log("Picking a card")
+    setNumMoves((prev)=>prev+1)
 
     let newCard = deck.dealACard()
     setPlayHand([...playHand,newCard])
@@ -84,6 +85,7 @@ function CrazyEights({darkMode}) {
         setValue(card.value)
         setPile(card)
         setComTakeTurn(true)
+        setNumMoves((prev)=>prev+1)
         if(newHand.length===0){
           endGame()
         }
@@ -156,6 +158,7 @@ function CrazyEights({darkMode}) {
     setPile(pileCard)
     setGameOver(false)
     setYouWin(false)
+    setNumMoves(0)
     console.log(deck)
     resetDeck()
   }
