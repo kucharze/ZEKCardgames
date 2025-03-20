@@ -24,7 +24,7 @@ function Blackjack() {
   const endGame = (win) =>{
     setDisabled(true)
     setGameOver(true)
-    setYouWin(true)
+    setYouWin(win)
 
     if(user && win){
       uploadToLeaderboards(1)
@@ -61,15 +61,15 @@ function Blackjack() {
       handVal+=Number(element.jackValue)
     });
     if(handVal>21){
-      setDisabled(true)
+      endGame(false)
       setComValue(tempComVal)
       setComTurn(true)
     }
     if(handVal===21 && playHand.length===2){
       setBlackjack(true)
-      setDisabled(true)
-      setGameOver(true)
-      setYouWin(true)
+
+      endGame(true)
+
       setComTurn(true)
       setComValue(tempComVal)
     }
@@ -95,7 +95,7 @@ function Blackjack() {
     let newHand = comHand;
     let handVal = tempComVal;
     //console.log(comHand)
-    setComValue(tempComVal)
+    // setComValue(tempComVal)
 
     while(handVal<=17){
       // newHand
@@ -209,7 +209,8 @@ function Blackjack() {
           playHand.map((item,i)=>{
               if(item){
                 return <img className={styles.hand} key={i} 
-                  src={require(`../../../Images/Playcards/${item}.png`)} alt="" />
+                  src={require(`../../../Images/Playcards/${item}.png`)} 
+                  alt="" />
               }
               return <p>No value here</p>
             })
