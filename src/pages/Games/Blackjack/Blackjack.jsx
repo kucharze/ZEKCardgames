@@ -21,6 +21,16 @@ function Blackjack() {
   const [disabled, setDisabled] = useState(true)
   const [blackjack, setBlackjack] = useState(false)
 
+  const endGame = (win) =>{
+    setDisabled(true)
+    setGameOver(true)
+    setYouWin(true)
+
+    if(user && win){
+      uploadToLeaderboards(1)
+    }
+  }
+
   const newGame = () =>{
     console.log("New Blackjack game")
     setComValue(0)
