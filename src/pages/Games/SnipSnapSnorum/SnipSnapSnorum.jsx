@@ -2,9 +2,13 @@ import React,{useState, useEffect} from 'react'
 import styles from './SnipSnapSnorum.module.css'
 // import back from '../../../Images/cardback.png'
 import Deck from '../../../gamecomponents/Deck'
+import { useAuth } from "../../../contexts/app_context";
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function SnipSnapSnorum({darkMode}) {
+  //Context
+  const { user, uploadToLeaderboards } = useAuth();
+
   const [rules, setRules] = useState(false)
   const [comHand, setComHand] = useState([])
   const [playHand, setPlayHand] = useState([])
