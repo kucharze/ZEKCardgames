@@ -2,11 +2,14 @@ import React,{useState, useEffect} from 'react'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './GoFish.module.css'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
-// import { useAuth } from "../../../contexts/app_context";
+import { useAuth } from "../../../contexts/app_context";
 import useCards from "./Game_modules/checkHand"
 import endGamelogic from './Game_modules/endGame'
 
 function GoFish({darkmode}) {
+  //Context
+  const { user, uploadToLeaderboards } = useAuth();
+
   //States
   const [rules, setRules] = useState(false)
   const [deck, setDeck] = useState(new Deck())
