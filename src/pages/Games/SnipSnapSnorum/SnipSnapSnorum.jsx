@@ -156,9 +156,7 @@ function SnipSnapSnorum({darkMode}) {
 
       if(tempHand.length===0){
         //The computer wins
-        setGameOver(true)
-        setWin(false)
-        setDisabled(true)
+        endGame(false)
       }
     }
 
