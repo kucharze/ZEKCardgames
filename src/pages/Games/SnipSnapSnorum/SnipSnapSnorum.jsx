@@ -25,6 +25,10 @@ function SnipSnapSnorum({darkMode}) {
     setWin(win)
     setDisabled(true)
     setGameOver(true)
+
+    if(user && win){
+      uploadToLeaderboards()
+    }
   }
 
   const newGame = () =>{
