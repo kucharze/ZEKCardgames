@@ -21,6 +21,12 @@ function SnipSnapSnorum({darkMode}) {
   const [gameOver, setGameOver] = useState(false)
   const [passStatus, setPassStatus] = useState(false)
 
+  const endGame = (win) =>{
+    setWin(win)
+    setDisabled(true)
+    setGameOver(true)
+  }
+
   const newGame = () =>{
     console.log("Start a new snip snap snorum game")
     setCondition("Snip")
@@ -66,9 +72,7 @@ function SnipSnapSnorum({darkMode}) {
 
     setPlayHand(tempHand)
     if(tempHand.length === 0){
-      setWin(true)
-      setDisabled(true)
-      setGameOver(true)
+      endGame(true)
     }
   }
 
