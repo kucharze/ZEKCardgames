@@ -6,7 +6,7 @@ import { useAuth } from "../../contexts/app_context";
 
 function War({darkmode}) {
   const { user, uploadToLeaderboards } = useAuth();
-  
+
     const [rules, setRules] = useState(false)
 
     const [playDeck, setPlayDeck] = useState(new Deck())
@@ -28,6 +28,12 @@ function War({darkmode}) {
     const [gameInProgress, setGameInProgress] = useState(false)
     const [winner, setWinner] = useState(false)
     const [gameOver, setGameOver] = useState(false)
+
+    const uploadWins = () =>{
+      if(user){
+        uploadToLeaderboards()
+      }
+    }
 
     const newGame = () =>{
       console.log("New war game")
