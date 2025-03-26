@@ -7,7 +7,7 @@ import { useAuth } from "../../contexts/app_context";
 
 function SpiderSolitare() {
   const { user, uploadToLeaderboards } = useAuth();
-  
+
   const [deck, setDeck] = useState(new Deck())
   const [row1, setRow1] = useState([])
   const [row2, setRow2] = useState([])
@@ -39,8 +39,13 @@ function SpiderSolitare() {
     return templist
   }
 
-  const newGame = () =>{
+  const updateScore = () =>{
+    if(user){
+      uploadToLeaderboards(score)
+    }
+  }
 
+  const newGame = () =>{
     setRow1(setList())
     setRow2(setList())
     setRow3(setList())
