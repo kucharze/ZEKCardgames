@@ -31,7 +31,7 @@ function War({darkmode}) {
 
     const uploadWins = () =>{
       if(user){
-        uploadToLeaderboards()
+        uploadToLeaderboards(playerWins)
       }
     }
 
@@ -121,6 +121,7 @@ function War({darkmode}) {
         //draw
         setWinner(false)
       }
+      uploadWins()
     }
 
     useState(()=>{
