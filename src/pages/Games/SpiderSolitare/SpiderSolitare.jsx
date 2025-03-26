@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
+import { useAuth } from "../../contexts/app_context";
 // import { set } from 'mongoose'
 
 function SpiderSolitare() {
+  const { user, uploadToLeaderboards } = useAuth();
+  
   const [deck, setDeck] = useState(new Deck())
   const [row1, setRow1] = useState([])
   const [row2, setRow2] = useState([])
