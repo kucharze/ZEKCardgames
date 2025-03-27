@@ -3,7 +3,7 @@ import back from '../../../Images/BACKCARD.JPG'
 import styles from './Blackjack.module.css'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
-import { useAuth } from "../../contexts/app_context";
+import { useAuth } from "../../../contexts/app_context";
 
 function Blackjack() {
   const { user, uploadToLeaderboards } = useAuth();

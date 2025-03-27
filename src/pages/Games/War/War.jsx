@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styles from './War.module.css'
 import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
-import { useAuth } from "../../contexts/app_context";
+import { useAuth } from "../../../contexts/app_context";
 
 function War({darkmode}) {
   const { user, uploadToLeaderboards } = useAuth();
