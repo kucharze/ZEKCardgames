@@ -69,15 +69,17 @@ router.get("/:game", async (req, res) => {
 });
 
 router.get("/:game/:user", async (req, res) => {
-  console.log("Server Leaderboard test");
-  console.log("We are searching for game", req.params.game);
-  //res.status(200).json("Success accessing server for leaderboards");
-
   let game = req.params.game;
+  let user = req.params.user
+
+  console.log("Server Leaderboard test for finding one user");
+  console.log("We are searching for game", game);
+  console.log("We are looking for one user", user)
+  //res.status(200).json("Success accessing server for leaderboards");
 
   if (game === "Blackjack Wins") {
     try {
-      const leaderboard = await Blackjack.find();
+      const leaderboard = await Blackjack.findOne({ userName: user });
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
@@ -85,7 +87,7 @@ router.get("/:game/:user", async (req, res) => {
     }
   } else if (game === "Crazy Eights Moves") {
     try {
-      const leaderboard = await EightMoves.find();
+      const leaderboard = await EightMoves.findOne({ userName: user });
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
@@ -93,7 +95,7 @@ router.get("/:game/:user", async (req, res) => {
     }
   } else if (game === "War Score") {
     try {
-      const leaderboard = await WarScore.find();
+      const leaderboard = await WarScore.findOne({ userName: user });
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
@@ -101,7 +103,7 @@ router.get("/:game/:user", async (req, res) => {
     }
   } else if (game === "Go Fish High Score") {
     try {
-      const leaderboard = await GoFishScore.find();
+      const leaderboard = await GoFishScore.findOne({ userName: user });
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
@@ -109,7 +111,7 @@ router.get("/:game/:user", async (req, res) => {
     }
   } else if (game === "Matching Moves") {
     try {
-      const leaderboard = await MatchMoves.find();
+      const leaderboard = await MatchMoves.findOne({ userName: user });
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
@@ -117,7 +119,7 @@ router.get("/:game/:user", async (req, res) => {
     }
   } else if (game === "Spider Solitare Score") {
     try {
-      const leaderboard = await SpiderSolitareScore.find();
+      const leaderboard = await SpiderSolitareScore.findOne({ userName: user });
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
