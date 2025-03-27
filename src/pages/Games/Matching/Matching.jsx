@@ -20,8 +20,11 @@ import sun from '../../../Images/cards/sun1.PNG'
 import turtle from '../../../Images/cards/turtle1.PNG'
 import umbrella from '../../../Images/cards/umbrella1.PNG'
 import watermellon from '../../../Images/cards/watermellon1.PNG'
+import { useAuth } from "../../../contexts/app_context";
 
 function Matching() {
+  const { user, uploadToLeaderboards } = useAuth();
+  
   //List of elements that will get matched
   const [matchList, setMatchList] = 
   useState([{value: apple, flipped: false}, {value: apple, flipped: false}, 
