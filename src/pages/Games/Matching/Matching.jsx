@@ -24,7 +24,7 @@ import { useAuth } from "../../../contexts/app_context";
 
 function Matching() {
   const { user, uploadToLeaderboards } = useAuth();
-  
+
   //List of elements that will get matched
   const [matchList, setMatchList] = 
   useState([{value: apple, flipped: false}, {value: apple, flipped: false}, 
@@ -61,6 +61,12 @@ function Matching() {
       let card = matchList[r];
       matchList[r] = matchList[n - 1];
       matchList[n - 1] = card;
+    }
+  }
+
+  const uploadMoves = () =>{
+    if(user){
+      uploadToLeaderboards(totalMoves)
     }
   }
 
