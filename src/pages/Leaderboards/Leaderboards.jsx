@@ -1,8 +1,11 @@
 import React,{useState} from 'react'
 import styles from './Leaderboards.module.css'
 import axios from 'axios'
+import { useAuth } from "../../contexts/app_context";
 
 function Leaderboards() {
+  const { user} = useAuth();
+
   const [option,setOption] = useState("")
   const [data,setData] = useState([])
 
