@@ -51,7 +51,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      setUser(res.data);
+      //setUser(res.data);
     } catch (error) {
       console.log(error);
     }
@@ -72,7 +72,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      setUser(res.data);
+      //setUser(res.data);
     } catch (error) {
       console.log(error);
     }
@@ -83,7 +83,7 @@ export const AppContextProvider = ({ children }) => {
   }
 
   const GoFishScore = (score) =>{
-    
+
   }
 
   return (
