@@ -86,6 +86,14 @@ export const AppContextProvider = ({ children }) => {
 
   }
 
+  const warScore = (score) =>{
+
+  }
+
+  const SpiderSolitareScore = (score) =>{
+
+  }
+
   return (
     <AppContext.Provider
       value={{
