@@ -78,6 +78,14 @@ export const AppContextProvider = ({ children }) => {
     }
   };
 
+  const MatchingMoves = (moves) =>{
+
+  }
+
+  const GoFishScore = (score) =>{
+    
+  }
+
   return (
     <AppContext.Provider
       value={{
