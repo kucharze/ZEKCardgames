@@ -40,7 +40,7 @@ function SpiderSolitare() {
   }
 
   const updateScore = () =>{
-    if(user && score != 0){
+    if(user && score !== 0){
       uploadToLeaderboards("Spider Solitare Score", score)
     }
   }
@@ -158,7 +158,8 @@ function SpiderSolitare() {
 
   const takeTurn = (card, row) =>{
     if(movecard){
-      if(card.value===movecard.value-1){
+      console.log("Card value:",card.value,"Movecard value", movecard.value)
+      if(card.value-1===movecard.value){
           depositcard(movecard, row)
           //Remove cards from previous row and move to new row
           moveCards()
