@@ -32,6 +32,11 @@ function GoFish({darkmode}) {
   const {testPlayGiving} = useCards()
   const {checkEndConditions,findWinner} = endGamelogic
   
+  const uploadScore = () =>{
+    if(user){
+      uploadToLeaderboards("Go Fish High Score", playScore)
+    }
+  }
   
   const setUpDeck = () =>{
     setDeck(new Deck())
