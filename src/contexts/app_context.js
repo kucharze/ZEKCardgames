@@ -121,7 +121,24 @@ export const AppContextProvider = ({ children }) => {
   }
 
   const warScore = (score) =>{
-
+    try {
+      let res = axios.post(
+        "http://localhost:3001/leaderboards/WarScore",
+        {
+          username: user,
+          score: moves,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      //setUser(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const SpiderSolitareScore = (score) =>{
