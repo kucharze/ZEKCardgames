@@ -142,7 +142,24 @@ export const AppContextProvider = ({ children }) => {
   }
 
   const SpiderSolitareScore = (score) =>{
-
+    try {
+      let res = axios.post(
+        "http://localhost:3001/leaderboards/SpiderSolitareScore",
+        {
+          username: user,
+          score: moves,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      //setUser(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
