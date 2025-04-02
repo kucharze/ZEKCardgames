@@ -23,12 +23,16 @@ export const AppContextProvider = ({ children }) => {
         // snipSnipSnorum();
         break;
       case "Matching Moves":
+        MatchingMoves(score)
         break;
       case "Go Fish High Score":
+        GoFishScore(score)
         break;
       case "Spider Solitare Score":
+        SpiderSolitareScore(score)
         break;
       case "War Score":
+        warScore(score)
         break;
       default:
         alert("No valid leaderboard option");
