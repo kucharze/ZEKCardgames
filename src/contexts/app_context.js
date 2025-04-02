@@ -100,7 +100,24 @@ export const AppContextProvider = ({ children }) => {
   }
 
   const GoFishScore = (score) =>{
-
+    try {
+      let res = axios.post(
+        "http://localhost:3001/leaderboards/GoFishScore",
+        {
+          username: user,
+          score: moves,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      //setUser(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const warScore = (score) =>{
