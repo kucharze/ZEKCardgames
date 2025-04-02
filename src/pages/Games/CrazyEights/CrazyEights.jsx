@@ -29,7 +29,7 @@ function CrazyEights({darkMode}) {
     setYouWin(true)
 
     if(user){
-      uploadToLeaderboards(numMoves)
+      uploadToLeaderboards("Crazy Eights Moves", numMoves)
     }
   }
 

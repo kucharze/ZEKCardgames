@@ -66,7 +66,7 @@ function Matching() {
 
   const uploadMoves = () =>{
     if(user){
-      uploadToLeaderboards(totalMoves)
+      uploadToLeaderboards("Matching Moves", totalMoves)
     }
   }
 
