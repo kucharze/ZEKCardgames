@@ -31,7 +31,7 @@ function War({darkmode}) {
 
     const uploadWins = () =>{
       if(user){
-        uploadToLeaderboards(playerWins)
+        uploadToLeaderboards("War Score",playerWins)
       }
     }
 

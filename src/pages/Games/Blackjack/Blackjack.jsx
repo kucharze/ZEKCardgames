@@ -27,7 +27,7 @@ function Blackjack() {
     setYouWin(win)
 
     if(user && win){
-      uploadToLeaderboards(1)
+      uploadToLeaderboards("Blackjack Wins",1)
     }
   }
 
