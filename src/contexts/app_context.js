@@ -130,7 +130,7 @@ export const AppContextProvider = ({ children }) => {
         "http://localhost:3001/leaderboards/GoFishScore",
         {
           username: user,
-          score: moves,
+          score: score,
         },
         {
           headers: {
@@ -151,7 +151,7 @@ export const AppContextProvider = ({ children }) => {
         "http://localhost:3001/leaderboards/WarScore",
         {
           username: user,
-          score: moves,
+          score: score,
         },
         {
           headers: {
@@ -172,7 +172,7 @@ export const AppContextProvider = ({ children }) => {
         "http://localhost:3001/leaderboards/SpiderSolitareScore",
         {
           username: user,
-          score: moves,
+          score: score,
         },
         {
           headers: {
