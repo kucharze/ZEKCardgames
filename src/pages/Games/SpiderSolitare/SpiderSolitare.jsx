@@ -40,8 +40,8 @@ function SpiderSolitare() {
   }
 
   const updateScore = () =>{
-    if(user){
-      uploadToLeaderboards(score)
+    if(user && score != 0){
+      uploadToLeaderboards("Spider Solitare Score", score)
     }
   }
 
