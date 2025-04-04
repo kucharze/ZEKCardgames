@@ -3,6 +3,7 @@ import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 import { useAuth } from "../../../contexts/app_context";
+import { set } from 'mongoose';
 // import { set } from 'mongoose'
 
 function SpiderSolitare() {
@@ -113,7 +114,7 @@ function SpiderSolitare() {
       let mover = parseInt(movecard.value)
       console.log("Card value:", typeof(card.value),"Movecard value", typeof(movecard.value))
       if((target-1)===(mover)){
-          depositcard(movecard, row)
+          // depositcard(movecard, row)
           //Remove cards from previous row and move to new row
           moveCards(row, movePos, row)
       }
@@ -121,6 +122,7 @@ function SpiderSolitare() {
         alert("That card can't be moved there value", card.value, movecard.value)
         console.log("That card can't be moved there value", card.value, movecard.value)
         setMoveCard(null)
+        setRow(row)
       }
     }
     else{
@@ -129,24 +131,24 @@ function SpiderSolitare() {
     }
   }
 
-  const depositcard = (card,row) =>{
+  const setRow = (row) =>{
     if(row===row1){
-      setRow1([...row1,movecard])
+      setMoveRow(row1)
     }
     else if(row===row2){
-      setRow2([...row2,movecard])
+      setMoveRow(row2)
     }
     else if(row===row3){
-      setRow3([...row3,movecard])
+      setMoveRow(row3)
     }
     else if(row===row4){
-      setRow4([...row4,movecard])
+      setMoveRow(row4)
     }
     else if(row===row5){
-      setRow5([...row5,movecard])
+      setMoveRow(row5)
     }
     else if(row===row6){
-      setRow6([...row6,movecard])
+      setMoveRow(row6)
     }
   }
 
