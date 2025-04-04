@@ -19,6 +19,7 @@ function SpiderSolitare() {
   const [movecard, setMoveCard] = useState(null)
   //The position of cards to be moved
   const [movePos, setMovePos] = useState([0,0])
+  const [moveRow, setMoveRow] = useState(null)
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
   
