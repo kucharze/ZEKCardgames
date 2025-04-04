@@ -62,56 +62,6 @@ function SpiderSolitare() {
     
   }
 
-  const moveCards = (row, pos, endrow) =>{
-    //Set up list starting at pos and move to new row
-    let movelist = []
-    if(row===row1){
-      movelist = row1.splice(pos)
-    }
-    else if(row===row2){
-      movelist = row2.splice(pos)
-    }
-    else if(row===row3){
-      movelist = row3.splice(pos)
-    }
-    else if(row===row4){
-      movelist = row4.splice(pos)
-    }
-    else if(row===row5){
-      movelist = row5.splice(pos)
-    }
-    else if(row===row6){
-      movelist = row6.splice(pos)
-    }
-    
-    console.log(movelist)
-
-    if(endrow===row1){
-     setRow1([...row1,...movelist])
-     checkForPoint(row1)
-    }
-    else if(endrow===row2){
-      setRow1([...row2,...movelist])
-      checkForPoint(row2)
-    }
-    else if(endrow===row3){
-      setRow1([...row3,...movelist])
-      checkForPoint(row3)
-    }
-    else if(endrow===row4){
-      setRow1([...row4,...movelist])
-      checkForPoint(row4)
-    }
-    else if(endrow===row5){
-      setRow1([...row5,...movelist])
-      checkForPoint(row5)
-    }
-    else if(endrow===row6){
-      setRow1([...row6,...movelist])
-      checkForPoint(row6)
-    }
-  }
-
   const checkForPoint = (row) =>{
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2']
     let points = 0
@@ -164,7 +114,7 @@ function SpiderSolitare() {
       if((target-1)===(mover)){
           depositcard(movecard, row)
           //Remove cards from previous row and move to new row
-          moveCards()
+          moveCards(row, movePos, row)
       }
       else{
         alert("That card can't be moved there value", card.value, movecard.value)
@@ -196,6 +146,56 @@ function SpiderSolitare() {
     }
     else if(row===row6){
       setRow6([...row6,movecard])
+    }
+  }
+
+  const moveCards = (row, pos, endrow) =>{
+    //Set up list starting at pos and move to new row
+    let movelist = []
+    if(row===row1){
+      movelist = row1.splice(pos)
+    }
+    else if(row===row2){
+      movelist = row2.splice(pos)
+    }
+    else if(row===row3){
+      movelist = row3.splice(pos)
+    }
+    else if(row===row4){
+      movelist = row4.splice(pos)
+    }
+    else if(row===row5){
+      movelist = row5.splice(pos)
+    }
+    else if(row===row6){
+      movelist = row6.splice(pos)
+    }
+    
+    console.log(movelist)
+
+    if(endrow===row1){
+     setRow1([...row1,...movelist])
+     checkForPoint(row1)
+    }
+    else if(endrow===row2){
+      setRow1([...row2,...movelist])
+      checkForPoint(row2)
+    }
+    else if(endrow===row3){
+      setRow1([...row3,...movelist])
+      checkForPoint(row3)
+    }
+    else if(endrow===row4){
+      setRow1([...row4,...movelist])
+      checkForPoint(row4)
+    }
+    else if(endrow===row5){
+      setRow1([...row5,...movelist])
+      checkForPoint(row5)
+    }
+    else if(endrow===row6){
+      setRow1([...row6,...movelist])
+      checkForPoint(row6)
     }
   }
 
