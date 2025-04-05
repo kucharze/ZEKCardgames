@@ -116,7 +116,7 @@ function SpiderSolitare() {
       if((target-1)===(mover)){
           // depositcard(movecard, row)
           //Remove cards from previous row and move to new row
-          moveCards(row, movePos, row)
+          moveCards(moveRow, movePos, row)
       }
       else{
         alert("That card can't be moved there value", card.value, movecard.value)
