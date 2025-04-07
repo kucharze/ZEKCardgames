@@ -156,22 +156,22 @@ function SpiderSolitare() {
     //Set up list starting at pos and move to new row
     let movelist = []
     if(row===row1){
-      movelist = row1.splice(pos)
+      movelist = row1.shift(pos)
     }
     else if(row===row2){
-      movelist = row2.splice(pos)
+      movelist = row2.shift(pos)
     }
     else if(row===row3){
-      movelist = row3.splice(pos)
+      movelist = row3.shift(pos)
     }
     else if(row===row4){
-      movelist = row4.splice(pos)
+      movelist = row4.shift(pos)
     }
     else if(row===row5){
-      movelist = row5.splice(pos)
+      movelist = row5.shift(pos)
     }
     else if(row===row6){
-      movelist = row6.splice(pos)
+      movelist = row6.shift(pos)
     }
     
     console.log(movelist)
@@ -205,7 +205,7 @@ function SpiderSolitare() {
   useEffect(()=>{
     deck.shuffle()
     deck.shuffle()
-  },[])
+  },[deck])
 
   return (
     <div className={styles.SpiderSolitare}>
