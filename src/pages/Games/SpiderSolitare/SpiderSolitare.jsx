@@ -200,6 +200,8 @@ function SpiderSolitare() {
       setRow1([...row6,...movelist])
       checkForPoint(row6)
     }
+
+    setMoveCard(null)
   }
 
   useEffect(()=>{
