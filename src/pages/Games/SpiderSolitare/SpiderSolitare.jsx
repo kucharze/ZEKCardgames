@@ -42,6 +42,7 @@ function SpiderSolitare() {
   }
 
   const updateScore = () =>{
+    console.log("Trying to upload score")
     if(user && score !== 0){
       uploadToLeaderboards("Spider Solitare Score", score)
     }
@@ -88,6 +89,7 @@ function SpiderSolitare() {
   const addPoint = (row) =>{
     setScore(score+1)
     //remove cards from row where point was scored
+    //May have to change logic in this to match other function
     if(row===row1){
       row1.splice((row1.length-1)-12)
     }
@@ -228,6 +230,7 @@ function SpiderSolitare() {
       <div>
         <button onClick={newGame}>New game</button>
         <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button disabled onClick={()=>{updateScore(score)}}>Upload Score</button>
       </div>
           {
         rules &&
@@ -302,6 +305,7 @@ function SpiderSolitare() {
             row3.map((item, i)=>{
               if(item.back){
                 return <img key={i} alt={item} className={styles.card}
+                style={{top : (30*i)}}
                 src={back}
                 />
               }
