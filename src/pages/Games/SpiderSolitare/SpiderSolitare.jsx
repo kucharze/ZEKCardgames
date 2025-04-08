@@ -271,12 +271,14 @@ function SpiderSolitare() {
             row1.map((item, i)=>{
              if(item.back){
                 return <img key={i} alt={item} className={styles.card}
+                style={{top: 30*i}}
                 src={back}
                 />
               }
               else{
                 return <img key={i} alt={item} className={styles.card} 
                 onClick={()=>{takeTurn(item, row1)}}
+                style={{top: 30*i}}
                 src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
