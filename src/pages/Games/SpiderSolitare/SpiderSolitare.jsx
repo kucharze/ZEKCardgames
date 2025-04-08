@@ -113,8 +113,8 @@ function SpiderSolitare() {
       let target = parseInt(card.value)
       let mover = parseInt(movecard.value)
       console.log("Card value:", typeof(card.value),"Movecard value", typeof(movecard.value))
-      if(mover == "j" || mover == "q" || mover == "k" || mover == "a"
-        || target == "j" || target == "q" || target == "k" || target == "a"
+      if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
+        || target === "j" || target === "q" || target === "k" || target === "a"
       ){
 
       }
@@ -301,7 +301,7 @@ function SpiderSolitare() {
           {
             row3.map((item, i)=>{
               if(item.back){
-                return <img key={i} alt={item} className={styles.card} 
+                return <img key={i} alt={item} className={styles.card}
                 src={back}
                 />
               }
