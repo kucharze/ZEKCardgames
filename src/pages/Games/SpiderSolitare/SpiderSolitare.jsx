@@ -113,16 +113,23 @@ function SpiderSolitare() {
       let target = parseInt(card.value)
       let mover = parseInt(movecard.value)
       console.log("Card value:", typeof(card.value),"Movecard value", typeof(movecard.value))
-      if((target-1)===(mover)){
+      if(mover == "j" || mover == "q" || mover == "k" || mover == "a"
+        || target == "j" || target == "q" || target == "k" || target == "a"
+      ){
+
+      }
+      else{
+        if((target-1)===(mover)){
           // depositcard(movecard, row)
           //Remove cards from previous row and move to new row
           moveCards(moveRow, movePos, row)
-      }
-      else{
-        alert("That card can't be moved there value", card.value, movecard.value)
-        console.log("That card can't be moved there value", card.value, movecard.value)
-        setMoveCard(null)
-        setRow(row)
+        }
+        else{
+          alert("That card can't be moved there value", card.value, movecard.value)
+          console.log("That card can't be moved there value", card.value, movecard.value)
+          setMoveCard(null)
+          setRow(row)
+        }
       }
     }
     else{
@@ -156,25 +163,31 @@ function SpiderSolitare() {
     //Set up list starting at pos and move to new row
     let movelist = []
     if(row===row1){
+      console.log(row1)
       movelist = row1.splice(0,pos)
     }
     else if(row===row2){
+      console.log(row2)
       movelist = row2.splice(0,pos)
     }
     else if(row===row3){
+      console.log(row3)
       movelist = row3.splice(0,pos)
     }
     else if(row===row4){
+      console.log(row4)
       movelist = row4.splice(0,pos)
     }
     else if(row===row5){
+      console.log(row5)
       movelist = row5.splice(0,pos)
     }
     else if(row===row6){
+      console.log(row6)
       movelist = row6.splice(0,pos)
     }
     
-    console.log(movelist)
+    console.log("Movelist",movelist)
 
     if(endrow===row1){
      setRow1([...row1,...movelist])
