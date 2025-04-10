@@ -106,6 +106,10 @@ function War({darkmode}) {
       setCom(comCard)
     }
 
+    const war = () =>{
+      
+    }
+
     const checkForWinner = () =>{
       setGameInProgress(false)
       setGameOver(true)
