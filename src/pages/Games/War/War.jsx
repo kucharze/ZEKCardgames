@@ -68,6 +68,7 @@ function War({darkmode}) {
       if(playDeck.isEmpty() || comDeck.isEmpty()){
         //Make this check for a win
         alert("A deck is out of cards")
+        checkForWinner()
         return
       }
       let playerCard = playDeck.dealACard();
@@ -107,7 +108,7 @@ function War({darkmode}) {
     }
 
     const war = () =>{
-      
+
     }
 
     const checkForWinner = () =>{
