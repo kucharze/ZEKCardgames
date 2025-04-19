@@ -56,6 +56,7 @@ export const AppContextProvider = ({ children }) => {
       );
       console.log(res);
       //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
@@ -76,7 +77,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
@@ -97,7 +98,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
@@ -118,7 +119,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
@@ -139,7 +140,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
@@ -160,7 +161,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
@@ -181,7 +182,7 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
+      alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
