@@ -55,20 +55,19 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      //setUser(res.data);
       alert("Leaderboard upload successful")
     } catch (error) {
       console.log(error);
     }
   };
 
-  const snipSnipSnorumTime = (moves) => {
+  const snipSnipSnorumTime = (time) => {
     try {
       let res = axios.post(
         "http://localhost:3001/leaderboards/SnipSnapSnorumTime",
         {
           username: user,
-          score: moves,
+          score: time,
         },
         {
           headers: {
