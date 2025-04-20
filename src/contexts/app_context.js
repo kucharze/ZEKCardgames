@@ -11,33 +11,61 @@ export const AppContextProvider = ({ children }) => {
   //Add functions for uploading to leaderboards
   const uploadToLeaderboards = (board, score) => {
     console.log("uploading to leaderboards");
+    const URL = ""
 
     switch (board) {
       case "Crazy Eights Moves":
+        URL = "http://localhost:3001/leaderboards/CrazyEightsMoves"
         eightMoves(score);
         break;
       case "Blackjack Wins":
+        URL = "http://localhost:3001/leaderboards/BlackjackWins"
         blackjackWins(score);
         break;
       case "Snip Snap Snorum":
+        URL = "http://localhost:3001/leaderboards/SnipSnapSnorumTime"
         snipSnipSnorumTime();
         break;
       case "Matching Moves":
+        URL = "http://localhost:3001/leaderboards/MatchingMoves"
         MatchingMoves(score)
         break;
       case "Go Fish High Score":
+        URL = "http://localhost:3001/leaderboards/GoFishScore"
         GoFishScore(score)
         break;
       case "Spider Solitare Score":
+        URL = "http://localhost:3001/leaderboards/SpiderSolitareScore"
         SpiderSolitareScore(score)
         break;
       case "War Score":
+        URL = "http://localhost:3001/leaderboards/WarScore"
         warScore(score)
         break;
       default:
         alert("No valid leaderboard option");
         break;
     }
+
+      try {
+      let res = axios.post(
+        URL,
+        {
+          username: user,
+          score: moves,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      alert("Leaderboard upload successful")
+    } catch (error) {
+      console.log(error);
+    }
+     
   };
 
   const eightMoves = (moves) => {
