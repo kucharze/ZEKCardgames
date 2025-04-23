@@ -118,7 +118,23 @@ function SpiderSolitare() {
       if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
         || target === "j" || target === "q" || target === "k" || target === "a"
       ){
+        if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
+          (target !== "j" || target !== "q" || target !== "k" || target !== "a")
+        ){//Move facecard to not facecard
+          alert("That card can't be moved there value", card.value, movecard.value)
+          console.log("That card can't be moved there value", card.value, movecard.value)
+          setMoveCard(null)
+          setRow(row)
+        }
+        else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
+          (target === "j" || target === "q" || target === "k" || target === "a")
+        ){//Move not face card to face card
 
+        }
+        else{
+          //Move one face card to another face card
+          //Make a serperate function for this
+        }
       }
       else{
         if((target-1)===(mover)){

@@ -47,7 +47,7 @@ export const AppContextProvider = ({ children }) => {
         break;
     }
 
-      try {
+    try {
       let res = axios.post(
         URL,
         {
