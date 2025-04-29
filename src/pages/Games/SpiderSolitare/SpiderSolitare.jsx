@@ -156,6 +156,10 @@ function SpiderSolitare() {
     }
   }
 
+  const checkFaceMove = (card1, card2) =>{
+    
+  }
+
   const setRow = (row) =>{
     if(row===row1){
       setMoveRow(row1)
