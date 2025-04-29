@@ -160,7 +160,12 @@ function SpiderSolitare() {
   const checkFaceMove = (mover, target) =>{
     //Target is an ace
     if(target.value === "A"){
-
+      if(mover.value === "A"){
+        return false
+      }
+      else{
+        return true
+      }
     }
     //Target is a king
     else if(target.value === "k"){
@@ -168,11 +173,17 @@ function SpiderSolitare() {
     }
     //Target is a queen
     else if(target.value === "q"){
-
+      if(mover.value === "j"){
+        return true
+      }
+      else{
+        return false
+      }
     }
     //Target is a jack
+    //Just return false, there is no scenario this can be true
     else if(target.value === "j"){
-      
+      return false
     }
   }
 
