@@ -134,6 +134,7 @@ function SpiderSolitare() {
         else{
           //Move one face card to another face card
           //Make a serperate function for this
+          checkFaceMove(mover, target)
         }
       }
       else{
@@ -156,8 +157,23 @@ function SpiderSolitare() {
     }
   }
 
-  const checkFaceMove = (card1, card2) =>{
-    
+  const checkFaceMove = (mover, target) =>{
+    //Target is an ace
+    if(target.value === "A"){
+
+    }
+    //Target is a king
+    else if(target.value === "k"){
+      
+    }
+    //Target is a queen
+    else if(target.value === "q"){
+
+    }
+    //Target is a jack
+    else if(target.value === "j"){
+      
+    }
   }
 
   const setRow = (row) =>{
