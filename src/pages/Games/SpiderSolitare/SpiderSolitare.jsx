@@ -129,15 +129,18 @@ function SpiderSolitare() {
         else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
           (target === "j" || target === "q" || target === "k" || target === "a")
         ){//Move not face card to face card
-
+          moveCards(moveRow, movePos, row)
         }
         else{
           //Move one face card to another face card
           if(checkFaceMove(mover, target)){
-            
+            moveCards(moveRow, movePos, row)
           }
           else{
-
+            alert("That card can't be moved there value", card.value, movecard.value)
+            console.log("That card can't be moved there value", card.value, movecard.value)
+            setMoveCard(null)
+            setRow(row)
           }
         }
       }
