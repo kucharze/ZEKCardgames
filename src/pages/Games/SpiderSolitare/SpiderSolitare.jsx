@@ -133,8 +133,12 @@ function SpiderSolitare() {
         }
         else{
           //Move one face card to another face card
-          //Make a serperate function for this
-          checkFaceMove(mover, target)
+          if(checkFaceMove(mover, target)){
+            
+          }
+          else{
+
+          }
         }
       }
       else{
