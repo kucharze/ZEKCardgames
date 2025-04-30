@@ -115,12 +115,16 @@ function SpiderSolitare() {
       let target = parseInt(card.value)
       let mover = parseInt(movecard.value)
       console.log("Card value:", target, typeof(target.value),"Movecard value",mover, typeof(mover.value))
+
+      //Either the movecard or the card being moved to is a face card
       if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
         || target === "j" || target === "q" || target === "k" || target === "a"
       ){
         if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
           (target !== "j" || target !== "q" || target !== "k" || target !== "a")
-        ){//Move facecard to not facecard
+        ){
+          //Move facecard to not facecard
+          //This isn't allowed so deny the move
           alert("That card can't be moved there value", card.value, movecard.value)
           console.log("That card can't be moved there value", card.value, movecard.value)
           setMoveCard(null)
@@ -128,7 +132,8 @@ function SpiderSolitare() {
         }
         else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
           (target === "j" || target === "q" || target === "k" || target === "a")
-        ){//Move not face card to face card
+        ){
+          //Move not face card to face card
           moveCards(moveRow, movePos, row)
         }
         else{
