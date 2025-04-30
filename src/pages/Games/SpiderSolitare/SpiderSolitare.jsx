@@ -114,7 +114,7 @@ function SpiderSolitare() {
     if(movecard){
       let target = parseInt(card.value)
       let mover = parseInt(movecard.value)
-      console.log("Card value:", typeof(card.value),"Movecard value", typeof(movecard.value))
+      console.log("Card value:", target, typeof(target.value),"Movecard value",mover, typeof(mover.value))
       if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
         || target === "j" || target === "q" || target === "k" || target === "a"
       ){
@@ -124,7 +124,7 @@ function SpiderSolitare() {
           alert("That card can't be moved there value", card.value, movecard.value)
           console.log("That card can't be moved there value", card.value, movecard.value)
           setMoveCard(null)
-          setRow(row)
+          setRow(0)
         }
         else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
           (target === "j" || target === "q" || target === "k" || target === "a")
@@ -140,7 +140,7 @@ function SpiderSolitare() {
             alert("That card can't be moved there value", card.value, movecard.value)
             console.log("That card can't be moved there value", card.value, movecard.value)
             setMoveCard(null)
-            setRow(row)
+            setRow(0)
           }
         }
       }
@@ -154,16 +154,18 @@ function SpiderSolitare() {
           alert("That card can't be moved there value", card.value, movecard.value)
           console.log("That card can't be moved there value", card.value, movecard.value)
           setMoveCard(null)
-          setRow(row)
+          setRow(0)
         }
       }
     }
     else{
       setMoveCard(card)
+      setRow(row)
       setMovePos([row,0])
     }
   }
 
+  //Run checks to see if we should move one face card to another
   const checkFaceMove = (mover, target) =>{
     //Target is an ace
     if(target.value === "A"){
@@ -212,6 +214,9 @@ function SpiderSolitare() {
     }
     else if(row===row6){
       setMoveRow(row6)
+    }
+    else{
+      setMoveRow(null)
     }
   }
 
