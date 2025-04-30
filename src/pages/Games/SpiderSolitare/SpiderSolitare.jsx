@@ -281,6 +281,7 @@ function SpiderSolitare() {
     }
 
     setMoveCard(null)
+    setRow(0)
   }
 
   useEffect(()=>{
