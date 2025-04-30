@@ -174,20 +174,17 @@ function SpiderSolitare() {
   const checkFaceMove = (mover, target) =>{
     //Target is an ace
     if(target.value === "A"){
-      if(mover.value === "A"){
-        return false
-      }
-      else{
-        return true
-      }
+      //This can never be true, ace is the lowest number
+      return false
     }
     //Target is a king
     else if(target.value === "k"){
-      
+      //King is the highest value, this is always true
+      return true
     }
     //Target is a queen
     else if(target.value === "q"){
-      if(mover.value === "j"){
+      if(mover.value === "q" || mover.value === "k"){
         return true
       }
       else{
@@ -195,9 +192,14 @@ function SpiderSolitare() {
       }
     }
     //Target is a jack
-    //Just return false, there is no scenario this can be true
+    //Return true if ace otherwise return false
     else if(target.value === "j"){
-      return false
+      if(mover.value === 'a'){
+        return true
+      }
+      else{
+        return false
+      }
     }
   }
 
