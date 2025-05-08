@@ -11,35 +11,35 @@ export const AppContextProvider = ({ children }) => {
   //Add functions for uploading to leaderboards
   const uploadToLeaderboards = (board, score) => {
     console.log("uploading to leaderboards");
-    const URL = ""
+    const URL = "";
 
     switch (board) {
       case "Crazy Eights Moves":
-        URL = "http://localhost:3001/leaderboards/CrazyEightsMoves"
-        eightMoves(score);
+        URL = "http://localhost:3001/leaderboards/CrazyEightsMoves";
+        // eightMoves(score);
         break;
       case "Blackjack Wins":
-        URL = "http://localhost:3001/leaderboards/BlackjackWins"
+        URL = "http://localhost:3001/leaderboards/BlackjackWins";
         // blackjackWins(score);
         break;
       case "Snip Snap Snorum":
-        URL = "http://localhost:3001/leaderboards/SnipSnapSnorumTime"
+        URL = "http://localhost:3001/leaderboards/SnipSnapSnorumTime";
         // snipSnipSnorumTime();
         break;
       case "Matching Moves":
-        URL = "http://localhost:3001/leaderboards/MatchingMoves"
+        URL = "http://localhost:3001/leaderboards/MatchingMoves";
         // MatchingMoves(score)
         break;
       case "Go Fish High Score":
-        URL = "http://localhost:3001/leaderboards/GoFishScore"
+        URL = "http://localhost:3001/leaderboards/GoFishScore";
         // GoFishScore(score)
         break;
       case "Spider Solitare Score":
-        URL = "http://localhost:3001/leaderboards/SpiderSolitareScore"
+        URL = "http://localhost:3001/leaderboards/SpiderSolitareScore";
         // SpiderSolitareScore(score)
         break;
       case "War Score":
-        URL = "http://localhost:3001/leaderboards/WarScore"
+        URL = "http://localhost:3001/leaderboards/WarScore";
         // warScore(score)
         break;
       default:
@@ -61,11 +61,10 @@ export const AppContextProvider = ({ children }) => {
         }
       );
       console.log(res);
-      alert("Leaderboard upload successful")
+      alert("Leaderboard upload successful");
     } catch (error) {
       console.log(error);
     }
-     
   };
 
   // const eightMoves = (moves) => {
@@ -88,132 +87,6 @@ export const AppContextProvider = ({ children }) => {
   //     console.log(error);
   //   }
   // };
-
-  // const snipSnipSnorumTime = (time) => {
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/SnipSnapSnorumTime",
-  //       {
-  //         username: user,
-  //         score: time,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // const blackjackWins = (moves) => {
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/BlackjackWins",
-  //       {
-  //         username: user,
-  //         score: moves,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // const MatchingMoves = (moves) =>{
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/MatchingMoves",
-  //       {
-  //         username: user,
-  //         score: moves,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  // const GoFishScore = (score) =>{
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/GoFishScore",
-  //       {
-  //         username: user,
-  //         score: score,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  // const warScore = (score) =>{
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/WarScore",
-  //       {
-  //         username: user,
-  //         score: score,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  // const SpiderSolitareScore = (score) =>{
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/SpiderSolitareScore",
-  //       {
-  //         username: user,
-  //         score: score,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
 
   return (
     <AppContext.Provider

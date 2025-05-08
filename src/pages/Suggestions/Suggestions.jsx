@@ -13,12 +13,11 @@ function Suggestions() {
         headers:{
             "Content-Type": "application/json"
           }
-        })
+        }
+      )
 
-        console.log("Back from the server")
-        console.log(res)
-        // set("Successful Order Submision")
-          
+      console.log("Back from the server")
+      console.log(res)
     } catch (error) {
         console.log("There was an error")
         console.log(error)
