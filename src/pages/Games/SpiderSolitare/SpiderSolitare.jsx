@@ -120,7 +120,31 @@ function SpiderSolitare() {
       if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
         || target === "j" || target === "q" || target === "k" || target === "a"
       ){
-        if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
+        faceMove(mover, target, card, row)
+      }
+      else{
+        if((target-1)===(mover)){
+          // depositcard(movecard, row)
+          //Remove cards from previous row and move to new row
+          moveCards(moveRow, movePos, row)
+        }
+        else{
+          alert("That card can't be moved there value", card.value, movecard.value)
+          console.log("That card can't be moved there value", card.value, movecard.value)
+          setMoveCard(null)
+          setRow(0)
+        }
+      }
+    }
+    else{
+      setMoveCard(card)
+      setRow(row)
+      setMovePos([row,0])
+    }
+  }
+
+  const faceMove = (mover, target, card, row) =>{
+    if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
           (target !== "j" || target !== "q" || target !== "k" || target !== "a")
         ){
           //Move facecard to not facecard
@@ -148,26 +172,6 @@ function SpiderSolitare() {
             setRow(0)
           }
         }
-      }
-      else{
-        if((target-1)===(mover)){
-          // depositcard(movecard, row)
-          //Remove cards from previous row and move to new row
-          moveCards(moveRow, movePos, row)
-        }
-        else{
-          alert("That card can't be moved there value", card.value, movecard.value)
-          console.log("That card can't be moved there value", card.value, movecard.value)
-          setMoveCard(null)
-          setRow(0)
-        }
-      }
-    }
-    else{
-      setMoveCard(card)
-      setRow(row)
-      setMovePos([row,0])
-    }
   }
 
   //Run checks to see if we should move one face card to another
