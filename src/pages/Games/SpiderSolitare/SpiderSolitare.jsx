@@ -414,8 +414,7 @@ function SpiderSolitare() {
             })
           }
         </div>
-      </div>
-      <div>
+        <div>
         <h3>Card to be moved:</h3>
         {
           movecard && 
@@ -424,6 +423,8 @@ function SpiderSolitare() {
                 />
         }
       </div>
+      </div>
+      
     </div>
   )
 }
