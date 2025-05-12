@@ -2,8 +2,6 @@ import { createContext, useContext, useState } from "react";
 import axios from "axios";
 export const AppContext = createContext();
 
-const BASEURL = "http://localhost:3001";
-
 export const AppContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [user, setUser] = useState("");
@@ -11,7 +9,7 @@ export const AppContextProvider = ({ children }) => {
   //Add functions for uploading to leaderboards
   const uploadToLeaderboards = (board, score) => {
     console.log("uploading to leaderboards");
-    const URL = "";
+    let URL = "";
 
     switch (board) {
       case "Crazy Eights Moves":
