@@ -1,4 +1,6 @@
-const faceCards = () => {};
+const faceCards = () => {
+
+
 // const faceMove = (mover, target, card, row) => {
 //   if (
 //     (mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
@@ -68,5 +70,9 @@ const checkFaceMove = (mover, target) => {
   }
 };
 
+return checkFaceMove
+
+};
+
 export default faceCards;
-export { checkFaceMove };
+// export { checkFaceMove };
