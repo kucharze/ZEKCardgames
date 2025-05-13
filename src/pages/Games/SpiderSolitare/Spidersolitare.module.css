@@ -95,3 +95,26 @@
     padding: 30px;
   }
 }
+
+@media only screen and (max-width: 1500px) {
+  .playmat {
+    width: 90%;
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+
+  .playmat img {
+    width: 100px;
+    height: 125px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}
