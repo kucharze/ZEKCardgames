@@ -133,8 +133,8 @@ function SpiderSolitare() {
           moveCards(moveRow, movePos, row)
         }
         else{
-          alert("That card can't be moved there value", card.value, movecard.value)
-          console.log("That card can't be moved there value", card.value, movecard.value)
+          alert("Cannot move card", card.value,"on top of card" ,movecard.value)
+          console.log("Cannot move card", card.value, "on top of card",movecard.value)
           setMoveCard(null)
           setRow(0)
         }
