@@ -50,6 +50,9 @@ function SpiderSolitare() {
     if(user && score !== 0){
       uploadToLeaderboards("Spider Solitare Score", score)
     }
+    else{
+      alert("Error, Not signed in or score not present")
+    }
   }
 
   const newGame = () =>{
