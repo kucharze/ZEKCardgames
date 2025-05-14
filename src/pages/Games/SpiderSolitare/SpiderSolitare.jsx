@@ -152,8 +152,14 @@ function SpiderSolitare() {
           (target !== "j" || target !== "q" || target !== "k" || target !== "a")
     ){
       //Move facecard to not facecard
-      //This isn't allowed so deny the move
-      denyMove(movecard, card)
+      //Allow the move if we are moving an Ace otherwise deny
+      if(mover === 'a'){
+        moveCards(moveRow,movePos, row)
+      }
+      else{
+        denyMove(movecard, card)
+      }
+      
     }
     else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
         (target === "j" || target === "q" || target === "k" || target === "a")
