@@ -3,10 +3,8 @@ import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 import { useAuth } from "../../../contexts/app_context";
-import { set } from 'mongoose';
-import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
+// import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 import face from './Game modules/faceCards'
-// import { set } from 'mongoose'
 
 function SpiderSolitare() {
   const { user, uploadToLeaderboards } = useAuth();
