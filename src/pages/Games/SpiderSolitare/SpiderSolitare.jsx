@@ -165,7 +165,13 @@ function SpiderSolitare() {
         (target === "j" || target === "q" || target === "k" || target === "a")
     ){
       //Move not face card to face card
-      moveCards(moveRow, movePos, row)
+      //Only allow the move if we are not moving an ace
+      if(mover !== 'a'){
+        moveCards(moveRow,movePos, row)
+      }
+      else{
+        denyMove(movecard, card)
+      }
     }
     else{
       //Move one face card to another face card
