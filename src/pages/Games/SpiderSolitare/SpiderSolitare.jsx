@@ -153,32 +153,32 @@ function SpiderSolitare() {
   const faceMove = (mover, target, card, row) =>{
     if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
           (target !== "j" || target !== "q" || target !== "k" || target !== "a")
-        ){
-          //Move facecard to not facecard
-          //This isn't allowed so deny the move
-          alert("That card can't be moved there value", card.value, movecard.value)
-          console.log("That card can't be moved there value", card.value, movecard.value)
-          setMoveCard(null)
-          setRow(0)
-        }
-        else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
-          (target === "j" || target === "q" || target === "k" || target === "a")
-        ){
-          //Move not face card to face card
-          moveCards(moveRow, movePos, row)
-        }
-        else{
-          //Move one face card to another face card
-          if(checkFaceMove(mover, target)){
-            moveCards(moveRow, movePos, row)
-          }
-          else{
-            alert("That card can't be moved there value", card.value, movecard.value)
-            console.log("That card can't be moved there value", card.value, movecard.value)
-            setMoveCard(null)
-            setRow(0)
-          }
-        }
+    ){
+      //Move facecard to not facecard
+      //This isn't allowed so deny the move
+      alert("That card can't be moved there value", card.value, movecard.value)
+      console.log("That card can't be moved there value", card.value, movecard.value)
+      setMoveCard(null)
+      setRow(0)
+    }
+    else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
+        (target === "j" || target === "q" || target === "k" || target === "a")
+    ){
+      //Move not face card to face card
+      moveCards(moveRow, movePos, row)
+    }
+    else{
+      //Move one face card to another face card
+      if(checkFaceMove(mover, target)){
+        moveCards(moveRow, movePos, row)
+      }
+      else{
+        alert("That card can't be moved there value", card.value, movecard.value)
+        console.log("That card can't be moved there value", card.value, movecard.value)
+        setMoveCard(null)
+        setRow(0)
+      }
+    }
   }
 
   const setRow = (row) =>{
@@ -260,6 +260,13 @@ function SpiderSolitare() {
       checkForPoint(row6)
     }
 
+    setMoveCard(null)
+    setRow(0)
+  }
+
+  const denyMove = (mover, target) => {
+    alert("Cannot move card", mover.value,"on top of card" , target.value)
+    console.log("Cannot move card", mover.value, "on top of card", target.value)
     setMoveCard(null)
     setRow(0)
   }
