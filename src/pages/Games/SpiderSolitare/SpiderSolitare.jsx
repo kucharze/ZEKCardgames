@@ -136,10 +136,7 @@ function SpiderSolitare() {
           moveCards(moveRow, movePos, row)
         }
         else{
-          alert("Cannot move card", card.value,"on top of card" ,movecard.value)
-          console.log("Cannot move card", card.value, "on top of card",movecard.value)
-          setMoveCard(null)
-          setRow(0)
+          denyMove(movecard, card)
         }
       }
     }
@@ -156,10 +153,7 @@ function SpiderSolitare() {
     ){
       //Move facecard to not facecard
       //This isn't allowed so deny the move
-      alert("That card can't be moved there value", card.value, movecard.value)
-      console.log("That card can't be moved there value", card.value, movecard.value)
-      setMoveCard(null)
-      setRow(0)
+      denyMove(movecard, card)
     }
     else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
         (target === "j" || target === "q" || target === "k" || target === "a")
@@ -173,10 +167,7 @@ function SpiderSolitare() {
         moveCards(moveRow, movePos, row)
       }
       else{
-        alert("That card can't be moved there value", card.value, movecard.value)
-        console.log("That card can't be moved there value", card.value, movecard.value)
-        setMoveCard(null)
-        setRow(0)
+        denyMove(movecard, card)
       }
     }
   }
