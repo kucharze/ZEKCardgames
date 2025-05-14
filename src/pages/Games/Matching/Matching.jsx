@@ -45,6 +45,7 @@ function Matching() {
     {value: turtle, flipped: false}, {value: turtle, flipped: false}, 
     {value: umbrella, flipped: false}, {value: umbrella, flipped: false}, 
     {value: watermellon, flipped: false}, {value: watermellon, flipped: false}])
+
   const [el1, setEl1] = useState(null)
   const [el2, setEl2] = useState(null)
   const [rules, setRules] = useState(false)
@@ -67,6 +68,10 @@ function Matching() {
   const uploadMoves = () =>{
     if(user){
       uploadToLeaderboards("Matching Moves", totalMoves)
+    }
+    else{
+      console.log("No user logged in")
+      alert("No user logged in")
     }
   }
 
@@ -128,11 +133,11 @@ function Matching() {
       console.log("Resetting cards")
 
       setTimeout(() => {
-      resetCards()
+        resetCards()
 
-      setEl1(null)
-      setEl2(null)
-      setFrozen(false)
+        setEl1(null)
+        setEl2(null)
+        setFrozen(false)
       }, 700);
       
     }
@@ -142,6 +147,7 @@ function Matching() {
     if(score===18){
       //end game
       setGameOver(true)
+      uploadMoves()
     }
   },[score])
 

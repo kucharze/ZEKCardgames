@@ -11,13 +11,17 @@ function SpiderSolitare() {
 
   const { checkFaceMove} = face()
 
+  //Deck
   const [deck, setDeck] = useState(new Deck())
+
+  //Each row
   const [row1, setRow1] = useState([])
   const [row2, setRow2] = useState([])
   const [row3, setRow3] = useState([])
   const [row4, setRow4] = useState([])
   const [row5, setRow5] = useState([])
   const [row6, setRow6] = useState([])
+
   //Card to move
   const [movecard, setMoveCard] = useState(null)
   //The position of cards to be moved
