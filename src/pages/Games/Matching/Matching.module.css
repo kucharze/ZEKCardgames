@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1750px) {
   .matchzone {
     width: 95%;
   }
@@ -40,12 +40,32 @@
   }
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1400px) {
   .matchzone {
     width: 95%;
   }
   .matchzone > img {
     height: 100px;
     width: 100px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .matchzone {
+    width: 90%;
+  }
+  .matchzone > img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .matchzone {
+    width: 90%;
+  }
+  .matchzone > img {
+    height: 50px;
+    width: 50px;
   }
 }
