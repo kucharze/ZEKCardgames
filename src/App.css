@@ -150,7 +150,7 @@ button {
   color: yellow;
   font-size: 25px;
   height: 80px;
-  width: 250px;
+  width: 450px;
   /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
   background-image: linear-gradient(
     315deg,
@@ -269,12 +269,12 @@ button.active .text {
     font-weight: 600;
     font-size: 20px;
     height: 80px;
-    width: 550px;
+    width: 300px;
     padding: 0.8em 1.4em;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .App {
     font-size: 18px;
   }
@@ -288,7 +288,7 @@ button.active .text {
   }
   button {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     height: 70px;
     width: 200px;
     padding: 0.8em 1.4em;
