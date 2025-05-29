@@ -242,7 +242,7 @@ function CrazyEights({darkMode}) {
           <div>
             <WinnerBoard winner={youWin}/>
             <h2>Player</h2>
-            <div className='player'>{
+            <div className={styles.player}>{
               playHand.map((item,i)=>{
                 if(item){
                   return <img className={styles.hand} key={i} 

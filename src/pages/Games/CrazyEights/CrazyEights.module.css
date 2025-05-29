@@ -24,6 +24,10 @@
   padding: 10px;
 }
 
+.player {
+  border: solid black;
+}
+
 .rules li {
   margin: 15px;
 }
@@ -41,9 +45,10 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .hand {
     width: 100px;
+    height: 140px;
     margin: 5px;
   }
   .rules {
