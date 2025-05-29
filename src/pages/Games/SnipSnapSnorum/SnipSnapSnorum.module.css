@@ -65,7 +65,6 @@
   .playSpace {
     margin: 10px;
     width: 90%;
-    border: solid black;
     padding: 10px;
   }
 
@@ -73,6 +72,34 @@
     height: 100px;
     /* padding: 10px; */
     margin: 12px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .SnipSnapSnorum {
+    font-size: 20px;
+  }
+
+  .rules {
+    width: 700px;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .rules li {
+    margin: 15px;
+  }
+
+  .playSpace {
+    margin: 10px;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .card {
+    height: 90px;
+    /* padding: 10px; */
+    margin: 10px;
   }
 }
 
