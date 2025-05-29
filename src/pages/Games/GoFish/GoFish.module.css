@@ -24,3 +24,24 @@
   width: 250px;
   height: 100px;
 } */
+
+@media (max-width: 1000px) {
+  .GoFish {
+    font-size: 20px;
+  }
+
+  .rules {
+    width: 350px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .rules li {
+    margin: 12px;
+  }
+
+  .card {
+    height: 80px;
+    margin: 5px;
+  }
+}

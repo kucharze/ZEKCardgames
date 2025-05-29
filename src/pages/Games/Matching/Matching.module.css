@@ -38,6 +38,9 @@
     height: 150px;
     width: 150px;
   }
+  .rules {
+    width: 850px;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -47,6 +50,9 @@
   .matchzone > img {
     height: 100px;
     width: 100px;
+  }
+  .rules {
+    width: 700px;
   }
 }
 
@@ -58,14 +64,22 @@
     height: 75px;
     width: 75px;
   }
+  .rules {
+    width: 600px;
+  }
 }
 
 @media only screen and (max-width: 650px) {
   .matchzone {
-    width: 90%;
+    width: 78%;
   }
   .matchzone > img {
     height: 50px;
     width: 50px;
+    margin: auto;
+  }
+  .rules {
+    width: 400px;
+    font-size: 16px;
   }
 }
