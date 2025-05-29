@@ -17,19 +17,13 @@ a {
 @media (max-width: 1600px) {
   .Navbar {
     font-size: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     /* height: 70px; */
   }
 }
 
 @media (max-width: 1100px) {
   .Navbar {
-    font-size: 17px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    font-size: 15px;
     height: auto;
   }
 }

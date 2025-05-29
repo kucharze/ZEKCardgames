@@ -260,10 +260,8 @@ button.active .text {
   .logo {
     width: 60%;
     height: 350px;
-    border: solid black;
   }
   h1 {
-    /* background-color: green; */
     width: 100%;
     font-size: 30px;
   }
@@ -283,10 +281,8 @@ button.active .text {
   .logo {
     width: 50%;
     height: 240px;
-    border: solid black;
   }
   h1 {
-    /* background-color: green; */
     width: 100%;
     font-size: 20px;
   }
