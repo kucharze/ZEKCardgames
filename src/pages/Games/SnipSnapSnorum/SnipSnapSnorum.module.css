@@ -47,6 +47,35 @@
   margin: 20px;
 }
 
+@media (max-width: 1800px) {
+  .SnipSnapSnorum {
+    font-size: 20px;
+  }
+
+  .rules {
+    width: 750px;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .rules li {
+    margin: 15px;
+  }
+
+  .playSpace {
+    margin: 10px;
+    width: 90%;
+    border: solid black;
+    padding: 10px;
+  }
+
+  .card {
+    height: 100px;
+    /* padding: 10px; */
+    margin: 12px;
+  }
+}
+
 @media (max-width: 500px) {
   .SnipSnapSnorum {
     font-size: 20px;
@@ -65,13 +94,11 @@
   .playSpace {
     margin: 10px;
     width: 90%;
-    border: solid black;
     padding: 10px;
   }
 
   .card {
     height: 70px;
-    border: solid gold;
     /* padding: 10px; */
     margin: 5px;
   }
