@@ -80,10 +80,24 @@
     align-items: center;
   }
   .rules {
-    background-color: gray;
-    border: solid green;
     width: 550px;
-    color: white;
+    padding: 10px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    height: 120px;
+  }
+  .War {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rules {
+    width: 350px;
     padding: 10px;
     font-size: 17px;
   }
