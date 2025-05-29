@@ -46,3 +46,33 @@
   /* padding: 10px; */
   margin: 20px;
 }
+
+@media (max-width: 500px) {
+  .SnipSnapSnorum {
+    font-size: 20px;
+  }
+
+  .rules {
+    width: 350px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .rules li {
+    margin: 12px;
+  }
+
+  .playSpace {
+    margin: 10px;
+    width: 90%;
+    border: solid black;
+    padding: 10px;
+  }
+
+  .card {
+    height: 70px;
+    border: solid gold;
+    /* padding: 10px; */
+    margin: 5px;
+  }
+}
