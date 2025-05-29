@@ -276,7 +276,7 @@ button.active .text {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .App {
     font-size: 18px;
   }
