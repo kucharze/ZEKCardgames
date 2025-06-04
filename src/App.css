@@ -274,7 +274,7 @@ button.active .text {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .App {
     font-size: 18px;
   }
@@ -296,6 +296,6 @@ button.active .text {
   .darkMode {
     font-size: 20px;
     height: 80px;
-    width: 450px;
+    width: 350px;
   }
 }
