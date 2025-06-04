@@ -101,4 +101,15 @@
     padding: 10px;
     font-size: 17px;
   }
+  .gamemat {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  mat {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+  }
 }
