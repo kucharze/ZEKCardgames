@@ -12,14 +12,14 @@ function NewsFeed(darkmode) {
             <li>Crazy Eights - Done</li>
             <li>Snip Snap Snorum - Done</li>
             <li>Black jack - Done</li>
-            <li>Matching - TODO</li>
+            <li>Matching - Done</li>
             <li>Go Fish - In Progress</li>
-            <li>Spider Solitare - TODO</li>
+            <li>Spider Solitare - In Progress</li>
             <li>War - DONE</li>
             <li>Online game features - TODO</li>
             <li>Load Leaderboard - DONE</li>
             <li>Upload to Leaderboards - TODO</li>
-            <li>Login functions - In Progress</li>
+            <li>Login functions - Done</li>
             <li>Suggesstions - DONE</li>
         </ol>
         </div>
