@@ -8,7 +8,6 @@ import face from './Game modules/faceCards'
 
 function SpiderSolitare() {
   const { user, uploadToLeaderboards } = useAuth();
-
   const { checkFaceMove} = face()
 
   //Deck
