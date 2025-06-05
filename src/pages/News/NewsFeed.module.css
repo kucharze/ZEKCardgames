@@ -35,4 +35,37 @@
 }
 
 @media (max-width: 1600px) {
+  .NewsFeed ol {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+  }
+
+  .NewsFeed li {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .NewsFeed h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .Content {
+    font-size: 25px;
+    width: 90%;
+  }
+  .NewsFeed ol {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+  }
+
+  .NewsFeed li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 }
