@@ -31,9 +31,9 @@ function Suggestions() {
         You may submit them down below.
       </h3>
       {/* <form onSubmit={sendSuggestion}> */}
-        <input placeholder='Put your suggestions here' 
+        <input className={styles.suggest} placeholder='Put your suggestions here' 
          onChange={(e)=>{setSuggestion(e.target.value)}}/><br/>
-        <input type='submit' onClick={() =>{sendSuggestion()}}/>
+        <input type='submit' className={styles.suggest} onClick={() =>{sendSuggestion()}}/>
       {/* </form> */}
     </div>
   )

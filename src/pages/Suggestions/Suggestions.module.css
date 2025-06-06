@@ -5,7 +5,7 @@
   margin: 0 auto;
 }
 
-input {
+.suggest {
   margin: 20px;
   height: 70px;
   width: 300px;
@@ -22,10 +22,22 @@ input {
   .Suggestions {
     font-size: 17px;
   }
-  input {
+  .suggest {
     margin: 20px;
     height: 60px;
     width: 250px;
     font-size: 21px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Suggestions {
+    font-size: 17px;
+  }
+  .suggest {
+    margin: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
   }
 }
