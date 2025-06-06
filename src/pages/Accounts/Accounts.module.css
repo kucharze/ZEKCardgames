@@ -40,20 +40,20 @@ input {
   input {
     font-size: 14px;
     margin: 10px;
-    width: 150px;
+    width: 100px;
     height: 30px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .Accounts {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   input {
-    font-size: 14px;
-    margin: 10px;
-    width: 150px;
-    height: 30px;
+    font-size: 10px;
+    margin: 5px;
+    width: 120px;
+    height: 20px;
   }
 }

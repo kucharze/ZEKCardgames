@@ -294,8 +294,8 @@ button.active .text {
     padding: 0.8em 1.4em;
   }
   .darkMode {
-    font-size: 20px;
-    height: 80px;
-    width: 350px;
+    font-size: 18px;
+    height: 70px;
+    width: 300px;
   }
 }
