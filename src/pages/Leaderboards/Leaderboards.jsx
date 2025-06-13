@@ -23,7 +23,7 @@ function Leaderboards() {
       setData(res.data)
     } catch (error) {
       console.log("There was an error",error)
-      alert("Error: "+error.message)
+      alert("Error: Network error or leaderboard option not available")
     }
   }
 
@@ -62,9 +62,9 @@ function Leaderboards() {
        <ol>
           {data.map((data)=>{
             //Highlight in bold if we find an entry that matches the user
-            // if(data === user){
-            //   return <li><b>{data}</b></li>
-            // }
+            if(data === user){
+              return <li><b>{data}</b></li>
+            }
             return <li>{data}</li>
           })}
         </ol>
