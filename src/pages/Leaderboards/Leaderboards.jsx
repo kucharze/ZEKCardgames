@@ -44,6 +44,14 @@ function Leaderboards() {
         </select>
         <input type='submit' onClick={getLeaderboardData}/>
       </form>
+      {
+        data.length > 0 &&
+        <button onClick={()=>{setData([])}}>Clear Data</button>
+      }
+      {
+        data.length <= 0 && user &&
+        <button onClick={getLeaderboardData}>Refresh Data</button>
+      }
       <p>Leaderboard data:</p>
        <ol>
           {data.map((data)=>{
