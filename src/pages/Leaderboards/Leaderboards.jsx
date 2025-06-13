@@ -52,7 +52,12 @@ function Leaderboards() {
         data.length <= 0 && user &&
         <button onClick={getLeaderboardData}>Refresh Data</button>
       }
+     
       <p>Leaderboard data:</p>
+      {
+        data.length <= 0 &&
+        <h2>No data to display</h2>
+      }
        <ol>
           {data.map((data)=>{
             //Highlight in bold if we find an entry that matches the user
