@@ -64,17 +64,18 @@ router.get("/:game", async (req, res) => {
       res.status(400).json(error);
     }
   } else {
+    console.log("This game is not here yet");
     res.status(400).json("Game Leaderboard not yet implemented");
   }
 });
 
 router.get("/:game/:user", async (req, res) => {
   let game = req.params.game;
-  let user = req.params.user
+  let user = req.params.user;
 
   console.log("Server Leaderboard test for finding one user");
   console.log("We are searching for game", game);
-  console.log("We are looking for one user", user)
+  console.log("We are looking for one user", user);
   //res.status(200).json("Success accessing server for leaderboards");
 
   if (game === "Blackjack Wins") {
