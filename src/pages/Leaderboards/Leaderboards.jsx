@@ -46,7 +46,13 @@ function Leaderboards() {
       </form>
       <p>Leaderboard data:</p>
        <ol>
-          {data.map((data)=>{return <li>{data}</li>})}
+          {data.map((data)=>{
+            //Highlight in bold if we find an entry that matches the user
+            if(data === user){
+              return <li><b>{data}</b></li>
+            }
+            return <li>{data}</li>
+          })}
         </ol>
     </div>
   )
