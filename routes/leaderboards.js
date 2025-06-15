@@ -26,6 +26,7 @@ router.get("/:game", async (req, res) => {
   } else if (game === "Crazy Eights Moves") {
     try {
       const leaderboard = await EightMoves.find();
+      console.log("crazy eights moves", leaderboard);
       res.status(200).json(leaderboard);
     } catch (error) {
       console.log(error);
