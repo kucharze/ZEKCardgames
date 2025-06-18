@@ -219,7 +219,6 @@ function GoFish({darkmode}) {
     setDisabled(true)
     setAsking(false)
     
-
   }
 
   //Function for player taking there turn
@@ -251,8 +250,8 @@ function GoFish({darkmode}) {
   return (
     <div className={styles.GoFish}>
       <div>
-        <button onClick={newGame}>New game</button>
-        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkmode} onClick={newGame}>New game</button>
+        <button id={darkmode} onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
         rules &&
@@ -298,7 +297,7 @@ function GoFish({darkmode}) {
       
       <h2>Player</h2>
       <h4>Score: {playScore}</h4>
-      <button disabled={disabled} onClick={()=>{goFish()}}>Go Fish</button>
+      <button id={darkmode} disabled={disabled} onClick={()=>{goFish()}}>Go Fish</button>
       <div>
         {
           playHand.map((item,i)=>{
