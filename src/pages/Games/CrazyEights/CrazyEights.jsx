@@ -200,8 +200,8 @@ function CrazyEights({darkMode}) {
     <div className={styles.CrazyEights}>
       <h1>Crazy Eights</h1>
       <div>
-        <button onClick={newGame}>New game</button>
-        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkMode} onClick={newGame}>New game</button>
+        <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
       {
         rules &&
