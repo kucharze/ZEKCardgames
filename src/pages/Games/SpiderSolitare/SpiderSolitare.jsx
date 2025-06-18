@@ -284,9 +284,9 @@ function SpiderSolitare({darkMode}) {
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
       <div>
-        <button onClick={newGame}>New game</button>
-        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
-        <button disabled onClick={()=>{updateScore(score)}}>Upload Score</button>
+        <button id={darkMode} onClick={newGame}>New game</button>
+        <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkMode} disabled onClick={()=>{updateScore(score)}}>Upload Score</button>
       </div>
           {
         rules &&
