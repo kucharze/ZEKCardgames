@@ -1,5 +1,5 @@
 .matchzone {
-  width: 95%;
+  width: 90%;
   border: solid black;
   margin: 30px;
   padding: 40px;
@@ -31,9 +31,6 @@
 }
 
 @media only screen and (max-width: 1750px) {
-  .matchzone {
-    width: 95%;
-  }
   .matchzone > img {
     height: 150px;
     width: 150px;
@@ -44,9 +41,6 @@
 }
 
 @media only screen and (max-width: 1400px) {
-  .matchzone {
-    width: 95%;
-  }
   .matchzone > img {
     height: 100px;
     width: 100px;
