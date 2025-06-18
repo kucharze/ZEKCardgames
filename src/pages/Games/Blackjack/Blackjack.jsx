@@ -145,8 +145,8 @@ function Blackjack({darkMode}) {
     <div className={styles.Blackjack}>
       <h1>Blackjack</h1>
       <div>
-        <button onClick={newGame}>New game</button>
-        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkMode} onClick={newGame}>New game</button>
+        <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
         rules &&
@@ -200,8 +200,8 @@ function Blackjack({darkMode}) {
       
       <h2>Player</h2>
       <div className='interface'>
-        <button onClick={dealCard} disabled={disabled}>Hit</button>
-        <button onClick={playComTurn} disabled={disabled}>Stand</button>
+        <button id={darkMode} onClick={dealCard} disabled={disabled}>Hit</button>
+        <button id={darkMode} onClick={playComTurn} disabled={disabled}>Stand</button>
       </div>
       <h2>Player hand value: {value}</h2>
       <div className={styles.player}>
