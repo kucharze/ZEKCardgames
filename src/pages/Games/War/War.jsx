@@ -4,7 +4,7 @@ import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 import { useAuth } from "../../../contexts/app_context";
 
-function War({darkmode}) {
+function War({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
 
     const [rules, setRules] = useState(false)
@@ -160,8 +160,8 @@ function War({darkmode}) {
   return (
     <div className={styles.War}>
       <div>
-        <button id={darkmode} onClick={newGame}>New game</button>
-        <button id={darkmode} onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkMode} onClick={newGame}>New game</button>
+        <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
         rules &&
@@ -201,7 +201,7 @@ function War({darkmode}) {
         {
           gameOver && <WinnerBoard winner={winner}/>
         }
-        <button id={darkmode} onClick={playCard} disabled={!gameInProgress}>Play a round</button>
+        <button id={darkMode} onClick={playCard} disabled={!gameInProgress}>Play a round</button>
       </div>
       
       <div>
