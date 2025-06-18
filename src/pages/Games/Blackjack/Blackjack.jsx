@@ -5,7 +5,7 @@ import Deck from '../../../gamecomponents/Deck'
 import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 import { useAuth } from "../../../contexts/app_context";
 
-function Blackjack() {
+function Blackjack({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
 
   const [playHand, setPlayHand] = useState([])

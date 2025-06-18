@@ -6,7 +6,7 @@ import { useAuth } from "../../../contexts/app_context";
 // import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 import face from './Game modules/faceCards'
 
-function SpiderSolitare() {
+function SpiderSolitare({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
   const { checkFaceMove} = face()
 

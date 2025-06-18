@@ -22,7 +22,7 @@ import umbrella from '../../../Images/cards/umbrella1.PNG'
 import watermellon from '../../../Images/cards/watermellon1.PNG'
 import { useAuth } from "../../../contexts/app_context";
 
-function Matching() {
+function Matching({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
 
   //List of elements that will get matched
