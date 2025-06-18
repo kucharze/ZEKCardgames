@@ -160,8 +160,8 @@ function War({darkmode}) {
   return (
     <div className={styles.War}>
       <div>
-        <button onClick={newGame}>New game</button>
-        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkmode} onClick={newGame}>New game</button>
+        <button id={darkmode} onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
         rules &&
@@ -201,7 +201,7 @@ function War({darkmode}) {
         {
           gameOver && <WinnerBoard winner={winner}/>
         }
-        <button onClick={playCard} disabled={!gameInProgress}>Play a round</button>
+        <button id={darkmode} onClick={playCard} disabled={!gameInProgress}>Play a round</button>
       </div>
       
       <div>
