@@ -8,12 +8,6 @@ img {
   align-items: center;
 }
 
-.Blackjack > h1 {
-  background-color: green;
-  color: gold;
-  width: 100%;
-  font-size: 40px;
-}
 .blackjack {
   font-size: 30px;
   background-color: blue;
