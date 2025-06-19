@@ -24,7 +24,8 @@ h1#darkMode {
 
 h1 {
   /* background-color: green; */
-  color: darkred;
+  background-color: green;
+  color: gold;
   width: 100%;
   font-size: 40px;
 }
@@ -266,7 +267,6 @@ button.active .text {
     font-size: 30px;
   }
   button {
-    font-weight: 600;
     font-size: 20px;
     height: 80px;
     width: 300px;
@@ -274,7 +274,7 @@ button.active .text {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .App {
     font-size: 18px;
   }
@@ -287,10 +287,10 @@ button.active .text {
     font-size: 20px;
   }
   button {
-    font-weight: 600;
     font-size: 16px;
     height: 70px;
     width: 200px;
+    margin: 10px;
     padding: 0.8em 1.4em;
   }
   .darkMode {
