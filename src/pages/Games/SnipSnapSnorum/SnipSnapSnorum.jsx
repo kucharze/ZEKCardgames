@@ -232,8 +232,8 @@ function SnipSnapSnorum({darkMode}) {
     <div id={darkMode} className={styles.SnipSnapSnorum}>
       <h1 id={darkMode }>Snip Snap Snorum</h1>
       <div>
-        <button onClick={newGame}>New game</button>
-        <button onClick={()=>{setRules(!rules)}}>Show rules</button>
+        <button id={darkMode} onClick={newGame}>New game</button>
+        <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
       </div>
             {
         rules &&
@@ -271,7 +271,7 @@ function SnipSnapSnorum({darkMode}) {
       }
       
       <div className={styles.playSpace} id={darkMode}>
-        <button onClick={()=>{
+        <button id={darkMode} onClick={()=>{
           // setDisabled(true); 
           setComCanPlay(true)
           // if(passStatus){
