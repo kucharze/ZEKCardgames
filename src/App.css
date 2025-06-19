@@ -1,6 +1,7 @@
 #darkMode {
   background-color: black;
   color: turquoise;
+  border: solid green;
 }
 
 .App {
@@ -29,6 +30,7 @@ h1 {
   color: gold;
   width: 100%;
   font-size: 40px;
+  padding: 10px;
 }
 
 .logo {
