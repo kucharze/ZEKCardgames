@@ -6,6 +6,7 @@
 }
 
 #darkMode {
+  background-color: green;
   color: turquoise;
 }
 
@@ -20,13 +21,6 @@
 .rules li {
   margin: 15px;
 }
-
-#darkmode {
-  margin: 20px;
-  border: solid red;
-  background-color: gray;
-}
-
 .playSpace {
   margin: 15px;
   width: 90%;
@@ -38,6 +32,11 @@
   background-size: contain;
   background-attachment: fixed; */
   padding: 10px;
+}
+.playSpace#darkMode {
+  margin: 20px;
+  border: solid red;
+  background-color: blue;
 }
 
 .card {
