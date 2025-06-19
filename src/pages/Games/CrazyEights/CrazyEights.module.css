@@ -5,12 +5,6 @@
   align-items: center;
 }
 
-.CrazyEights > h1 {
-  background-color: green;
-  color: gold;
-  width: 100%;
-}
-
 .hand {
   width: 140px;
   margin: 10px;
