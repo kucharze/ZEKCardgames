@@ -19,7 +19,8 @@ a#darkMode {
 
 h1#darkMode {
   /* background-color: gray; */
-  color: rgb(221, 201, 103);
+  color: rgb(226, 190, 9);
+  background-color: rgb(9, 143, 116);
 }
 
 h1 {
