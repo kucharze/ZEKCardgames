@@ -10,7 +10,6 @@
   /* background-image: url("./Images/thumbnail.jpg"); */
   /* background-repeat: no-repeat; */
   background-size: contain;
-  /* background-color: black; */
   font-size: 20px;
   margin: 0;
 }
@@ -22,6 +21,12 @@ h1#darkMode {
   /* background-color: gray; */
   color:  turquoise;
   background-color: rgb(6, 122, 47);
+}
+
+.SnipSnapSnorum > div#darkMode {
+  margin: 20px;
+  border: solid red;
+  background-color: blue;
 }
 
 h1 {
