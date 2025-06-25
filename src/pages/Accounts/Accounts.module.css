@@ -3,10 +3,10 @@
 }
 
 input {
-  font-size: 20px;
-  margin: 15px;
-  width: 250px;
-  height: 50px;
+  font-size: 30px;
+  margin: 25px;
+  width: 400px;
+  height: 80px;
   background-color: rgb(116, 183, 116);
   border: none;
 }
@@ -14,7 +14,7 @@ input {
 .errorMessage {
   color: white;
   background-color: red;
-  font-size: 40px;
+  font-size: 30px;
   /* height: 100px; */
   padding: 3px;
 }
