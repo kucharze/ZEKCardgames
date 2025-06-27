@@ -9,6 +9,7 @@ input {
   height: 80px;
   background-color: rgb(116, 183, 116);
   border: solid black;
+  text-align: center;
 }
 
 .errorMessage {
@@ -39,7 +40,7 @@ input {
 
   input {
     font-size: 20px;
-    margin: 25px;
+    margin: 20px;
     width: 250px;
     height: 60px;
   }
@@ -55,6 +56,5 @@ input {
     margin: 10px;
     width: 210px;
     height: 40px;
-    text-align: center;
   }
 }
