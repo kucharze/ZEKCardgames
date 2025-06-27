@@ -18,7 +18,7 @@ function Leaderboards() {
     e.preventDefault()
     console.log("Leaderboard server test")
     try {
-      let res = await axios.get("http://localhost:3001/leaderboards/"+option)
+      let res = await axios.get("http://localhost:3000/leaderboards/"+option)
       console.log(res.data)
       setData(res.data)
     } catch (error) {

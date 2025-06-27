@@ -13,25 +13,25 @@ export const AppContextProvider = ({ children }) => {
 
     switch (board) {
       case "Crazy Eights Moves":
-        URL = "http://localhost:3001/leaderboards/CrazyEightsMoves";
+        URL = "http://localhost:3000/leaderboards/CrazyEightsMoves";
         break;
       case "Blackjack Wins":
-        URL = "http://localhost:3001/leaderboards/BlackjackWins";
+        URL = "http://localhost:3000/leaderboards/BlackjackWins";
         break;
       case "Snip Snap Snorum":
-        URL = "http://localhost:3001/leaderboards/SnipSnapSnorumTime";
+        URL = "http://localhost:3000/leaderboards/SnipSnapSnorumTime";
         break;
       case "Matching Moves":
-        URL = "http://localhost:3001/leaderboards/MatchingMoves";
+        URL = "http://localhost:3000/leaderboards/MatchingMoves";
         break;
       case "Go Fish High Score":
-        URL = "http://localhost:3001/leaderboards/GoFishScore";
+        URL = "http://localhost:3000/leaderboards/GoFishScore";
         break;
       case "Spider Solitare Score":
-        URL = "http://localhost:3001/leaderboards/SpiderSolitareScore";
+        URL = "http://localhost:3000/leaderboards/SpiderSolitareScore";
         break;
       case "War Score":
-        URL = "http://localhost:3001/leaderboards/WarScore";
+        URL = "http://localhost:3000/leaderboards/WarScore";
         break;
       default:
         alert("No valid leaderboard option");
@@ -61,7 +61,7 @@ export const AppContextProvider = ({ children }) => {
   // const eightMoves = (moves) => {
   //   try {
   //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/CrazyEightsMoves",
+  //       "http://localhost:3000/leaderboards/CrazyEightsMoves",
   //       {
   //         username: user,
   //         score: moves,
