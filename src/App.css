@@ -284,10 +284,10 @@ button.active .text {
 
 @media (max-width: 600px) {
   .App {
-    font-size: 18px;
+    font-size: 16px;
   }
   .logo {
-    width: 50%;
+    width: 60%;
     height: 240px;
   }
   h1 {
