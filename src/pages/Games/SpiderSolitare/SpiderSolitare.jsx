@@ -120,8 +120,15 @@ function SpiderSolitare({darkMode}) {
 
   const takeTurn = (card, row) =>{
     if(movecard){
+      
       let target = parseInt(card.value)
+      if(!target){
+        target = card.value
+      }
       let mover = parseInt(movecard.value)
+      if(!mover){
+        mover=movecard.value
+      }
       console.log("Card value:", target, typeof(target.value),"Movecard value",mover, typeof(mover.value))
 
       //Either the movecard or the card being moved to is a face card
@@ -149,6 +156,7 @@ function SpiderSolitare({darkMode}) {
   }
 
   const faceMove = (mover, target, card, row) =>{
+    console.log("Attempting to check logic for moves involving face cards")
     if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
           (target !== "j" || target !== "q" || target !== "k" || target !== "a")
     ){
@@ -175,6 +183,7 @@ function SpiderSolitare({darkMode}) {
       }
     }
     else{
+      console.log("Moving one face card to another")
       //Move one face card to another face card
       if(checkFaceMove(mover, target)){
         moveCards(moveRow, movePos, row)
