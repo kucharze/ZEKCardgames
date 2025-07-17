@@ -129,7 +129,7 @@ function SpiderSolitare({darkMode}) {
       if(!mover){
         mover=movecard.value
       }
-      console.log("Card value:", target, typeof(target.value),"Movecard value",mover, typeof(mover.value))
+      console.log("Card value:", target, ,"Movecard value",mover, )
 
       //Either the movecard or the card being moved to is a face card
       if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
