@@ -44,7 +44,7 @@ function Accounts() {
         setSignUpError('')
     } catch (error) {
       console.log(error)
-      setSignUpError(error.response.data)
+      setSignUpError(error.message)
     }
   }
 
