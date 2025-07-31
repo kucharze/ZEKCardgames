@@ -4,6 +4,7 @@ import axios from 'axios'
 
 function Suggestions() {
   const [suggestion, setSuggestion] = useState("")
+  const [error, setError] = useState("false")
 
   const sendSuggestion = async () =>{
     console.log("Sending a suggestion",suggestion)
@@ -30,6 +31,11 @@ function Suggestions() {
       <h3>If you have any suggestions you would like to make or would like to report a bug
         You may submit them down below.
       </h3>
+      {
+        error & <div className={styles.errorMessage}>
+          <h2>An Error occured communicating with the server</h2>
+        </div>
+      }
       {/* <form onSubmit={sendSuggestion}> */}
         <input className={styles.suggest} placeholder='Put your suggestions here' 
          onChange={(e)=>{setSuggestion(e.target.value)}}/><br/>
