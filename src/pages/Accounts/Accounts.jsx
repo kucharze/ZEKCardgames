@@ -69,7 +69,8 @@ function Accounts() {
         setLoginError('')
     } catch (error) {
       console.log(error)
-      setLoginError(error.message)
+      // setLoginError(error.message)
+      setLoginError(error.response.data)
     }
   }
 

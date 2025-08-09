@@ -39,7 +39,7 @@ app.use("/suggestions", require("./routes/suggestions"));
 app.use("/leaderboards", require("./routes/leaderboards"));
 app.use("/users", require("./routes/users"));
 
-//For games, have site store info along with id for game
+//For games, have site store info along with ID for game
 //to send to server, while server holds info for games
 
 // The following "catch all" route (note the *) is necessary
@@ -49,6 +49,6 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.listen("3000", () => {
-  console.log("Listening on port 3000");
+app.listen("3001", () => {
+  console.log("Listening on port 3001");
 });
