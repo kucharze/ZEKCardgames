@@ -19,6 +19,7 @@ function Suggestions() {
 
       console.log("Back from the server")
       console.log(res)
+      setError(false)
     } catch (error) {
         console.log("There was an error")
         console.log(error)
@@ -29,7 +30,7 @@ function Suggestions() {
   return (
     <div className={styles.Suggestions}>
       <h1>Suggestions</h1>
-      <h3>If you have any suggestions you would like to make or would like to report a bug<br></br>
+      <h3>If you have any suggestions you would like to make or would like to report a bug<br/>
         You may submit them down below.
       </h3>
       {
@@ -42,7 +43,7 @@ function Suggestions() {
          onChange={(e)=>{setSuggestion(e.target.value)}}/><br/>
         <input type='submit' className={styles.suggest} onClick={() =>{sendSuggestion()}}/>
       {/* </form> */}
-      <br></br>
+      <br/>
     </div>
   )
 }
