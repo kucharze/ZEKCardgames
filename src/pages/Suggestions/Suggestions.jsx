@@ -22,6 +22,7 @@ function Suggestions() {
     } catch (error) {
         console.log("There was an error")
         console.log(error)
+        setError(true)
     }
   }
 
