@@ -9,7 +9,7 @@ function Suggestions() {
   const sendSuggestion = async () =>{
     console.log("Sending a suggestion",suggestion)
     try {
-      let res = await axios.post('http://localhost:3000/suggestions',
+      let res = await axios.post('http://localhost:3001/suggestions',
         {suggestion},{
         headers:{
             "Content-Type": "application/json"
