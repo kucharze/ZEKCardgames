@@ -29,7 +29,7 @@ function Suggestions() {
   return (
     <div className={styles.Suggestions}>
       <h1>Suggestions</h1>
-      <h3>If you have any suggestions you would like to make or would like to report a bug
+      <h3>If you have any suggestions you would like to make or would like to report a bug<br></br>
         You may submit them down below.
       </h3>
       {
@@ -42,6 +42,7 @@ function Suggestions() {
          onChange={(e)=>{setSuggestion(e.target.value)}}/><br/>
         <input type='submit' className={styles.suggest} onClick={() =>{sendSuggestion()}}/>
       {/* </form> */}
+      <br></br>
     </div>
   )
 }
