@@ -1,5 +1,5 @@
 .Suggestions {
-  font-size: 25px;
+  font-size: 30px;
   margin: 15px;
   width: 85%;
   margin: 0 auto;
@@ -7,9 +7,13 @@
 
 .suggest {
   margin: 20px;
-  height: 70px;
-  width: 300px;
-  font-size: 24px;
+  height: 90px;
+  width: 350px;
+  font-size: 25px;
+}
+
+.suggest:hover {
+  background-color: lightgreen;
 }
 
 @media (max-width: 1600px) {
