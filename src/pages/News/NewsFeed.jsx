@@ -20,7 +20,7 @@ function NewsFeed(darkmode) {
             <li>Load Leaderboard - DONE</li>
             <li>Upload to Leaderboards - TODO</li>
             <li>Login functions - Done</li>
-            <li>Suggesstions - DONE</li>
+            <li>Suggestions - DONE</li>
         </ol>
         </div>
         
