@@ -65,7 +65,8 @@
 
 @media only screen and (max-width: 650px) {
   .matchzone {
-    width: 78%;
+    width: 85%;
+    padding: 15px;
   }
   .matchzone > img {
     height: 50px;

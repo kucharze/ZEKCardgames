@@ -20,7 +20,7 @@ input {
   padding: 3px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .Accounts {
     font-size: 18px;
   }
