@@ -45,6 +45,8 @@ function Accounts() {
     } catch (error) {
       console.log(error)
       setSignUpError(error.message)
+      //Consider this option here
+      //alert("Error: Network error or leaderboard option not available")
     }
   }
 
@@ -71,6 +73,8 @@ function Accounts() {
       console.log(error)
       // setLoginError(error.message)
       setLoginError(error.response.data)
+      //Consider this option here
+      //alert("Error: Network error or leaderboard option not available")
     }
   }
 
