@@ -10,13 +10,16 @@ const faceCards = () => {
     //Target is a king
     else if (target.value === "k") {
       //King is the highest value, this is always true
+      console.log("King");
       return true;
     }
     //Target is a queen
     else if (target.value === "q") {
+      console.log("Queen");
       if (mover.value === "j" || mover.value === "a") {
         return true;
       } else {
+        console.log("Not a jack or ace");
         return false;
       }
     }
