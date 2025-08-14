@@ -1,16 +1,15 @@
 const faceCards = () => {
   //Run checks to see if we should move one face card to another
   const checkFaceMove = (mover, target) => {
-    console.log("Moving a ",mover, " to a ", target)
+    console.log("Moving a ", mover, " to a ", target);
     //Target is an ace
-    if (target.value === "A") {
+    if (target.value === "a") {
       //This can never be true, ace is the lowest number
       return false;
     }
     //Target is a king
     else if (target.value === "k") {
       //King is the highest value, this is always true
-      
       return true;
     }
     //Target is a queen
