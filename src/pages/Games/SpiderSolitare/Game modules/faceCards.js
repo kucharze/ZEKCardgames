@@ -4,6 +4,7 @@ const faceCards = () => {
     console.log("Moving a ", mover, " to a ", target);
     //Target is an ace
     if (target.value === "a") {
+      console.log("Ace");
       //This can never be true, ace is the lowest number
       return false;
     }
@@ -26,9 +27,12 @@ const faceCards = () => {
     //Target is a jack
     //Return true if ace otherwise return false
     else if (target.value === "j") {
+      console.log("Jack");
       if (mover.value === "a") {
+        console.log("Ace");
         return true;
       } else {
+        console.log("Not an ace");
         return false;
       }
     }
