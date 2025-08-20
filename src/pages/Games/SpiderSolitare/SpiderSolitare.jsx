@@ -160,10 +160,11 @@ function SpiderSolitare({darkMode}) {
   const faceMove = (mover, target, card, row) =>{
     console.log("Attempting to check logic for moves involving face cards")
     if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
-          (target !== "j" || target !== "q" || target !== "k" || target !== "a")
+          (target !== "j" && target !== "q" && target !== "k" && target !== "a")
     ){
       //Move facecard to not facecard
       //Allow the move if we are moving an Ace otherwise deny
+      console.log("Moving face card to not face card")
       if(mover === 'a'){
         moveCards(moveRow,movePos, row)
       }
@@ -172,11 +173,12 @@ function SpiderSolitare({darkMode}) {
       }
       
     }
-    else if((mover !== "j" || mover !== "q" || mover !== "k" || mover !== "a") && 
+    else if((mover !== "j" && mover !== "q" && mover !== "k" && mover !== "a") && 
         (target === "j" || target === "q" || target === "k" || target === "a")
     ){
       //Move not face card to face card
       //Only allow the move if we are not moving an ace
+      console.log("Moving not face card to face card")
       if(mover !== 'a'){
         moveCards(moveRow,movePos, row)
       }
