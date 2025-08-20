@@ -124,12 +124,14 @@ function SpiderSolitare({darkMode}) {
       let target = parseInt(card.value)
       if(!target){
         target = card.value
+        console.log("Targt is not a number",target)
       }
       let mover = parseInt(movecard.value)
       if(!mover){
         mover=movecard.value
+        console.log("Mover is not a number",mover)
       }
-      console.log("Card value:", target, "Movecard value",mover, )
+      console.log("Card value:", target, "Movecard value",mover)
 
       //Either the movecard or the card being moved to is a face card
       if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
