@@ -152,80 +152,11 @@ function SpiderSolitare({darkMode}) {
         return
       }
       
-      let target = parseInt(card.value)
-      if(!target){
-        target = card.value
-        console.log("Targt is not a number",target)
-      }
-      let mover = parseInt(movecard.value)
-      if(!mover){
-        mover=movecard.value
-        console.log("Mover is not a number",mover)
-      }
-      console.log("Card value:", target, "Movecard value",mover)
-
-      //Either the movecard or the card being moved to is a face card
-      if(mover === "j" || mover === "q" || mover === "k" || mover === "a"
-        || target === "j" || target === "q" || target === "k" || target === "a"
-      ){
-        faceMove(mover, target, card, row)
-      }
-      else{
-        if((target-1)===(mover)){
-          // depositcard(movecard, row)
-          //Remove cards from previous row and move to new row
-          moveCards(moveRow, movePos, row)
-        }
-        else{
-          denyMove(movecard, card)
-        }
-      }
     }
     else{
       setMoveCard(card)
       setRow(row)
       setMovePos([row,0])
-    }
-  }
-
-  const faceMove = (mover, target, card, row) =>{
-    console.log("Attempting to check logic for moves involving face cards")
-    if((mover === "j" || mover === "q" || mover === "k" || mover === "a") &&
-          (target !== "j" && target !== "q" && target !== "k" && target !== "a")
-    ){
-      //Move facecard to not facecard
-      //Allow the move if we are moving an Ace otherwise deny
-      console.log("Moving face card to not face card")
-      if(mover === 'a'){
-        moveCards(moveRow,movePos, row)
-      }
-      else{
-        denyMove(movecard, card)
-      }
-      
-    }
-    else if((mover !== "j" && mover !== "q" && mover !== "k" && mover !== "a") && 
-        (target === "j" || target === "q" || target === "k" || target === "a")
-    ){
-      //Move not face card to face card
-      //Only allow the move if we are not moving an ace
-      console.log("Moving not face card to face card")
-      if(mover !== 'a'){
-        moveCards(moveRow,movePos, row)
-      }
-      else{
-        denyMove(movecard, card)
-      }
-    }
-    else{
-      console.log("Moving one face card to another")
-      //Move one face card to another face card
-      if(checkFaceMove(mover, target)){
-        moveCards(moveRow, movePos, row)
-      }
-      else{
-        denyMove(movecard, card)
-      }
     }
   }
 
