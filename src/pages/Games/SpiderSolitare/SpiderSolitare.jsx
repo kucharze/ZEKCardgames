@@ -422,7 +422,7 @@ function SpiderSolitare({darkMode}) {
             })
           }
         </div>
-        <div>
+        <div className={styles.moveCards}>
             <h3>Card to be moved:</h3>
             {
               movecard && 
@@ -430,6 +430,12 @@ function SpiderSolitare({darkMode}) {
                     src={require(`../../../Images/Playcards/${movecard}.png`)}
                     />
             }
+        </div>
+        <div className={styles.deal}>
+          <img key="deal" alt="deck" className={styles.card} 
+                // onClick={()=>{takeTurn(item, row6)}}
+                src={back}
+                />
         </div>
       </div>
       
