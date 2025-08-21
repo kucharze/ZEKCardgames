@@ -47,6 +47,16 @@ function SpiderSolitare({darkMode}) {
     return templist
   }
 
+  //Make sure the end card of each row is face up
+  const makeFlips = () =>{
+    row1[row1.length-1].back = false
+    row2[row2.length-1].back = false
+    row3[row3.length-1].back = false
+    row4[row4.length-1].back = false
+    row5[row5.length-1].back = false
+    row6[row6.length-1].back = false
+  }
+
   const updateScore = () =>{
     console.log("Trying to upload score")
     if(user && score !== 0){
