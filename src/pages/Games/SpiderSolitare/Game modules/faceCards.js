@@ -1,7 +1,7 @@
 const faceCards = () => {
   //Run checks to see if we should move one face card to another
   const checkFaceMove = (mover, target) => {
-    console.log("Moving a ", mover, " to a ", target);
+    console.log("Facecard: Moving a ", mover, " to a ", target);
     //Target is an ace
     if (target.value === "a") {
       console.log("Ace");
@@ -38,7 +38,7 @@ const faceCards = () => {
     }
   };
 
-  return checkFaceMove;
+  return { checkFaceMove };
 };
 
 export default faceCards;
