@@ -121,17 +121,36 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
-  const refTakeTurn = (card) =>{
+  const checkRank = (card) =>{
     console.log("Ref taking turn")
 
     console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
     console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
+
+    if(RANK_ORDER.indexOf(card.value) <= RANK_ORDER.indexOf(movecard.value)){
+      console.log("Card is lower or equal than movecard")
+      return false
+    }
+    else{
+      console.log("Card is higher than movecard")
+      return true
+    }
   }
 
   const takeTurn = (card, row) =>{
     if(movecard){
       // console.log(RANK_ORDER.indexOf(card.value), RANK_ORDER.indexOf(movecard.value))
-      refTakeTurn(card)
+      let rank = checkRank(card)
+
+      console.log("Rank is", rank)
+      if(rank){
+        moveCards(moveRow, movePos, row)
+        return
+      }
+      else{
+        denyMove(movecard, card)
+        return
+      }
       
       let target = parseInt(card.value)
       if(!target){
