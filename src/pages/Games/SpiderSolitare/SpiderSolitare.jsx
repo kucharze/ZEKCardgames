@@ -4,11 +4,9 @@ import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 import { useAuth } from "../../../contexts/app_context";
 // import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
-import face from './Game modules/faceCards'
 
 function SpiderSolitare({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
-  const { checkFaceMove} = face()
 
   //Deck
   const [deck, setDeck] = useState(new Deck())
