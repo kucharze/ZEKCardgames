@@ -186,53 +186,59 @@ function SpiderSolitare({darkMode}) {
     //Set up list starting at pos and move to new row
     let movelist = []
     if(row===row1){
-      console.log(row1)
+      console.log("Row1",row1)
       movelist = row1.splice(0,pos)
     }
     else if(row===row2){
-      console.log(row2)
+      console.log("Row2",row2)
       movelist = row2.splice(0,pos)
     }
     else if(row===row3){
-      console.log(row3)
+      console.log("Row3", row3)
       movelist = row3.splice(0,pos)
     }
     else if(row===row4){
-      console.log(row4)
+      console.log("Row4", row4)
       movelist = row4.splice(0,pos)
     }
     else if(row===row5){
-      console.log(row5)
+      console.log("Row5", row5)
       movelist = row5.splice(0,pos)
     }
     else if(row===row6){
-      console.log(row6)
+      console.log("Row6", row6)
       movelist = row6.splice(0,pos)
     }
     
     console.log("Movelist",movelist)
 
     if(endrow===row1){
+      console.log("Move to row 1")
      setRow1([...row1,...movelist])
      checkForPoint(row1)
     }
     else if(endrow===row2){
+      console.log("Move to row 2")
       setRow2([...row2,...movelist])
       checkForPoint(row2)
     }
     else if(endrow===row3){
+      console.log("Move to row 3")
       setRow3([...row3,...movelist])
       checkForPoint(row3)
     }
     else if(endrow===row4){
+      console.log("Move to row 4")
       setRow4([...row4,...movelist])
       checkForPoint(row4)
     }
     else if(endrow===row5){
+      console.log("Move to row 5")
       setRow5([...row5,...movelist])
       checkForPoint(row5)
     }
     else if(endrow===row6){
+      console.log("Move to row 6")
       setRow6([...row6,...movelist])
       checkForPoint(row6)
     }
