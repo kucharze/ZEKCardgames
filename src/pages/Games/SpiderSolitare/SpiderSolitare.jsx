@@ -28,6 +28,9 @@ function SpiderSolitare({darkMode}) {
   const [moveRow, setMoveRow] = useState(null)
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
+
+  const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
+                      "8", "9", "10", "j", "q", "k"]
   
   const setList = () =>{
     let card = null
