@@ -152,7 +152,10 @@ function SpiderSolitare({darkMode}) {
 
       console.log("Rank is", rank)
       if(rank){
-        moveCards(moveRow, movePos, row)
+        moveCards(moveRow, movePos, row) 
+        setMoveCard(null)
+        setRow(0)
+        makeFlips()
         return
       }
       else{
