@@ -135,9 +135,9 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
+  //Function for player taking there turn
   const takeTurn = (card, row) =>{
-    if(movecard){
-      // console.log(RANK_ORDER.indexOf(card.value), RANK_ORDER.indexOf(movecard.value))
+    if(movecard){//Moving a card and checking if move is valid
       let rank = checkRank(card)
 
       console.log("Rank is", rank)
@@ -151,7 +151,7 @@ function SpiderSolitare({darkMode}) {
       }
       
     }
-    else{
+    else{//Selecting a card to move
       setMoveCard(card)
       setRow(row)
       setMovePos([row,0])
