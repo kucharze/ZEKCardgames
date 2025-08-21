@@ -121,8 +121,17 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
+  const refTakeTurn = (card) =>{
+    console.log("Ref taking turn")
+
+    console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
+    console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
+  }
+
   const takeTurn = (card, row) =>{
     if(movecard){
+      // console.log(RANK_ORDER.indexOf(card.value), RANK_ORDER.indexOf(movecard.value))
+      refTakeTurn(card)
       
       let target = parseInt(card.value)
       if(!target){
