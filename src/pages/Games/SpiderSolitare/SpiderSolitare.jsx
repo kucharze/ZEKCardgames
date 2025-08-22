@@ -438,10 +438,15 @@ function SpiderSolitare({darkMode}) {
             }
         </div>
         <div className={styles.deal}>
-          <img key="deal" alt="deck" className={styles.deck} 
+          {
+            decksLeft.map((item, i)=>{
+              return <img key={i} alt={item} className={styles.card}
                 // onClick={()=>{takeTurn(item, row6)}}
                 src={back}
                 />
+              
+            })
+          }
         </div>
       </div>
       
