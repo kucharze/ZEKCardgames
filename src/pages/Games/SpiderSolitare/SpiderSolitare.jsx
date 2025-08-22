@@ -59,6 +59,15 @@ function SpiderSolitare({darkMode}) {
     row6[row6.length-1].back = false
   }
 
+  const dealCards = () =>{
+      row1.push(deck.dealACard())
+      row2.push(deck.dealACard())
+      row3.push(deck.dealACard())
+      row4.push(deck.dealACard())
+      row5.push(deck.dealACard())
+      row6.push(deck.dealACard())
+  }
+
   const updateScore = () =>{
     console.log("Trying to upload score")
     if(user && score !== 0){
@@ -441,7 +450,7 @@ function SpiderSolitare({darkMode}) {
           {
             decksLeft.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card}
-                // onClick={()=>{takeTurn(item, row6)}}
+                onClick={dealCards}
                 src={back}
                 />
               
