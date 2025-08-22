@@ -57,6 +57,11 @@ function SpiderSolitare({darkMode}) {
     row4[row4.length-1].back = false
     row5[row5.length-1].back = false
     row6[row6.length-1].back = false
+
+    setDecksLeft((prev)=>{
+      prev.pop()
+      return prev
+    })
   }
 
   const dealCards = () =>{
@@ -95,7 +100,6 @@ function SpiderSolitare({darkMode}) {
 
     setDecksLeft([1,2,3,4])
     setScore(0)
-    // makeFlips()
     
   }
 
