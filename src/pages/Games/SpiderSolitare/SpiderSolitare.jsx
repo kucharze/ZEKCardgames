@@ -95,7 +95,7 @@ function SpiderSolitare({darkMode}) {
 
     setDecksLeft([1,2,3,4])
     setScore(0)
-    makeFlips()
+    // makeFlips()
     
   }
 
