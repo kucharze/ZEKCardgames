@@ -27,7 +27,7 @@ function SpiderSolitare({darkMode}) {
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
 
-  const [decksLeft, setDecksLeft] = useState(4)
+  const [decksLeft, setDecksLeft] = useState([1,2,3,4])
 
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
                       "8", "9", "10", "j", "q", "k"]
@@ -83,6 +83,10 @@ function SpiderSolitare({darkMode}) {
       deck.shuffle()
       return deck
     })
+
+    setDecksLeft([1,2,3,4])
+    setScore(0)
+    makeFlips()
     
   }
 
