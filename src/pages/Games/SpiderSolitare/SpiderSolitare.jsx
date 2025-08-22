@@ -27,6 +27,8 @@ function SpiderSolitare({darkMode}) {
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
 
+  const [decksLeft, setDecksLeft] = useState(4)
+
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
                       "8", "9", "10", "j", "q", "k"]
   
@@ -432,7 +434,7 @@ function SpiderSolitare({darkMode}) {
             }
         </div>
         <div className={styles.deal}>
-          <img key="deal" alt="deck" className={styles.card} 
+          <img key="deal" alt="deck" className={styles.deck} 
                 // onClick={()=>{takeTurn(item, row6)}}
                 src={back}
                 />
