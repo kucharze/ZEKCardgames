@@ -8,6 +8,7 @@ import { useAuth } from "../../../contexts/app_context";
 
 function CrazyEights({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
+  const {online, setOnline} = useState(false)
 
   const [playHand, setPlayHand] = useState([])
   const [comHand, setComHand] = useState([])
@@ -30,6 +31,7 @@ function CrazyEights({darkMode}) {
 
     if(user){
       uploadToLeaderboards("Crazy Eights Moves", numMoves)
+      setOnline(true)
     }
   }
 
