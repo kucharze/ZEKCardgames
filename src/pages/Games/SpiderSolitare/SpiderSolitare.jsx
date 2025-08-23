@@ -7,6 +7,7 @@ import { useAuth } from "../../../contexts/app_context";
 
 function SpiderSolitare({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
+  const {online, setOnline} = newState(false)
 
   //Deck
   const [deck, setDeck] = useState(new Deck())
@@ -293,13 +294,22 @@ function SpiderSolitare({darkMode}) {
     deck.shuffle()
   },[deck])
 
+  useEffect(()=>{
+    if(user){
+      setOnline(true)
+    }
+    else{
+      setOnline(false)
+    }
+  },[user])
+
   return (
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
       <div>
         <button id={darkMode} onClick={newGame}>New game</button>
         <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
-        <button id={darkMode} onClick={()=>{updateScore(score)}}>Upload Score</button>
+        <button id={darkMode} disabled={!online} onClick={()=>{updateScore(score)}}>Upload Score</button>
       </div>
           {
         rules &&
