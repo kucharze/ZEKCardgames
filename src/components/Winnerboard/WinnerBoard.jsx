@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './WinnerBoard.module.css'
 import Firework from '../Firework/Firework'
 
-function WinnerBoard({winner,moves}) {
+function WinnerBoard({winner,moves,online}) {
   return (
     <div className={styles.WinnerBoard}>
       {winner && <h1>You win</h1>}
@@ -15,6 +15,11 @@ function WinnerBoard({winner,moves}) {
         moves
         && 
         <h3>You had {moves} moves</h3>
+      }
+      {
+        !online 
+        &&
+        <h3>Login to record results to leaderboards.</h3>
       }
     </div>
   )
