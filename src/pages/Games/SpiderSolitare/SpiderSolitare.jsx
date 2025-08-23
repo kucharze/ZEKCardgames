@@ -7,7 +7,8 @@ import { useAuth } from "../../../contexts/app_context";
 
 function SpiderSolitare({darkMode}) {
   const { user, uploadToLeaderboards } = useAuth();
-  const {online, setOnline} = newState(false)
+
+  const {online, setOnline} = useState(false)
 
   //Deck
   const [deck, setDeck] = useState(new Deck())
@@ -32,6 +33,7 @@ function SpiderSolitare({darkMode}) {
 
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
                       "8", "9", "10", "j", "q", "k"]
+
   
   const setList = () =>{//Quick setup for a row to start a game
     let card = null
@@ -297,9 +299,6 @@ function SpiderSolitare({darkMode}) {
   useEffect(()=>{
     if(user){
       setOnline(true)
-    }
-    else{
-      setOnline(false)
     }
   },[user])
 
