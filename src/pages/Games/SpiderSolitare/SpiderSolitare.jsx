@@ -64,13 +64,11 @@ function SpiderSolitare({darkMode}) {
 
   }
 
-/*************  ✨ Windsurf Command ⭐  *************/
   /**
    * Deals one card from the deck to each row.  If the deck is empty, 
    * this function does nothing.  Also, if the deck is empty, the 
    * last element of the decksLeft array is popped off.
    */
-/*******  28c3ddb4-c20a-481d-8522-b6662af9450e  *******/
   const dealCards = () =>{
     
     console.log("Dealing cards")
