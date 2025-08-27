@@ -29,7 +29,7 @@ function SpiderSolitare({darkMode}) {
   const [rules, setRules] = useState(false)
   const [score, setScore] = useState(0)
 
-  const [decksLeft, setDecksLeft] = useState([1,2,3,4])
+  const [decksLeft, setDecksLeft] = useState([])
 
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
                       "8", "9", "10", "j", "q", "k"]
@@ -61,19 +61,20 @@ function SpiderSolitare({darkMode}) {
     row5[row5.length-1].back = false
     row6[row6.length-1].back = false
 
+  }
+
+  const dealCards = () =>{
+    row1.push(deck.dealACard())
+    row2.push(deck.dealACard())
+    row3.push(deck.dealACard())
+    row4.push(deck.dealACard())
+    row5.push(deck.dealACard())
+    row6.push(deck.dealACard())
+
     setDecksLeft((prev)=>{
       prev.pop()
       return prev
     })
-  }
-
-  const dealCards = () =>{
-      row1.push(deck.dealACard())
-      row2.push(deck.dealACard())
-      row3.push(deck.dealACard())
-      row4.push(deck.dealACard())
-      row5.push(deck.dealACard())
-      row6.push(deck.dealACard())
   }
 
   const updateScore = () =>{
