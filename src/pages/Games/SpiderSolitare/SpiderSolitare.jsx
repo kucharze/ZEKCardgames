@@ -72,12 +72,17 @@ function SpiderSolitare({darkMode}) {
   const dealCards = () =>{
     
     console.log("Dealing cards")
-    row1.push(deck.dealACard())
-    row2.push(deck.dealACard())
-    row3.push(deck.dealACard())
-    row4.push(deck.dealACard())
-    row5.push(deck.dealACard())
-    row6.push(deck.dealACard())
+    setRow1(row1.concat(deck.dealACard()))
+
+    setRow2(row2.concat(deck.dealACard()))
+
+    setRow3(row3.concat(deck.dealACard()))
+
+    setRow4(row4.concat(deck.dealACard()))
+
+    setRow5(row5.concat(deck.dealACard()))
+
+    setRow6(row6.concat(deck.dealACard()))
 
     setDecksLeft((prev)=>{
       prev.pop()
@@ -311,10 +316,6 @@ function SpiderSolitare({darkMode}) {
     }
   },[user])
 
-  useEffect(()=>{
-    dealCards()
-  },[rowChange])
-
   return (
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
@@ -476,7 +477,7 @@ function SpiderSolitare({darkMode}) {
           {
             decksLeft.map((item, i)=>{
               return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{setRowChange(!rowChange); }}
+                onClick={()=>{dealCards() }}
                 src={back}
                 />
               
