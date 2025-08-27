@@ -19,7 +19,7 @@ a#darkMode {
 
 h1#darkMode {
   /* background-color: gray; */
-  color:  turquoise;
+  color: turquoise;
   background-color: rgb(6, 122, 47);
 }
 
@@ -39,8 +39,8 @@ h1 {
 }
 
 .logo {
-  width: 70%;
-  height: 550px;
+  width: 75%;
+  height: 600px;
   border: solid black;
 }
 
