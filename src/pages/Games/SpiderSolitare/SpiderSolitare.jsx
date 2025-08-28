@@ -55,6 +55,11 @@ function SpiderSolitare({darkMode}) {
 
   //Make sure the end card of each row is face up
   const makeFlips = () =>{
+    if(row1.length===0 || row2.length===0 || row3.length===0 || 
+      row4.length===0 || row5.length===0 || row6.length===0)
+      {
+        return
+      }
     row1[row1.length-1].back = false
     row2[row2.length-1].back = false
     row3[row3.length-1].back = false
