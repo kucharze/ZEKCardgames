@@ -85,6 +85,7 @@ function SpiderSolitare({darkMode}) {
     setRow6(row6.concat(deck.dealACard()))
 
     setDecksLeft((prev)=>{
+      console.log("Prev is ",prev)
       prev.pop()
       return prev
     })
