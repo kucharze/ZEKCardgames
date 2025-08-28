@@ -20,7 +20,7 @@ function SpiderSolitare({darkMode}) {
   const [row4, setRow4] = useState([])
   const [row5, setRow5] = useState([])
   const [row6, setRow6] = useState([])
-  const [rowChange, setRowChange] = useState(false)
+  // const [rowChange, setRowChange] = useState(false)
 
   //Card to move
   const [movecard, setMoveCard] = useState(null)
