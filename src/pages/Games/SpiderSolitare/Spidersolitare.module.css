@@ -111,6 +111,17 @@
   .row {
     padding: 10px;
   }
+
+  .deal {
+    margin-top: 400px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    width: 10%;
+  }
+  .deal img {
+    height: 90px;
+    width: 70px;
+  }
 }
 
 @media only screen and (max-width: 1500px) {
