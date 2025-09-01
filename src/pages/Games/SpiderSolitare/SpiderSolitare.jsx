@@ -56,17 +56,39 @@ function SpiderSolitare({darkMode}) {
 
   //Make sure the end card of each row is face up
   const makeFlips = () =>{
-    if(row1.length===0 || row2.length===0 || row3.length===0 || 
-      row4.length===0 || row5.length===0 || row6.length===0)
-      {
-        return
-      }
-    row1[row1.length-1].back = false
-    row2[row2.length-1].back = false
-    row3[row3.length-1].back = false
-    row4[row4.length-1].back = false
-    row5[row5.length-1].back = false
-    row6[row6.length-1].back = false
+    if(row1.length!==0)
+    {
+      row1[row1.length-1].back = false
+    }
+    
+    if(row2.length!==0)
+    {
+      row2[row2.length-1].back = false
+    }
+    
+    if(row3.length!==0)
+    {
+      row3[row3.length-1].back = false
+    }
+    
+    if(row4.length!==0)
+    {
+      row4[row4.length-1].back = false
+    }
+    
+    if(row5.length!==0)
+    {
+     row5[row5.length-1].back = false
+    }
+    
+    if(row6.length!==0)
+    {
+      row6[row6.length-1].back = false
+    }
+    
+  }
+
+  const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
 
   }
 
