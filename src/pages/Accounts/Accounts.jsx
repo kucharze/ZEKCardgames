@@ -43,8 +43,15 @@ function Accounts() {
         setUser(res.data.userName)
         setSignUpError('')
     } catch (error) {
-      console.log(error)
-      setSignUpError(error.message)
+      if(error.message){
+        console.log(error)
+        setSignUpError(error.message)
+      }
+      else{
+        console.log(error)
+        setSignUpError(error.response.data)
+      }
+      
       //Consider this option here
       //alert("Error: Network error or leaderboard option not available")
     }
@@ -71,8 +78,14 @@ function Accounts() {
         setLoginError('')
     } catch (error) {
       console.log(error)
-      // setLoginError(error.message)
-      setLoginError(error.response.data)
+      if(error.message){
+        console.log(error)
+        setLoginError(error.message)
+      }
+      else{
+        console.log(error)
+        setLoginError(error.response.data)
+      }
       //Consider this option here
       //alert("Error: Network error or leaderboard option not available")
     }
