@@ -133,7 +133,6 @@ function SpiderSolitare({darkMode}) {
    * last element of the decksLeft array is popped off.
    */
   const dealCards = () =>{
-    
     console.log("Dealing cards")
     decksLeft.pop()
     setRow1(row1.concat(deck.dealACard()))
@@ -142,13 +141,6 @@ function SpiderSolitare({darkMode}) {
     setRow4(row4.concat(deck.dealACard()))
     setRow5(row5.concat(deck.dealACard()))
     setRow6(row6.concat(deck.dealACard()))
-
-
-    // setDecksLeft((prev)=>{//Find out why this gets called twice???
-    //   console.log("Prev is ",prev)
-    //   prev.pop()
-    //   return prev
-    // })
   }
 
   const updateScore = () =>{
