@@ -108,22 +108,22 @@ function SpiderSolitare({darkMode}) {
 
   const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
     if(row === row1){
-      row1.push([{image: empty, back: true}])
+      row1.push([{image: empty, back: false}])
     }
     if(row === row2){
-      row2.push([{image: empty, back: true}])
+      row2.push([{image: empty, back: false}])
     }
     if(row === row3){
-      row3.push([{image: empty, back: true}])
+      row3.push([{image: empty, back: false}])
     }
     if(row === row4){
-      row4.push([{image: empty, back: true}])
+      row4.push([{image: empty, back: false}])
     }
     if(row === row5){
-      row5.push([{image: empty, back: true}])
+      row5.push([{image: empty, back: false}])
     }
     if(row === row6){
-      row6.push([{image: empty, back: true}])
+      row6.push([{image: empty, back: false}])
     }
   }
 
