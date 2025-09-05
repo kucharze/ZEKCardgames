@@ -34,7 +34,7 @@ function SpiderSolitare({darkMode}) {
   const [decksLeft, setDecksLeft] = useState([])
 
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
-                      "8", "9", "10", "j", "q", "k"]
+                      "8", "9", "10", "j", "q", "k", "empty"]
 
   
   const setList = () =>{//Quick setup for a row to start a game
@@ -108,22 +108,22 @@ function SpiderSolitare({darkMode}) {
 
   const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
     if(row === row1){
-      row1.unshift("Empty")
+      row1.unshift("empty")
     }
     if(row === row2){
-      row2.unshift("Empty")
+      row2.unshift("empty")
     }
     if(row === row3){
-      row3.unshift("Empty")
+      row3.unshift("empty")
     }
     if(row === row4){
-      row4.unshift("Empty")
+      row4.unshift("empty")
     }
     if(row === row5){
-      row5.unshift("Empty")
+      row5.unshift("empty")
     }
     if(row === row6){
-      row6.unshift("Empty")
+      row6.unshift("empty")
     }
   }
 
