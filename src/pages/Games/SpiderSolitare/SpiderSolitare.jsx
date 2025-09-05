@@ -268,6 +268,12 @@ function SpiderSolitare({darkMode}) {
         setMoveCard(null)
         setRow(0)
         makeFlips()
+
+        if(movecard.value === 'k'){
+          //Check if we moved to an empty row
+          //If so remove the empty card
+          removeEmpty(row)
+        }
         return
       }
       else{
