@@ -61,30 +61,48 @@ function SpiderSolitare({darkMode}) {
     {
       row1[row1.length-1].back = false
     }
+    else{
+      deployEmpty(row1)
+    }
     
     if(row2.length!==0)
     {
       row2[row2.length-1].back = false
+    }
+    else{
+      deployEmpty(row2)
     }
     
     if(row3.length!==0)
     {
       row3[row3.length-1].back = false
     }
+    else{
+      deployEmpty(row3)
+    }
     
     if(row4.length!==0)
     {
       row4[row4.length-1].back = false
+    }
+    else{
+      deployEmpty(row4)
     }
     
     if(row5.length!==0)
     {
      row5[row5.length-1].back = false
     }
+    else{
+      deployEmpty(row5)
+    }
     
     if(row6.length!==0)
     {
       row6[row6.length-1].back = false
+    }
+    else{
+      deployEmpty(row6)
     }
     
   }
@@ -250,7 +268,7 @@ function SpiderSolitare({darkMode}) {
         if(moveRow.length === 0){
           //Check if move row will be empty
           //If so, add the empty card
-          removeEmpty(moveRow)
+          deployEmpty(moveRow)
         }
         if(movecard.value === 'k'){
           //Check if we moved to an empty row
