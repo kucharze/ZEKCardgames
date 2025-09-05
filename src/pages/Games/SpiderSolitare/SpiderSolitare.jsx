@@ -414,7 +414,14 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row1.map((item, i)=>{
-             if(item.back){
+            if(item.empty){
+              return <img key={i} alt={item} className={styles.card}
+              style={{top: 30*i}}
+              src={item.image}
+              />
+            }
+            else{
+              if(item.back){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
                 src={back}
@@ -427,92 +434,139 @@ function SpiderSolitare({darkMode}) {
                 src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
+            }
+             
             })
           }
         </div>
         <div className={styles.row}>
           {
             row2.map((item, i)=>{
-              if(item.back){
-                return <img key={i} alt={item} className={styles.card} 
-                src={back}
+              if(item.empty){
+                return <img key={i} alt={item} className={styles.card}
+                style={{top: 30*i}}
+                src={item.image}
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{takeTurn(item, row2)}} 
-                src={require(`../../../Images/Playcards/${item}.png`)}
-                />
+                 if(item.back){
+                  return <img key={i} alt={item} className={styles.card} 
+                  src={back}
+                  />
+                }
+                else{
+                  return <img key={i} alt={item} className={styles.card}
+                  onClick={()=>{takeTurn(item, row2)}} 
+                  src={require(`../../../Images/Playcards/${item}.png`)}
+                  />
+                }
               }
+             
             })
           }
         </div>
         <div className={styles.row}>
           {
             row3.map((item, i)=>{
-              if(item.back){
+              if(item.empty){
                 return <img key={i} alt={item} className={styles.card}
-                style={{top : (30*i)}}
-                src={back}
+                style={{top: 30*i}}
+                src={item.image}
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item, row3)}}
-                src={require(`../../../Images/Playcards/${item}.png`)}
-                />
+                if(item.back){
+                  return <img key={i} alt={item} className={styles.card}
+                  style={{top : (30*i)}}
+                  src={back}
+                  />
+                }
+                else{
+                  return <img key={i} alt={item} className={styles.card} 
+                  onClick={()=>{takeTurn(item, row3)}}
+                  src={require(`../../../Images/Playcards/${item}.png`)}
+                  />
+                }
               }
+              
             })
           }
         </div>
         <div className={styles.row}>
           {
             row4.map((item, i)=>{
-              if(item.back){
-                return <img key={i} alt={item} className={styles.card} 
-                src={back}
+              if(item.empty){
+                return <img key={i} alt={item} className={styles.card}
+                style={{top: 30*i}}
+                src={item.image}
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item, row4)}}
-                src={require(`../../../Images/Playcards/${item}.png`)}
-                />
+                if(item.back){
+                  return <img key={i} alt={item} className={styles.card} 
+                  src={back}
+                  />
+                }
+                else{
+                  return <img key={i} alt={item} className={styles.card} 
+                  onClick={()=>{takeTurn(item, row4)}}
+                  src={require(`../../../Images/Playcards/${item}.png`)}
+                  />
+                }
               }
+              
             })
           }
         </div>
         <div className={styles.row}>
           {
             row5.map((item, i)=>{
-              if(item.back){
-                return <img key={i} alt={item} className={styles.card} 
-                src={back}
+              if(item.empty){
+                return <img key={i} alt={item} className={styles.card}
+                style={{top: 30*i}}
+                src={item.image}
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card}
-                onClick={()=>{takeTurn(item, row5)}}
-                src={require(`../../../Images/Playcards/${item}.png`)}
-                />
+                if(item.back){
+                  return <img key={i} alt={item} className={styles.card} 
+                  src={back}
+                  />
+                }
+                else{
+                  return <img key={i} alt={item} className={styles.card}
+                  onClick={()=>{takeTurn(item, row5)}}
+                  src={require(`../../../Images/Playcards/${item}.png`)}
+                  />
+                }
               }
+              
             })
           }
         </div>
         <div className={styles.row}>
           {
             row6.map((item, i)=>{
-              if(item.back){
-                return <img key={i} alt={item} className={styles.card} 
-                src={back}
+               if(item.empty){
+                return <img key={i} alt={item} className={styles.card}
+                style={{top: 30*i}}
+                src={item.image}
                 />
               }
               else{
-                return <img key={i} alt={item} className={styles.card} 
-                onClick={()=>{takeTurn(item, row6)}}
-                src={require(`../../../Images/Playcards/${item}.png`)}
-                />
+                if(item.back){
+                  return <img key={i} alt={item} className={styles.card} 
+                  src={back}
+                  />
+                }
+                else{
+                  return <img key={i} alt={item} className={styles.card} 
+                  onClick={()=>{takeTurn(item, row6)}}
+                  src={require(`../../../Images/Playcards/${item}.png`)}
+                  />
+                }
               }
+             
               
             })
           }
