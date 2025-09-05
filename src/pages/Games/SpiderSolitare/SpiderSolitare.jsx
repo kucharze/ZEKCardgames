@@ -450,7 +450,6 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row1.map((item, i)=>{
-            console.log("Row 1 Empty: ", item.empty)
               if(item.back){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
@@ -471,7 +470,6 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row2.map((item, i)=>{
-              console.log("Row 2 Empty: ", item.empty)
                  if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -490,7 +488,6 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row3.map((item, i)=>{
-              console.log("Row 3 Empty: ", item.empty)
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card}
                   style={{top : (30*i)}}
@@ -510,7 +507,6 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row4.map((item, i)=>{
-              console.log("Row 4 Empty: ", item.empty)
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -529,7 +525,6 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row5.map((item, i)=>{
-              console.log("Row 5 Empty: ", item.empty)
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -548,7 +543,6 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row6.map((item, i)=>{
-              console.log("Row 6 Empty: ", item.empty)
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
