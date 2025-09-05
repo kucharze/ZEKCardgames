@@ -131,22 +131,22 @@ function SpiderSolitare({darkMode}) {
   const removeEmpty = (row) =>{
     //Rework to not use empty
     if(row === row1){
-      row1.pop()
+      row1.shift()
     }
     if(row === row2){
-      row2.pop()
+      row2.shift()
     }
     if(row === row3){
-      row3.pop()
+      row3.shift()
     }
     if(row === row4){
-      row4.pop()
+      row4.shift()
     }
     if(row === row5){
-      row5.pop()
+      row5.shift()
     }
     if(row === row6){
-      row6.pop()
+      row6.shift()
     }
   }
 
