@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
-import empty from '../../../Images/empty.jpg'
+// import empty from '../../../Images/empty.jpg'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 import { useAuth } from "../../../contexts/app_context";
@@ -450,13 +450,6 @@ function SpiderSolitare({darkMode}) {
           {
             row1.map((item, i)=>{
             console.log("Row 1 Empty: ", item.empty)
-            if(item.empty){
-              return <img key={i} alt={item} className={styles.card}
-              style={{top: 30*i}}
-              src={item.image}
-              />
-            }
-            else{
               if(item.back){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
@@ -470,7 +463,6 @@ function SpiderSolitare({darkMode}) {
                 src={require(`../../../Images/Playcards/${item}.png`)}
                 />
               }
-            }
              
             })
           }
@@ -479,13 +471,6 @@ function SpiderSolitare({darkMode}) {
           {
             row2.map((item, i)=>{
               console.log("Row 2 Empty: ", item.empty)
-              if(item.empty){
-                return <img key={i} alt={item} className={styles.card}
-                style={{top: 30*i}}
-                src={item.image}
-                />
-              }
-              else{
                  if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -497,7 +482,6 @@ function SpiderSolitare({darkMode}) {
                   src={require(`../../../Images/Playcards/${item}.png`)}
                   />
                 }
-              }
              
             })
           }
@@ -506,13 +490,6 @@ function SpiderSolitare({darkMode}) {
           {
             row3.map((item, i)=>{
               console.log("Row 3 Empty: ", item.empty)
-              if(item.empty){
-                return <img key={i} alt={item} className={styles.card}
-                style={{top: 30*i}}
-                src={item.image}
-                />
-              }
-              else{
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card}
                   style={{top : (30*i)}}
@@ -525,7 +502,6 @@ function SpiderSolitare({darkMode}) {
                   src={require(`../../../Images/Playcards/${item}.png`)}
                   />
                 }
-              }
               
             })
           }
@@ -534,13 +510,6 @@ function SpiderSolitare({darkMode}) {
           {
             row4.map((item, i)=>{
               console.log("Row 4 Empty: ", item.empty)
-              if(item.empty){
-                return <img key={i} alt={item} className={styles.card}
-                style={{top: 30*i}}
-                src={item.image}
-                />
-              }
-              else{
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -552,7 +521,6 @@ function SpiderSolitare({darkMode}) {
                   src={require(`../../../Images/Playcards/${item}.png`)}
                   />
                 }
-              }
               
             })
           }
@@ -561,13 +529,6 @@ function SpiderSolitare({darkMode}) {
           {
             row5.map((item, i)=>{
               console.log("Row 5 Empty: ", item.empty)
-              if(item.empty){
-                return <img key={i} alt={item} className={styles.card}
-                style={{top: 30*i}}
-                src={item.image}
-                />
-              }
-              else{
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -579,7 +540,6 @@ function SpiderSolitare({darkMode}) {
                   src={require(`../../../Images/Playcards/${item}.png`)}
                   />
                 }
-              }
               
             })
           }
@@ -588,13 +548,6 @@ function SpiderSolitare({darkMode}) {
           {
             row6.map((item, i)=>{
               console.log("Row 6 Empty: ", item.empty)
-               if(item.empty){
-                return <img key={i} alt={item} className={styles.card}
-                style={{top: 30*i}}
-                src={item.image}
-                />
-              }
-              else{
                 if(item.back){
                   return <img key={i} alt={item} className={styles.card} 
                   src={back}
@@ -606,8 +559,6 @@ function SpiderSolitare({darkMode}) {
                   src={require(`../../../Images/Playcards/${item}.png`)}
                   />
                 }
-              }
-             
               
             })
           }
