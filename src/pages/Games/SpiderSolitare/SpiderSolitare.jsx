@@ -108,22 +108,22 @@ function SpiderSolitare({darkMode}) {
 
   const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
     if(row === row1){
-      row1.unshift([{image: empty, back: false, empty: true}])
+      row1.unshift([empty])
     }
     if(row === row2){
-      row2.unshift([{image: empty, back: false, empty: true}])
+      row2.unshift([empty])
     }
     if(row === row3){
-      row3.unshift([{image: empty, back: false, empty: true}])
+      row3.unshift([empty])
     }
     if(row === row4){
-      row4.unshift([{image: empty, back: false, empty: true}])
+      row4.unshift([empty])
     }
     if(row === row5){
-      row5.unshift([{image: empty, back: false, empty: true}])
+      row5.unshift([empty])
     }
     if(row === row6){
-      row6.unshift([{image: empty, back: false, empty: true}])
+      row6.unshift([empty])
     }
   }
 
@@ -449,7 +449,7 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row1.map((item, i)=>{
-            console.log("Empty: ", item.empty)
+            console.log("Row 1 Empty: ", item.empty)
             if(item.empty){
               return <img key={i} alt={item} className={styles.card}
               style={{top: 30*i}}
@@ -478,7 +478,7 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row2.map((item, i)=>{
-              console.log("Empty: ", item.empty)
+              console.log("Row 2 Empty: ", item.empty)
               if(item.empty){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
@@ -505,7 +505,7 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row3.map((item, i)=>{
-              console.log("Empty: ", item.empty)
+              console.log("Row 3 Empty: ", item.empty)
               if(item.empty){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
@@ -533,7 +533,7 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row4.map((item, i)=>{
-              console.log("Empty: ", item.empty)
+              console.log("Row 4 Empty: ", item.empty)
               if(item.empty){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
@@ -560,7 +560,7 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row5.map((item, i)=>{
-              console.log("Empty: ", item.empty)
+              console.log("Row 5 Empty: ", item.empty)
               if(item.empty){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
@@ -587,7 +587,7 @@ function SpiderSolitare({darkMode}) {
         <div className={styles.row}>
           {
             row6.map((item, i)=>{
-              console.log("Empty: ", item.empty)
+              console.log("Row 6 Empty: ", item.empty)
                if(item.empty){
                 return <img key={i} alt={item} className={styles.card}
                 style={{top: 30*i}}
