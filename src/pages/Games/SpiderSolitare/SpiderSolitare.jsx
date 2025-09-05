@@ -108,22 +108,22 @@ function SpiderSolitare({darkMode}) {
 
   const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
     if(row === row1){
-      row1.unshift([empty])
+      row1.unshift("Empty")
     }
     if(row === row2){
-      row2.unshift([empty])
+      row2.unshift("Empty")
     }
     if(row === row3){
-      row3.unshift([empty])
+      row3.unshift("Empty")
     }
     if(row === row4){
-      row4.unshift([empty])
+      row4.unshift("Empty")
     }
     if(row === row5){
-      row5.unshift([empty])
+      row5.unshift("Empty")
     }
     if(row === row6){
-      row6.unshift([empty])
+      row6.unshift("Empty")
     }
   }
 
