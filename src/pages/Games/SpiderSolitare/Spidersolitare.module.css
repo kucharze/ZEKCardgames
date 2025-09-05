@@ -23,7 +23,7 @@
 .playmat img {
   width: 160px;
   /* position: absolute; */
-  margin-bottom: -80px;
+  margin-bottom: -100px;
 }
 .row {
   display: flex;
