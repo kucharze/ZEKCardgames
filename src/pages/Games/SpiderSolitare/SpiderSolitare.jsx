@@ -127,6 +127,29 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
+  //Remove empty card from the front of the row
+  const removeEmpty = (row) =>{
+    //Rework to not use empty
+    if(row === row1){
+      row1.pop()
+    }
+    if(row === row2){
+      row2.pop()
+    }
+    if(row === row3){
+      row3.pop()
+    }
+    if(row === row4){
+      row4.pop()
+    }
+    if(row === row5){
+      row5.pop()
+    }
+    if(row === row6){
+      row6.pop()
+    }
+  }
+
   /**
    * Deals one card from the deck to each row.  If the deck is empty, 
    * this function does nothing.  Also, if the deck is empty, the 
@@ -318,8 +341,8 @@ function SpiderSolitare({darkMode}) {
 
     if(endrow===row1){
       console.log("Move to row 1")
-     setRow1([...row1,...movelist])
-     checkForPoint(row1)
+      setRow1([...row1,...movelist])
+      checkForPoint(row1)
     }
     else if(endrow===row2){
       console.log("Move to row 2")
