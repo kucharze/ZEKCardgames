@@ -277,6 +277,15 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
+  const checkEndCard = (row,card) =>{
+    if(row[row.length-1].value === card.value){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
   //Function for player taking there turn
   const takeTurn = (card, row) =>{
     if(movecard){//Moving a card and checking if move is valid
@@ -284,6 +293,10 @@ function SpiderSolitare({darkMode}) {
 
       console.log("Rank is", rank)
       if(rank){
+        ///check if card is at the end of the row
+        if(!checkEndCard(row)){
+          denyMove(movecard, card)
+        }
         if(moveRow.length === 0){
           //Check if move row will be empty
           //If so, add the empty card
