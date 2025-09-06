@@ -184,6 +184,7 @@ function SpiderSolitare({darkMode}) {
     setRow4(setList())
     setRow5(setList())
     setRow6(setList())
+    setRow7(setList())
 
     setDeck(()=>{
       let deck = new Deck()
@@ -551,6 +552,24 @@ function SpiderSolitare({darkMode}) {
                 else{
                   return <img key={i} alt={item} className={styles.card} 
                   onClick={()=>{takeTurn(item, row6)}}
+                  src={require(`../../../Images/Playcards/${item}.png`)}
+                  />
+                }
+              
+            })
+          }
+        </div>
+        <div className={styles.row}>
+          {
+            row7.map((item, i)=>{
+                if(item.back){
+                  return <img key={i} alt={item} className={styles.card} 
+                  src={back}
+                  />
+                }
+                else{
+                  return <img key={i} alt={item} className={styles.card} 
+                  onClick={()=>{takeTurn(item, row7)}}
                   src={require(`../../../Images/Playcards/${item}.png`)}
                   />
                 }
