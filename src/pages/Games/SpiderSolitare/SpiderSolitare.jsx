@@ -104,6 +104,14 @@ function SpiderSolitare({darkMode}) {
     else{
       deployEmpty(row6)
     }
+
+    if(row7.length!==0)
+    {
+      row7[row7.length-1].back = false
+    }
+    else{
+      deployEmpty(row7)
+    }
     
   }
 
@@ -125,6 +133,9 @@ function SpiderSolitare({darkMode}) {
     }
     if(row === row6){
       row6.unshift("empty")
+    }
+    if(row === row7){
+      row7.unshift("empty")
     }
   }
 
@@ -149,6 +160,9 @@ function SpiderSolitare({darkMode}) {
     if(row === row6){
       row6.shift()
     }
+    if(row === row7){
+      row7.shift()
+    }
   }
 
   /**
@@ -165,6 +179,7 @@ function SpiderSolitare({darkMode}) {
     setRow4(row4.concat(deck.dealACard()))
     setRow5(row5.concat(deck.dealACard()))
     setRow6(row6.concat(deck.dealACard()))
+    setRow7(row7.concat(deck.dealACard()))
   }
 
   const updateScore = () =>{
