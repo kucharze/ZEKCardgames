@@ -248,7 +248,7 @@ function SpiderSolitare({darkMode}) {
     console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
     console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
 
-    if(RANK_ORDER.indexOf(card.value) <= RANK_ORDER.indexOf(movecard.value)){
+    if(RANK_ORDER.indexOf(card.value) == RANK_ORDER.indexOf(movecard.value)-1){
       console.log("Card is lower or equal than movecard")
       return false
     }
