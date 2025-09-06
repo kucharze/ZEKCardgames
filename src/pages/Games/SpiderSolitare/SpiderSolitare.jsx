@@ -241,6 +241,9 @@ function SpiderSolitare({darkMode}) {
     else if(row===row6){
       row6.splice((row6.length-1)-12)
     }
+    else if(row===row7){
+      row7.splice((row7.length-1)-12)
+    }
   }
 
   const checkRank = (card) =>{
@@ -316,6 +319,9 @@ function SpiderSolitare({darkMode}) {
     else if(row===row6){
       setMoveRow(row6)
     }
+    else if(row===row7){
+      setMoveRow(row7)
+    }
     else{
       setMoveRow(null)
     }
@@ -350,6 +356,10 @@ function SpiderSolitare({darkMode}) {
       console.log("Row6", row6)
       movelist = row6.splice(pos,row6.length)
     }
+    else if(row===row7){
+      console.log("Row7", row7)
+      movelist = row7.splice(pos,row7.length)
+    }
     
     console.log("Movelist",movelist)
 
@@ -381,6 +391,11 @@ function SpiderSolitare({darkMode}) {
     else if(endrow===row6){
       console.log("Move to row 6")
       setRow6([...row6,...movelist])
+      checkForPoint(row6)
+    }
+    else if(endrow===row7){
+      console.log("Move to row 7")
+      setRow7([...row7,...movelist])
       checkForPoint(row6)
     }
 
