@@ -267,7 +267,7 @@ function SpiderSolitare({darkMode}) {
     console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
     console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
 
-    if(RANK_ORDER.indexOf(card.value) == RANK_ORDER.indexOf(movecard.value)-1){
+    if(RANK_ORDER.indexOf(card.value) === RANK_ORDER.indexOf(movecard.value)-1){
       console.log("Card is lower or equal than movecard")
       return false
     }
@@ -294,8 +294,9 @@ function SpiderSolitare({darkMode}) {
       console.log("Rank is", rank)
       if(rank){
         ///check if card is at the end of the row
-        if(!checkEndCard(row)){
+        if(!checkEndCard(row,card)){
           denyMove(movecard, card)
+          return;
         }
         if(moveRow.length === 0){
           //Check if move row will be empty
@@ -329,30 +330,7 @@ function SpiderSolitare({darkMode}) {
   }
 
   const setRow = (row) =>{
-    if(row===row1){
-      setMoveRow(row1)
-    }
-    else if(row===row2){
-      setMoveRow(row2)
-    }
-    else if(row===row3){
-      setMoveRow(row3)
-    }
-    else if(row===row4){
-      setMoveRow(row4)
-    }
-    else if(row===row5){
-      setMoveRow(row5)
-    }
-    else if(row===row6){
-      setMoveRow(row6)
-    }
-    else if(row===row7){
-      setMoveRow(row7)
-    }
-    else{
-      setMoveRow(null)
-    }
+    setMoveRow(row)
   }
 
   const moveCards = (row, pos, endrow) =>{
