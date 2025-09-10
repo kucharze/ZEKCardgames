@@ -335,37 +335,7 @@ function SpiderSolitare({darkMode}) {
 
   const moveCards = (row, pos, endrow) =>{
     //Set up list starting at pos and move to new row
-    let movelist = []
-    console.log("pos is",pos)
-
-    if(row===row1){
-      console.log("Row1",row1)
-      movelist = row1.splice(pos,row1.length)
-    }
-    else if(row===row2){
-      console.log("Row2",row2)
-      movelist = row2.splice(pos,row2.length)
-    }
-    else if(row===row3){
-      console.log("Row3", row3)
-      movelist = row3.splice(pos,row3.length)
-    }
-    else if(row===row4){
-      console.log("Row4", row4)
-      movelist = row4.splice(pos,row4.length)
-    }
-    else if(row===row5){
-      console.log("Row5", row5)
-      movelist = row5.splice(pos,row5.length)
-    }
-    else if(row===row6){
-      console.log("Row6", row6)
-      movelist = row6.splice(pos,row6.length)
-    }
-    else if(row===row7){
-      console.log("Row7", row7)
-      movelist = row7.splice(pos,row7.length)
-    }
+    let movelist = row.splice(pos,row.length)
     
     console.log("Movelist",movelist)
 
