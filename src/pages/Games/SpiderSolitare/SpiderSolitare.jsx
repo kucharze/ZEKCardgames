@@ -115,6 +115,20 @@ function SpiderSolitare({darkMode}) {
     
   }
 
+/**
+ * Check if the given card is "empty".
+ * @param {string} card - card to check
+ * @returns {boolean} - true if the card is "empty", false otherwise
+ */
+  const checkEmpty = (card) =>{
+    if(card === "empty"){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
   const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
     if(row === row1){
       row1.unshift("empty")
