@@ -336,27 +336,22 @@ function SpiderSolitare({darkMode}) {
     console.log("Movelist",movelist)
 
     if(endrow===row1){
-      console.log("Move to row 1")
       setRow1([...row1,...movelist])
       checkForPoint(row1)
     }
     else if(endrow===row2){
-      console.log("Move to row 2")
       setRow2([...row2,...movelist])
       checkForPoint(row2)
     }
     else if(endrow===row3){
-      console.log("Move to row 3")
       setRow3([...row3,...movelist])
       checkForPoint(row3)
     }
     else if(endrow===row4){
-      console.log("Move to row 4")
       setRow4([...row4,...movelist])
       checkForPoint(row4)
     }
     else if(endrow===row5){
-      console.log("Move to row 5")
       setRow5([...row5,...movelist])
       checkForPoint(row5)
     }
@@ -366,9 +361,8 @@ function SpiderSolitare({darkMode}) {
       checkForPoint(row6)
     }
     else if(endrow===row7){
-      console.log("Move to row 7")
       setRow7([...row7,...movelist])
-      checkForPoint(row6)
+      checkForPoint(row7)
     }
 
     setMoveCard(null)
