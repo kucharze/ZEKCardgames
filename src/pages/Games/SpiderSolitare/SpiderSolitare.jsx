@@ -67,9 +67,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row1)
     }
     else{
-      if(row1.length===1){
       deployEmpty(row1)
-      }
     }
     
     if(row2.length!==0 && !checkEmpty(row2[row2.length-1]))
@@ -77,10 +75,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row2)
     }
     else{
-      if(row2.length===1){
-        deployEmpty(row2)
-      }
-      
+      deployEmpty(row2)
     }
     
     if(row3.length!==0 && !checkEmpty(row3[row3.length-1]))
@@ -88,9 +83,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row3)
     }
     else{
-      if(row3.length===1){
-        deployEmpty(row3)
-      }
+      deployEmpty(row3)
     }
     
     if(row4.length!==0 && !checkEmpty(row4[row4.length-1]))
@@ -98,9 +91,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row4)
     }
     else{
-      if(row4.length===1){
       deployEmpty(row4)
-      }
     }
     
     if(row5.length!==0 && !checkEmpty(row5[row5.length-1]))
@@ -108,9 +99,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row5)
     }
     else{
-      if(row5.length===1){
       deployEmpty(row5)
-      }
     }
     
     if(row6.length!==0 && !checkEmpty(row6[row6.length-1]))
@@ -118,9 +107,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row6)
     }
     else{
-      if(row6.length===1){
       deployEmpty(row6)
-      }
     }
 
     if(row7.length!==0 && !checkEmpty(row7[row7.length-1]))
@@ -128,9 +115,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row7)
     }
     else{
-      if(row7.length===1){
-        deployEmpty(row7)
-      }
+      deployEmpty(row7)
     }
     
   }
@@ -149,7 +134,8 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
-  const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
+  //Deploy empty cards to the end of the row
+  const deployEmpty =(row) =>{
     row.unshift("empty")
   }
 
