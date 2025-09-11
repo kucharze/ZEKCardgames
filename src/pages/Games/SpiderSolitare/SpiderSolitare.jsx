@@ -136,8 +136,8 @@ function SpiderSolitare({darkMode}) {
 
   //Deploy empty card to the beginning of the row
   const deployEmpty =(row) =>{
-    console.log("Deploying empty")
-    if(row.length === 1){
+    // console.log("Deploying empty")
+    if(row.length === 0){
       row.unshift("empty")
     }
     return
