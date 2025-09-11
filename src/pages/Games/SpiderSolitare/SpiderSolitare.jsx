@@ -35,7 +35,7 @@ function SpiderSolitare({darkMode}) {
   const [decksLeft, setDecksLeft] = useState([])
 
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
-                      "8", "9", "10", "j", "q", "k", "empty"]
+                      "8", "9", "10", "j", "q", "k"]
 
   
   const setList = () =>{//Quick setup for a row to start a game
@@ -250,6 +250,10 @@ function SpiderSolitare({darkMode}) {
 
     // console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
     // console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
+
+    if(card === "empty"){
+      return true
+    }
 
     //Flip true and false positions later
     //These will stay as is right now for testing
