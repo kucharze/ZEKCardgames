@@ -64,7 +64,7 @@ function SpiderSolitare({darkMode}) {
   const makeFlips = () =>{
     if(row1.length!==0 && !checkEmpty(row1[row1.length-1]))
     {
-      row1[row1.length-1].back = false
+      flipRowCard(row1)
     }
     else{
       if(row1.length!==0){
@@ -74,7 +74,7 @@ function SpiderSolitare({darkMode}) {
     
     if(row2.length!==0 && !checkEmpty(row2[row2.length-1]))
     {
-      row2[row2.length-1].back = false
+      flipRowCard(row2)
     }
     else{
       if(row2.length!==0){
@@ -85,7 +85,7 @@ function SpiderSolitare({darkMode}) {
     
     if(row3.length!==0 && !checkEmpty(row3[row3.length-1]))
     {
-      row3[row3.length-1].back = false
+      flipRowCard(row3)
     }
     else{
       if(row3.length!==0){
@@ -95,7 +95,7 @@ function SpiderSolitare({darkMode}) {
     
     if(row4.length!==0 && !checkEmpty(row4[row4.length-1]))
     {
-      row4[row4.length-1].back = false
+      flipRowCard(row4)
     }
     else{
       if(row4.length!==0){
@@ -105,7 +105,7 @@ function SpiderSolitare({darkMode}) {
     
     if(row5.length!==0 && !checkEmpty(row5[row5.length-1]))
     {
-     row5[row5.length-1].back = false
+      flipRowCard(row5)
     }
     else{
       if(row5.length!==0){
@@ -115,7 +115,7 @@ function SpiderSolitare({darkMode}) {
     
     if(row6.length!==0 && !checkEmpty(row6[row6.length-1]))
     {
-      row6[row6.length-1].back = false
+      flipRowCard(row6)
     }
     else{
       if(row6.length!==0){
@@ -125,7 +125,7 @@ function SpiderSolitare({darkMode}) {
 
     if(row7.length!==0 && !checkEmpty(row7[row7.length-1]))
     {
-      row7[row7.length-1].back = false
+      flipRowCard(row7)
     }
     else{
       if(row7.length!==0){
@@ -150,53 +150,13 @@ function SpiderSolitare({darkMode}) {
   }
 
   const deployEmpty =(row) =>{//Deploy empty cards to the end of the row
-    if(row === row1){
-      row1.unshift("empty")
-    }
-    if(row === row2){
-      row2.unshift("empty")
-    }
-    if(row === row3){
-      row3.unshift("empty")
-    }
-    if(row === row4){
-      row4.unshift("empty")
-    }
-    if(row === row5){
-      row5.unshift("empty")
-    }
-    if(row === row6){
-      row6.unshift("empty")
-    }
-    if(row === row7){
-      row7.unshift("empty")
-    }
+    row.unshift("empty")
   }
 
   //Remove empty card from the front of the row
   const removeEmpty = (row) =>{
     //Rework to not use empty
-    if(row === row1){
-      row1.shift()
-    }
-    if(row === row2){
-      row2.shift()
-    }
-    if(row === row3){
-      row3.shift()
-    }
-    if(row === row4){
-      row4.shift()
-    }
-    if(row === row5){
-      row5.shift()
-    }
-    if(row === row6){
-      row6.shift()
-    }
-    if(row === row7){
-      row7.shift()
-    }
+    row.shift()
   }
 
   /**
