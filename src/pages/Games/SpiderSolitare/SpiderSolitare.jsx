@@ -256,10 +256,10 @@ function SpiderSolitare({darkMode}) {
   }
 
   const checkRank = (card) =>{
-    console.log("Ref taking turn")
+    console.log("Taking turn")
 
-    console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
-    console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
+    // console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
+    // console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
 
     //Flip true and false positions later
     //These will stay as is right now for testing
@@ -287,7 +287,7 @@ function SpiderSolitare({darkMode}) {
     if(movecard){//Moving a card and checking if move is valid
       let rank = checkRank(card)
 
-      console.log("Rank is", rank)
+      // console.log("Rank is", rank)
       if(rank){
         ///check if card is at the end of the row
         if(!checkEndCard(row,card)){
@@ -356,7 +356,6 @@ function SpiderSolitare({darkMode}) {
       checkForPoint(row5)
     }
     else if(endrow===row6){
-      console.log("Move to row 6")
       setRow6([...row6,...movelist])
       checkForPoint(row6)
     }
