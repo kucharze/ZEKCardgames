@@ -55,62 +55,82 @@ function SpiderSolitare({darkMode}) {
     return templist
   }
 
+  const flipRowCard = (row) =>{//Flips a card in a row to face down
+    row[row.length-1].back = false
+    //!row[row.length-1].back
+  }
+
   //Make sure the end card of each row is face up
   const makeFlips = () =>{
-    if(row1.length!==0 && checkEmpty(row1[row1.length-1]))
+    if(row1.length!==0 && !checkEmpty(row1[row1.length-1]))
     {
       row1[row1.length-1].back = false
     }
     else{
+      if(row1.length!==0){
       deployEmpty(row1)
+      }
     }
     
-    if(row2.length!==0 && checkEmpty(row2[row2.length-1]))
+    if(row2.length!==0 && !checkEmpty(row2[row2.length-1]))
     {
       row2[row2.length-1].back = false
     }
     else{
-      deployEmpty(row2)
+      if(row2.length!==0){
+        deployEmpty(row2)
+      }
+      
     }
     
-    if(row3.length!==0 && checkEmpty(row3[row3.length-1]))
+    if(row3.length!==0 && !checkEmpty(row3[row3.length-1]))
     {
       row3[row3.length-1].back = false
     }
     else{
-      deployEmpty(row3)
+      if(row3.length!==0){
+        deployEmpty(row3)
+      }
     }
     
-    if(row4.length!==0 && checkEmpty(row4[row4.length-1]))
+    if(row4.length!==0 && !checkEmpty(row4[row4.length-1]))
     {
       row4[row4.length-1].back = false
     }
     else{
+      if(row4.length!==0){
       deployEmpty(row4)
+      }
     }
     
-    if(row5.length!==0 && checkEmpty(row5[row5.length-1]))
+    if(row5.length!==0 && !checkEmpty(row5[row5.length-1]))
     {
      row5[row5.length-1].back = false
     }
     else{
+      if(row5.length!==0){
       deployEmpty(row5)
+      }
     }
     
-    if(row6.length!==0 && checkEmpty(row6[row6.length-1]))
+    if(row6.length!==0 && !checkEmpty(row6[row6.length-1]))
     {
       row6[row6.length-1].back = false
     }
     else{
+      if(row6.length!==0){
       deployEmpty(row6)
+      }
     }
 
-    if(row7.length!==0 && checkEmpty(row7[row7.length-1]))
+    if(row7.length!==0 && !checkEmpty(row7[row7.length-1]))
     {
       row7[row7.length-1].back = false
     }
     else{
-      deployEmpty(row7)
+      if(row7.length!==0){
+        deployEmpty(row7)
+      }
     }
     
   }
