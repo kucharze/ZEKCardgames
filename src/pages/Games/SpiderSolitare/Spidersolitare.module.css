@@ -68,16 +68,20 @@
 
 .moveCards img {
   height: 100px;
-  width: 80px;
+  width: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .deal {
   margin-top: 500px;
   margin-bottom: 100px;
+  margin-left: 50px;
+  width: 100px;
 }
 
 .deal img {
-  height: 100px;
+  height: 120px;
   width: 100px;
 }
 

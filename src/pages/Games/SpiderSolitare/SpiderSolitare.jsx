@@ -559,7 +559,6 @@ function SpiderSolitare({darkMode}) {
                 onClick={()=>{dealCards() }}
                 src={back}
                 />
-              
             })
           }
         </div>
