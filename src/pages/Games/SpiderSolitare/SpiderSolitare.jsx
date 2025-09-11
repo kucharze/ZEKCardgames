@@ -67,7 +67,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row1)
     }
     else{
-      if(row1.length!==0){
+      if(row1.length===1){
       deployEmpty(row1)
       }
     }
@@ -77,7 +77,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row2)
     }
     else{
-      if(row2.length!==0){
+      if(row2.length===1){
         deployEmpty(row2)
       }
       
@@ -88,7 +88,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row3)
     }
     else{
-      if(row3.length!==0){
+      if(row3.length===1){
         deployEmpty(row3)
       }
     }
@@ -98,7 +98,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row4)
     }
     else{
-      if(row4.length!==0){
+      if(row4.length===1){
       deployEmpty(row4)
       }
     }
@@ -108,7 +108,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row5)
     }
     else{
-      if(row5.length!==0){
+      if(row5.length===1){
       deployEmpty(row5)
       }
     }
@@ -118,7 +118,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row6)
     }
     else{
-      if(row6.length!==0){
+      if(row6.length===1){
       deployEmpty(row6)
       }
     }
@@ -128,7 +128,7 @@ function SpiderSolitare({darkMode}) {
       flipRowCard(row7)
     }
     else{
-      if(row7.length!==0){
+      if(row7.length===1){
         deployEmpty(row7)
       }
     }
@@ -261,6 +261,8 @@ function SpiderSolitare({darkMode}) {
     console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
     console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
 
+    //Flip true and false positions later
+    //These will stay as is right now for testing
     if(RANK_ORDER.indexOf(card.value) === RANK_ORDER.indexOf(movecard.value)-1){
       console.log("Card is lower or equal than movecard")
       return false
