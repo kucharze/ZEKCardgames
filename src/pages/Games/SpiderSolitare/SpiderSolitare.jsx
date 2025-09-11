@@ -333,7 +333,7 @@ function SpiderSolitare({darkMode}) {
     //Set up list starting at pos and move to new row
     let movelist = row.splice(pos,row.length)
     
-    console.log("Movelist",movelist)
+    // console.log("Movelist",movelist)
 
     if(endrow===row1){
       setRow1([...row1,...movelist])

@@ -6,7 +6,7 @@
 }
 
 .playmat {
-  width: 92%;
+  width: 90%;
   border: solid black;
   display: flex;
   flex-direction: row;
@@ -17,19 +17,19 @@
   padding-right: 40px;
   padding-bottom: 70px;
   margin-left: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .playmat img {
   width: 160px;
   /* position: absolute; */
-  margin-bottom: -100px;
+  margin-bottom: -120px;
 }
 .row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 45px;
+  padding-left: 40px;
   padding-bottom: 30px;
 }
 
