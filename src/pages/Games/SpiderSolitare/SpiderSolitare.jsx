@@ -134,9 +134,13 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
-  //Deploy empty cards to the end of the row
+  //Deploy empty card to the beginning of the row
   const deployEmpty =(row) =>{
-    row.unshift("empty")
+    console.log("Deploying empty")
+    if(row.length === 1){
+      row.unshift("empty")
+    }
+    return
   }
 
   //Remove empty card from the front of the row
@@ -250,11 +254,11 @@ function SpiderSolitare({darkMode}) {
     //Flip true and false positions later
     //These will stay as is right now for testing
     if(RANK_ORDER.indexOf(card.value) === RANK_ORDER.indexOf(movecard.value)-1){
-      console.log("Card is lower or equal than movecard")
+      // console.log("Card is lower or equal than movecard")
       return false
     }
     else{
-      console.log("Card is higher than movecard")
+      // console.log("Card is higher than movecard")
       return true
     }
   }
