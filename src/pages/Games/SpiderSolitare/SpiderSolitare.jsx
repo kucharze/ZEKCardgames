@@ -289,7 +289,7 @@ function SpiderSolitare({darkMode}) {
           //If so, add the empty card
           deployEmpty(moveRow)
         }
-        if(movecard.value === 'k'){
+        if(card === 'empty'){
           //Check if we moved to an empty row
           //If so remove the empty card
           removeEmpty(row)
