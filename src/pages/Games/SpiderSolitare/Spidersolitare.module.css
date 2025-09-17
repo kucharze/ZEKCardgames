@@ -114,7 +114,7 @@
   }
   .row {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .deal {
@@ -141,7 +141,7 @@
     height: 125px;
   }
   .row {
-    padding: 20px;
+    padding-left: 10px;
   }
 }
 
@@ -158,8 +158,8 @@
     height: 110px;
   }
   .row {
-    padding: 15px;
-    margin-bottom: 35px;
+    padding-left: 5px;
+    margin-bottom: 80px;
   }
 }
 
