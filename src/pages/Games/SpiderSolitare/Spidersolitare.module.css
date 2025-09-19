@@ -111,10 +111,12 @@
   .playmat img {
     width: 105px;
     height: 135px;
+    margin-bottom: -115px;
   }
   .row {
     padding: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .deal {
@@ -139,14 +141,17 @@
   .playmat img {
     width: 100px;
     height: 125px;
+    margin-bottom: -110px;
   }
   .row {
     padding-left: 10px;
+    padding-bottom: 50px;
   }
   .deal {
-    margin-top: 140px;
+    margin-top: 150px;
     margin-bottom: 80px;
     margin-left: 10px;
+    margin-right: 20px;
     width: 80px;
   }
   .moveCards img {
