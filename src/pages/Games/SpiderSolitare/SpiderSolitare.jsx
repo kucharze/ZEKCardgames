@@ -198,22 +198,25 @@ function SpiderSolitare({darkMode}) {
   }
 
   const checkForPoint = (row) =>{
+    console.log("Checking for point")
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
     let points = 0
     for(let i=0; i<row.length; i++){
       if(points===0){
+        console.log("0 PointsValue: "+row[i].value)
         if(row[i].value===pointlist[points]){
           points++
         }
       }
       else{
+        console.log("Greater than 0 PointsValue: "+row[i].value)
         if(row[i].value===pointlist[points].value){
           points++
         }
       }
     }
-
-    if(points===13){
+    console.log("Points: "+points)
+    if(points===12){
       addPoint(row)
     }
   }
