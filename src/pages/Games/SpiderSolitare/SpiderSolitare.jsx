@@ -339,31 +339,31 @@ function SpiderSolitare({darkMode}) {
 
     if(endrow===row1){
       setRow1([...row1,...movelist])
-      checkForPoint(row1)
+      checkForPoint(row1, pos)
     }
     else if(endrow===row2){
       setRow2([...row2,...movelist])
-      checkForPoint(row2)
+      checkForPoint(row2, pos)
     }
     else if(endrow===row3){
       setRow3([...row3,...movelist])
-      checkForPoint(row3)
+      checkForPoint(row3, pos)
     }
     else if(endrow===row4){
       setRow4([...row4,...movelist])
-      checkForPoint(row4)
+      checkForPoint(row4, pos)
     }
     else if(endrow===row5){
       setRow5([...row5,...movelist])
-      checkForPoint(row5)
+      checkForPoint(row5, pos)
     }
     else if(endrow===row6){
       setRow6([...row6,...movelist])
-      checkForPoint(row6)
+      checkForPoint(row6, pos)
     }
     else if(endrow===row7){
       setRow7([...row7,...movelist])
-      checkForPoint(row7)
+      checkForPoint(row7, pos)
     }
 
     setMoveCard(null)
