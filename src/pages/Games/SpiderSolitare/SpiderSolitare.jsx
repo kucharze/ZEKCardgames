@@ -26,6 +26,7 @@ function SpiderSolitare({darkMode}) {
 
   //Card to move
   const [movecard, setMoveCard] = useState(null)
+
   //The position of cards to be moved
   const [movePos, setMovePos] = useState([0,0])
   const [moveRow, setMoveRow] = useState(null)
@@ -201,7 +202,7 @@ function SpiderSolitare({darkMode}) {
     console.log("Checking for point")
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
     let points = 0
-    
+
     for(let i=0; i<row.length; i++){
       if(points===0){
         console.log("0 PointsValue: ",row[i].value, "Points: ", points)
@@ -339,31 +340,31 @@ function SpiderSolitare({darkMode}) {
 
     if(endrow===row1){
       setRow1([...row1,...movelist])
-      checkForPoint(row1, pos)
+      checkForPoint(row1, row1[row1.length-1])
     }
     else if(endrow===row2){
       setRow2([...row2,...movelist])
-      checkForPoint(row2, pos)
+      checkForPoint(row2, row2[row2.length-1])
     }
     else if(endrow===row3){
       setRow3([...row3,...movelist])
-      checkForPoint(row3, pos)
+      checkForPoint(row3, row3[row3.length-1])
     }
     else if(endrow===row4){
       setRow4([...row4,...movelist])
-      checkForPoint(row4, pos)
+      checkForPoint(row4, row4[row4.length-1])
     }
     else if(endrow===row5){
       setRow5([...row5,...movelist])
-      checkForPoint(row5, pos)
+      checkForPoint(row5, row5[row5.length-1])
     }
     else if(endrow===row6){
       setRow6([...row6,...movelist])
-      checkForPoint(row6, pos)
+      checkForPoint(row6, row6[row6.length-1])
     }
     else if(endrow===row7){
       setRow7([...row7,...movelist])
-      checkForPoint(row7, pos)
+      checkForPoint(row7, row7[row7.length-1])
     }
 
     setMoveCard(null)
