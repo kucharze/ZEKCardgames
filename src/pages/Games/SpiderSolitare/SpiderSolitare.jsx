@@ -201,6 +201,7 @@ function SpiderSolitare({darkMode}) {
     console.log("Checking for point")
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
     let points = 0
+    
     for(let i=0; i<row.length; i++){
       if(points===0){
         console.log("0 PointsValue: ",row[i].value, "Points: ", points)
@@ -210,7 +211,6 @@ function SpiderSolitare({darkMode}) {
         }
       }
       else{
-        if(row[i].value===pointlist[points].value){
         console.log("Greater than 0 PointsValue: "+row[i].value,"Points: ",points)
         if(row[i].value===pointlist[points]){
           points++
@@ -220,6 +220,7 @@ function SpiderSolitare({darkMode}) {
         }
       }
     }
+
     console.log("Points: "+points)
     if(points===12){
       addPoint(row)
