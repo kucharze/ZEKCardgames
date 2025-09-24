@@ -211,6 +211,11 @@ function SpiderSolitare({darkMode}) {
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
     let points = 0
 
+    if(row.length <13){//Not enough space to check for a point
+      console.log("Not enough space to check for a point")
+      return
+    }
+
     for(let i=0; i<row.length; i++){
       console.log("Points loop")
       if(points===0){
