@@ -406,30 +406,32 @@ function SpiderSolitare({darkMode}) {
 
   useEffect(()=>{
     checkForPoint(row1, row1[row1.length-1])
-    checkForPoint(row2, row2[row2.length-1])
-    checkForPoint(row3, row3[row3.length-1])
-    checkForPoint(row4, row4[row4.length-1])
-    checkForPoint(row5, row5[row5.length-1])
-    checkForPoint(row6, row6[row6.length-1])
-    checkForPoint(row7, row7[row7.length-1])
-  },[row1, row2, row3, row4, row5, row6, row7])
+  },[row1])
 
   useEffect(()=>{
     checkForPoint(row2, row2[row2.length-1])
-    checkForPoint(row3, row3[row3.length-1])
-    checkForPoint(row4, row4[row4.length-1])
-    checkForPoint(row5, row5[row5.length-1])
-    checkForPoint(row6, row6[row6.length-1])
-    checkForPoint(row7, row7[row7.length-1])
-  },[row2, row3, row4, row5, row6, row7])
+  },[row2])
 
   useEffect(()=>{
     checkForPoint(row3, row3[row3.length-1])
+  },[row3])
+
+  useEffect(()=>{
     checkForPoint(row4, row4[row4.length-1])
+  },[row4])
+
+  useEffect(()=>{
     checkForPoint(row5, row5[row5.length-1])
+  },[row5])
+
+  useEffect(()=>{
     checkForPoint(row6, row6[row6.length-1])
     checkForPoint(row7, row7[row7.length-1])
-  },[row3, row4, row5, row6, row7])
+  },[row6])
+
+  useEffect(()=>{
+    checkForPoint(row7, row7[row7.length-1])
+  },[row7])
 
   return (
     <div className={styles.SpiderSolitare}>
