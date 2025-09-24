@@ -216,6 +216,10 @@ function SpiderSolitare({darkMode}) {
       return
     }
 
+    //Check for a king in the row
+    let index = findIndex(row, 'k')
+    console.log("Found a king at:",index)
+
     for(let i=0; i<row.length; i++){
       console.log("Points loop")
       if(points===0){
@@ -402,6 +406,33 @@ function SpiderSolitare({darkMode}) {
       setOnline(true)
     }
   },[user])
+
+  useEffect(()=>{
+    checkForPoint(row1, row1[row1.length-1])
+    checkForPoint(row2, row2[row2.length-1])
+    checkForPoint(row3, row3[row3.length-1])
+    checkForPoint(row4, row4[row4.length-1])
+    checkForPoint(row5, row5[row5.length-1])
+    checkForPoint(row6, row6[row6.length-1])
+    checkForPoint(row7, row7[row7.length-1])
+  },[row1, row2, row3, row4, row5, row6, row7])
+
+  useEffect(()=>{
+    checkForPoint(row2, row2[row2.length-1])
+    checkForPoint(row3, row3[row3.length-1])
+    checkForPoint(row4, row4[row4.length-1])
+    checkForPoint(row5, row5[row5.length-1])
+    checkForPoint(row6, row6[row6.length-1])
+    checkForPoint(row7, row7[row7.length-1])
+  },[row2, row3, row4, row5, row6, row7])
+
+  useEffect(()=>{
+    checkForPoint(row3, row3[row3.length-1])
+    checkForPoint(row4, row4[row4.length-1])
+    checkForPoint(row5, row5[row5.length-1])
+    checkForPoint(row6, row6[row6.length-1])
+    checkForPoint(row7, row7[row7.length-1])
+  },[row3, row4, row5, row6, row7])
 
   return (
     <div className={styles.SpiderSolitare}>
