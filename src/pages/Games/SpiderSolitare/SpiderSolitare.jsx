@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useCallback} from 'react'
 import back from '../../../Images/BACKCARD.JPG'
 // import empty from '../../../Images/empty.jpg'
 import Deck from '../../../gamecomponents/Deck'
@@ -206,7 +206,7 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
-  const checkForPoint = (row, startPoint) =>{
+  const checkForPoint = useCallback((row) =>{
     console.log("Checking for point")
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
     let points = 0
@@ -248,7 +248,7 @@ function SpiderSolitare({darkMode}) {
     if(points===12){
       addPoint(row)
     }
-  }
+  },[])
 
   const addPoint = (row) =>{
     setScore(score+1)
@@ -406,32 +406,31 @@ function SpiderSolitare({darkMode}) {
 
   useEffect(()=>{
     checkForPoint(row1, row1[row1.length-1])
-  },[row1])
+  },[row1, checkForPoint])
 
   useEffect(()=>{
     checkForPoint(row2, row2[row2.length-1])
-  },[row2])
+  },[row2, checkForPoint])
 
   useEffect(()=>{
     checkForPoint(row3, row3[row3.length-1])
-  },[row3])
+  },[row3, checkForPoint])
 
   useEffect(()=>{
     checkForPoint(row4, row4[row4.length-1])
-  },[row4])
+  },[row4, checkForPoint])
 
   useEffect(()=>{
     checkForPoint(row5, row5[row5.length-1])
-  },[row5])
+  },[row5, checkForPoint])
 
   useEffect(()=>{
     checkForPoint(row6, row6[row6.length-1])
-    checkForPoint(row7, row7[row7.length-1])
-  },[row6])
+  },[row6, checkForPoint])
 
   useEffect(()=>{
     checkForPoint(row7, row7[row7.length-1])
-  },[row7])
+  },[row7, checkForPoint])
 
   return (
     <div className={styles.SpiderSolitare}>
