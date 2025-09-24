@@ -198,6 +198,14 @@ function SpiderSolitare({darkMode}) {
     
   }
 
+  const findIndex = (row, card) =>{
+    for(let i=0; i<row.length; i++){
+      if(row[i].value === card.value){
+        return i
+      }
+    }
+  }
+
   const checkForPoint = (row, startPoint) =>{
     console.log("Checking for point")
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
@@ -207,8 +215,12 @@ function SpiderSolitare({darkMode}) {
     if(startPoint == undefined){
       startPoint = 0
     }
+    else{
+      startPoint = findIndex(row, startPoint)
+    }
 
     for(let i=startPoint; i<row.length; i++){
+      console.log("Points loop")
       if(points===0){
         console.log("0 PointsValue: ",row[i].value, "Points: ", points)
         console.log("PointsValue: "+row[i].value,"Points: ",points)
