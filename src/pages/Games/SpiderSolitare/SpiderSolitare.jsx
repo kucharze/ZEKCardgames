@@ -34,6 +34,7 @@ function SpiderSolitare({darkMode}) {
   const [score, setScore] = useState(0)
 
   const [decksLeft, setDecksLeft] = useState([])
+  const [gameOver, setGameOver] = useState(true)
 
   const RANK_ORDER = ["a", "2", "3", "4", "5", "6", "7",
                       "8", "9", "10", "j", "q", "k"]
@@ -195,7 +196,7 @@ function SpiderSolitare({darkMode}) {
 
     setDecksLeft([1,2,3,4])
     setScore(0)
-    
+    setGameOver(false)
   }
 
   const findIndex = (row, card) =>{
