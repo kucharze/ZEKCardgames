@@ -254,28 +254,36 @@ function SpiderSolitare({darkMode}) {
 
   const addPoint = (row) =>{
     setScore(score+1)
+
     //remove cards from row where point was scored
-    //May have to change logic in this to match other function
+    //Adjust logic here to use prev variable
     if(row===row1){
-      row1.splice((row1.length-1)-12)
+      setRow1(row1.splice((row1.length-1)-12))
+      // row1.splice((row1.length-1)-12)
     }
     else if(row===row2){
-      row2.splice((row2.length-1)-12)
+      setRow2(row2.splice((row2.length-1)-12))
+      // row2.splice((row2.length-1)-12)
     }
     else if(row===row3){
-      row3.splice((row3.length-1)-12)
+      setRow3(row3.splice((row3.length-1)-12))
+      // row3.splice((row3.length-1)-12)
     }
     else if(row===row4){
-      row4.splice((row4.length-1)-12)
+      setRow4(row4.splice((row4.length-1)-12))
+      // row4.splice((row4.length-1)-12)
     }
     else if(row===row5){
-      row5.splice((row5.length-1)-12)
+      setRow5(row5.splice((row5.length-1)-12))
+      // row5.splice((row5.length-1)-12)
     }
     else if(row===row6){
-      row6.splice((row6.length-1)-12)
+      setRow6(row6.splice((row6.length-1)-12))
+      // row6.splice((row6.length-1)-12)
     }
     else if(row===row7){
-      row7.splice((row7.length-1)-12)
+      setRow7(row7.splice((row7.length-1)-12))
+      // row7.splice((row7.length-1)-12)
     }
   }
 
