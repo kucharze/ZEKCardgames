@@ -263,7 +263,7 @@ function SpiderSolitare({darkMode}) {
       setRow1((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row1)
+          prev.unshift("empty")
         }
         return prev
       })
@@ -272,61 +272,55 @@ function SpiderSolitare({darkMode}) {
       setRow2((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row2)
+          prev.unshift("empty")
         }
         return prev
       })
-      // row2.splice((row2.length-1)-12)
     }
     else if(row===row3){
       setRow3((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row3)
+          prev.unshift("empty")
         }
         return prev
       })
-      // row3.splice((row3.length-1)-12)
     }
     else if(row===row4){
       setRow4((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row4)
+          prev.unshift("empty")
         }
         return prev
       })
-      // row4.splice((row4.length-1)-12)
     }
     else if(row===row5){
       setRow5((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row5)
+          prev.unshift("empty")
         }
         return prev
       })
-      // row5.splice((row5.length-1)-12)
     }
     else if(row===row6){
       setRow6((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row6)
+          prev.unshift("empty")
         }
         return prev
       })
-      // row6.splice((row6.length-1)-12)
     }
     else if(row===row7){
       setRow7((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
-          deployEmpty(row7)
+          prev.unshift("empty")
         }
         return prev
       })
-      // row7.splice((row7.length-1)-12)
     }
   }
 
