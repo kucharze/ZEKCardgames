@@ -441,8 +441,13 @@ function SpiderSolitare({darkMode}) {
   }
 
   useEffect(()=>{
-    deck.shuffle()
-    deck.shuffle()
+    if(deck.list.length>0){
+      console.log(deck.list)
+      deck.shuffle()
+      deck.shuffle()
+      newGame()
+    }
+    
   },[deck])
 
   useEffect(()=>{
@@ -498,7 +503,7 @@ function SpiderSolitare({darkMode}) {
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
       <div>
-        <button id={darkMode} onClick={newGame}>New game</button>
+        <button id={darkMode} onClick={()=>{setDeck(new Deck())}}>New game</button>
         <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
         <button id={darkMode} disabled={!online} onClick={()=>{updateScore(score)}}>Upload Score</button>
       </div>
