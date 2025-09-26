@@ -246,7 +246,8 @@ function SpiderSolitare({darkMode}) {
     }
 
     console.log("Points: "+points)
-    if(points===12){
+    if(points===13){
+      //adding a point
       addPoint(row)
     }
   },[])
