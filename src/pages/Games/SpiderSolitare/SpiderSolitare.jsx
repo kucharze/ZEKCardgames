@@ -248,6 +248,7 @@ function SpiderSolitare({darkMode}) {
     console.log("Points: "+points)
     if(points===13){
       //adding a point
+      console.log("Adding a point")
       addPoint(row)
     }
   },[])
@@ -258,31 +259,48 @@ function SpiderSolitare({darkMode}) {
     //remove cards from row where point was scored
     //Adjust logic here to use prev variable
     if(row===row1){
-      setRow1(row1.splice((row1.length-1)-12))
-      // row1.splice((row1.length-1)-12)
+      setRow1((prev)=>{
+        prev = prev.splice((prev.length-1)-12)
+        if(prev.length===0){
+          deployEmpty(row1)
+        }
+        return prev
+      })
     }
     else if(row===row2){
-      setRow2(row2.splice((row2.length-1)-12))
+      setRow2((prev)=>{
+        return row2.splice((row2.length-1)-12)
+      })
       // row2.splice((row2.length-1)-12)
     }
     else if(row===row3){
-      setRow3(row3.splice((row3.length-1)-12))
+      setRow3((prev)=>{
+        return row3.splice((row3.length-1)-12)
+      })
       // row3.splice((row3.length-1)-12)
     }
     else if(row===row4){
-      setRow4(row4.splice((row4.length-1)-12))
+      setRow4((prev)=>{
+        return row4.splice((row4.length-1)-12)
+      })
       // row4.splice((row4.length-1)-12)
     }
     else if(row===row5){
-      setRow5(row5.splice((row5.length-1)-12))
+      setRow5((prev)=>{
+        return row5.splice((row5.length-1)-12)
+      })
       // row5.splice((row5.length-1)-12)
     }
     else if(row===row6){
-      setRow6(row6.splice((row6.length-1)-12))
+      setRow6((prev)=>{
+        return row6.splice((row6.length-1)-12)
+      })
       // row6.splice((row6.length-1)-12)
     }
     else if(row===row7){
-      setRow7(row7.splice((row7.length-1)-12))
+      setRow7((prev)=>{
+        return row7.splice((row7.length-1)-12)
+      })
       // row7.splice((row7.length-1)-12)
     }
   }
