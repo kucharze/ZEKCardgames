@@ -187,13 +187,6 @@ function SpiderSolitare({darkMode}) {
     setRow6(setList())
     setRow7(setList())
 
-    setDeck(()=>{
-      let deck = new Deck()
-      deck.shuffle()
-      deck.shuffle()
-      return deck
-    })
-
     setDecksLeft([1,2,3,4])
     setScore(0)
     setGameOver(false)
@@ -503,7 +496,14 @@ function SpiderSolitare({darkMode}) {
     <div className={styles.SpiderSolitare}>
       <h1>Spider Solitare</h1>
       <div>
-        <button id={darkMode} onClick={()=>{setDeck(new Deck())}}>New game</button>
+        <button id={darkMode} onClick={()=>{
+              setDeck(()=>{
+              let deck = new Deck()
+              deck.shuffle()
+              deck.shuffle()
+              return deck
+            })
+        }}>New game</button>
         <button id={darkMode} onClick={()=>{setRules(!rules)}}>Show rules</button>
         <button id={darkMode} disabled={!online} onClick={()=>{updateScore(score)}}>Upload Score</button>
       </div>
