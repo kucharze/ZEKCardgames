@@ -318,8 +318,6 @@ function SpiderSolitare({darkMode}) {
   }
 
   const checkRank = (card) =>{
-    console.log("Taking turn")
-
     // console.log("Card value:", card.value, RANK_ORDER.indexOf(card.value))
     // console.log("Movecard value",movecard.value, RANK_ORDER.indexOf(movecard.value))
 
@@ -349,6 +347,7 @@ function SpiderSolitare({darkMode}) {
 
   //Function for player taking there turn
   const takeTurn = (card, row) =>{
+    console.log("Taking turn")
     if(movecard){//Moving a card and checking if move is valid
       let rank = checkRank(card)
 
@@ -435,7 +434,6 @@ function SpiderSolitare({darkMode}) {
 
   useEffect(()=>{
     setTimeout(()=>{
-      
       if(deck.list.length > (0)){
         console.log("Deck card list",deck.list)
         newGame()
