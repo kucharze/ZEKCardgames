@@ -250,9 +250,8 @@ function SpiderSolitare({darkMode}) {
     setScore(score+1)
 
     //remove cards from row where point was scored
-    //Adjust logic here to use prev variable
-    //May have to copy deployEmpty logic here
     if(row===row1){
+      console.log("Row 1")
       setRow1((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
@@ -262,6 +261,7 @@ function SpiderSolitare({darkMode}) {
       })
     }
     else if(row===row2){
+      console.log("Row 2")
       setRow2((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
@@ -271,6 +271,7 @@ function SpiderSolitare({darkMode}) {
       })
     }
     else if(row===row3){
+      console.log("Row 3")
       setRow3((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
@@ -280,6 +281,7 @@ function SpiderSolitare({darkMode}) {
       })
     }
     else if(row===row4){
+      console.log("Row 4")
       setRow4((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
@@ -289,6 +291,7 @@ function SpiderSolitare({darkMode}) {
       })
     }
     else if(row===row5){
+      console.log("Row 5")
       setRow5((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
@@ -298,6 +301,7 @@ function SpiderSolitare({darkMode}) {
       })
     }
     else if(row===row6){
+      console.log("Row 6")
       setRow6((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
@@ -307,6 +311,7 @@ function SpiderSolitare({darkMode}) {
       })
     }
     else if(row===row7){
+      console.log("Row 7")
       setRow7((prev)=>{
         prev = prev.splice((prev.length-1)-12)
         if(prev.length===0){
