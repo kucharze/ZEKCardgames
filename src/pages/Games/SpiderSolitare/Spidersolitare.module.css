@@ -162,7 +162,7 @@
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1250px) {
   .playmat {
     width: 90%;
     flex-wrap: wrap;
@@ -177,7 +177,7 @@
   }
   .row {
     padding-left: 5px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
   .deal {
     margin-top: 200px;
