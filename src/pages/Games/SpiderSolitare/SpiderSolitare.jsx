@@ -4,6 +4,7 @@ import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 import { useAuth } from "../../../contexts/app_context";
+import Card from '../../../gamecomponents/Card';
 // import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function SpiderSolitare({darkMode}) {
