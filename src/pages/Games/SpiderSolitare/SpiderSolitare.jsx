@@ -690,6 +690,7 @@ function SpiderSolitare({darkMode}) {
           }
         </div>
         <div className={styles.moveCards}>
+        <button>Cancel Move</button>
             <h3>Card to be moved:</h3>
             {
               movecard && 
