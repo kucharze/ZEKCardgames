@@ -12,7 +12,7 @@ function SpiderSolitare({darkMode}) {
   const {online, setOnline} = useState(false)
 
   //Deck
-  const [deck, setDeck] = useState(new Deck())
+  const [deck, setDeck] = useState(null)
 
   //Each row
   const [row1, setRow1] = useState([])
@@ -439,7 +439,7 @@ function SpiderSolitare({darkMode}) {
 
   useEffect(()=>{
     setTimeout(()=>{
-      if(deck.list.length > (0)){
+      if(deck && ((deck.list.length) > (0))){
         console.log("Deck card list",deck.list)
         newGame()
       }
