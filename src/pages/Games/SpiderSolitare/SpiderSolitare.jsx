@@ -241,7 +241,10 @@ function SpiderSolitare({darkMode}) {
     if(points===13){
       //adding a point
       console.log("Adding a point")
-      addPoint(row)
+      setTimeout(()=>{
+        addPoint(row)
+      },[1000])
+      
     }
   }
 
