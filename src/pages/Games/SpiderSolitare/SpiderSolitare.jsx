@@ -200,7 +200,7 @@ function SpiderSolitare({darkMode}) {
     }
   }
 
-  const checkForPoint = useCallback((row) =>{
+  const checkForPoint = useCallback((row, startPoint) =>{
     console.log("Checking for point")
     let pointlist = ['k','q','j','10','9','8','7','6','5','4','3','2','a']
     let points = 0
