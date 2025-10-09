@@ -4,7 +4,7 @@ import back from '../../../Images/BACKCARD.JPG'
 import Deck from '../../../gamecomponents/Deck'
 import styles from './Spidersolitare.module.css'
 import { useAuth } from "../../../contexts/app_context";
-import Card from '../../../gamecomponents/Card';
+// import Card from '../../../gamecomponents/Card';
 // import WinnerBoard from '../../../components/Winnerboard/WinnerBoard'
 
 function SpiderSolitare({darkMode}) {
@@ -333,6 +333,16 @@ function SpiderSolitare({darkMode}) {
     if(card === "empty"){
       return true
     }
+
+    //Use this logic for testing
+    // if(RANK_ORDER.indexOf(card.value) === (RANK_ORDER.indexOf(movecard.value)-1)){
+    //   // console.log("Card is lower or equal than movecard")
+    //   return false
+    // }
+    // else{
+    //   // console.log("Card is higher than movecard")
+    //   return true
+    // }
 
     //Theses are now correct
     if(RANK_ORDER.indexOf(card.value) === (RANK_ORDER.indexOf(movecard.value)+1)){
