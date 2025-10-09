@@ -218,7 +218,6 @@ function SpiderSolitare({darkMode}) {
       console.log("Points loop")
       if(points===0){
         console.log("0 PointsValue: ",row[i].value, "Points: ", points)
-        console.log("PointsValue: "+row[i].value,"Points: ",points)
         if(row[i].value===pointlist[points]){
           points++
         }
@@ -247,6 +246,7 @@ function SpiderSolitare({darkMode}) {
   }
 
   const addPoint = (row) =>{
+    console.log("Add point function",row)
     setScore(score+1)
 
     //remove cards from row where point was scored
