@@ -451,6 +451,12 @@ function SpiderSolitare({darkMode}) {
     setRow(0)
   }
 
+  //Clear move parameters to reset move
+  const cancelMove = () =>{
+    setMoveCard(null)
+    setRow(0)
+  }
+
   useEffect(()=>{
     setTimeout(()=>{
       if(deck && ((deck.list.length) > (0))){
@@ -690,7 +696,7 @@ function SpiderSolitare({darkMode}) {
           }
         </div>
         <div className={styles.moveCards}>
-        <button>Cancel Move</button>
+        <button onClick={cancelMove}>Cancel Move</button>
             <h3>Card to be moved:</h3>
             {
               movecard && 
