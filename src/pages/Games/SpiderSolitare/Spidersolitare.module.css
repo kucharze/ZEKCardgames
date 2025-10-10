@@ -179,8 +179,13 @@
     padding-left: 5px;
     margin-bottom: 100px;
   }
+  .moveCards {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+  }
   .deal {
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 500px;
     width: 100px;
