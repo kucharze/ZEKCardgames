@@ -43,12 +43,11 @@ function Accounts() {
         setUser(res.data.userName)
         setSignUpError('')
     } catch (error) {
+      console.log(error)
       if(error.message){
-        console.log(error)
         setSignUpError(error.message)
       }
       else{
-        console.log(error)
         setSignUpError(error.response.data)
       }
       
@@ -78,12 +77,11 @@ function Accounts() {
         setLoginError('')
     } catch (error) {
       console.log(error)
+      console.log(error)
       if(error.message){
-        console.log(error)
         setLoginError(error.message)
       }
       else{
-        console.log(error)
         setLoginError(error.response.data)
       }
       //Consider this option here
