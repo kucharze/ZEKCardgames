@@ -1,5 +1,5 @@
 .War {
-  font-size: 20px;
+  font-size: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,32 +21,35 @@
   color: gold;
   width: 100%;
 }
+
 .gamemat {
   display: flex;
   border: solid black;
   background-color: green;
   color: yellow;
-  margin: 20px;
+  margin: 25px;
 }
+
 .mat {
   display: flex;
   border: solid black;
   background-color: blue;
   color: yellow;
-  margin: 20px;
+  margin: 25px;
 }
+
 .Comwarmat {
-  margin: 20px;
+  margin: 25px;
 }
 .ComPlayMat {
-  margin: 20px;
+  margin: 25px;
 }
 
 .Playwarmat {
-  margin: 20px;
+  margin: 25px;
 }
 .PlayPlayMat {
-  margin: 20px;
+  margin: 25px;
 }
 
 @media (max-width: 1600px) {
