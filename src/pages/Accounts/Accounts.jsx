@@ -44,11 +44,11 @@ function Accounts() {
         setSignUpError('')
     } catch (error) {
       console.log(error)
-      if(error.message){
-        setSignUpError(error.message)
+      if(error.response.data){
+        setLoginError(error.response.data)
       }
       else{
-        setSignUpError(error.response.data)
+        setLoginError(error.message)
       }
       
       //Consider this option here
@@ -77,11 +77,11 @@ function Accounts() {
         setLoginError('')
     } catch (error) {
       console.log(error)
-      if(error.message){
-        setLoginError(error.message)
+      if(error.response.data){
+        setLoginError(error.response.data)
       }
       else{
-        setLoginError(error.response.data)
+        setLoginError(error.message)
       }
       //Consider this option here
       //alert("Error: Network error or leaderboard option not available")
