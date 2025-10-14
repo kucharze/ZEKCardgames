@@ -17,7 +17,7 @@
   padding-right: 40px;
   padding-bottom: 70px;
   margin-left: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .playmat img {
@@ -74,15 +74,15 @@
 }
 
 .deal {
-  margin-top: 500px;
-  margin-bottom: 100px;
-  margin-left: 50px;
+  margin-top: 300px;
+  margin-bottom: 150px;
+  margin-left: 80px;
   width: 100px;
 }
 
 .deal img {
-  height: 150px;
-  width: 120px;
+  height: 180px;
+  width: 140px;
 }
 
 @media only screen and (max-width: 2000px) {
