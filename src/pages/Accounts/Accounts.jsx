@@ -77,7 +77,6 @@ function Accounts() {
         setLoginError('')
     } catch (error) {
       console.log(error)
-      console.log(error)
       if(error.message){
         setLoginError(error.message)
       }
