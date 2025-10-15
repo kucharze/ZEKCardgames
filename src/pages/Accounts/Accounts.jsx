@@ -45,10 +45,10 @@ function Accounts() {
     } catch (error) {
       console.log(error)
       if(error.response.data){
-        setLoginError(error.response.data)
+        setsignUpError(error.response.data)
       }
       else{
-        setLoginError(error.message)
+        setsignUpError(error.message)
       }
       
       //Consider this option here
