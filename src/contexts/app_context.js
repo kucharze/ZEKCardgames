@@ -58,27 +58,6 @@ export const AppContextProvider = ({ children }) => {
     }
   };
 
-  // const eightMoves = (moves) => {
-  //   try {
-  //     let res = axios.post(
-  //       "http://localhost:3001/leaderboards/CrazyEightsMoves",
-  //       {
-  //         username: user,
-  //         score: moves,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     console.log(res);
-  //     alert("Leaderboard upload successful")
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   return (
     <AppContext.Provider
       value={{
