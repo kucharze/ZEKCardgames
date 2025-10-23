@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import styles from './Accounts.module.css'
 import axios from 'axios'
 import { useAuth } from "../../contexts/app_context";
+import { clear } from '@testing-library/user-event/dist/clear';
 
 function Accounts() {
   const { user, setUser } = useAuth();
@@ -51,7 +52,7 @@ function Accounts() {
       else{
         setSignUpError(error.message)
       }
-      
+      clearError(5000)
       //Consider this option here
       //alert("Error: Network error")
     }
@@ -85,6 +86,7 @@ function Accounts() {
       else{
         setLoginError(error.message)
       }
+      clearError(5000)
       //Consider this option here
       //alert("Error: Network error")
     }
