@@ -19,6 +19,7 @@ function Accounts() {
 
   const createAccount = async (e) => {
     e.preventDefault()
+    clearError()
     if(password !== confirm){
       alert("Passwords do not match")
     }
@@ -58,6 +59,7 @@ function Accounts() {
 
   const login = async (e) => {
     e.preventDefault()
+    clearError()
     try {
       let res = await axios.post('http://localhost:3001/users/login',
         {
@@ -86,6 +88,11 @@ function Accounts() {
       //Consider this option here
       //alert("Error: Network error or leaderboard option not available")
     }
+  }
+
+  const clearError = () => {
+    setSignUpError("")
+    setLoginError("")
   }
 
   return (
