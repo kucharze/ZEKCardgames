@@ -90,9 +90,12 @@ function Accounts() {
     }
   }
 
-  const clearError = () => {
-    setSignUpError("")
-    setLoginError("")
+  const clearError = (timeout = 0) => {
+    setTimeout(() => {
+      setSignUpError("")
+      setLoginError("")
+    }, timeout);
+    
   }
 
   return (
