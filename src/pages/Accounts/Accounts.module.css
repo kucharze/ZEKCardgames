@@ -5,8 +5,9 @@
 input {
   font-size: 28px;
   margin: 25px;
-  width: 400px;
-  height: 75px;
+  padding: 5px;
+  width: 370px;
+  height: 70px;
   background-color: rgb(116, 183, 116);
   border: solid black;
   text-align: center;
