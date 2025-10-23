@@ -53,7 +53,7 @@ function Accounts() {
       }
       
       //Consider this option here
-      //alert("Error: Network error or leaderboard option not available")
+      //alert("Error: Network error")
     }
   }
 
@@ -86,7 +86,7 @@ function Accounts() {
         setLoginError(error.message)
       }
       //Consider this option here
-      //alert("Error: Network error or leaderboard option not available")
+      //alert("Error: Network error")
     }
   }
 
