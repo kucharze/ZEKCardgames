@@ -17,9 +17,20 @@ const useCards = () => {
     return stillGiving;
   };
 
-  const testComHand = (card) =>{
+  const testComHand = (card, hand) =>{
     //Test the computer's hand for the card that they are playing for
-
+    let tempCardList = []
+    
+    while(i<hand.length){
+      // console.log(tempHand[i])
+      if(hand[i].value===card.value){
+        tempCardList = [...tempCardList,hand.splice(i,1)];
+      }
+      else{
+        i++
+      }
+      
+    }
   };
   return { testPlayGiving,testComHand };
 };
