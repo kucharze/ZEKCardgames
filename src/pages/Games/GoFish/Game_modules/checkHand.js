@@ -22,7 +22,6 @@ const useCards = () => {
     let tempCardList = []
     
     while(i<hand.length){
-      // console.log(tempHand[i])
       if(hand[i].value===card.value){
         tempCardList = [...tempCardList,hand.splice(i,1)];
       }
