@@ -111,9 +111,7 @@ function GoFish({darkmode}) {
       }
 
       //Check if we can end the game
-      if(deck.list.length===0 
-        && playHand.length === 0 
-        && comHand.length === 0){
+      if(deck.list.length===0){
         if(checkEndConditions(playHand,comHand)){
           endGame()
         }
