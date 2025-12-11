@@ -29,7 +29,7 @@ function GoFish({darkmode}) {
   const [winner, setWinner] = useState(false)
 
   //hooks
-  const {testPlayGiving} = useCards()
+  const {testPlayGiving,testComHand} = useCards()
   const {checkEndConditions,findWinner} = endGamelogic
   
   const uploadScore = () =>{
