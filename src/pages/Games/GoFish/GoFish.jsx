@@ -98,6 +98,8 @@ function GoFish({darkmode}) {
       
     }
     // console.log("Temocardlist:",tempCardList)
+
+    //Computer must Go Fish
     if(tempCardList.length===0){
       alert("Go Fish!")
 
@@ -108,6 +110,7 @@ function GoFish({darkmode}) {
         console.log("No cards left in deck")
       }
 
+      //Check if we can end the game
       if(deck.list.length===0 
         && playHand.length === 0 
         && comHand.length === 0){
