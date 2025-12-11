@@ -8,7 +8,6 @@ const useCards = () => {
 
     while (i < tempHand.length) {
       //Check if the card the computer is asking for is still in the player's hand
-      // console.log(tempHand[i])
       if (tempHand[i].value === card.value) {
         stillGiving = true;
         break;
@@ -17,7 +16,12 @@ const useCards = () => {
     }
     return stillGiving;
   };
-  return { testPlayGiving };
+
+  const testComHand = (card) =>{
+    //Test the computer's hand for the card that they are playing for
+
+  };
+  return { testPlayGiving,testComHand };
 };
 
 export default useCards;
