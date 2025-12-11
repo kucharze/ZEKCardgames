@@ -53,8 +53,6 @@ function Accounts() {
         setSignUpError(error.code)
       }
       clearError(5000)
-      //Consider this option here
-      //alert("Error: Network error")
     }
   }
 
@@ -87,8 +85,6 @@ function Accounts() {
         setLoginError(error.code)
       }
       clearError(5000)
-      //Consider this option here
-      //alert("Error: Network error")
     }
   }
 
