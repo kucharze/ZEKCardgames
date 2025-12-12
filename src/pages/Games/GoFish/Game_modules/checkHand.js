@@ -31,7 +31,7 @@ const useCards = () => {
       
     }
   };
-  return { testPlayGiving,testComHand };
+  return { testPlayGiving,testComGiving };
 };
 
 export default useCards;
