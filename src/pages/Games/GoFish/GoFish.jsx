@@ -87,6 +87,8 @@ function GoFish({darkmode}) {
 
     // testPlayGiving(card,comHand)
 
+    //testComGiving(card,tempHand)
+
     while(i<tempHand.length){
       // console.log(tempHand[i])
       if(tempHand[i].value===card.value){
@@ -97,6 +99,7 @@ function GoFish({darkmode}) {
       }
       
     }
+
     // console.log("Temocardlist:",tempCardList)
 
     //Computer must Go Fish
