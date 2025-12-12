@@ -17,7 +17,7 @@ const useCards = () => {
     return stillGiving;
   };
 
-  const testComHand = (card, hand) =>{
+  const testComGiving = (card, hand) =>{
     //Test the computer's hand for the card that they are playing for
     let tempCardList = []
     
