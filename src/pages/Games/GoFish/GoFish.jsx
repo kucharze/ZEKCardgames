@@ -87,20 +87,9 @@ function GoFish({darkmode}) {
 
     // testPlayGiving(card,comHand)
 
-    //testComGiving(card,tempHand)
+    testComGiving(card,tempHand)
 
-    while(i<tempHand.length){
-      // console.log(tempHand[i])
-      if(tempHand[i].value===card.value){
-        tempCardList = [...tempCardList,tempHand.splice(i,1)];
-      }
-      else{
-        i++
-      }
-      
-    }
-
-    // console.log("Temocardlist:",tempCardList)
+    console.log("Tempcardlist:",tempCardList)
 
     //Computer must Go Fish
     if(tempCardList.length===0){

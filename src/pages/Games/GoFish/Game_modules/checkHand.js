@@ -30,6 +30,8 @@ const useCards = () => {
       }
       
     }
+
+    return tempCardList;
   };
   return { testPlayGiving,testComGiving };
 };
