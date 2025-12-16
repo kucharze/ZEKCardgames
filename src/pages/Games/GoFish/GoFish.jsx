@@ -87,7 +87,7 @@ function GoFish({darkmode}) {
 
     // testPlayGiving(card,comHand)
 
-    testComGiving(card,tempHand)
+    tempCardList = testComGiving(card,tempHand)
 
     console.log("Tempcardlist:",tempCardList)
 
