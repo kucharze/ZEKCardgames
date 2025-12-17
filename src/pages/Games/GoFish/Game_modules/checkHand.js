@@ -23,9 +23,11 @@ const useCards = () => {
     
     while(i<hand.length){
       if(hand[i].value===card.value){
+        //We found a card, add to list
         tempCardList = [...tempCardList,hand.splice(i,1)];
       }
       else{
+        //No value found at given position. Increment i
         i++
       }
       
