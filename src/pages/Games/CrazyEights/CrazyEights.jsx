@@ -25,14 +25,21 @@ function CrazyEights({darkMode}) {
   const [rules, setRules] = useState(false)
   const [numMoves, setNumMoves] = useState(0)
 
-  const endGame = () =>{
-    setGameOver(true)
-    setYouWin(true)
+  const endGame = (playerWin) =>{
+    if(playerWin){
+      setGameOver(true)
+      setYouWin(true)
 
-    if(user){
-      uploadToLeaderboards("Crazy Eights Moves", numMoves)
-      setOnline(true)
+      if(user){
+        uploadToLeaderboards("Crazy Eights Moves", numMoves)
+        setOnline(true)
+      }
     }
+    else{
+      setGameOver(true)
+      setYouWin(false)
+    }
+    
   }
 
   const cardPicked = () =>{
@@ -89,7 +96,7 @@ function CrazyEights({darkMode}) {
         setComTakeTurn(true)
         setNumMoves((prev)=>prev+1)
         if(newHand.length===0){
-          endGame()
+          endGame(true)
         }
       }
     }
@@ -130,7 +137,7 @@ function CrazyEights({darkMode}) {
       setValue(foundValue)
       setComTakeTurn(false)
       if(newHand.length===0){
-        endGame()
+        endGame(false)
       }
     }
     else{
