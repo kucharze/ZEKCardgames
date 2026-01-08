@@ -30,11 +30,10 @@ h1#darkMode {
 }
 
 h1 {
-  /* background-color: green; */
   background-color: green;
   color: gold;
-  width: 100%;
-  font-size: 40px;
+  width: 90%;
+  font-size: 35px;
   padding: 10px;
 }
 
@@ -157,9 +156,9 @@ button {
   color: var(--bg);
   font-weight: 600;
   color: yellow;
-  font-size: 25px;
+  font-size: 30px;
   height: 80px;
-  width: 450px;
+  width: 350px;
   /*  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
   background-image: linear-gradient(
     315deg,
