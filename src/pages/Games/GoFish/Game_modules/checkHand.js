@@ -21,6 +21,7 @@ const useCards = () => {
     //Test the computer's hand for the card that they are playing for
     let tempCardList = []
     
+    let i=0
     while(i<hand.length){
       if(hand[i].value===card.value){
         //We found a card, add to list
