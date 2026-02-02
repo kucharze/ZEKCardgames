@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import styles from './Accounts.module.css'
 import axios from 'axios'
 import { useAuth } from "../../contexts/app_context";
-import { clear } from '@testing-library/user-event/dist/clear';
+// import { clear } from '@testing-library/user-event/dist/clear';
 
 function Accounts() {
   const { user, setUser } = useAuth();
