@@ -1,0 +1,48 @@
+.GoFish {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rules {
+  background-color: gray;
+  border: solid green;
+  width: 850px;
+  color: white;
+  padding: 10px;
+}
+
+.rules li {
+  margin: 15px;
+}
+
+.card {
+  height: 120px;
+}
+button {
+  width: 400px;
+  height: 80px;
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .GoFish {
+    font-size: 20px;
+  }
+
+  .rules {
+    width: 350px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .rules li {
+    margin: 12px;
+  }
+
+  .card {
+    height: 80px;
+    margin: 5px;
+  }
+}
