@@ -14,7 +14,7 @@ function CrazyEights({darkMode}) {
   const [comHand, setComHand] = useState([])
   const [pile,setPile] = useState(null)
   const [tempPile, setTempPile] = useState(null)
-  const [comTakeTurn, setComTakeTurn] = useState(false)
+
   const [deck, setDeck] = useState(new Deck())
   const [suit, setSuit] = useState("No current suit")
   const [value, setValue] = useState('No current value')
@@ -70,8 +70,7 @@ function CrazyEights({darkMode}) {
     setSuit(suit)
     setPickSuit(false)
     setPile(tempPile)
-    setComTakeTurn(true)
-    // comTurn()
+    // setComTakeTurn(true)
   }
 
   const playCard = (card,i) =>{
@@ -93,7 +92,8 @@ function CrazyEights({darkMode}) {
         setSuit(card.suit)
         setValue(card.value)
         setPile(card)
-        setComTakeTurn(true)
+
+        // setComTakeTurn(true)
         setNumMoves((prev)=>prev+1)
         if(newHand.length===0){
           endGame(true)
@@ -104,46 +104,6 @@ function CrazyEights({darkMode}) {
       alert("That card is not valid")
     }
    
-  }
-
-  //The computer turn
-  const comTurn = () =>{
-    let newHand = comHand;
-    let found = false;
-    let foundPos = -1;
-    let foundSuit = null;
-    let foundValue = null;
-
-    console.log(newHand);
-
-    for(let i=0; i<newHand.length; i++){
-      if(newHand[i].suit === suit || newHand[i].value === value){
-        found = true;
-        foundPos=i;
-        // console.log("Found something to play",newHand[i].suit, newHand[i].value)
-        foundSuit=newHand[i].suit
-        foundValue=newHand[i].value
-      }
-    }
-
-    if(found){
-      // console.log("Found a card to play for Com")
-      // console.log(comHand[foundPos])
-      let playcard = newHand.splice(foundPos,1);
-      console.log("Com suit: ",playcard,playcard.suit)
-      setComHand(newHand)
-      setPile(playcard)
-      setSuit(foundSuit)
-      setValue(foundValue)
-      setComTakeTurn(false)
-      if(newHand.length===0){
-        endGame(false)
-      }
-    }
-    else{
-      // console.log("No card found")
-      setComHand([...comHand, deck.dealACard()])
-    }
   }
 
   const newGame = () =>{
@@ -165,6 +125,7 @@ function CrazyEights({darkMode}) {
     setSuit(pileCard.suit)
     setValue(pileCard.value)
     setPile(pileCard)
+
     setGameOver(false)
     setYouWin(false)
     setNumMoves(0)
@@ -198,12 +159,12 @@ function CrazyEights({darkMode}) {
      }
   },[suit])
 
-  useEffect(()=>{
-    if(comTakeTurn){
-      comTurn()
-    }
+  // useEffect(()=>{
+  //   if(comTakeTurn){
+  //     comTurn()
+  //   }
     
-  },[pile, comTakeTurn])
+  // },[pile, comTakeTurn])
 
   return (
     <div className={styles.CrazyEights}>
