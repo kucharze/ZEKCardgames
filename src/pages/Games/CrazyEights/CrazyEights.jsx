@@ -275,6 +275,7 @@ function CrazyEights({darkMode}) {
                 return <p>No value here</p>
               })
             }</div>
+            <button className={styles.online}>Online mode(not yet implemented)</button>
             </div>
           )
         }
