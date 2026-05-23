@@ -194,6 +194,7 @@ function GoFish({darkmode}) {
       return
     }
 
+    //Check if we can draw from the deck
     if(deck.list.length>0){
       setComHand([...comHand,deck.dealACard()])
     }
@@ -201,6 +202,7 @@ function GoFish({darkmode}) {
       console.log("No cards left in deck")
     }
 
+    //Check if we need to end the game and check scores
     if(deck.list.length===0){
       if(checkEndConditions(playHand,comHand)){
         endGame()
