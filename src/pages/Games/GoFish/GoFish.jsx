@@ -127,6 +127,25 @@ function GoFish({darkmode}) {
     }
   }
 
+  //Check if we have four of a card to score a point
+  const canScore = (card,hand) =>{
+    let count = 0;
+    let positions = [];
+    for(let i=0; i<hand.length; i++){
+      if(hand[i].value===card.value){
+        positions.push(i)
+        count++
+      }
+    }
+
+    if(count === 4){
+      return positions;
+    }
+    else{
+      return null;
+    }
+  }
+
   //Check conditions for Computer scoring a point
   const checkForComPoints = (card) =>{
     let count = 0
