@@ -152,21 +152,25 @@ function GoFish({darkmode}) {
   }
 
   //Check conditions for player scoring a point
+  //Must be four of a given card
   const checkForPlayPoints = (card) =>{
     let count = 0
     let positions = []
     console.log("Checking for play points")
 
+    //Note each location found for the card
     for(let i=0; i<playHand.length; i++){
       if(playHand[i].value===card.value){
         positions.push(i)
         count++
       }
     }
+    //We found 4 of a given card, remove the cards and scrore a point
     if(count===4){
       console.log("Found 4 of a kind")
       for(let i=0; i<positions.length; i++){
         playHand.splice(positions[i],1)
+
         //Subtract one from other positions in order to prevent errors
         for(let j=i+1; j<positions.length; j++){
           positions[j]--
@@ -181,6 +185,7 @@ function GoFish({darkmode}) {
     setDisabled(false)
     setAsking(true)
     
+    //Randomly pick a card from the computer's hand
     setAskCard(Math.floor((Math.random() * comHand.length) + 1))
   }
 
