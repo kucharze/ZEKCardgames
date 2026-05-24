@@ -147,6 +147,7 @@ function GoFish({darkmode}) {
   }
 
   //Check conditions for Computer scoring a point
+  //Connect to other functions
   const checkForComPoints = (card) =>{
     let count = 0
     let positions = []
