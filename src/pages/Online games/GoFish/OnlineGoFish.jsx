@@ -127,19 +127,33 @@ function GoFish({darkmode}) {
     }
   }
 
-  //Check conditions for Computer scoring a point
-  const checkForComPoints = (card) =>{
-    let count = 0
-    let positions = []
-    console.log("Checking for COM points")
-
-    for(let i=0; i<comHand.length; i++){
-      if(comHand[i].value===card.value){
+   //Check if we have four of a card to score a point
+  const canScore = (card,hand) =>{
+    let count = 0;
+    let positions = [];
+    for(let i=0; i<hand.length; i++){
+      if(hand[i].value===card.value){
         positions.push(i)
         count++
       }
     }
-    if(count===4){
+
+    if(count === 4){
+      return positions;
+    }
+    else{
+      return null;
+    }
+  }
+
+  //Check conditions for Computer scoring a point
+  //Connect to other functions
+  const checkForComPoints = (card) =>{
+    let count = 0
+    let positions = canScore(card, comHand)
+    console.log("Checking for COM points")
+
+    if(positions != null){
       for(let i=0; i<positions.length; i++){
         comHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
@@ -152,21 +166,18 @@ function GoFish({darkmode}) {
   }
 
   //Check conditions for player scoring a point
+  //Must be four of a given card
   const checkForPlayPoints = (card) =>{
     let count = 0
-    let positions = []
+    let positions = canScore(card, playHand)
     console.log("Checking for play points")
 
-    for(let i=0; i<playHand.length; i++){
-      if(playHand[i].value===card.value){
-        positions.push(i)
-        count++
-      }
-    }
-    if(count===4){
+    //We found 4 of a given card, remove the cards and scrore a point
+    if(positions != null){
       console.log("Found 4 of a kind")
       for(let i=0; i<positions.length; i++){
         playHand.splice(positions[i],1)
+
         //Subtract one from other positions in order to prevent errors
         for(let j=i+1; j<positions.length; j++){
           positions[j]--
