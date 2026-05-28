@@ -150,16 +150,10 @@ function GoFish({darkmode}) {
   //Connect to other functions
   const checkForComPoints = (card) =>{
     let count = 0
-    let positions = []
+    let positions = canScore(card, comHand)
     console.log("Checking for COM points")
 
-    for(let i=0; i<comHand.length; i++){
-      if(comHand[i].value===card.value){
-        positions.push(i)
-        count++
-      }
-    }
-    if(count===4){
+    if(positions != null){
       for(let i=0; i<positions.length; i++){
         comHand.splice(positions[i],1)
         //Subtract one from other positions in order to prevent errors
@@ -175,18 +169,11 @@ function GoFish({darkmode}) {
   //Must be four of a given card
   const checkForPlayPoints = (card) =>{
     let count = 0
-    let positions = []
+    let positions = canScore(card, playHand)
     console.log("Checking for play points")
 
-    //Note each location found for the card
-    for(let i=0; i<playHand.length; i++){
-      if(playHand[i].value===card.value){
-        positions.push(i)
-        count++
-      }
-    }
     //We found 4 of a given card, remove the cards and scrore a point
-    if(count===4){
+    if(positions != null){
       console.log("Found 4 of a kind")
       for(let i=0; i<positions.length; i++){
         playHand.splice(positions[i],1)
