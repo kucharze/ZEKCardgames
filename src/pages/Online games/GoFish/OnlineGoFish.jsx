@@ -19,6 +19,9 @@ function GoFish({darkmode}) {
   const [comHand, setComHand] = useState([])
   const [playScore, setPlayScore] = useState(0)
   const [comScore, setComScore] = useState(0)
+  //Used by computer to ask for a card at given position in its hand
+  //Updated when the computer is asking for a card and has to go fish
+  const [comHandpos, setComHandpos] = useState(0)
 
   //Other important state items
   const [gameOver, setGameOver] = useState(false)//The game has completed
